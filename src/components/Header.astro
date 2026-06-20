@@ -1,0 +1,111 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+		<a href="/" class="site-logo">
+			<span class="logo-main">Regresión a</span>
+			<span class="logo-accent">Vidas Pasadas</span>
+		</a>
+		<div class="nav-links">
+			<HeaderLink href="/">Inicio</HeaderLink>
+			<HeaderLink href="/blog">Artículos</HeaderLink>
+			<a href="https://www.juanpabloloaiza.com/agenda" target="_blank" rel="noopener" class="nav-cta">
+				Agenda una sesión
+			</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+	header {
+		margin: 0;
+		padding: 0 1.5em;
+		background: rgba(2, 6, 23, 0.95);
+		border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		backdrop-filter: blur(8px);
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 960px;
+		margin: 0 auto;
+		height: 64px;
+	}
+
+	.site-logo {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		line-height: 1.1;
+	}
+
+	.logo-main {
+		font-family: 'Cinzel', serif;
+		font-size: 0.75em;
+		color: #8a9ab5;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.logo-accent {
+		font-family: 'Cinzel', serif;
+		font-size: 1em;
+		font-weight: 700;
+		color: #C5A059;
+		letter-spacing: 0.05em;
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	.nav-links :global(a) {
+		padding: 0.4em 0.8em;
+		color: #8a9ab5;
+		text-decoration: none;
+		font-family: 'Cinzel', serif;
+		font-size: 0.8em;
+		letter-spacing: 0.05em;
+		border-bottom: 2px solid transparent;
+		transition: color 0.2s;
+	}
+
+	.nav-links :global(a:hover),
+	.nav-links :global(a.active) {
+		color: #e2d5bb;
+		border-bottom-color: #C5A059;
+	}
+
+	.nav-cta {
+		margin-left: 0.5em;
+		padding: 0.5em 1.2em !important;
+		background: #C5A059 !important;
+		color: #020617 !important;
+		border-radius: 5px;
+		font-weight: 700 !important;
+		border-bottom: none !important;
+	}
+
+	.nav-cta:hover {
+		background: #d4b577 !important;
+		color: #020617 !important;
+	}
+
+	@media (max-width: 600px) {
+		.nav-links :global(a:not(.nav-cta)) {
+			display: none;
+		}
+		.nav-cta {
+			display: block !important;
+		}
+	}
+</style>

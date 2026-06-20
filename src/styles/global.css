@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+	--accent: #C5A059;
+	--accent-dark: #9a7a3f;
+	--bg: #020617;
+	--bg-secondary: #0a1628;
+	--text: #e2d5bb;
+	--text-muted: #8a9ab5;
+	--border: rgba(197, 160, 89, 0.2);
+	--box-shadow:
+		0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body {
+	font-family: 'Crimson Text', Georgia, serif;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	background-color: var(--bg);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	color: var(--text);
+	font-size: 20px;
+	line-height: 1.75;
+}
+
+main {
+	width: 760px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+	padding: 3em 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5rem 0;
+	font-family: 'Cinzel', serif;
+	color: var(--text);
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.1em; }
+
+strong, b { font-weight: 600; }
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d4b577;
+	text-decoration: underline;
+}
+
+p { margin-bottom: 1em; }
+
+.prose p { margin-bottom: 1.5em; }
+
+textarea { width: 100%; font-size: 16px; }
+input { font-size: 16px; }
+table { width: 100%; }
+
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+code {
+	padding: 2px 5px;
+	background-color: var(--bg-secondary);
+	border-radius: 2px;
+	font-size: 0.85em;
+}
+
+pre {
+	padding: 1.5em;
+	border-radius: 8px;
+	background-color: var(--bg-secondary);
+}
+
+pre > code { all: unset; }
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0.5em 0 0.5em 1.5em;
+	margin: 1.5em 0;
+	font-size: 1.15em;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2em 0;
+}
+
+@media (max-width: 720px) {
+	body { font-size: 18px; }
+	main { padding: 1em; }
+}
+
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* CTA Banner */
+.cta-banner {
+	background: linear-gradient(135deg, var(--bg-secondary), #0f1e35);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 2em;
+	text-align: center;
+	margin: 3em 0 1em;
+}
+
+.cta-banner h3 {
+	font-size: 1.4em;
+	margin-bottom: 0.5em;
+	color: var(--accent);
+}
+
+.cta-banner p {
+	color: var(--text-muted);
+	margin-bottom: 1.5em;
+	font-size: 1em;
+}
+
+.cta-btn {
+	display: inline-block;
+	background: var(--accent);
+	color: var(--bg) !important;
+	font-family: 'Cinzel', serif;
+	font-weight: 600;
+	padding: 0.75em 2em;
+	border-radius: 6px;
+	text-decoration: none !important;
+	letter-spacing: 0.05em;
+	transition: background 0.2s;
+}
+
+.cta-btn:hover {
+	background: #d4b577;
+	text-decoration: none !important;
+}

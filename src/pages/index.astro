@@ -1,0 +1,186 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<p class="hero-eyebrow">Portal de conocimiento</p>
+				<h1>Regresión a<br />Vidas Pasadas</h1>
+				<p class="hero-desc">
+					Explora qué es la terapia de regresión, cómo funciona una sesión y qué puedes
+					sanar a través de este proceso terapéutico profundo.
+				</p>
+				<a href="https://www.juanpabloloaiza.com/agenda" target="_blank" rel="noopener" class="cta-btn">
+					Agenda una sesión →
+				</a>
+			</section>
+
+			<section class="posts-section">
+				<h2 class="section-title">Artículos recientes</h2>
+				<ul class="posts-grid">
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.id}/`}>
+									<div class="post-card">
+										{post.data.heroImage && (
+											<div class="post-img">
+												<img src={post.data.heroImage.src} alt={post.data.title} />
+											</div>
+										)}
+										<div class="post-body">
+											<time><FormattedDate date={post.data.pubDate} /></time>
+											<h3>{post.data.title}</h3>
+											<p>{post.data.description}</p>
+											<span class="read-more">Leer artículo →</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.hero {
+		text-align: center;
+		padding: 4em 1em 3em;
+		border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+		margin-bottom: 3em;
+	}
+
+	.hero-eyebrow {
+		font-family: 'Cinzel', serif;
+		font-size: 0.75em;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #C5A059;
+		margin-bottom: 0.75em;
+	}
+
+	.hero h1 {
+		font-size: 3em;
+		font-weight: 700;
+		margin-bottom: 0.5em;
+		line-height: 1.1;
+	}
+
+	.hero-desc {
+		max-width: 540px;
+		margin: 0 auto 1.75em;
+		color: #8a9ab5;
+		font-size: 1.05em;
+		line-height: 1.6;
+	}
+
+	.section-title {
+		font-size: 1.2em;
+		color: #C5A059;
+		margin-bottom: 1.5em;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.posts-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5em;
+	}
+
+	.posts-grid a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.post-card {
+		background: #0a1628;
+		border: 1px solid rgba(197, 160, 89, 0.15);
+		border-radius: 10px;
+		overflow: hidden;
+		transition: border-color 0.2s, transform 0.2s;
+		display: flex;
+		gap: 0;
+	}
+
+	.post-card:hover {
+		border-color: rgba(197, 160, 89, 0.5);
+		transform: translateY(-2px);
+	}
+
+	.post-img {
+		flex-shrink: 0;
+		width: 200px;
+	}
+
+	.post-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 0;
+		display: block;
+	}
+
+	.post-body {
+		padding: 1.5em;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4em;
+	}
+
+	.post-body time {
+		font-size: 0.75em;
+		color: #4a5a72;
+		font-family: 'Cinzel', serif;
+		letter-spacing: 0.05em;
+	}
+
+	.post-body h3 {
+		font-size: 1.2em;
+		margin: 0;
+		color: #e2d5bb;
+	}
+
+	.post-body p {
+		font-size: 0.9em;
+		color: #8a9ab5;
+		margin: 0;
+		line-height: 1.5;
+	}
+
+	.read-more {
+		margin-top: auto;
+		font-size: 0.8em;
+		color: #C5A059;
+		font-family: 'Cinzel', serif;
+	}
+
+	@media (max-width: 600px) {
+		.hero h1 { font-size: 2em; }
+		.post-card { flex-direction: column; }
+		.post-img { width: 100%; height: 160px; }
+	}
+</style>

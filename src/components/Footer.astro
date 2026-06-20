@@ -1,0 +1,83 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<div class="footer-cta">
+		<p class="cta-label">¿Listo para comenzar tu proceso?</p>
+		<a href="https://www.juanpabloloaiza.com/agenda" target="_blank" rel="noopener" class="cta-btn">
+			Agenda una sesión con Juan Pablo →
+		</a>
+	</div>
+	<div class="footer-bottom">
+		<p>
+			© {today.getFullYear()} <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>
+			· Terapeuta de Regresión a Vidas Pasadas
+		</p>
+		<p class="footer-links">
+			<a href="/">Inicio</a>
+			<span>·</span>
+			<a href="/blog">Artículos</a>
+			<span>·</span>
+			<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">juanpabloloaiza.com</a>
+		</p>
+	</div>
+</footer>
+
+<style>
+	footer {
+		border-top: 1px solid rgba(197, 160, 89, 0.15);
+		margin-top: 4em;
+	}
+
+	.footer-cta {
+		background: linear-gradient(135deg, #0a1628, #0f1e35);
+		padding: 3em 1.5em;
+		text-align: center;
+	}
+
+	.cta-label {
+		font-family: 'Cinzel', serif;
+		font-size: 1.1em;
+		color: #e2d5bb;
+		margin-bottom: 1em;
+	}
+
+	.cta-btn {
+		display: inline-block;
+		background: #C5A059;
+		color: #020617;
+		font-family: 'Cinzel', serif;
+		font-weight: 700;
+		padding: 0.75em 2em;
+		border-radius: 6px;
+		text-decoration: none;
+		letter-spacing: 0.05em;
+		transition: background 0.2s;
+	}
+
+	.cta-btn:hover {
+		background: #d4b577;
+		text-decoration: none;
+	}
+
+	.footer-bottom {
+		background: #020617;
+		padding: 1.5em 1.5em 2em;
+		text-align: center;
+		color: #4a5a72;
+		font-size: 0.85em;
+	}
+
+	.footer-bottom p { margin: 0.25em 0; }
+
+	.footer-bottom a {
+		color: #6a7a92;
+		text-decoration: none;
+	}
+
+	.footer-bottom a:hover { color: #C5A059; }
+
+	.footer-links { display: flex; justify-content: center; gap: 0.75em; margin-top: 0.5em; }
+	.footer-links span { color: #2a3a52; }
+</style>
