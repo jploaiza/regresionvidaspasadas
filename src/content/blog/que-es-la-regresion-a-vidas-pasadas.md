@@ -43,4 +43,4 @@ Sin ese acompañamiento, el proceso puede quedarse en la superficie o, peor, abr
 
 ---
 
-Si sientes que este proceso puede ser relevante para ti, el primer paso es una conversación. En esa llamada puedes hacer las preguntas que tengas y decidir si quieres agendar una sesión.
+Si este proceso te genera curiosidad, los siguientes artículos del sitio pueden ayudarte a profundizar en cómo funciona una sesión y qué beneficios reportan quienes lo han atravesado.

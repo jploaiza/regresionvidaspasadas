@@ -55,4 +55,4 @@ Depende de cada persona y de lo que busque. Hay quienes encuentran una respuesta
 
 ---
 
-Si alguno de estos beneficios resuena contigo, el mejor paso es agendar una conversación. En 20-30 minutos puedes hacer todas tus preguntas y evaluar si este proceso es para ti.
+El mejor primer paso siempre es informarse — los demás artículos de este sitio describen cómo funciona el proceso y qué puedes esperar de él.

@@ -81,6 +81,35 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				background: linear-gradient(90deg, transparent, #D4AF6A, transparent);
 				margin: 2em auto;
 			}
+			.author-card {
+				margin-top: 3em;
+				padding: 1.25em 1.5em;
+				border-left: 3px solid rgba(184, 149, 42, 0.35);
+				background: #F5EFE0;
+				border-radius: 0 5px 5px 0;
+			}
+			.author-label {
+				display: block;
+				font-family: 'Cinzel', serif;
+				font-size: 0.68em;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				color: #A89060;
+				margin-bottom: 0.6em;
+			}
+			.author-card p {
+				font-size: 0.9em;
+				color: #7A6840;
+				line-height: 1.65;
+				margin: 0;
+			}
+			.author-card a {
+				color: #8B6914;
+				text-decoration: none;
+			}
+			.author-card a:hover {
+				text-decoration: underline;
+			}
 		</style>
 	</head>
 
@@ -105,12 +134,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<div class="title-divider"></div>
 					</div>
 					<slot />
-					<div class="cta-banner">
-						<h3>¿Quieres vivir este proceso?</h3>
-						<p>Juan Pablo Loaiza acompaña sesiones de Regresión a Vidas Pasadas de forma individual y profunda.</p>
-						<a href="https://www.juanpabloloaiza.com/agenda" target="_blank" rel="noopener" class="cta-btn">
-							Agenda tu sesión →
-						</a>
+					<div class="author-card">
+						<span class="author-label">Sobre el autor</span>
+						<p><a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a> es terapeuta de Regresión a Vidas Pasadas. Si quieres explorar este proceso, puedes conocer su trabajo en <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">juanpabloloaiza.com</a>.</p>
 					</div>
 				</div>
 			</article>
