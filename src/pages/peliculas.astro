@@ -1,0 +1,350 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const CATEGORIAS = [
+  {
+    titulo: 'Vida después de la muerte',
+    icono: '✨',
+    items: [
+      {
+        titulo: 'Nosso Lar',
+        tipo: 'Película',
+        año: '2010',
+        origen: 'Brasil',
+        descripcion: 'La adaptación cinematográfica del libro de Chico Xavier. Un médico muere y despierta en una ciudad espiritual llamada Nosso Lar. La producción espírita más influyente del cine latinoamericano.',
+        porque: 'La representación más completa y emocionalmente honesta del proceso de transición hacia el plano espiritual. Imprescindible.',
+      },
+      {
+        titulo: 'Astral City: A Spiritual Journey',
+        tipo: 'Película',
+        año: '2010',
+        origen: 'Brasil',
+        descripcion: 'Otro nombre para la misma película de Nosso Lar, en su versión para el mercado internacional en inglés.',
+        porque: 'Ver con subtítulos en español si no está disponible en español — la experiencia vale la pena.',
+      },
+      {
+        titulo: 'Hereafter',
+        tipo: 'Película',
+        año: '2010',
+        origen: 'EE.UU.',
+        descripcion: 'Tres historias conectadas sobre la experiencia cercana a la muerte: una mujer francesa que sobrevive al tsunami de 2004, un niño que busca contactar a su hermano muerto, y un médium americano que quiere liberarse de su don.',
+        porque: 'Una exploración cinematográfica inusualmente honesta y no sensacionalista de la comunicación con los muertos y las NDE.',
+      },
+      {
+        titulo: 'What Dreams May Come',
+        tipo: 'Película',
+        año: '1998',
+        origen: 'EE.UU.',
+        descripcion: 'Un hombre muere en un accidente y descubre los planos del más allá mientras intenta rescatar a su esposa del infierno de su propio dolor. Basada en la novela de Richard Matheson.',
+        porque: 'Visualmente impresionante y emocionalmente poderosa. Explora la idea de que el más allá es co-creado por nuestra mente.',
+      },
+    ],
+  },
+  {
+    titulo: 'Reencarnación y vidas pasadas',
+    icono: '🔄',
+    items: [
+      {
+        titulo: 'Cloud Atlas',
+        tipo: 'Película',
+        año: '2012',
+        origen: 'EE.UU./Alemania',
+        descripcion: 'Seis historias en seis épocas diferentes, con los mismos actores interpretando almas que se encuentran repetidamente a lo largo del tiempo. La exploración cinematográfica más ambiciosa de la reencarnación.',
+        porque: 'Transforma el concepto de las vidas pasadas en narrativa visual de alto impacto. Las almas se reconocen, los patrones se repiten, los compromisos trascienden la muerte.',
+      },
+      {
+        titulo: 'Birth',
+        tipo: 'Película',
+        año: '2004',
+        origen: 'EE.UU.',
+        descripcion: 'Un niño de 10 años afirma ser la reencarnación del esposo muerto de una mujer. Nicole Kidman en una actuación extraordinaria. Una película que no da respuestas fáciles.',
+        porque: 'Explora la incomodidad y la complejidad emocional de creer —o no creer— en la reencarnación cuando se presenta frente a ti.',
+      },
+      {
+        titulo: 'Flipped',
+        tipo: 'Película',
+        año: '2021',
+        origen: 'India (Tamil)',
+        descripcion: 'Un joven recuerda su vida anterior y busca a sus seres queridos de esa vida. Una de las películas más emotivas sobre reencarnación del cine indio contemporáneo.',
+        porque: 'El cine indio trata la reencarnación con naturalidad narrativa — sin necesidad de justificarla ni defenderla.',
+      },
+      {
+        titulo: 'I Origins',
+        tipo: 'Película',
+        año: '2014',
+        origen: 'EE.UU.',
+        descripcion: 'Un biólogo molecular que estudia el ojo como prueba de la evolución descubre evidencia biométrica que sugiere la continuidad de la identidad entre vidas.',
+        porque: 'La única película que intenta abordar la reencarnación desde la evidencia científica. El giro final es memorable.',
+      },
+    ],
+  },
+  {
+    titulo: 'Hipnosis y estados alterados',
+    icono: '🌀',
+    items: [
+      {
+        titulo: 'Trance',
+        tipo: 'Película',
+        año: '2013',
+        origen: 'Reino Unido',
+        descripcion: 'Un subastador usa la hipnosis para recuperar memorias de un robo que no recuerda conscientemente. Danny Boyle dirige un thriller que explora los límites de la memoria y la sugestión.',
+        porque: 'Representación poco habitual de la hipnosis clínica en el cine — compleja, ambigua y psicológicamente sofisticada.',
+      },
+      {
+        titulo: 'Peaceful Warrior (Guerrero Pacífico)',
+        tipo: 'Película',
+        año: '2006',
+        origen: 'EE.UU.',
+        descripcion: 'Basada en la autobiografía de Dan Millman. Un gimnasta olímpico encuentra a un misterioso maestro en una gasolinera que le enseña a vivir en el momento presente.',
+        porque: 'No es sobre hipnosis sino sobre lo que la hipnosis y la regresión a veces revelan: que el obstáculo para la transformación es siempre el ego, no las circunstancias.',
+      },
+      {
+        titulo: 'Get Out',
+        tipo: 'Película',
+        año: '2017',
+        origen: 'EE.UU.',
+        descripcion: 'Un thriller de terror que usa la hipnosis como mecanismo central de su premisa. Aunque es ficción de género, su representación del trance forzado toca algo real sobre la vulnerabilidad que el estado hipnótico puede crear.',
+        porque: 'Para entender la diferencia entre hipnosis consentida y terapéutica versus hipnosis usada para control — y por qué esa diferencia importa.',
+      },
+    ],
+  },
+  {
+    titulo: 'Documentales para despertar',
+    icono: '🎬',
+    items: [
+      {
+        titulo: 'Life After Death with Tyler Henry',
+        tipo: 'Docuserie',
+        año: '2022',
+        origen: 'EE.UU. / Netflix',
+        descripcion: 'El médium Tyler Henry realiza lecturas con personas conocidas y desconocidas, y viaja para investigar sus propias raíces. Una mezcla de entretenimiento y fenómeno genuino.',
+        porque: 'Sea cual sea tu posición sobre la mediumnidad, la serie obliga a hacerse preguntas sobre la comunicación con los muertos.',
+      },
+      {
+        titulo: 'Surviving Death',
+        tipo: 'Docuserie',
+        año: '2021',
+        origen: 'EE.UU. / Netflix',
+        descripcion: 'Seis episodios que exploran experiencias cercanas a la muerte, mediumnidad, signos del más allá y casos de reencarnación. Basada en el libro de Leslie Kean.',
+        porque: 'La investigación más equilibrada y rigurosa sobre supervivencia de la conciencia disponible en streaming. Imprescindible.',
+      },
+      {
+        titulo: 'The Afterlife Investigations',
+        tipo: 'Documental',
+        año: '2009',
+        origen: 'Reino Unido',
+        descripcion: 'Investigación de los experimentos de Scole —una serie de sesiones mediúmnicas controladas que produjeron evidencia física inexplicable— y de los estudios de la Universidad de Arizona sobre mediumnidad.',
+        porque: 'Para quienes quieren evidencia, no solo testimonios. Los experimentos de Scole son lo más cercano a evidencia científica de la comunicación post-mortem.',
+      },
+      {
+        titulo: 'Hypnosis: A New Film',
+        tipo: 'Documental',
+        año: 'Varios',
+        origen: 'Internacional',
+        descripcion: 'Existen varios documentales sobre hipnosis clínica y regresión disponibles en plataformas. Busca: "regression therapy documentary" o "past life hypnosis documentary" para los más recientes.',
+        porque: 'La experiencia de ver a otros en proceso de regresión puede preparar emocionalmente para una sesión propia.',
+      },
+      {
+        titulo: 'Unmistaken Child',
+        tipo: 'Documental',
+        año: '2008',
+        origen: 'Israel/Nepal',
+        descripcion: 'Un monje budista busca la reencarnación de su maestro fallecido siguiendo señales y pruebas. Un proceso real filmado con acceso extraordinario.',
+        porque: 'El único documental que muestra el proceso de verificación de reencarnación de la tradición tibetana desde adentro.',
+      },
+    ],
+  },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title="Películas y Documentales — Hipnosis, Regresión y Despertar"
+      description="Las mejores películas y documentales sobre regresión a vidas pasadas, hipnosis, vida después de la muerte y despertar espiritual: de Nosso Lar a Cloud Atlas, de Surviving Death a Peaceful Warrior."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="page-wrap">
+      <div class="page-header">
+        <span class="ornament">✦</span>
+        <h1>Películas y Documentales</h1>
+        <p class="page-desc">
+          Ficción y no ficción que expande la comprensión de la conciencia, la reencarnación,
+          la hipnosis y la vida después de la muerte. Ordenadas por categoría.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      {CATEGORIAS.map(cat => (
+        <section class="categoria-section">
+          <h2 class="categoria-titulo">
+            <span class="cat-icon">{cat.icono}</span>
+            {cat.titulo}
+          </h2>
+          <ul class="items-lista">
+            {cat.items.map(item => (
+              <li class="item-card">
+                <div class="item-header">
+                  <div class="item-meta">
+                    <span class="item-tipo">{item.tipo}</span>
+                    <span class="item-año">{item.año}</span>
+                    <span class="item-origen">{item.origen}</span>
+                  </div>
+                  <h3 class="item-titulo">{item.titulo}</h3>
+                </div>
+                <p class="item-desc">{item.descripcion}</p>
+                <p class="item-porque">
+                  <span class="porque-label">Por qué verla:</span> {item.porque}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  .ornament {
+    display: block;
+    color: #D4AF6A;
+    font-size: 0.9em;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+  }
+
+  .page-desc {
+    max-width: 560px;
+    margin: 0 auto 1.5em;
+    color: #7A6840;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF6A, transparent);
+    margin: 0 auto;
+  }
+
+  .categoria-section { margin-top: 3.5em; }
+
+  .categoria-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid rgba(184,149,42,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .cat-icon { font-size: 1.1em; }
+
+  .items-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .item-card {
+    background: #F5EFE0;
+    border-radius: 8px;
+    padding: 1.25em 1.5em;
+    border-left: 3px solid rgba(184,149,42,0.25);
+  }
+
+  .item-meta {
+    display: flex;
+    gap: 0.75em;
+    margin-bottom: 0.4em;
+    flex-wrap: wrap;
+  }
+
+  .item-tipo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B8952A;
+    background: rgba(184,149,42,0.1);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+  }
+
+  .item-año, .item-origen {
+    font-size: 0.78em;
+    color: #A89060;
+    align-self: center;
+  }
+
+  .item-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.5em;
+  }
+
+  .item-desc {
+    font-size: 0.88em;
+    color: #5A4830;
+    line-height: 1.65;
+    margin-bottom: 0.65em;
+  }
+
+  .item-porque {
+    font-size: 0.84em;
+    color: #7A6840;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 0.5em;
+    border-top: 1px solid rgba(184,149,42,0.12);
+  }
+
+  .porque-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    color: #8B6914;
+    margin-right: 0.35em;
+  }
+
+  @media (max-width: 600px) {
+    .page-header h1 { font-size: 1.8em; }
+    .item-card { padding: 1em; }
+  }
+</style>

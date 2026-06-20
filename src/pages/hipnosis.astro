@@ -1,0 +1,244 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const allPosts = await getCollection('blog');
+
+const ARTICULOS_HIPNOSIS = allPosts
+  .filter(p => p.data.expositor === 'hipnosis')
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title="Hipnosis: qué es, su historia y cómo funciona"
+      description="Todo sobre la hipnosis: sus orígenes chamánicos y con Mesmer, Milton Erickson y la hipnosis clínica moderna, la diferencia entre hipnosis de espectáculo y terapéutica, mitos, realidades y su relación con la regresión."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="page-wrap">
+      <div class="page-header">
+        <span class="ornament">✦</span>
+        <h1>Hipnosis</h1>
+        <p class="page-desc">
+          La hipnosis no es sueño, no es control mental y no comenzó con Mesmer.
+          Es uno de los fenómenos más malentendidos — y más poderosos — de la psicología.
+          Una guía completa desde sus orígenes ancestrales hasta la práctica clínica actual.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-card">
+          <span class="intro-icon">🌀</span>
+          <h3>¿Qué es realmente?</h3>
+          <p>Un estado de atención focalizada y sugestibilidad aumentada. Sin pérdida de conciencia, sin sueño, sin pérdida de control.</p>
+        </div>
+        <div class="intro-card">
+          <span class="intro-icon">🥁</span>
+          <h3>Más antigua que Mesmer</h3>
+          <p>Los chamanes siberianos, los templos griegos de Asclepio y los sacerdotes egipcios usaban el trance curativo miles de años antes.</p>
+        </div>
+        <div class="intro-card">
+          <span class="intro-icon">🧠</span>
+          <h3>Medible en el cerebro</h3>
+          <p>La neuroimagen muestra cambios reales en la conectividad cerebral durante el trance. No es imaginación — es fisiología.</p>
+        </div>
+      </div>
+
+      <section class="articulos-section">
+        <h2 class="section-title">Artículos sobre hipnosis</h2>
+        <ul class="articulos-lista">
+          {ARTICULOS_HIPNOSIS.map(art => (
+            <li>
+              <a href={`/blog/${art.id}/`} class="articulo-card">
+                <div class="art-content">
+                  <span class="art-title">{art.data.title}</span>
+                  <span class="art-desc">{art.data.description}</span>
+                </div>
+                <span class="art-arrow">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <div class="cta-section">
+        <p class="cta-text">
+          La hipnosis es la puerta de acceso a la regresión a vidas pasadas.
+          Si quieres saber más sobre cómo funciona el proceso completo,
+          visita la sección de <a href="/expositores">grandes expositores</a> o
+          <a href="/srt">Terapia de Liberación Espiritual</a>.
+        </p>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  .ornament {
+    display: block;
+    color: #4A6B8A;
+    font-size: 0.9em;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+  }
+
+  .page-desc {
+    max-width: 560px;
+    margin: 0 auto 1.5em;
+    color: #7A6840;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4A6B8A, transparent);
+    margin: 0 auto;
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin: 2.5em 0;
+  }
+
+  .intro-card {
+    background: #F5EFE0;
+    border-radius: 8px;
+    padding: 1.25em 1em;
+    text-align: center;
+    border-top: 3px solid rgba(74, 107, 138, 0.25);
+  }
+
+  .intro-icon {
+    display: block;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+  }
+
+  .intro-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    color: #2C1F0E;
+    margin-bottom: 0.5em;
+  }
+
+  .intro-card p {
+    font-size: 0.85em;
+    color: #5A4830;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #4A6B8A;
+    margin: 2.5em 0 1em;
+  }
+
+  .articulos-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .articulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 1.25em;
+    background: #F5EFE0;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .articulo-card:hover {
+    border-color: rgba(74, 107, 138, 0.3);
+    background: #EDE5D0;
+  }
+
+  .art-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .art-title {
+    font-size: 0.95em;
+    color: #2C1F0E;
+    font-weight: 500;
+  }
+
+  .art-desc {
+    font-size: 0.82em;
+    color: #7A6840;
+    line-height: 1.4;
+  }
+
+  .art-arrow { color: #4A6B8A; flex-shrink: 0; }
+
+  .cta-section {
+    margin-top: 3em;
+    padding: 1.5em;
+    background: #F5EFE0;
+    border-radius: 8px;
+    border-left: 3px solid rgba(74, 107, 138, 0.35);
+  }
+
+  .cta-text {
+    color: #5A4830;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95em;
+  }
+
+  .cta-text a {
+    color: #4A6B8A;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .intro-grid { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 2em; }
+  }
+</style>

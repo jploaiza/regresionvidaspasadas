@@ -1,0 +1,334 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const allPosts = await getCollection('blog');
+
+const EXPOSITORES_SRT = [
+  {
+    slug: 'carl-wickland',
+    nombre: 'Carl Wickland',
+    periodo: '1861 – 1945',
+    rol: 'El pionero',
+    descripcion: 'Psiquiatra sueco-americano que documentó más de 30 años de sesiones de liberación espiritual junto a su esposa Anna, la médium que hizo posible todo su trabajo. Su libro "Thirty Years Among the Dead" (1924) es el texto fundacional del campo.',
+    libro: 'Thirty Years Among the Dead (1924)',
+  },
+  {
+    slug: 'william-baldwin',
+    nombre: 'William Baldwin',
+    periodo: '1939 – 2004',
+    rol: 'El sistematizador',
+    descripcion: 'Psicólogo y exdentista que desarrolló los protocolos más completos y sistemáticos del campo. Su "Spirit Releasement Therapy: A Technique Manual" (1992) es la referencia técnica definitiva. Creó la taxonomía de entidades: humanas, oscuras, no humanas y fragmentos del alma.',
+    libro: 'Spirit Releasement Therapy (1992)',
+  },
+  {
+    slug: 'edith-fiore',
+    nombre: 'Edith Fiore',
+    periodo: '1930s –',
+    rol: 'La psicóloga clínica',
+    descripcion: 'PhD de la Universidad de Miami, con más de 30 años de práctica en California. Primera psicóloga con credenciales convencionales en documentar sistemáticamente la posesión espiritual desde una perspectiva terapéutica. Formó a más de 2.000 profesionales.',
+    libro: 'The Unquiet Dead (1987)',
+  },
+  {
+    slug: 'alan-sanderson',
+    nombre: 'Alan Sanderson',
+    periodo: '1930s –',
+    rol: 'El psiquiatra institucional',
+    descripcion: 'Psiquiatra formado en el Hospital St. Thomas de Londres. Introdujo la liberación espiritual en el NHS y presentó su trabajo al Royal College of Psychiatrists. Fundó la Spirit Release Foundation (2000–2013).',
+    libro: 'Psychiatry and the Spirit World',
+  },
+];
+
+const TEMAS_SRT = [
+  { slug: 'srt-que-es', titulo: '¿Qué es la SRT?' },
+  { slug: 'srt-posesiones-apego', titulo: 'Posesión y apego espiritual' },
+  { slug: 'srt-entidades-oscuras-demonios', titulo: '¿Existen los demonios?' },
+  { slug: 'srt-exorcismo-vs-srt', titulo: 'Exorcismo vs. SRT' },
+  { slug: 'srt-extraterrestres-entidades', titulo: 'Entidades extraterrestres' },
+  { slug: 'srt-magia-negra-mal-de-ojo', titulo: 'Magia negra y mal de ojo' },
+  { slug: 'srt-y-regresion', titulo: 'SRT y Regresión: la conexión' },
+];
+
+function getArticulosPorExpositor(slug: string) {
+  return allPosts
+    .filter(p => p.data.expositor === slug)
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+}
+
+function getArticuloPorSlug(slug: string) {
+  return allPosts.find(p => p.id === slug || p.id === `${slug}.md`);
+}
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title="Terapia de Liberación Espiritual (SRT)"
+      description="Todo sobre la Spirit Releasement Therapy: posesiones, entidades, magia negra, ataques psíquicos y los grandes referentes del campo — Carl Wickland, William Baldwin, Edith Fiore y Alan Sanderson."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="page-wrap">
+      <div class="page-header">
+        <span class="ornament">✦</span>
+        <h1>Terapia de Liberación Espiritual</h1>
+        <p class="page-desc">
+          La SRT trabaja con entidades que se adhieren al campo energético humano —
+          espíritus, energías oscuras, ataques psíquicos — y las libera con compasión,
+          no con combate. Una modalidad terapéutica documentada desde 1924.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      <section class="temas-section">
+        <h2 class="section-title">Conceptos y fenómenos</h2>
+        <ul class="temas-grid">
+          {TEMAS_SRT.map(tema => {
+            const art = getArticuloPorSlug(tema.slug);
+            if (!art) return null;
+            return (
+              <li>
+                <a href={`/blog/${art.id}/`} class="tema-card">
+                  <span class="tema-titulo">{tema.titulo}</span>
+                  <span class="tema-arrow">→</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <h2 class="section-title">Los referentes del campo</h2>
+
+      {EXPOSITORES_SRT.map(exp => {
+        const articulos = getArticulosPorExpositor(exp.slug);
+        return (
+          <section class="expositor-section">
+            <div class="expositor-header">
+              <div class="expositor-meta">
+                <span class="expositor-periodo">{exp.periodo}</span>
+                <span class="expositor-rol">{exp.rol}</span>
+              </div>
+              <h3 class="expositor-nombre">{exp.nombre}</h3>
+              <p class="expositor-desc">{exp.descripcion}</p>
+              <p class="expositor-libro">
+                <span class="libro-label">Obra principal:</span> {exp.libro}
+              </p>
+            </div>
+
+            {articulos.length > 0 && (
+              <ul class="articulos-grid">
+                {articulos.map(art => (
+                  <li>
+                    <a href={`/blog/${art.id}/`} class="articulo-card">
+                      <span class="art-title">{art.data.title}</span>
+                      <span class="art-arrow">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        );
+      })}
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  .ornament {
+    display: block;
+    color: #8B3A3A;
+    font-size: 0.9em;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+  }
+
+  .page-desc {
+    max-width: 560px;
+    margin: 0 auto 1.5em;
+    color: #7A6840;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #8B3A3A, transparent);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8B3A3A;
+    margin: 2.5em 0 1em;
+  }
+
+  .temas-section { margin-top: 2em; }
+
+  .temas-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .tema-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.85em 1.1em;
+    background: #F5EFE0;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .tema-card:hover {
+    border-color: rgba(139, 58, 58, 0.3);
+    background: #EDE5D0;
+  }
+
+  .tema-titulo {
+    font-size: 0.9em;
+    color: #2C1F0E;
+    font-weight: 500;
+  }
+
+  .tema-arrow { color: #8B3A3A; font-size: 0.85em; flex-shrink: 0; }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139,58,58,0.2), transparent);
+    margin: 3em 0;
+  }
+
+  .expositor-section {
+    margin-top: 3em;
+    padding-top: 2.5em;
+    border-top: 1px solid rgba(139, 58, 58, 0.1);
+  }
+
+  .expositor-meta {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  .expositor-periodo,
+  .expositor-rol {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68em;
+    letter-spacing: 0.12em;
+    color: #8B3A3A;
+    text-transform: uppercase;
+  }
+
+  .expositor-rol::before {
+    content: '·';
+    margin-right: 1em;
+    color: #C08080;
+  }
+
+  .expositor-nombre {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.5em;
+  }
+
+  .expositor-desc {
+    color: #5A4830;
+    line-height: 1.7;
+    margin-bottom: 0.75em;
+    font-size: 0.95em;
+  }
+
+  .expositor-libro {
+    font-size: 0.85em;
+    color: #8B3A3A;
+    font-style: italic;
+    margin-bottom: 1.25em;
+  }
+
+  .libro-label {
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.06em;
+    color: #A06060;
+    margin-right: 0.35em;
+  }
+
+  .articulos-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .articulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5em;
+    padding: 0.75em 1em;
+    background: #F5EFE0;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .articulo-card:hover {
+    border-color: rgba(139, 58, 58, 0.25);
+    background: #EDE5D0;
+  }
+
+  .art-title { font-size: 0.84em; color: #2C1F0E; line-height: 1.4; }
+  .art-arrow { color: #8B3A3A; flex-shrink: 0; font-size: 0.84em; }
+
+  @media (max-width: 600px) {
+    .temas-grid, .articulos-grid { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 1.8em; }
+    .expositor-nombre { font-size: 1.35em; }
+  }
+</style>

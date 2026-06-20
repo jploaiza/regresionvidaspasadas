@@ -1,0 +1,328 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const CATEGORIAS = [
+  {
+    titulo: 'Regresión a Vidas Pasadas',
+    color: '#B8952A',
+    libros: [
+      {
+        titulo: 'Muchas Vidas, Muchos Maestros',
+        autor: 'Brian Weiss',
+        año: '1988',
+        descripcion: 'El libro que popularizó la regresión terapéutica. Un psiquiatra de Yale documenta el caso que lo cambió todo: su paciente Catherine y los maestros que hablaron a través de ella.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'Journey of Souls',
+        autor: 'Michael Newton',
+        año: '1994',
+        descripcion: 'Veintinueve casos de personas que bajo hipnosis describieron la vida entre vidas con un nivel de detalle y consistencia sin precedentes. El texto fundacional de la LBL.',
+        nivel: 'Intermedio',
+      },
+      {
+        titulo: 'Reliving Past Lives',
+        autor: 'Helen Wambach',
+        año: '1978',
+        descripcion: 'El único estudio estadístico serio sobre regresiones: más de 1.000 sesiones grupales analizadas. Los datos no coinciden con lo que la fantasía pura produciría.',
+        nivel: 'Intermedio',
+      },
+      {
+        titulo: 'Other Lives, Other Selves',
+        autor: 'Roger Woolger',
+        año: '1987',
+        descripcion: 'El análisis junguiano más riguroso de la regresión: cómo el material de vidas pasadas se relaciona con el inconsciente profundo de Jung y con el trauma somático.',
+        nivel: 'Avanzado',
+      },
+      {
+        titulo: 'You Have Been Here Before',
+        autor: 'Edith Fiore',
+        año: '1978',
+        descripcion: 'La perspectiva de una psicóloga clínica sobre la regresión: casos documentados desde el consultorio, sin misticismo, con rigor terapéutico.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'Return to Life',
+        autor: 'Jim Tucker',
+        año: '2013',
+        descripcion: 'Los casos más sólidos de la base de datos de la Universidad de Virginia presentados para el público general: niños que recuerdan vidas anteriores con datos verificables.',
+        nivel: 'Entrada',
+      },
+    ],
+  },
+  {
+    titulo: 'Liberación Espiritual (SRT)',
+    color: '#8B3A3A',
+    libros: [
+      {
+        titulo: 'Thirty Years Among the Dead',
+        autor: 'Carl Wickland',
+        año: '1924',
+        descripcion: 'El texto fundacional de la liberación espiritual. Tres décadas de sesiones documentadas con Anna como médium, espíritus confundidos y casos clínicos resueltos.',
+        nivel: 'Fundacional',
+      },
+      {
+        titulo: 'Spirit Releasement Therapy: A Technique Manual',
+        autor: 'William Baldwin',
+        año: '1992',
+        descripcion: 'El manual técnico más completo del campo. Protocolos para cada tipo de entidad, sistema de diagnóstico diferencial y marco teórico exhaustivo. Para practicantes.',
+        nivel: 'Avanzado',
+      },
+      {
+        titulo: 'The Unquiet Dead',
+        autor: 'Edith Fiore',
+        año: '1987',
+        descripcion: 'La introducción más accesible a la posesión espiritual desde una perspectiva psicológica. Para lectores con formación en salud mental.',
+        nivel: 'Entrada',
+      },
+    ],
+  },
+  {
+    titulo: 'Hipnosis',
+    color: '#4A6B8A',
+    libros: [
+      {
+        titulo: 'Hypnotherapy',
+        autor: 'Milton Erickson y Ernest Rossi',
+        año: '1979',
+        descripcion: 'Los casos y técnicas de Erickson explicados junto a Rossi. La referencia para entender la hipnosis ericksoniana directamente de su creador.',
+        nivel: 'Avanzado',
+      },
+      {
+        titulo: 'My Voice Will Go with You',
+        autor: 'Sidney Rosen',
+        año: '1982',
+        descripcion: 'Las enseñanzas de Erickson a través de sus historias y metáforas. La introducción más amable al pensamiento ericksoniano.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'Trance-formations',
+        autor: 'Richard Bandler y John Grinder',
+        año: '1981',
+        descripcion: 'Cómo los creadores de la PNL analizaron el modelo lingüístico de Erickson. La conexión entre hipnosis y programación neurolingüística.',
+        nivel: 'Intermedio',
+      },
+    ],
+  },
+  {
+    titulo: 'Espiritualidad y Conciencia',
+    color: '#5A7A5A',
+    libros: [
+      {
+        titulo: 'Nosso Lar',
+        autor: 'Francisco Cândido Xavier (Chico Xavier)',
+        año: '1944',
+        descripcion: 'Dictado por el médium brasileño más importante del siglo XX, este libro describe la vida después de la muerte en detalle extraordinario. Base de la película homónima.',
+        nivel: 'Fundacional',
+      },
+      {
+        titulo: 'Os Mensageiros',
+        autor: 'Francisco Cândido Xavier (Chico Xavier)',
+        año: '1944',
+        descripcion: 'Continuación de Nosso Lar. El doctor André Luiz sigue explorando los planos espirituales y sus leyes. Filosofía espírita en su expresión más narrativa.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'El Libro de los Espíritus',
+        autor: 'Allan Kardec',
+        año: '1857',
+        descripcion: 'El texto fundacional del espiritismo codificado. Preguntas y respuestas con espíritus sobre la naturaleza del alma, la reencarnación y las leyes del universo.',
+        nivel: 'Fundacional',
+      },
+      {
+        titulo: 'Many Lives, Many Masters',
+        autor: 'Brian Weiss',
+        año: '1988',
+        descripcion: 'La versión original en inglés para quienes prefieran leerlo en su idioma. El libro más vendido del campo en el mundo anglosajón.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'Proof of Heaven',
+        autor: 'Eben Alexander',
+        año: '2012',
+        descripcion: 'Un neurocirujano de Harvard documenta su experiencia cercana a la muerte durante una meningitis grave. El argumento médico más sólido a favor de la conciencia post-mortem.',
+        nivel: 'Entrada',
+      },
+      {
+        titulo: 'The Power of Now',
+        autor: 'Eckhart Tolle',
+        año: '1997',
+        descripcion: 'No es sobre regresión pero es sobre lo que la regresión enseña: que la identidad trasciende la historia personal. El libro de despertar más leído del siglo XXI.',
+        nivel: 'Entrada',
+      },
+    ],
+  },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title="Libros recomendados — Hipnosis, Regresión y Espiritualidad"
+      description="Una biblioteca curada sobre regresión a vidas pasadas, hipnosis clínica, liberación espiritual y espiritualidad: de Chico Xavier a Brian Weiss, de Erickson a Carl Wickland."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="page-wrap">
+      <div class="page-header">
+        <span class="ornament">✦</span>
+        <h1>Biblioteca</h1>
+        <p class="page-desc">
+          Los libros más importantes sobre regresión a vidas pasadas, hipnosis clínica,
+          liberación espiritual y espiritualidad. Organizados por tema y nivel.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      {CATEGORIAS.map(cat => (
+        <section class="categoria-section">
+          <h2 class="categoria-titulo" style={`--accent: ${cat.color}`}>{cat.titulo}</h2>
+          <ul class="libros-grid">
+            {cat.libros.map(libro => (
+              <li class="libro-card">
+                <div class="libro-header">
+                  <span class="libro-nivel" style={`background: ${cat.color}22; color: ${cat.color}`}>{libro.nivel}</span>
+                  <span class="libro-año">{libro.año}</span>
+                </div>
+                <h3 class="libro-titulo">{libro.titulo}</h3>
+                <p class="libro-autor">{libro.autor}</p>
+                <p class="libro-desc">{libro.descripcion}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  .ornament {
+    display: block;
+    color: #D4AF6A;
+    font-size: 0.9em;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+  }
+
+  .page-desc {
+    max-width: 560px;
+    margin: 0 auto 1.5em;
+    color: #7A6840;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF6A, transparent);
+    margin: 0 auto;
+  }
+
+  .categoria-section { margin-top: 3.5em; }
+
+  .categoria-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent, #B8952A);
+    margin-bottom: 1.25em;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+
+  .libros-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .libro-card {
+    background: #F5EFE0;
+    border-radius: 8px;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35em;
+  }
+
+  .libro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25em;
+  }
+
+  .libro-nivel {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25em 0.65em;
+    border-radius: 3px;
+  }
+
+  .libro-año {
+    font-size: 0.78em;
+    color: #A89060;
+    font-family: 'Cinzel', serif;
+  }
+
+  .libro-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.92em;
+    font-weight: 500;
+    color: #2C1F0E;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .libro-autor {
+    font-size: 0.8em;
+    color: #8B6914;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .libro-desc {
+    font-size: 0.83em;
+    color: #5A4830;
+    line-height: 1.6;
+    margin: 0;
+    margin-top: 0.25em;
+  }
+
+  @media (max-width: 600px) {
+    .libros-grid { grid-template-columns: 1fr; }
+    .page-header h1 { font-size: 2em; }
+  }
+</style>
