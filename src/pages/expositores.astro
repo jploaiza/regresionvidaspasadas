@@ -1,0 +1,277 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const allPosts = await getCollection('blog');
+
+const EXPOSITORES = [
+  {
+    slug: 'brian-weiss',
+    nombre: 'Brian Weiss',
+    periodo: '1944 –',
+    disciplina: 'Psiquiatría · Regresión clínica',
+    descripcion: 'Psiquiatra de Yale y Mount Sinai. Su caso con la paciente Catherine —documentado en "Muchas Vidas, Muchos Maestros" (1988)— convirtió la regresión terapéutica en un fenómeno mundial.',
+    libro: 'Muchas Vidas, Muchos Maestros (1988)',
+  },
+  {
+    slug: 'michael-newton',
+    nombre: 'Michael Newton',
+    periodo: '1931 – 2016',
+    disciplina: 'Hipnoterapia · Vida entre Vidas',
+    descripcion: 'Psicólogo clínico y maestro hipnoterapeuta. Desarrolló la Life Between Lives (LBL): el estudio sistemático de lo que el alma experimenta entre una encarnación y la siguiente.',
+    libro: 'Journey of Souls (1994)',
+  },
+  {
+    slug: 'dolores-cannon',
+    nombre: 'Dolores Cannon',
+    periodo: '1931 – 2014',
+    disciplina: 'Hipnoterapia · QHHT',
+    descripcion: 'Hipnoterapeuta autodidacta que creó el Quantum Healing Hypnosis Technique (QHHT). Autora de más de 20 libros y fundadora de Ozark Mountain Publishing.',
+    libro: 'The Convoluted Universe (2001–2012)',
+  },
+  {
+    slug: 'roger-woolger',
+    nombre: 'Roger Woolger',
+    periodo: '1944 – 2011',
+    disciplina: 'Psicología junguiana · Deep Memory Process',
+    descripcion: 'Analista junguiano de Oxford. Integró la psicología profunda de Jung con la regresión, creando el Deep Memory Process y el marco teórico más riguroso del campo.',
+    libro: 'Other Lives, Other Selves (1987)',
+  },
+  {
+    slug: 'ian-stevenson',
+    nombre: 'Ian Stevenson',
+    periodo: '1918 – 2007',
+    disciplina: 'Psiquiatría · Investigación científica',
+    descripcion: 'Psiquiatra de la Universidad de Virginia. Investigó durante 40 años más de 3.000 casos de niños con recuerdos espontáneos de vidas pasadas. La evidencia más sólida y verificable del campo.',
+    libro: 'Veinte Casos Sugestivos de Reencarnación (1966)',
+  },
+  {
+    slug: 'helen-wambach',
+    nombre: 'Helen Wambach',
+    periodo: '1925 – 1986',
+    disciplina: 'Psicología clínica · Investigación estadística',
+    descripcion: 'Psicóloga clínica. Condujo sesiones de hipnosis grupal con más de 1.000 sujetos y analizó estadísticamente los patrones de sus regresiones. Única investigadora del campo que comenzó desde el escepticismo explícito.',
+    libro: 'Reliving Past Lives (1978)',
+  },
+];
+
+function getArticulosPorExpositor(slug: string) {
+  return allPosts
+    .filter(p => p.data.expositor === slug)
+    .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+}
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead
+      title="Expositores de la Regresión a Vidas Pasadas"
+      description="Los seis investigadores y terapeutas más influyentes en el campo de la regresión a vidas pasadas: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson y Helen Wambach."
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="page-wrap">
+      <div class="page-header">
+        <span class="ornament">✦</span>
+        <h1>Grandes Expositores</h1>
+        <p class="page-desc">
+          Los investigadores, terapeutas y académicos que definieron el campo de la
+          regresión a vidas pasadas. Sus metodologías y sus obras son el fundamento
+          de lo que hoy entendemos sobre este proceso.
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      {EXPOSITORES.map(exp => {
+        const articulos = getArticulosPorExpositor(exp.slug);
+        return (
+          <section class="expositor-section">
+            <div class="expositor-header">
+              <div class="expositor-meta">
+                <span class="expositor-periodo">{exp.periodo}</span>
+                <span class="expositor-disciplina">{exp.disciplina}</span>
+              </div>
+              <h2 class="expositor-nombre">{exp.nombre}</h2>
+              <p class="expositor-desc">{exp.descripcion}</p>
+              <p class="expositor-libro">
+                <span class="libro-label">Obra principal:</span> {exp.libro}
+              </p>
+            </div>
+
+            {articulos.length > 0 && (
+              <ul class="articulos-grid">
+                {articulos.map(art => (
+                  <li>
+                    <a href={`/blog/${art.id}/`} class="articulo-card">
+                      <span class="art-title">{art.data.title}</span>
+                      <span class="art-arrow">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        );
+      })}
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5em 4em;
+  }
+
+  .page-header {
+    text-align: center;
+    padding: 3em 0 2em;
+  }
+
+  .ornament {
+    display: block;
+    color: #D4AF6A;
+    font-size: 0.9em;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+  }
+
+  .page-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+  }
+
+  .page-desc {
+    max-width: 560px;
+    margin: 0 auto 1.5em;
+    color: #7A6840;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF6A, transparent);
+    margin: 0 auto;
+  }
+
+  .expositor-section {
+    margin-top: 3.5em;
+    padding-top: 3em;
+    border-top: 1px solid rgba(184, 149, 42, 0.15);
+  }
+
+  .expositor-header {
+    margin-bottom: 1.75em;
+  }
+
+  .expositor-meta {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  .expositor-periodo,
+  .expositor-disciplina {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68em;
+    letter-spacing: 0.12em;
+    color: #A89060;
+    text-transform: uppercase;
+  }
+
+  .expositor-disciplina::before {
+    content: '·';
+    margin-right: 1em;
+    color: #D4C090;
+  }
+
+  .expositor-nombre {
+    font-family: 'Cinzel', serif;
+    font-size: 1.85em;
+    font-weight: 400;
+    color: #2C1F0E;
+    margin-bottom: 0.6em;
+    line-height: 1.2;
+  }
+
+  .expositor-desc {
+    color: #5A4830;
+    line-height: 1.7;
+    margin-bottom: 0.75em;
+    font-size: 0.97em;
+  }
+
+  .expositor-libro {
+    font-size: 0.85em;
+    color: #8B6914;
+    font-style: italic;
+  }
+
+  .libro-label {
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    letter-spacing: 0.06em;
+    color: #A89060;
+    margin-right: 0.35em;
+  }
+
+  .articulos-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+
+  .articulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5em;
+    padding: 0.75em 1em;
+    background: #F5EFE0;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .articulo-card:hover {
+    border-color: rgba(184, 149, 42, 0.3);
+    background: #EDE5D0;
+  }
+
+  .art-title {
+    font-size: 0.85em;
+    color: #2C1F0E;
+    line-height: 1.4;
+  }
+
+  .art-arrow {
+    color: #B8952A;
+    flex-shrink: 0;
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 600px) {
+    .articulos-grid {
+      grid-template-columns: 1fr;
+    }
+    .page-header h1 { font-size: 1.8em; }
+    .expositor-nombre { font-size: 1.5em; }
+  }
+</style>
