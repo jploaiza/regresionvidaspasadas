@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import headerImg from '../assets/blog/hipnosis-ojo-mistico.jpg';
 
 const allPosts = await getCollection('blog');
 
@@ -21,18 +23,17 @@ const ARTICULOS_HIPNOSIS = allPosts
   </head>
   <body>
     <Header />
-    <main class="page-wrap">
-      <div class="page-header">
+
+    <div class="page-hero">
+      <Image src={headerImg} alt="Hipnosis clínica y estados alterados de conciencia" width={1200} height={320} class="hero-img" />
+      <div class="hero-overlay">
         <span class="ornament">✦</span>
         <h1>Hipnosis</h1>
-        <p class="page-desc">
-          La hipnosis no es sueño, no es control mental y no comenzó con Mesmer.
-          Es uno de los fenómenos más malentendidos — y más poderosos — de la psicología.
-          Una guía completa desde sus orígenes ancestrales hasta la práctica clínica actual.
-        </p>
-        <div class="divider"></div>
+        <p>No es sueño, no es control mental y no comenzó con Mesmer. Una guía completa desde los orígenes ancestrales hasta la práctica clínica actual.</p>
       </div>
+    </div>
 
+    <main class="page-wrap">
       <div class="intro-grid">
         <div class="intro-card">
           <span class="intro-icon">🌀</span>
@@ -82,15 +83,60 @@ const ARTICULOS_HIPNOSIS = allPosts
 </html>
 
 <style>
+  .page-hero {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    filter: sepia(10%) brightness(0.65) hue-rotate(190deg);
+    display: block;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    background: linear-gradient(to bottom, rgba(44,31,14,0.2) 0%, rgba(44,31,14,0.6) 100%);
+  }
+
+  .hero-overlay .ornament {
+    color: #4A6B8A;
+    font-size: 0.85em;
+    letter-spacing: 0.5em;
+    margin-bottom: 0.75em;
+  }
+
+  .hero-overlay h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+    font-weight: 400;
+    color: #FDFAF4;
+    margin-bottom: 0.4em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .hero-overlay p {
+    color: #EDE5D0;
+    font-size: 0.95em;
+    max-width: 520px;
+    line-height: 1.65;
+  }
+
   .page-wrap {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 1.5em 4em;
-  }
-
-  .page-header {
-    text-align: center;
-    padding: 3em 0 2em;
+    padding: 2.5em 1.5em 4em;
   }
 
   .ornament {
@@ -99,22 +145,6 @@ const ARTICULOS_HIPNOSIS = allPosts
     font-size: 0.9em;
     letter-spacing: 0.4em;
     margin-bottom: 1em;
-  }
-
-  .page-header h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.8em;
-    font-weight: 400;
-    color: #2C1F0E;
-    margin-bottom: 0.6em;
-  }
-
-  .page-desc {
-    max-width: 560px;
-    margin: 0 auto 1.5em;
-    color: #7A6840;
-    font-size: 1.05em;
-    line-height: 1.7;
   }
 
   .divider {
