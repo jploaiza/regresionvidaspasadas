@@ -3,81 +3,117 @@ const today = new Date();
 ---
 
 <footer>
+	<div class="footer-ornament">✦</div>
 	<div class="footer-cta">
-		<p class="cta-label">¿Listo para comenzar tu proceso?</p>
+		<p class="cta-eyebrow">¿Listo para comenzar?</p>
+		<h3>Agenda una sesión con Juan Pablo</h3>
+		<p class="cta-desc">Terapeuta de Regresión a Vidas Pasadas con años de experiencia acompañando procesos de sanación profunda.</p>
 		<a href="https://www.juanpabloloaiza.com/agenda" target="_blank" rel="noopener" class="cta-btn">
-			Agenda una sesión con Juan Pablo →
+			Reservar mi sesión →
 		</a>
 	</div>
 	<div class="footer-bottom">
-		<p>
-			© {today.getFullYear()} <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>
-			· Terapeuta de Regresión a Vidas Pasadas
-		</p>
-		<p class="footer-links">
+		<div class="footer-links">
 			<a href="/">Inicio</a>
 			<span>·</span>
 			<a href="/blog">Artículos</a>
 			<span>·</span>
 			<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">juanpabloloaiza.com</a>
-		</p>
+		</div>
+		<p class="footer-copy">© {today.getFullYear()} Juan Pablo Loaiza · Todos los derechos reservados</p>
 	</div>
 </footer>
 
 <style>
 	footer {
-		border-top: 1px solid rgba(197, 160, 89, 0.15);
+		border-top: 1px solid rgba(184, 149, 42, 0.15);
 		margin-top: 4em;
 	}
 
-	.footer-cta {
-		background: linear-gradient(135deg, #0a1628, #0f1e35);
-		padding: 3em 1.5em;
+	.footer-ornament {
 		text-align: center;
+		color: #D4AF6A;
+		font-size: 1.2em;
+		padding: 1.5em 0 0;
+		letter-spacing: 0.5em;
 	}
 
-	.cta-label {
+	.footer-cta {
+		background: #F5EFE0;
+		padding: 3em 2em 3.5em;
+		text-align: center;
+		border-top: 1px solid rgba(184,149,42,0.12);
+		border-bottom: 1px solid rgba(184,149,42,0.12);
+		margin-top: 1em;
+	}
+
+	.cta-eyebrow {
 		font-family: 'Cinzel', serif;
-		font-size: 1.1em;
-		color: #e2d5bb;
-		margin-bottom: 1em;
+		font-size: 0.7em;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #A89060;
+		margin-bottom: 0.5em;
+	}
+
+	.footer-cta h3 {
+		font-family: 'Cinzel', serif;
+		font-size: 1.4em;
+		font-weight: 400;
+		color: #2C1F0E;
+		margin-bottom: 0.75em;
+	}
+
+	.cta-desc {
+		color: #7A6840;
+		font-size: 0.9em;
+		max-width: 480px;
+		margin: 0 auto 1.75em;
+		line-height: 1.6;
 	}
 
 	.cta-btn {
 		display: inline-block;
-		background: #C5A059;
-		color: #020617;
+		background: #B8952A;
+		color: #fff;
 		font-family: 'Cinzel', serif;
-		font-weight: 700;
-		padding: 0.75em 2em;
-		border-radius: 6px;
+		font-size: 0.82em;
+		font-weight: 500;
+		padding: 0.8em 2.25em;
+		border-radius: 4px;
 		text-decoration: none;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.08em;
 		transition: background 0.2s;
 	}
 
 	.cta-btn:hover {
-		background: #d4b577;
+		background: #8B6914;
 		text-decoration: none;
 	}
 
 	.footer-bottom {
-		background: #020617;
-		padding: 1.5em 1.5em 2em;
+		background: #FDFAF4;
+		padding: 1.5em 1.5em 2.5em;
 		text-align: center;
-		color: #4a5a72;
-		font-size: 0.85em;
+		color: #A89060;
+		font-size: 0.82em;
 	}
 
-	.footer-bottom p { margin: 0.25em 0; }
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		gap: 0.75em;
+		margin-bottom: 0.5em;
+	}
 
-	.footer-bottom a {
-		color: #6a7a92;
+	.footer-links a {
+		color: #A89060;
 		text-decoration: none;
 	}
 
-	.footer-bottom a:hover { color: #C5A059; }
+	.footer-links a:hover { color: #8B6914; }
 
-	.footer-links { display: flex; justify-content: center; gap: 0.75em; margin-top: 0.5em; }
-	.footer-links span { color: #2a3a52; }
+	.footer-links span { color: #D4C090; }
+
+	.footer-copy { margin: 0; color: #C0A870; }
 </style>

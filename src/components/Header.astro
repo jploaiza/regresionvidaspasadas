@@ -5,8 +5,8 @@ import HeaderLink from './HeaderLink.astro';
 <header>
 	<nav>
 		<a href="/" class="site-logo">
-			<span class="logo-main">Regresión a</span>
-			<span class="logo-accent">Vidas Pasadas</span>
+			<span class="logo-eyebrow">Portal de conocimiento</span>
+			<span class="logo-title">Regresión a Vidas Pasadas</span>
 		</a>
 		<div class="nav-links">
 			<HeaderLink href="/">Inicio</HeaderLink>
@@ -16,18 +16,16 @@ import HeaderLink from './HeaderLink.astro';
 			</a>
 		</div>
 	</nav>
+	<div class="header-line"></div>
 </header>
 
 <style>
 	header {
-		margin: 0;
-		padding: 0 1.5em;
-		background: rgba(2, 6, 23, 0.95);
-		border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+		background: #FDFAF4;
+		border-bottom: 1px solid rgba(184, 149, 42, 0.15);
 		position: sticky;
 		top: 0;
 		z-index: 100;
-		backdrop-filter: blur(8px);
 	}
 
 	nav {
@@ -36,76 +34,81 @@ import HeaderLink from './HeaderLink.astro';
 		justify-content: space-between;
 		max-width: 960px;
 		margin: 0 auto;
-		height: 64px;
+		padding: 0 1.5em;
+		height: 68px;
 	}
 
 	.site-logo {
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
-		line-height: 1.1;
+		line-height: 1.15;
 	}
 
-	.logo-main {
+	.logo-eyebrow {
 		font-family: 'Cinzel', serif;
-		font-size: 0.75em;
-		color: #8a9ab5;
-		letter-spacing: 0.1em;
+		font-size: 0.6em;
+		letter-spacing: 0.18em;
 		text-transform: uppercase;
+		color: #A89060;
 	}
 
-	.logo-accent {
+	.logo-title {
 		font-family: 'Cinzel', serif;
-		font-size: 1em;
-		font-weight: 700;
-		color: #C5A059;
-		letter-spacing: 0.05em;
+		font-size: 0.95em;
+		font-weight: 500;
+		color: #8B6914;
+		letter-spacing: 0.04em;
 	}
 
 	.nav-links {
 		display: flex;
 		align-items: center;
-		gap: 0.5em;
+		gap: 0.25em;
 	}
 
 	.nav-links :global(a) {
-		padding: 0.4em 0.8em;
-		color: #8a9ab5;
-		text-decoration: none;
+		padding: 0.4em 0.85em;
+		color: #7A6840;
 		font-family: 'Cinzel', serif;
-		font-size: 0.8em;
-		letter-spacing: 0.05em;
+		font-size: 0.75em;
+		letter-spacing: 0.06em;
+		text-decoration: none;
 		border-bottom: 2px solid transparent;
 		transition: color 0.2s;
 	}
 
 	.nav-links :global(a:hover),
 	.nav-links :global(a.active) {
-		color: #e2d5bb;
-		border-bottom-color: #C5A059;
+		color: #2C1F0E;
+		border-bottom-color: #B8952A;
+		text-decoration: none;
 	}
 
 	.nav-cta {
-		margin-left: 0.5em;
-		padding: 0.5em 1.2em !important;
-		background: #C5A059 !important;
-		color: #020617 !important;
-		border-radius: 5px;
-		font-weight: 700 !important;
+		margin-left: 0.75em;
+		padding: 0.5em 1.25em !important;
+		background: #B8952A !important;
+		color: #fff !important;
+		border-radius: 4px;
+		font-weight: 500 !important;
 		border-bottom: none !important;
+		letter-spacing: 0.06em;
+		transition: background 0.2s !important;
 	}
 
 	.nav-cta:hover {
-		background: #d4b577 !important;
-		color: #020617 !important;
+		background: #8B6914 !important;
+		color: #fff !important;
+	}
+
+	.header-line {
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(184,149,42,0.3) 30%, rgba(184,149,42,0.3) 70%, transparent);
 	}
 
 	@media (max-width: 600px) {
-		.nav-links :global(a:not(.nav-cta)) {
-			display: none;
-		}
-		.nav-cta {
-			display: block !important;
-		}
+		.nav-links :global(a:not(.nav-cta)) { display: none; }
+		.logo-eyebrow { display: none; }
 	}
 </style>

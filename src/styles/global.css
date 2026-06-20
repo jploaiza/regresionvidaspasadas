@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-	--accent: #C5A059;
-	--accent-dark: #9a7a3f;
-	--bg: #020617;
-	--bg-secondary: #0a1628;
-	--text: #e2d5bb;
-	--text-muted: #8a9ab5;
-	--border: rgba(197, 160, 89, 0.2);
-	--box-shadow:
-		0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+	--bg:           #FDFAF4;
+	--bg-secondary: #F5EFE0;
+	--bg-card:      #FAF6ED;
+	--accent:       #B8952A;
+	--accent-light: #D4AF6A;
+	--accent-dark:  #8B6914;
+	--text:         #2C1F0E;
+	--text-muted:   #7A6840;
+	--text-light:   #A89060;
+	--border:       rgba(184, 149, 42, 0.22);
+	--border-light: rgba(184, 149, 42, 0.10);
+	--shadow:       0 2px 12px rgba(139, 105, 20, 0.08), 0 8px 32px rgba(139, 105, 20, 0.05);
 }
 
 body {
 	font-family: 'Crimson Text', Georgia, serif;
 	margin: 0;
 	padding: 0;
-	text-align: left;
 	background-color: var(--bg);
+	color: var(--text);
+	font-size: 21px;
+	line-height: 1.8;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: var(--text);
-	font-size: 20px;
-	line-height: 1.75;
 }
 
 main {
@@ -33,29 +35,31 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5rem 0;
+	margin: 0 0 0.6rem 0;
 	font-family: 'Cinzel', serif;
+	font-weight: 400;
 	color: var(--text);
-	line-height: 1.2;
-	letter-spacing: 0.02em;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
 }
 
-h1 { font-size: 2.8em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.3em; }
-h5 { font-size: 1.1em; }
+h1 { font-size: 2.6em; }
+h2 { font-size: 1.9em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.05em; }
 
 strong, b { font-weight: 600; }
 
 a {
-	color: var(--accent);
+	color: var(--accent-dark);
 	text-decoration: none;
 }
 
 a:hover {
-	color: #d4b577;
+	color: var(--accent);
 	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 p { margin-bottom: 1em; }
@@ -63,33 +67,35 @@ p { margin-bottom: 1em; }
 .prose p { margin-bottom: 1.5em; }
 
 textarea { width: 100%; font-size: 16px; }
-input { font-size: 16px; }
-table { width: 100%; }
+input    { font-size: 16px; }
+table    { width: 100%; }
 
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
+	border-radius: 6px;
 }
 
 code {
-	padding: 2px 5px;
+	padding: 2px 6px;
 	background-color: var(--bg-secondary);
-	border-radius: 2px;
-	font-size: 0.85em;
+	border-radius: 3px;
+	font-size: 0.82em;
+	color: var(--accent-dark);
 }
 
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
 	background-color: var(--bg-secondary);
+	border: 1px solid var(--border);
 }
 
 pre > code { all: unset; }
 
 blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0.5em 0 0.5em 1.5em;
+	border-left: 3px solid var(--accent-light);
+	padding: 0.75em 0 0.75em 1.5em;
 	margin: 1.5em 0;
 	font-size: 1.15em;
 	color: var(--text-muted);
@@ -99,12 +105,13 @@ blockquote {
 hr {
 	border: none;
 	border-top: 1px solid var(--border);
-	margin: 2em 0;
+	margin: 2.5em auto;
+	width: 60%;
 }
 
 @media (max-width: 720px) {
-	body { font-size: 18px; }
-	main { padding: 1em; }
+	body { font-size: 19px; }
+	main { padding: 1.5em 1em; }
 }
 
 .sr-only {
@@ -120,42 +127,44 @@ hr {
 	white-space: nowrap;
 }
 
-/* CTA Banner */
+/* CTA Banner — light version */
 .cta-banner {
-	background: linear-gradient(135deg, var(--bg-secondary), #0f1e35);
+	background: var(--bg-secondary);
 	border: 1px solid var(--border);
-	border-radius: 12px;
-	padding: 2em;
+	border-radius: 10px;
+	padding: 2.5em 2em;
 	text-align: center;
-	margin: 3em 0 1em;
+	margin: 3.5em 0 1em;
 }
 
 .cta-banner h3 {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	margin-bottom: 0.5em;
-	color: var(--accent);
+	color: var(--accent-dark);
+	font-weight: 400;
 }
 
 .cta-banner p {
 	color: var(--text-muted);
 	margin-bottom: 1.5em;
-	font-size: 1em;
+	font-size: 0.95em;
 }
 
 .cta-btn {
 	display: inline-block;
 	background: var(--accent);
-	color: var(--bg) !important;
+	color: #fff !important;
 	font-family: 'Cinzel', serif;
-	font-weight: 600;
-	padding: 0.75em 2em;
-	border-radius: 6px;
+	font-weight: 500;
+	font-size: 0.85em;
+	padding: 0.75em 2.25em;
+	border-radius: 4px;
 	text-decoration: none !important;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.08em;
 	transition: background 0.2s;
 }
 
 .cta-btn:hover {
-	background: #d4b577;
+	background: var(--accent-dark);
 	text-decoration: none !important;
 }
