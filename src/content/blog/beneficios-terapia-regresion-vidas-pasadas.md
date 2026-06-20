@@ -2,6 +2,7 @@
 title: 'Beneficios de la Terapia de Regresión a Vidas Pasadas'
 description: '¿Para qué sirve realmente la regresión? Descubre los principales beneficios terapéuticos que puede ofrecer este proceso a nivel emocional, mental y físico.'
 pubDate: '2024-10-20'
+heroImage: '../../assets/blog/beneficios-regresion.jpg'
 ---
 
 La terapia de regresión a vidas pasadas sigue siendo una de las modalidades más mal entendidas del trabajo terapéutico —en parte porque su nombre evoca inmediatamente preguntas filosóficas sobre la reencarnación, en parte porque requiere una apertura que no todo el mundo tiene al principio. Sin embargo, los beneficios que ofrece a quienes deciden intentarlo son documentados, concretos y, muchas veces, sorprendentemente rápidos.

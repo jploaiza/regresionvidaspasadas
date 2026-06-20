@@ -2,6 +2,7 @@
 title: '¿Qué es la Regresión a Vidas Pasadas?'
 description: 'Una guía completa para entender qué es la terapia de regresión a vidas pasadas, en qué se basa y qué puedes esperar de este proceso terapéutico.'
 pubDate: '2024-09-15'
+heroImage: '../../assets/blog/que-es-regresion.jpg'
 ---
 
 La regresión a vidas pasadas es una modalidad terapéutica que permite acceder a memorias o experiencias que el inconsciente guarda más allá de la vida presente. A través de un estado modificado de conciencia —similar a la hipnosis profunda o la meditación guiada— la persona puede explorar escenas, emociones y relaciones que resuenan con conflictos o patrones de su vida actual.

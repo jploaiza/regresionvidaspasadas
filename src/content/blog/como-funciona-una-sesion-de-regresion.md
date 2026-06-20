@@ -2,6 +2,7 @@
 title: '¿Cómo funciona una sesión de Regresión a Vidas Pasadas?'
 description: 'Paso a paso: qué pasa antes, durante y después de una sesión de regresión. Qué sentirás, qué verás y cómo se integra la experiencia.'
 pubDate: '2024-10-03'
+heroImage: '../../assets/blog/sesion-regresion.jpg'
 ---
 
 Una de las preguntas más frecuentes antes de hacer una primera sesión de regresión es: *¿qué exactamente va a pasar?* La incertidumbre es natural —y completamente válida. En este artículo describo el proceso tal como transcurre, para que llegues a tu sesión con información clara, sin expectativas distorsionadas y con disposición a recibir lo que necesitas sanar.
