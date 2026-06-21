@@ -15,8 +15,15 @@ const post = Astro.props;
 const wordCount = (post.body ?? '').split(/\s+/).filter((w: string) => w.length > 0).length;
 const readingTime = Math.max(1, Math.round(wordCount / 200));
 const { Content } = await render(post);
+
+// Related posts: same expositor, or fallback to recent posts, max 3
+const allPosts = await getCollection('blog');
+const related = allPosts
+	.filter(p => p.id !== post.id && p.data.expositor && p.data.expositor === post.data.expositor)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 3);
 ---
 
-<BlogPost {...post.data} readingTime={readingTime} postId={post.id}>
+<BlogPost {...post.data} readingTime={readingTime} postId={post.id} relatedPosts={related}>
 	<Content />
 </BlogPost>

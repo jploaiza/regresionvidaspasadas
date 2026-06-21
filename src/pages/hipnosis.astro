@@ -11,6 +11,36 @@ const allPosts = await getCollection('blog');
 const ARTICULOS_HIPNOSIS = allPosts
   .filter(p => p.data.expositor === 'hipnosis')
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+
+const SITEURL = 'https://www.regresionvidaspasadas.com';
+const HUB_URL = `${SITEURL}/hipnosis/`;
+
+const hipnosisSchema = JSON.stringify([
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${HUB_URL}#collectionpage`,
+    name: 'Hipnosis Clínica',
+    description: 'Portal temático sobre hipnosis clínica: historia, técnicas, mitos, Milton Erickson y su relación con la regresión terapéutica.',
+    url: HUB_URL,
+    inLanguage: 'es',
+    publisher: { '@id': `${SITEURL}/#organization` },
+    hasPart: ARTICULOS_HIPNOSIS.map(p => ({
+      '@type': 'Article',
+      '@id': `${SITEURL}/blog/${p.id}/#article`,
+      name: p.data.title,
+      url: `${SITEURL}/blog/${p.id}/`,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITEURL },
+      { '@type': 'ListItem', position: 2, name: 'Hipnosis', item: HUB_URL },
+    ],
+  },
+]);
 ---
 
 <!doctype html>
@@ -20,6 +50,7 @@ const ARTICULOS_HIPNOSIS = allPosts
       title="Hipnosis: qué es, su historia y cómo funciona"
       description="Todo sobre la hipnosis: sus orígenes chamánicos y con Mesmer, Milton Erickson y la hipnosis clínica moderna, la diferencia entre hipnosis de espectáculo y terapéutica, mitos, realidades y su relación con la regresión."
     />
+    <script type="application/ld+json" set:html={hipnosisSchema}></script>
   </head>
   <body>
     <Header />
