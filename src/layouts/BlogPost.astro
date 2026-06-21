@@ -253,19 +253,91 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 				font-size: 0.8em;
 			}
 
-			/* ——— Override global main to remove excess padding ——— */
-			main {
+			/* ——— Article 2-col layout ——— */
+			.article-layout {
+				display: grid;
+				grid-template-columns: 1fr 280px;
+				gap: 3em;
+				max-width: 1040px;
+				margin: 0 auto;
+				padding: 0 1.5em;
 				padding-top: 0;
+				align-items: start;
 			}
+
+			.article-body { min-width: 0; }
 
 			/* ——— Article body ——— */
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 2.5em 1em 3.5em;
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+				padding: 2.5em 0 3.5em;
 				color: var(--text, #2C1F0E);
 			}
+
+			/* ——— Sidebar ——— */
+			.article-sidebar { padding-top: 2em; }
+
+			.sidebar-block {
+				background: #F5EFE0;
+				border: 1px solid rgba(184,149,42,0.18);
+				border-radius: 6px;
+				padding: 1.25em;
+				margin-bottom: 1.5em;
+			}
+
+			.sidebar-heading {
+				font-family: 'Cinzel', serif;
+				font-size: 0.68em;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: #A89060;
+				margin: 0 0 1em;
+			}
+
+			.sidebar-post {
+				display: flex;
+				flex-direction: column;
+				gap: 0.25em;
+				padding: 0.75em 0;
+				border-top: 1px solid rgba(184,149,42,0.12);
+				text-decoration: none;
+				color: inherit;
+			}
+			.sidebar-post:first-of-type { border-top: none; padding-top: 0; }
+			.sidebar-post:hover .sidebar-post-title { color: #8B6914; }
+
+			.sidebar-post-title { font-family: 'Crimson Text', serif; font-size: 0.95em; font-weight: 600; color: #2C1F0E; line-height: 1.35; }
+
+			.sidebar-post-desc {
+				font-size: 0.78em;
+				color: #7A6840;
+				line-height: 1.45;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+			.sidebar-cta-label { display: block; font-family: 'Cinzel', serif; font-size: 0.65em; letter-spacing: 0.18em; text-transform: uppercase; color: #A89060; margin-bottom: 0.6em; }
+
+			.sidebar-cta-block p { font-size: 0.85em; color: #5A4830; line-height: 1.6; margin-bottom: 1em; }
+
+			.sidebar-cta-btn {
+				display: block;
+				font-family: 'Cinzel', serif;
+				font-size: 0.68em;
+				letter-spacing: 0.1em;
+				color: #B8952A;
+				text-decoration: none;
+				border: 1px solid rgba(184,149,42,0.4);
+				border-radius: 4px;
+				padding: 0.65em 1em;
+				text-align: center;
+				transition: background 0.2s, color 0.2s;
+			}
+			.sidebar-cta-btn:hover { background: #B8952A; color: #FDFAF4; }
 
 			.prose :global(h2) {
 				font-family: 'Cinzel', serif;
@@ -430,11 +502,18 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 				overflow: hidden;
 			}
 
+			@media (max-width: 900px) {
+				.article-layout {
+					grid-template-columns: 1fr;
+					padding: 0 1em;
+				}
+				.article-sidebar { padding-top: 0; }
+			}
+
 			@media (max-width: 600px) {
 				.article-hero { height: 380px; }
 				.article-hero h1 { font-size: 2em; }
 				.article-hero-desc { display: none; }
-				.related-grid { grid-template-columns: 1fr; }
 			}
 		</style>
 	</head>
@@ -480,8 +559,8 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 				</div>
 			</div>
 		</div>
-		<main>
-			<article>
+		<main class="article-layout">
+			<article class="article-body">
 				<div class="prose">
 					<slot />
 					<div class="author-card">
@@ -494,26 +573,31 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 					</div>
 				</div>
 			</article>
-			{relatedPosts && relatedPosts.length > 0 && (
-				<aside class="related-posts">
-					<div class="related-header">
-						<span class="related-ornament">✦</span>
-						<h2 class="related-title">Artículos relacionados</h2>
-					</div>
-					<ul class="related-grid">
-						{relatedPosts.map(p => (
-							<li class="related-card">
-								<a href={`/blog/${p.id}/`} class="related-link">
-									<span class="related-card-title">{p.data.title}</span>
+
+			<aside class="article-sidebar">
+				{relatedPosts && relatedPosts.length > 0 && (
+					<div class="sidebar-block">
+						<h2 class="sidebar-heading">Artículos relacionados</h2>
+						<nav>
+							{relatedPosts.map(p => (
+								<a href={`/blog/${p.id}/`} class="sidebar-post">
+									<span class="sidebar-post-title">{p.data.title}</span>
 									{p.data.description && (
-										<span class="related-card-desc">{p.data.description}</span>
+										<span class="sidebar-post-desc">{p.data.description}</span>
 									)}
 								</a>
-							</li>
-						))}
-					</ul>
-				</aside>
-			)}
+							))}
+						</nav>
+					</div>
+				)}
+				<div class="sidebar-block sidebar-cta-block">
+					<span class="sidebar-cta-label">Trabajo personal</span>
+					<p>Sesiones de regresión con un terapeuta certificado en RVP.</p>
+					<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="sidebar-cta-btn">
+						juanpabloloaiza.com →
+					</a>
+				</div>
+			</aside>
 		</main>
 		<Footer />
 	</body>

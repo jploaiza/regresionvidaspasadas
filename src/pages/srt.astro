@@ -112,290 +112,198 @@ const hubSchema = JSON.stringify([
     <Header />
 
     <div class="page-hero">
-      <Image src={headerImg} alt="Velas encendidas en oscuridad — Terapia de Liberación Espiritual" width={1200} height={320} class="hero-img" />
+      <Image src={headerImg} alt="Velas encendidas en oscuridad — Terapia de Liberación Espiritual" width={1200} height={420} class="hero-img" />
       <div class="hero-overlay">
-        <span class="ornament">✦</span>
+        <span class="hero-eyebrow">Disciplina · SRT</span>
         <h1>Terapia de Liberación Espiritual</h1>
-        <p>Trabaja con entidades que se adhieren al campo energético humano y las libera con compasión, no con combate. Documentada desde 1924.</p>
+        <p class="hero-desc">Trabaja con entidades que se adhieren al campo energético humano y las libera con compasión, no con combate. Documentada desde 1924.</p>
       </div>
     </div>
 
-    <main class="page-wrap">
+    <main class="hub-main">
 
-      <section class="temas-section">
-        <h2 class="section-title">Conceptos y fenómenos</h2>
-        <ul class="temas-grid">
+      <section class="cards-section">
+        <div class="section-eyebrow">
+          <span class="eyebrow-ornament">✦</span>
+          <span class="eyebrow-text">Referentes del campo</span>
+        </div>
+        <div class="cards-grid">
+          {EXPOSITORES_SRT.map(exp => {
+            const articulos = getArticulosPorExpositor(exp.slug);
+            const firstArt = articulos[0];
+            return (
+              <a href={firstArt ? `/blog/${firstArt.id}/` : '#'} class="hub-card">
+                <span class="card-initial">{exp.nombre[0]}</span>
+                <div class="card-body">
+                  <span class="card-role">{exp.rol} · {exp.periodo}</span>
+                  <h3 class="card-title">{exp.nombre}</h3>
+                  <p class="card-desc">{exp.descripcion}</p>
+                  <span class="card-cta">Ver artículos →</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <div class="section-eyebrow">
+          <span class="eyebrow-ornament">✦</span>
+          <span class="eyebrow-text">Conceptos y fenómenos</span>
+        </div>
+        <div class="cards-grid">
           {TEMAS_SRT.map(tema => {
             const art = getArticuloPorSlug(tema.slug);
             if (!art) return null;
             return (
-              <li>
-                <a href={`/blog/${art.id}/`} class="tema-card">
-                  <span class="tema-titulo">{tema.titulo}</span>
-                  <span class="tema-arrow">→</span>
-                </a>
-              </li>
+              <a href={`/blog/${art.id}/`} class="hub-card hub-card--tema">
+                <span class="card-symbol">✦</span>
+                <div class="card-body">
+                  <h3 class="card-title">{tema.titulo}</h3>
+                  {art.data.description && <p class="card-desc">{art.data.description}</p>}
+                  <span class="card-cta">Leer artículo →</span>
+                </div>
+              </a>
             );
           })}
-        </ul>
+        </div>
       </section>
 
-      <div class="section-divider"></div>
+      <div class="hub-cta">
+        <span class="hub-cta-label">¿Quieres trabajar con un terapeuta?</span>
+        <p>Conoce el trabajo de <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>, especialista en liberación espiritual y regresión.</p>
+        <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="hub-cta-btn">juanpabloloaiza.com →</a>
+      </div>
 
-      <h2 class="section-title">Los referentes del campo</h2>
-
-      {EXPOSITORES_SRT.map(exp => {
-        const articulos = getArticulosPorExpositor(exp.slug);
-        return (
-          <section class="expositor-section">
-            <div class="expositor-header">
-              <div class="expositor-meta">
-                <span class="expositor-periodo">{exp.periodo}</span>
-                <span class="expositor-rol">{exp.rol}</span>
-              </div>
-              <h3 class="expositor-nombre">{exp.nombre}</h3>
-              <p class="expositor-desc">{exp.descripcion}</p>
-              <p class="expositor-libro">
-                <span class="libro-label">Obra principal:</span> {exp.libro}
-              </p>
-            </div>
-
-            {articulos.length > 0 && (
-              <ul class="articulos-grid">
-                {articulos.map(art => (
-                  <li>
-                    <a href={`/blog/${art.id}/`} class="articulo-card">
-                      <span class="art-title">{art.data.title}</span>
-                      <span class="art-arrow">→</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        );
-      })}
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
-  .page-hero {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    filter: sepia(25%) brightness(0.55);
-    display: block;
-  }
-
+  /* ——— Hero ——— */
+  .page-hero { position: relative; width: 100%; height: 420px; overflow: hidden; }
+  .hero-img { width: 100%; height: 420px; object-fit: cover; filter: sepia(25%) brightness(0.50); display: block; border-radius: 0; }
   .hero-overlay {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 3em 2em;
     text-align: center;
-    padding: 2em;
-    background: linear-gradient(to bottom, rgba(44,10,10,0.25) 0%, rgba(44,10,10,0.65) 100%);
+    background: linear-gradient(to bottom, rgba(44,10,10,0.1) 0%, rgba(44,10,10,0.72) 100%);
   }
+  .hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.22em; text-transform: uppercase; color: #E08080; margin-bottom: 0.75em; }
+  .hero-overlay h1 { font-family: 'Cinzel', serif; font-size: 2.6em; font-weight: 400; color: #FDFAF4; margin-bottom: 0.4em; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+  .hero-desc { color: rgba(253,250,244,0.8); font-size: 0.95em; max-width: 540px; line-height: 1.65; margin: 0; }
 
-  .hero-overlay .ornament {
-    color: #E08080;
-    font-size: 0.85em;
-    letter-spacing: 0.5em;
-    margin-bottom: 0.75em;
-  }
+  /* ——— Main ——— */
+  .hub-main { max-width: 1080px; margin: 0 auto; padding: 4em 1.5em 5em; }
 
-  .hero-overlay h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5em;
-    font-weight: 400;
-    color: #FDFAF4;
-    margin-bottom: 0.4em;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  }
+  /* ——— Eyebrow ——— */
+  .section-eyebrow { display: flex; align-items: center; gap: 0.75em; margin-bottom: 1.5em; }
+  .eyebrow-ornament { color: #D4AF6A; font-size: 0.65em; }
+  .eyebrow-text { font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.22em; text-transform: uppercase; color: #A89060; }
 
-  .hero-overlay p {
-    color: #EDE5D0;
-    font-size: 0.9em;
-    max-width: 500px;
-    line-height: 1.65;
-  }
+  /* ——— Cards section ——— */
+  .cards-section { margin-bottom: 3.5em; }
 
-  .page-wrap {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2.5em 1.5em 4em;
-  }
-
-  .ornament {
-    display: block;
-    color: #8B3A3A;
-    font-size: 0.9em;
-    letter-spacing: 0.4em;
-    margin-bottom: 1em;
-  }
-
-  .divider {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #8B3A3A, transparent);
-    margin: 0 auto;
-  }
-
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75em;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #8B3A3A;
-    margin: 2.5em 0 1em;
-  }
-
-  .temas-section { margin-top: 2em; }
-
-  .temas-grid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .cards-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25em;
   }
 
-  .tema-card {
+  .hub-card {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.75em;
+    padding: 1.75em 1.5em;
+    background: #F5EFE0;
+    border: 1px solid rgba(184,149,42,0.15);
+    border-top: 3px solid #8B3A3A;
+    border-radius: 0 0 6px 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(44,10,10,0.1); }
+
+  .hub-card--tema { border-top-color: #B8952A; }
+  .hub-card--tema .card-cta { color: #B8952A; }
+
+  .card-initial {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(139,58,58,0.12);
+    border: 1px solid rgba(139,58,58,0.25);
+    color: #8B3A3A;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    display: flex;
     align-items: center;
-    gap: 0.5em;
-    padding: 0.85em 1.1em;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .card-symbol { font-size: 0.9em; color: #B8952A; }
+
+  .card-body { display: flex; flex-direction: column; gap: 0.4em; flex: 1; }
+
+  .card-role { font-family: 'Cinzel', serif; font-size: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; color: #8B3A3A; }
+
+  .card-title { font-family: 'Cinzel', serif; font-size: 0.88em; font-weight: 400; color: #2C1F0E; line-height: 1.3; margin: 0; }
+
+  .card-desc {
+    font-size: 0.82em;
+    color: #7A6840;
+    line-height: 1.6;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-cta { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.1em; color: #8B3A3A; margin-top: 0.5em; }
+
+  /* ——— Hub CTA ——— */
+  .hub-cta {
     background: #F5EFE0;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
+    border: 1px solid rgba(184,149,42,0.2);
+    border-radius: 8px;
+    padding: 2.5em 2em;
+    text-align: center;
+    margin-top: 2em;
   }
-
-  .tema-card:hover {
-    border-color: rgba(139, 58, 58, 0.3);
-    background: #EDE5D0;
-  }
-
-  .tema-titulo {
-    font-size: 0.9em;
-    color: #2C1F0E;
-    font-weight: 500;
-  }
-
-  .tema-arrow { color: #8B3A3A; font-size: 0.85em; flex-shrink: 0; }
-
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139,58,58,0.2), transparent);
-    margin: 3em 0;
-  }
-
-  .expositor-section {
-    margin-top: 3em;
-    padding-top: 2.5em;
-    border-top: 1px solid rgba(139, 58, 58, 0.1);
-  }
-
-  .expositor-meta {
-    display: flex;
-    gap: 1em;
-    margin-bottom: 0.5em;
-    flex-wrap: wrap;
-  }
-
-  .expositor-periodo,
-  .expositor-rol {
+  .hub-cta-label { display: block; font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.18em; text-transform: uppercase; color: #A89060; margin-bottom: 0.75em; }
+  .hub-cta p { font-size: 0.9em; color: #5A4830; line-height: 1.7; margin-bottom: 1.5em; }
+  .hub-cta a { color: #8B6914; text-decoration: none; }
+  .hub-cta a:hover { text-decoration: underline; }
+  .hub-cta-btn {
+    display: inline-block;
     font-family: 'Cinzel', serif;
-    font-size: 0.68em;
-    letter-spacing: 0.12em;
-    color: #8B3A3A;
+    font-size: 0.72em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    background: #B8952A;
+    color: #FDFAF4 !important;
+    text-decoration: none !important;
+    border-radius: 4px;
+    padding: 0.85em 2em;
+    transition: background 0.2s;
   }
+  .hub-cta-btn:hover { background: #9A7A20 !important; }
 
-  .expositor-rol::before {
-    content: '·';
-    margin-right: 1em;
-    color: #C08080;
+  @media (max-width: 860px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
   }
-
-  .expositor-nombre {
-    font-family: 'Cinzel', serif;
-    font-size: 1.6em;
-    font-weight: 400;
-    color: #2C1F0E;
-    margin-bottom: 0.5em;
-  }
-
-  .expositor-desc {
-    color: #5A4830;
-    line-height: 1.7;
-    margin-bottom: 0.75em;
-    font-size: 0.95em;
-  }
-
-  .expositor-libro {
-    font-size: 0.85em;
-    color: #8B3A3A;
-    font-style: italic;
-    margin-bottom: 1.25em;
-  }
-
-  .libro-label {
-    font-style: normal;
-    font-family: 'Cinzel', serif;
-    font-size: 0.85em;
-    letter-spacing: 0.06em;
-    color: #A06060;
-    margin-right: 0.35em;
-  }
-
-  .articulos-grid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5em;
-  }
-
-  .articulo-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.5em;
-    padding: 0.75em 1em;
-    background: #F5EFE0;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .articulo-card:hover {
-    border-color: rgba(139, 58, 58, 0.25);
-    background: #EDE5D0;
-  }
-
-  .art-title { font-size: 0.84em; color: #2C1F0E; line-height: 1.4; }
-  .art-arrow { color: #8B3A3A; flex-shrink: 0; font-size: 0.84em; }
-
-  @media (max-width: 600px) {
-    .temas-grid, .articulos-grid { grid-template-columns: 1fr; }
-    .page-header h1 { font-size: 1.8em; }
-    .expositor-nombre { font-size: 1.35em; }
+  @media (max-width: 560px) {
+    .hero-overlay h1 { font-size: 1.9em; }
+    .page-hero, .hero-img { height: 320px; }
+    .cards-grid { grid-template-columns: 1fr; }
   }
 </style>

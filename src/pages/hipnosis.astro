@@ -56,250 +56,148 @@ const hipnosisSchema = JSON.stringify([
     <Header />
 
     <div class="page-hero">
-      <Image src={headerImg} alt="Hipnosis clínica y estados alterados de conciencia" width={1200} height={320} class="hero-img" />
+      <Image src={headerImg} alt="Hipnosis clínica y estados alterados de conciencia" width={1200} height={420} class="hero-img" />
       <div class="hero-overlay">
-        <span class="ornament">✦</span>
-        <h1>Hipnosis</h1>
-        <p>No es sueño, no es control mental y no comenzó con Mesmer. Una guía completa desde los orígenes ancestrales hasta la práctica clínica actual.</p>
+        <span class="hero-eyebrow">Disciplina · Hipnosis</span>
+        <h1>Hipnosis Clínica</h1>
+        <p class="hero-desc">No es sueño, no es control mental y no comenzó con Mesmer. Una guía completa desde los orígenes ancestrales hasta la práctica clínica actual.</p>
       </div>
     </div>
 
-    <main class="page-wrap">
-      <div class="intro-grid">
-        <div class="intro-card">
-          <span class="intro-icon">🌀</span>
-          <h3>¿Qué es realmente?</h3>
-          <p>Un estado de atención focalizada y sugestibilidad aumentada. Sin pérdida de conciencia, sin sueño, sin pérdida de control.</p>
-        </div>
-        <div class="intro-card">
-          <span class="intro-icon">🥁</span>
-          <h3>Más antigua que Mesmer</h3>
-          <p>Los chamanes siberianos, los templos griegos de Asclepio y los sacerdotes egipcios usaban el trance curativo miles de años antes.</p>
-        </div>
-        <div class="intro-card">
-          <span class="intro-icon">🧠</span>
-          <h3>Medible en el cerebro</h3>
-          <p>La neuroimagen muestra cambios reales en la conectividad cerebral durante el trance. No es imaginación — es fisiología.</p>
-        </div>
-      </div>
+    <main class="hub-main">
 
-      <section class="articulos-section">
-        <h2 class="section-title">Artículos sobre hipnosis</h2>
-        <ul class="articulos-lista">
-          {ARTICULOS_HIPNOSIS.map(art => (
-            <li>
-              <a href={`/blog/${art.id}/`} class="articulo-card">
-                <div class="art-content">
-                  <span class="art-title">{art.data.title}</span>
-                  <span class="art-desc">{art.data.description}</span>
-                </div>
-                <span class="art-arrow">→</span>
-              </a>
-            </li>
+      <section class="cards-section">
+        <div class="section-eyebrow">
+          <span class="eyebrow-ornament">✦</span>
+          <span class="eyebrow-text">Artículos sobre hipnosis</span>
+        </div>
+        <div class="cards-grid">
+          {ARTICULOS_HIPNOSIS.map((art, i) => (
+            <a href={`/blog/${art.id}/`} class="hub-card">
+              <span class="card-num">0{i + 1}</span>
+              <div class="card-body">
+                <h3 class="card-title">{art.data.title}</h3>
+                {art.data.description && <p class="card-desc">{art.data.description}</p>}
+                <span class="card-cta">Leer artículo →</span>
+              </div>
+            </a>
           ))}
-        </ul>
+        </div>
       </section>
 
-      <div class="cta-section">
-        <p class="cta-text">
-          La hipnosis es la puerta de acceso a la regresión a vidas pasadas.
-          Si quieres saber más sobre cómo funciona el proceso completo,
-          visita la sección de <a href="/expositores">grandes expositores</a> o
-          <a href="/srt">Terapia de Liberación Espiritual</a>.
-        </p>
+      <div class="hub-cta">
+        <span class="hub-cta-label">¿Quieres explorar la hipnosis en profundidad?</span>
+        <p>La hipnosis es la base de la terapia de regresión. Conoce cómo trabaja el especialista <a href="/expositores">Juan Pablo Loaiza</a> o explora la <a href="/srt">Terapia de Liberación Espiritual</a>.</p>
+        <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="hub-cta-btn">juanpabloloaiza.com →</a>
       </div>
+
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
-  .page-hero {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    filter: sepia(10%) brightness(0.65) hue-rotate(190deg);
-    display: block;
-  }
-
+  /* ——— Hero ——— */
+  .page-hero { position: relative; width: 100%; height: 420px; overflow: hidden; }
+  .hero-img { width: 100%; height: 420px; object-fit: cover; filter: sepia(10%) brightness(0.60) hue-rotate(190deg); display: block; border-radius: 0; }
   .hero-overlay {
     position: absolute;
     inset: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 3em 2em;
     text-align: center;
-    padding: 2em;
-    background: linear-gradient(to bottom, rgba(44,31,14,0.2) 0%, rgba(44,31,14,0.6) 100%);
+    background: linear-gradient(to bottom, rgba(20,40,60,0.1) 0%, rgba(20,40,60,0.72) 100%);
   }
+  .hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.22em; text-transform: uppercase; color: #7AA8C8; margin-bottom: 0.75em; }
+  .hero-overlay h1 { font-family: 'Cinzel', serif; font-size: 2.6em; font-weight: 400; color: #FDFAF4; margin-bottom: 0.4em; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+  .hero-desc { color: rgba(253,250,244,0.8); font-size: 0.95em; max-width: 540px; line-height: 1.65; margin: 0; }
 
-  .hero-overlay .ornament {
-    color: #4A6B8A;
-    font-size: 0.85em;
-    letter-spacing: 0.5em;
-    margin-bottom: 0.75em;
-  }
+  /* ——— Main ——— */
+  .hub-main { max-width: 1080px; margin: 0 auto; padding: 4em 1.5em 5em; }
 
-  .hero-overlay h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
-    font-weight: 400;
-    color: #FDFAF4;
-    margin-bottom: 0.4em;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  }
+  /* ——— Eyebrow ——— */
+  .section-eyebrow { display: flex; align-items: center; gap: 0.75em; margin-bottom: 1.5em; }
+  .eyebrow-ornament { color: #D4AF6A; font-size: 0.65em; }
+  .eyebrow-text { font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.22em; text-transform: uppercase; color: #A89060; }
 
-  .hero-overlay p {
-    color: #EDE5D0;
-    font-size: 0.95em;
-    max-width: 520px;
-    line-height: 1.65;
-  }
+  /* ——— Cards ——— */
+  .cards-section { margin-bottom: 3.5em; }
 
-  .page-wrap {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2.5em 1.5em 4em;
-  }
-
-  .ornament {
-    display: block;
-    color: #4A6B8A;
-    font-size: 0.9em;
-    letter-spacing: 0.4em;
-    margin-bottom: 1em;
-  }
-
-  .divider {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #4A6B8A, transparent);
-    margin: 0 auto;
-  }
-
-  .intro-grid {
+  .cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
-    margin: 2.5em 0;
+    gap: 1.25em;
   }
 
-  .intro-card {
-    background: #F5EFE0;
-    border-radius: 8px;
-    padding: 1.25em 1em;
-    text-align: center;
-    border-top: 3px solid rgba(74, 107, 138, 0.25);
-  }
-
-  .intro-icon {
-    display: block;
-    font-size: 1.6em;
-    margin-bottom: 0.5em;
-  }
-
-  .intro-card h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75em;
-    letter-spacing: 0.08em;
-    color: #2C1F0E;
-    margin-bottom: 0.5em;
-  }
-
-  .intro-card p {
-    font-size: 0.85em;
-    color: #5A4830;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .section-title {
-    font-family: 'Cinzel', serif;
-    font-size: 0.75em;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #4A6B8A;
-    margin: 2.5em 0 1em;
-  }
-
-  .articulos-lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .hub-card {
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
-  }
-
-  .articulo-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-    padding: 1em 1.25em;
+    gap: 0.75em;
+    padding: 1.75em 1.5em;
     background: #F5EFE0;
-    border-radius: 6px;
+    border: 1px solid rgba(184,149,42,0.15);
+    border-top: 3px solid #4A6B8A;
+    border-radius: 0 0 6px 6px;
     text-decoration: none;
-    border: 1px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
+  .hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(20,40,60,0.1); }
 
-  .articulo-card:hover {
-    border-color: rgba(74, 107, 138, 0.3);
-    background: #EDE5D0;
-  }
+  .card-num { font-family: 'Cinzel', serif; font-size: 1.4em; color: rgba(74,107,138,0.3); line-height: 1; }
 
-  .art-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25em;
-  }
+  .card-body { display: flex; flex-direction: column; gap: 0.4em; flex: 1; }
 
-  .art-title {
-    font-size: 0.95em;
-    color: #2C1F0E;
-    font-weight: 500;
-  }
+  .card-title { font-family: 'Cinzel', serif; font-size: 0.88em; font-weight: 400; color: #2C1F0E; line-height: 1.3; margin: 0; }
 
-  .art-desc {
+  .card-desc {
     font-size: 0.82em;
     color: #7A6840;
-    line-height: 1.4;
+    line-height: 1.6;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  .art-arrow { color: #4A6B8A; flex-shrink: 0; }
+  .card-cta { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.1em; color: #4A6B8A; margin-top: 0.5em; }
 
-  .cta-section {
-    margin-top: 3em;
-    padding: 1.5em;
+  /* ——— Hub CTA ——— */
+  .hub-cta {
     background: #F5EFE0;
+    border: 1px solid rgba(184,149,42,0.2);
     border-radius: 8px;
-    border-left: 3px solid rgba(74, 107, 138, 0.35);
+    padding: 2.5em 2em;
+    text-align: center;
+    margin-top: 2em;
   }
-
-  .cta-text {
-    color: #5A4830;
-    line-height: 1.7;
-    margin: 0;
-    font-size: 0.95em;
+  .hub-cta-label { display: block; font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.18em; text-transform: uppercase; color: #A89060; margin-bottom: 0.75em; }
+  .hub-cta p { font-size: 0.9em; color: #5A4830; line-height: 1.7; margin-bottom: 1.5em; }
+  .hub-cta a { color: #4A6B8A; text-decoration: none; }
+  .hub-cta a:hover { text-decoration: underline; }
+  .hub-cta-btn {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #B8952A;
+    color: #FDFAF4 !important;
+    text-decoration: none !important;
+    border-radius: 4px;
+    padding: 0.85em 2em;
+    transition: background 0.2s;
   }
+  .hub-cta-btn:hover { background: #9A7A20 !important; }
 
-  .cta-text a {
-    color: #4A6B8A;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  @media (max-width: 600px) {
-    .intro-grid { grid-template-columns: 1fr; }
-    .page-header h1 { font-size: 2em; }
+  @media (max-width: 860px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) {
+    .hero-overlay h1 { font-size: 1.9em; }
+    .page-hero, .hero-img { height: 320px; }
+    .cards-grid { grid-template-columns: 1fr; }
   }
 </style>
