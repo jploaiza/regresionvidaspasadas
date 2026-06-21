@@ -3,77 +3,95 @@ const today = new Date();
 ---
 
 <footer>
-	<div class="footer-ornament">✦</div>
-	<div class="footer-author">
-		<p>Portal de conocimiento sobre regresión a vidas pasadas, hipnosis y liberación espiritual.</p>
-	</div>
-	<div class="footer-bottom">
-		<div class="footer-links">
-			<a href="/">Inicio</a>
-			<span>·</span>
+	<div class="footer-inner">
+		<div class="footer-logo">REGRESIÓN A VIDAS PASADAS</div>
+
+		<nav class="footer-links">
 			<a href="/blog">Artículos</a>
-			<span>·</span>
+			<a href="/expositores">Expositores</a>
+			<a href="/srt">SRT</a>
+			<a href="/hipnosis">Hipnosis</a>
 			<a href="/libros">Libros</a>
-			<span>·</span>
-			<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">juanpabloloaiza.com</a>
-		</div>
-		<p class="footer-copy">© {today.getFullYear()} regresionvidaspasadas.com</p>
+			<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="footer-link-highlight">juanpabloloaiza.com</a>
+		</nav>
+
+		<p class="footer-desc">
+			Portal de conocimiento independiente para la exploración de la consciencia transpersonal.
+			Investigación en regresión a vidas pasadas, hipnosis clínica y liberación espiritual.
+		</p>
+
+		<p class="footer-copy">© {today.getFullYear()} Regresión a Vidas Pasadas. Portal de conocimiento espiritual independiente.</p>
 	</div>
 </footer>
 
 <style>
 	footer {
-		border-top: 1px solid rgba(184, 149, 42, 0.15);
-		margin-top: 4em;
+		background: #F5EFE0;
+		border-top: 1px solid rgba(184, 149, 42, 0.3);
+		opacity: 0.95;
+		transition: opacity 0.3s;
 	}
 
-	.footer-ornament {
+	footer:hover { opacity: 1; }
+
+	.footer-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5em;
+		padding: 3.5em 2em;
 		text-align: center;
-		color: #D4AF6A;
-		font-size: 1.2em;
-		padding: 1.5em 0 0;
-		letter-spacing: 0.5em;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
-	.footer-author {
-		text-align: center;
-		padding: 1.25em 1.5em 0.5em;
-		font-size: 0.83em;
-		color: #A89060;
-	}
-
-	.footer-author a {
-		color: #8B6914;
-		text-decoration: none;
-	}
-
-	.footer-author a:hover {
-		text-decoration: underline;
-	}
-
-	.footer-bottom {
-		background: #FDFAF4;
-		padding: 1.5em 1.5em 2.5em;
-		text-align: center;
-		color: #A89060;
-		font-size: 0.82em;
+	.footer-logo {
+		font-family: 'Playfair Display', serif;
+		font-size: 1em;
+		font-weight: 700;
+		color: #B8952A;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 
 	.footer-links {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		gap: 0.75em;
-		margin-bottom: 0.5em;
+		gap: 0.5em 2em;
 	}
 
 	.footer-links a {
-		color: #A89060;
+		font-family: 'EB Garamond', serif;
+		font-size: 0.9em;
+		color: #7A6840;
 		text-decoration: none;
+		transition: color 0.2s;
 	}
 
-	.footer-links a:hover { color: #8B6914; }
+	.footer-links a:hover { color: #2C1F0E; text-decoration: none; }
 
-	.footer-links span { color: #D4C090; }
+	.footer-link-highlight {
+		color: #B8952A !important;
+		text-decoration: underline !important;
+	}
+	.footer-link-highlight:hover { color: #8B6914 !important; }
 
-	.footer-copy { margin: 0; color: #C0A870; }
+	.footer-desc {
+		font-family: 'EB Garamond', serif;
+		font-size: 0.78em;
+		color: #7A6840;
+		line-height: 1.65;
+		max-width: 540px;
+		margin: 0;
+		opacity: 0.7;
+	}
+
+	.footer-copy {
+		font-family: 'EB Garamond', serif;
+		font-size: 0.75em;
+		color: #2C1F0E;
+		opacity: 0.6;
+		margin: 0;
+	}
 </style>
