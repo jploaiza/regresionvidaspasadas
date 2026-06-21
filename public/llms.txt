@@ -1,0 +1,35 @@
+# Regresión a Vidas Pasadas
+
+> Portal editorial en español sobre terapia de regresión a vidas pasadas (RVP), hipnosis clínica y Terapia de Liberación Espiritual (SRT).
+
+## Sobre el sitio
+
+Regresión a Vidas Pasadas es un portal de conocimiento especializado en tres disciplinas terapéuticas:
+
+1. **Regresión a Vidas Pasadas (RVP)** — técnica terapéutica que utiliza la hipnosis para acceder a memorias de vidas anteriores y sanar patrones del presente.
+2. **Hipnosis clínica** — estado de atención focalizada y sugestibilidad aumentada, documentado neurocientíficamente, distinto del sueño y del control mental.
+3. **Terapia de Liberación Espiritual (SRT)** — protocolo terapéutico que trabaja con entidades o energías adheridas al campo humano, desde una perspectiva compasiva.
+
+El autor y editor es **Juan Pablo Loaiza**, terapeuta certificado de RVP con sede en Colombia.
+
+## Secciones principales
+
+- [Artículos](/blog) — 64+ artículos originales en español sobre RVP, SRT e hipnosis
+- [Expositores](/expositores) — Perfiles de investigadores: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson, Helen Wambach
+- [SRT](/srt) — Terapia de Liberación Espiritual: Carl Wickland, William Baldwin, Edith Fiore, Alan Sanderson; posesiones, entidades, exorcismo vs. SRT
+- [Hipnosis](/hipnosis) — Historia (Mesmer, chamanes, Erickson), mitos y realidades, hipnosis clínica vs. espectáculo
+- [Libros](/libros) — Biblioteca curada: regresión, SRT, hipnosis, espiritualidad (Chico Xavier, Kardec, Brian Weiss, etc.)
+- [Películas](/peliculas) — Películas y documentales: Nosso Lar, Cloud Atlas, Surviving Death, Unmistaken Child
+
+## Temas cubiertos
+
+regresión a vidas pasadas, terapia de regresión, hipnosis clínica, hipnosis ericksoniana, terapia de liberación espiritual, SRT, posesión espiritual, entidades, Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson, Helen Wambach, Carl Wickland, William Baldwin, Edith Fiore, Alan Sanderson, vida entre vidas, LBL, QHHT, reencarnación, vida después de la muerte, consciencia, alma, liberación de entidades
+
+## Idioma
+
+Español (Colombia / global)
+
+## Indexación
+
+Sitemap: https://www.regresionvidaspasadas.com/sitemap-index.xml
+RSS: https://www.regresionvidaspasadas.com/rss.xml
