@@ -4,6 +4,16 @@
 export const SITE_TITLE = 'Regresión a Vidas Pasadas';
 export const SITE_DESCRIPTION = 'Artículos y recursos sobre terapia de regresión a vidas pasadas. Conoce qué es, cómo funciona y sus beneficios.';
 
+// Slug del artículo destacado en la portada de /blog — editar aquí para cambiarlo
+export const FEATURED_SLUG = 'que-es-la-regresion-a-vidas-pasadas';
+
+// 3 artículos editorialmente seleccionados para la homepage
+export const EDITORIAL_PICKS = [
+  'beneficios-terapia-regresion-vidas-pasadas',
+  'srt-que-es',
+  'hipnosis-que-es-realmente',
+];
+
 export interface CategoryInfo {
   label: string;
   color: string;
