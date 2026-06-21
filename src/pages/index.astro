@@ -74,460 +74,781 @@ const featuredImg = featuredPost
 const recentPosts = allPosts
   .filter(p => p.id !== FEATURED_SLUG)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 8);
-
-const highlightPost = allPosts.find(p => p.id === EDITORIAL_PICKS[1]) ?? recentPosts[4];
+  .slice(0, 2);
 
 const topPosts = EDITORIAL_PICKS
   .map(s => allPosts.find(p => p.id === s))
   .filter((p): p is NonNullable<typeof p> => p != null)
   .slice(0, 4);
 
-const HUB_CARDS = [
-  {
-    roman: 'I',
-    color: '#B8952A',
-    title: 'Regresión a Vidas Pasadas',
-    desc: 'Seis investigadores, técnicas y el fundamento científico de la terapia de regresión.',
-    href: '/expositores',
-    cta: 'Ver investigadores',
-  },
-  {
-    roman: 'II',
-    color: '#8B3A3A',
-    title: 'Liberación Espiritual (SRT)',
-    desc: 'Trabajo con entidades y energías adheridas al campo humano. Documentado desde 1924.',
-    href: '/srt',
-    cta: 'Explorar SRT',
-  },
-  {
-    roman: 'III',
-    color: '#4A6B8A',
-    title: 'Hipnosis Clínica',
-    desc: 'Historia, neurociencia, mitos y aplicaciones terapéuticas de la hipnosis.',
-    href: '/hipnosis',
-    cta: 'Explorar hipnosis',
-  },
-  {
-    roman: 'IV',
-    color: '#6B4A3A',
-    title: 'Biblioteca',
-    desc: 'Libros y recursos editorialmente seleccionados del campo.',
-    href: '/libros',
-    cta: 'Ver biblioteca',
-  },
+const casePost = allPosts.find(p => p.id === EDITORIAL_PICKS[1]) ?? topPosts[1];
+
+const EXPEDIENTES = [
+  { icon: 'history_edu', title: 'Regresión a Vidas Pasadas', desc: 'Investigación sobre memorias transgeneracionales y la continuidad de la consciencia a través del tiempo.', href: '/expositores', cta: 'Ver investigadores' },
+  { icon: 'auto_awesome', title: 'Terapia de Liberación Espiritual', desc: 'Sistemas de limpieza energética y liberación de entidades adheridas al campo humano. Documentado desde 1924.', href: '/srt', cta: 'Explorar SRT' },
+  { icon: 'psychology', title: 'Hipnosis Clínica', desc: 'Técnicas de inducción al subconsciente aplicadas al bienestar terapéutico y resolución de traumas.', href: '/hipnosis', cta: 'Explorar hipnosis' },
+  { icon: 'menu_book', title: 'Biblioteca Editorial', desc: 'Libros esenciales: Brian Weiss, Michael Newton, Dolores Cannon, William Baldwin y más.', href: '/libros', cta: 'Ver biblioteca' },
 ];
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<SearchModal />
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      /* Material Symbols */
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-family: 'Material Symbols Outlined';
+        font-size: inherit;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <Header transparent={true} />
+    <SearchModal />
 
-		<!-- Hero full-width -->
-		<div class="hero-image-wrap">
-			<Image src={heroImg} alt="Meditación espiritual al amanecer" width={1200} height={480} class="hero-img" />
-			<div class="hero-image-overlay"></div>
-		</div>
+    <!-- ① HERO PANTALLA COMPLETA -->
+    <section class="home-hero">
+      <div class="home-hero-bg">
+        <Image src={heroImg} alt="Meditación espiritual al amanecer" width={1600} height={900} class="home-hero-img" loading="eager" />
+        <div class="home-hero-overlay"></div>
+      </div>
+      <div class="home-hero-content">
+        <div class="home-hero-badge">
+          <span class="home-hero-badge-text">Portada Editorial</span>
+        </div>
+        <h1 class="home-hero-title">La Memoria del Alma<br/>a través del Tiempo</h1>
+        <p class="home-hero-subtitle">
+          "Una exploración académica sobre la regresión, la hipnosis y la liberación espiritual en la consciencia contemporánea."
+        </p>
+        <div class="home-hero-cta">
+          <span class="home-hero-cta-label">Explorar el portal</span>
+          <span class="material-symbols-outlined home-hero-arrow">arrow_downward</span>
+        </div>
+      </div>
+    </section>
 
-		<main class="home-main">
+    <main class="home-main">
 
-			<!-- ① HERO text + CTAs -->
-			<section class="hero">
-				<div class="hero-ornament">✦ ✦ ✦</div>
-				<h1>Regresión a<br />Vidas Pasadas</h1>
-				<p class="hero-desc">
-					Un portal de conocimiento sobre la terapia de regresión, la hipnosis clínica
-					y la liberación espiritual. Investigadores, técnicas y fundamentos documentados.
-				</p>
-				<div class="hero-actions">
-					<a href="/blog" class="btn-primary">Explorar artículos</a>
-					<a href="/blog/que-es-la-regresion-a-vidas-pasadas/" class="btn-secondary">¿Qué es la regresión?</a>
-				</div>
-				<div class="hero-divider"></div>
-			</section>
+      <!-- Meta bar académica -->
+      <div class="home-meta-bar">
+        <span class="home-meta-left">Portal Independiente · Más de 60 artículos · Actualizado 2025</span>
+        <span class="home-meta-right">Investigación en RVP · SRT · Hipnosis Clínica</span>
+      </div>
 
-			<!-- ② ARCHIVO DESTACADO -->
-			{featuredPost && (
-				<section class="featured-section">
-					<div class="section-eyebrow">
-						<span class="eyebrow-ornament">✦</span>
-						<span class="eyebrow-text">Archivo destacado</span>
-					</div>
-					<a href={`/blog/${featuredPost.id}/`} class="featured-card">
-						<div class="featured-img-wrap">
-							<Image src={featuredImg} alt={featuredPost.data.title} width={640} height={400} class="featured-img" loading="eager" />
-							{featuredCat && (
-								<span class="featured-badge" style={`background:${featuredCat.color}`}>{featuredCat.label}</span>
-							)}
-						</div>
-						<div class="featured-body">
-							<h2 class="featured-title">{featuredPost.data.title}</h2>
-							<p class="featured-excerpt">{featuredPost.data.description}</p>
-							<span class="featured-cta">Continuar lectura →</span>
-						</div>
-					</a>
-				</section>
-			)}
+      <!-- Grid editorial: 8 columnas contenido + 4 columnas sidebar -->
+      <div class="home-grid">
 
-			<!-- ③ PUBLICACIONES RECIENTES (2 columnas) -->
-			{recentPosts.length > 0 && (
-				<section class="recents-section">
-					<div class="section-eyebrow">
-						<span class="eyebrow-ornament">✦</span>
-						<span class="eyebrow-text">Publicaciones recientes</span>
-					</div>
-					<div class="recents-grid">
-						{recentPosts.map(post => {
-							const cat = post.data.expositor ? CATEGORY[post.data.expositor] : undefined;
-							const img = getPostImage(post.id, post.data.heroImage, post.data.expositor);
-							return (
-								<a href={`/blog/${post.id}/`} class="recent-card">
-									<div class="recent-img-wrap">
-										<Image src={img} alt={post.data.title} width={360} height={200} class="recent-img" loading="lazy" />
-										{cat && <span class="recent-badge" style={`background:${cat.color}`}>{cat.label}</span>}
-									</div>
-									<h3 class="recent-title">{post.data.title}</h3>
-								</a>
-							);
-						})}
-					</div>
-				</section>
-			)}
+        <!-- Contenido principal -->
+        <div class="home-main-col">
 
-			<!-- ④ LECTURA ESENCIAL (highlight card oscuro) -->
-			{highlightPost && (
-				<section class="highlight-section">
-					<div class="highlight-card">
-						<span class="highlight-label">Lectura esencial</span>
-						<blockquote class="highlight-quote">"{highlightPost.data.description}"</blockquote>
-						<a href={`/blog/${highlightPost.id}/`} class="highlight-link">{highlightPost.data.title} →</a>
-					</div>
-				</section>
-			)}
+          <!-- ARTÍCULO DESTACADO -->
+          {featuredPost && (
+            <article class="featured-article">
+              <div class="featured-img-wrap">
+                <Image src={featuredImg} alt={featuredPost.data.title} width={640} height={640} class="featured-img" loading="eager" />
+              </div>
+              <div class="featured-body">
+                {featuredCat && (
+                  <span class="featured-cat" style={`color: ${featuredCat.color}`}>{featuredCat.label}</span>
+                )}
+                <h2 class="featured-title">
+                  <a href={`/blog/${featuredPost.id}/`}>{featuredPost.data.title}</a>
+                </h2>
+                <p class="featured-excerpt drop-cap">{featuredPost.data.description}</p>
+                <a class="featured-read-more" href={`/blog/${featuredPost.id}/`}>
+                  Continuar lectura <span class="material-symbols-outlined" style="font-size:0.9em">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+          )}
 
-			<!-- ⑤ LO ESENCIAL + CTA (2 columnas) -->
-			<section class="bottom-section">
-				<div class="mostread-col">
-					<div class="section-eyebrow">
-						<span class="eyebrow-ornament">✦</span>
-						<span class="eyebrow-text">Lo esencial</span>
-					</div>
-					<ol class="mostread-list">
-						{topPosts.map((post, i) => (
-							<li class="mostread-item">
-								<span class="mostread-num">0{i + 1}</span>
-								<a href={`/blog/${post.id}/`} class="mostread-link">{post.data.title}</a>
-							</li>
-						))}
-					</ol>
-				</div>
-				<div class="cta-col">
-					<div class="cta-card">
-						<span class="cta-label">Trabajo personal</span>
-						<p class="cta-text">
-							Si quieres explorar este proceso con un terapeuta especializado, conoce el trabajo de
-							Juan Pablo Loaiza, certificado en RVP.
-						</p>
-						<a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="cta-btn">
-							juanpabloloaiza.com →
-						</a>
-					</div>
-				</div>
-			</section>
+          <!-- ARTÍCULOS SECUNDARIOS (2 columnas) -->
+          <div class="secondary-grid">
+            {recentPosts[0] && (() => {
+              const cat = recentPosts[0].data.expositor ? CATEGORY[recentPosts[0].data.expositor] : undefined;
+              const img = getPostImage(recentPosts[0].id, recentPosts[0].data.heroImage, recentPosts[0].data.expositor);
+              return (
+                <article class="secondary-card">
+                  <div class="secondary-img-wrap">
+                    <Image src={img} alt={recentPosts[0].data.title} width={480} height={270} class="secondary-img" loading="lazy" />
+                  </div>
+                  <h3 class="secondary-title">
+                    <a href={`/blog/${recentPosts[0].id}/`}>{recentPosts[0].data.title}</a>
+                  </h3>
+                  <p class="secondary-desc">{recentPosts[0].data.description}</p>
+                  {cat && <span class="secondary-cat">{cat.label}</span>}
+                </article>
+              );
+            })()}
 
-			<!-- ⑥ DISCIPLINAS DEL PORTAL (4 columnas) -->
-			<section class="hubs-section">
-				<div class="section-eyebrow">
-					<span class="eyebrow-ornament">✦</span>
-					<span class="eyebrow-text">Disciplinas del portal</span>
-				</div>
-				<div class="hubs-grid">
-					{HUB_CARDS.map(h => (
-						<a href={h.href} class="hub-card" style={`--hub-color:${h.color}`}>
-							<span class="hub-roman">{h.roman}</span>
-							<h3 class="hub-title">{h.title}</h3>
-							<p class="hub-desc">{h.desc}</p>
-							<span class="hub-cta">{h.cta} →</span>
-						</a>
-					))}
-				</div>
-			</section>
+            {recentPosts[1] && (
+              <article class="secondary-card secondary-card--text">
+                <div class="secondary-icon-wrap">
+                  <span class="material-symbols-outlined secondary-icon">psychology</span>
+                </div>
+                <h3 class="secondary-title">
+                  <a href={`/blog/${recentPosts[1].id}/`}>{recentPosts[1].data.title}</a>
+                </h3>
+                <p class="secondary-desc">{recentPosts[1].data.description}</p>
+                <span class="secondary-cat-label">Artículo · Investigación</span>
+              </article>
+            )}
+          </div>
 
-		</main>
-		<Footer />
-	</body>
+          <!-- ESTUDIO DE CASO (beige, horizontal) -->
+          {casePost && (
+            <article class="case-card">
+              <div class="case-body">
+                <span class="case-label">Lectura esencial</span>
+                <h3 class="case-title">{casePost.data.title}</h3>
+                <p class="case-quote">"{casePost.data.description}"</p>
+              </div>
+              <a href={`/blog/${casePost.id}/`} class="case-btn">Ver artículo</a>
+            </article>
+          )}
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="home-sidebar">
+
+          <!-- Newsletter (decorativo) -->
+          <div class="sidebar-newsletter">
+            <div class="sidebar-newsletter-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <h4 class="sidebar-newsletter-title">Boletín de Investigación</h4>
+            <p class="sidebar-newsletter-desc">Reciba mensualmente los últimos hallazgos sobre RVP, SRT y estudios de la consciencia.</p>
+            <form class="sidebar-newsletter-form" onsubmit="return false;">
+              <input class="sidebar-newsletter-input" type="email" placeholder="Correo electrónico" />
+              <button class="sidebar-newsletter-btn" type="submit">Suscribirse al Portal</button>
+            </form>
+          </div>
+
+          <!-- Lo más leído -->
+          <div class="sidebar-mostread">
+            <h4 class="sidebar-section-title">Lo más leído</h4>
+            <ol class="sidebar-mostread-list">
+              {topPosts.map((post, i) => (
+                <li class="sidebar-mostread-item">
+                  <span class="sidebar-mostread-num">0{i + 1}</span>
+                  <a href={`/blog/${post.id}/`} class="sidebar-mostread-link">{post.data.title}</a>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <!-- CTA especialista (reemplaza "Podcast Editorial") -->
+          <div class="sidebar-cta-dark">
+            <span class="sidebar-cta-eyebrow">Trabajo personal</span>
+            <h4 class="sidebar-cta-title">Sesiones con un especialista</h4>
+            <p class="sidebar-cta-desc">Explora el proceso de regresión con un terapeuta certificado en RVP.</p>
+            <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="sidebar-cta-link">
+              juanpabloloaiza.com →
+            </a>
+          </div>
+
+        </aside>
+      </div>
+
+      <div class="home-ornament"></div>
+
+      <!-- EXPEDIENTES (4 cards grid) -->
+      <section class="expedientes-section">
+        <div class="expedientes-header">
+          <h2 class="expedientes-title">Disciplinas del Portal</h2>
+          <div class="expedientes-line"></div>
+        </div>
+        <div class="expedientes-grid">
+          {EXPEDIENTES.map(e => (
+            <a href={e.href} class="expediente-card">
+              <span class="material-symbols-outlined expediente-icon">{e.icon}</span>
+              <h5 class="expediente-title">{e.title}</h5>
+              <p class="expediente-desc">{e.desc}</p>
+              <span class="expediente-cta">{e.cta}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+    </main>
+    <Footer />
+  </body>
 </html>
 
 <style>
-	.home-main { max-width: 1080px; padding-top: 0; }
+  /* ——— Hero ——— */
+  .home-hero {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
-	/* ——— Hero image ——— */
-	.hero-image-wrap {
-		position: relative;
-		width: 100%;
-		height: 420px;
-		overflow: hidden;
-	}
+  .home-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
 
-	.hero-img {
-		width: 100%;
-		height: 420px;
-		object-fit: cover;
-		object-position: center 30%;
-		filter: sepia(20%) brightness(0.92) saturate(0.85);
-		border-radius: 0;
-	}
+  .home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
 
-	.hero-image-overlay {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(to bottom, rgba(253,250,244,0) 40%, rgba(253,250,244,0.97) 100%);
-	}
+  .home-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
 
-	/* ——— Hero text ——— */
-	.hero { text-align: center; padding: 2.5em 1em 2em; }
+  .home-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 0 2em;
+    text-align: center;
+    color: #fff;
+  }
 
-	.hero-ornament { color: #D4AF6A; letter-spacing: 0.6em; font-size: 0.7em; margin-bottom: 1.25em; }
+  .home-hero-badge {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    background: rgba(184,149,42,0.2);
+    border: 1px solid rgba(184,149,42,0.4);
+    border-radius: 100px;
+    margin-bottom: 2em;
+  }
 
-	.hero h1 { font-size: 3em; font-weight: 400; color: #2C1F0E; line-height: 1.15; margin-bottom: 0.6em; }
+  .home-hero-badge-text {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.52em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #D4AF6A;
+  }
 
-	.hero-desc { max-width: 520px; margin: 0 auto 1.75em; color: #7A6840; font-size: 1.05em; line-height: 1.7; }
+  .home-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5em, 6vw, 5.5em);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 1em;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+  }
 
-	.hero-actions { display: flex; gap: 1em; justify-content: center; flex-wrap: wrap; margin-bottom: 2.5em; }
+  .home-hero-subtitle {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(1em, 2.5vw, 1.5em);
+    font-style: italic;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2.5em;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+  }
 
-	.btn-primary {
-		font-family: 'Cinzel', serif;
-		font-size: 0.75em;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		padding: 0.85em 2em;
-		background: #B8952A;
-		color: #FDFAF4;
-		text-decoration: none;
-		border-radius: 4px;
-		transition: background 0.2s, transform 0.15s;
-	}
-	.btn-primary:hover { background: #9A7A20; transform: translateY(-1px); }
+  .home-hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
 
-	.btn-secondary {
-		font-family: 'Cinzel', serif;
-		font-size: 0.75em;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		padding: 0.85em 2em;
-		border: 1px solid rgba(184,149,42,0.5);
-		color: #8B6914;
-		text-decoration: none;
-		border-radius: 4px;
-		transition: border-color 0.2s, color 0.2s, background 0.2s;
-	}
-	.btn-secondary:hover { border-color: #B8952A; color: #2C1F0E; background: rgba(184,149,42,0.06); }
+  .home-hero-cta-label {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.6em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
 
-	.hero-divider { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #D4AF6A, transparent); margin: 0 auto; }
+  .home-hero-arrow {
+    font-size: 1.75em !important;
+    color: #D4AF6A;
+    animation: bounce 2s infinite;
+  }
 
-	/* ——— Shared eyebrow ——— */
-	.section-eyebrow { display: flex; align-items: center; gap: 0.75em; margin-bottom: 1.5em; }
-	.eyebrow-ornament { color: #D4AF6A; font-size: 0.65em; }
-	.eyebrow-text { font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.22em; text-transform: uppercase; color: #A89060; }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
 
-	/* ——— Shared section spacing ——— */
-	.featured-section,
-	.recents-section,
-	.highlight-section,
-	.bottom-section,
-	.hubs-section { padding: 0 1.5em; margin-top: 4em; }
+  /* ——— Main container ——— */
+  .home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 2em 5em;
+  }
 
-	/* ——— Featured article (Archivos históricos) ——— */
-	.featured-card {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		text-decoration: none;
-		color: inherit;
-		background: #F5EFE0;
-		border: 1px solid rgba(184,149,42,0.15);
-		border-radius: 8px;
-		overflow: hidden;
-		transition: box-shadow 0.2s, transform 0.2s;
-	}
-	.featured-card:hover { box-shadow: 0 8px 30px rgba(44,31,14,0.12); transform: translateY(-2px); }
+  /* ——— Meta bar ——— */
+  .home-meta-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(184,149,42,0.12);
+    padding-bottom: 1.25em;
+    margin-bottom: 4em;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
 
-	.featured-img-wrap { position: relative; overflow: hidden; aspect-ratio: 4/3; }
+  .home-meta-left,
+  .home-meta-right {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.52em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7A6840;
+  }
 
-	.featured-img { width: 100%; height: 100%; object-fit: cover; filter: sepia(10%) saturate(0.9); transition: transform 0.4s; }
-	.featured-card:hover .featured-img { transform: scale(1.04); }
+  /* ——— Grid editorial ——— */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 4em;
+    margin-bottom: 4em;
+  }
 
-	.featured-badge {
-		position: absolute;
-		top: 1em;
-		left: 1em;
-		font-family: 'Cinzel', serif;
-		font-size: 0.58em;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		padding: 0.3em 0.7em;
-		border-radius: 3px;
-		color: #fff;
-	}
+  .home-main-col { min-width: 0; }
 
-	.featured-body {
-		padding: 2.5em 2em;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 1em;
-	}
+  /* ——— Featured article ——— */
+  .featured-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5em;
+    align-items: start;
+    margin-bottom: 4em;
+  }
 
-	.featured-title { font-family: 'Crimson Text', serif; font-size: 1.75em; font-weight: 400; color: #2C1F0E; line-height: 1.25; margin: 0; }
-	.featured-excerpt { font-size: 0.9em; color: #7A6840; line-height: 1.7; margin: 0; }
-	.featured-cta { font-family: 'Cinzel', serif; font-size: 0.7em; letter-spacing: 0.1em; color: #B8952A; border-bottom: 1px solid rgba(184,149,42,0.4); display: inline-block; padding-bottom: 0.1em; }
+  .featured-img-wrap {
+    aspect-ratio: 1;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(44,31,14,0.12);
+    border: 1px solid rgba(184,149,42,0.12);
+  }
 
-	/* ——— Recent articles (2 cols) ——— */
-	.recents-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.5em;
-	}
+  .featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+  .featured-img:hover { opacity: 0.9; }
 
-	.recent-card {
-		display: flex;
-		flex-direction: column;
-		text-decoration: none;
-		color: inherit;
-		background: #F5EFE0;
-		border: 1px solid rgba(184,149,42,0.1);
-		border-radius: 6px;
-		overflow: hidden;
-		transition: transform 0.2s, box-shadow 0.2s;
-	}
-	.recent-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(44,31,14,0.1); }
+  .featured-body { display: flex; flex-direction: column; gap: 0.75em; }
 
-	.recent-img-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; }
-	.recent-img { width: 100%; height: 100%; object-fit: cover; filter: sepia(10%) saturate(0.88); transition: transform 0.3s; }
-	.recent-card:hover .recent-img { transform: scale(1.04); }
+  .featured-cat {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    display: block;
+  }
 
-	.recent-badge {
-		position: absolute;
-		bottom: 0.5em;
-		left: 0.5em;
-		font-family: 'Cinzel', serif;
-		font-size: 0.55em;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		padding: 0.25em 0.6em;
-		border-radius: 3px;
-		color: #fff;
-	}
+  .featured-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
 
-	.recent-title { font-family: 'Crimson Text', serif; font-size: 1em; font-weight: 600; color: #2C1F0E; line-height: 1.4; padding: 1em 1.1em 1.25em; margin: 0; }
-	.recent-card:hover .recent-title { color: #8B6914; }
+  .featured-title a { color: #2C1F0E; text-decoration: none; transition: color 0.2s; }
+  .featured-title a:hover { color: #B8952A; text-decoration: none; }
 
-	/* ——— Highlight (dark card) ——— */
-	.highlight-card {
-		background: #2C1F0E;
-		border-radius: 8px;
-		padding: 3em 3.5em;
-		text-align: center;
-	}
+  .featured-excerpt {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05em;
+    color: #2C1F0E;
+    line-height: 1.7;
+    margin: 0;
+  }
 
-	.highlight-label { display: block; font-family: 'Cinzel', serif; font-size: 0.65em; letter-spacing: 0.22em; text-transform: uppercase; color: #B8952A; margin-bottom: 1.5em; }
+  .drop-cap::first-letter {
+    float: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    line-height: 0.8;
+    padding: 0.1em 0.3em 0 0;
+    color: #B8952A;
+    font-weight: 900;
+  }
 
-	.highlight-quote {
-		font-family: 'Crimson Text', serif;
-		font-size: 1.5em;
-		font-style: italic;
-		color: #FDFAF4;
-		line-height: 1.55;
-		margin: 0 auto 2em;
-		max-width: 680px;
-	}
+  .featured-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.55em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #B8952A;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184,149,42,0.4);
+    padding-bottom: 0.1em;
+    transition: color 0.2s;
+  }
+  .featured-read-more:hover { color: #8B6914; text-decoration: none; }
 
-	.highlight-link { font-family: 'Cinzel', serif; font-size: 0.7em; letter-spacing: 0.12em; color: #D4AF6A; text-decoration: none; border-bottom: 1px solid rgba(212,175,106,0.4); padding-bottom: 0.1em; transition: color 0.2s; }
-	.highlight-link:hover { color: #FDFAF4; }
+  /* ——— Secondary articles (2 cols) ——— */
+  .secondary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin-bottom: 4em;
+  }
 
-	/* ——— Lo esencial + CTA (2 cols) ——— */
-	.bottom-section { display: grid; grid-template-columns: 1fr 340px; gap: 3em; align-items: start; }
+  .secondary-card { display: flex; flex-direction: column; gap: 0.75em; }
 
-	.mostread-list { list-style: none; padding: 0; margin: 0; }
+  .secondary-img-wrap { overflow: hidden; aspect-ratio: 16/9; margin-bottom: 0.25em; box-shadow: 0 4px 16px rgba(44,31,14,0.1); }
+  .secondary-img { width: 100%; height: 100%; object-fit: cover; }
 
-	.mostread-item { display: flex; align-items: baseline; gap: 1.25em; padding: 1em 0; border-bottom: 1px solid rgba(184,149,42,0.12); }
+  .secondary-card--text { justify-content: space-between; border-left: 1px solid rgba(184,149,42,0.2); padding-left: 2em; }
 
-	.mostread-num { font-family: 'Cinzel', serif; font-size: 1.25em; color: rgba(184,149,42,0.3); flex-shrink: 0; line-height: 1; }
+  .secondary-icon-wrap { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #F5EFE0; }
+  .secondary-icon { font-size: 1.3em !important; color: #B8952A; }
 
-	.mostread-link { font-family: 'Crimson Text', serif; font-size: 1.05em; color: #3A2A10; text-decoration: none; line-height: 1.45; transition: color 0.2s; }
-	.mostread-link:hover { color: #8B6914; }
+  .secondary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .secondary-title a { color: #2C1F0E; text-decoration: none; }
+  .secondary-title a:hover { color: #B8952A; text-decoration: none; }
 
-	.cta-card { background: #F5EFE0; border: 1px solid rgba(184,149,42,0.2); border-radius: 8px; padding: 2em 1.75em; }
+  .secondary-desc { font-family: 'EB Garamond', serif; font-size: 0.9em; color: #7A6840; line-height: 1.6; margin: 0; font-style: italic; }
 
-	.cta-label { display: block; font-family: 'Cinzel', serif; font-size: 0.65em; letter-spacing: 0.2em; text-transform: uppercase; color: #A89060; margin-bottom: 0.75em; }
+  .secondary-cat { font-family: 'Libre Caslon Text', serif; font-size: 0.48em; letter-spacing: 0.18em; text-transform: uppercase; color: #B8952A; }
+  .secondary-cat-label { font-family: 'Libre Caslon Text', serif; font-size: 0.48em; letter-spacing: 0.18em; text-transform: uppercase; color: #7A6840; }
 
-	.cta-text { font-size: 0.88em; color: #5A4830; line-height: 1.7; margin-bottom: 1.5em; }
+  /* ——— Case / estudio de caso ——— */
+  .case-card {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    background: rgba(245,239,224,0.5);
+    padding: 2em 2.5em;
+    border: 1px solid rgba(184,149,42,0.12);
+  }
 
-	.cta-btn {
-		display: block;
-		font-family: 'Cinzel', serif;
-		font-size: 0.7em;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		background: #B8952A;
-		color: #FDFAF4;
-		text-decoration: none;
-		border-radius: 4px;
-		padding: 0.9em 1.25em;
-		text-align: center;
-		transition: background 0.2s;
-	}
-	.cta-btn:hover { background: #9A7A20; }
+  .case-body { flex: 1; }
 
-	/* ——— Hub cards (4 cols) ——— */
-	.hubs-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 1.25em;
-	}
+  .case-label {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #B8952A;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+  }
 
-	.hub-card {
-		display: flex;
-		flex-direction: column;
-		gap: 0.6em;
-		padding: 1.75em 1.5em;
-		background: #F5EFE0;
-		border: 1px solid rgba(184,149,42,0.12);
-		border-top: 3px solid var(--hub-color);
-		border-radius: 0 0 6px 6px;
-		text-decoration: none;
-		color: inherit;
-		transition: transform 0.2s, box-shadow 0.2s;
-	}
-	.hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(44,31,14,0.1); }
+  .case-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #2C1F0E;
+    margin: 0 0 0.5em;
+  }
 
-	.hub-roman { font-family: 'Cinzel', serif; font-size: 1.5em; color: var(--hub-color); opacity: 0.4; line-height: 1; margin-bottom: 0.25em; }
+  .case-quote {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #2C1F0E;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+  }
 
-	.hub-title { font-family: 'Cinzel', serif; font-size: 0.82em; font-weight: 500; color: #2C1F0E; line-height: 1.3; margin: 0; }
+  .case-btn {
+    white-space: nowrap;
+    padding: 0.8em 1.75em;
+    background: #2C1F0E;
+    color: #FDFAF4;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .case-btn:hover { background: #B8952A; text-decoration: none; color: #FDFAF4; }
 
-	.hub-desc { font-size: 0.82em; color: #7A6840; line-height: 1.6; flex: 1; margin: 0; }
+  /* ——— Sidebar ——— */
+  .home-sidebar { display: flex; flex-direction: column; gap: 3em; }
 
-	.hub-cta { font-family: 'Cinzel', serif; font-size: 0.65em; letter-spacing: 0.1em; color: var(--hub-color); margin-top: 0.5em; }
+  /* Newsletter */
+  .sidebar-newsletter {
+    border: 2px solid rgba(184,149,42,0.3);
+    padding: 2em;
+    position: relative;
+    text-align: center;
+  }
 
-	/* ——— Responsive ——— */
-	@media (max-width: 900px) {
-		.featured-card { grid-template-columns: 1fr; }
-		.featured-body { padding: 1.5em; }
-		.bottom-section { grid-template-columns: 1fr; }
-		.hubs-grid { grid-template-columns: repeat(2, 1fr); }
-	}
+  .sidebar-newsletter-icon {
+    position: absolute;
+    top: -1.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FDFAF4;
+    padding: 0 0.75em;
+  }
+  .sidebar-newsletter-icon .material-symbols-outlined { font-size: 1.75em !important; color: #B8952A; }
 
-	@media (max-width: 600px) {
-		.hero h1 { font-size: 2.2em; }
-		.hero-image-wrap { height: 300px; }
-		.hero-img { height: 300px; }
-		.recents-grid { grid-template-columns: 1fr; }
-		.hubs-grid { grid-template-columns: 1fr; }
-		.highlight-card { padding: 2em 1.25em; }
-		.highlight-quote { font-size: 1.2em; }
-	}
+  .sidebar-newsletter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0.5em 0 0.75em;
+  }
+
+  .sidebar-newsletter-desc {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #7A6840;
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+  }
+
+  .sidebar-newsletter-form { display: flex; flex-direction: column; gap: 0.75em; }
+
+  .sidebar-newsletter-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(184,149,42,0.4);
+    padding: 0.6em 0;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #2C1F0E;
+    outline: none;
+    width: 100%;
+  }
+  .sidebar-newsletter-input:focus { border-bottom-color: #B8952A; }
+  .sidebar-newsletter-input::placeholder { color: #A89060; }
+
+  .sidebar-newsletter-btn {
+    padding: 0.8em;
+    background: #B8952A;
+    color: #FDFAF4;
+    border: none;
+    cursor: pointer;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .sidebar-newsletter-btn:hover { background: #9A7A20; }
+
+  /* Lo más leído */
+  .sidebar-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0 0 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba(184,149,42,0.2);
+  }
+
+  .sidebar-mostread-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25em; }
+
+  .sidebar-mostread-item { display: flex; flex-direction: column; gap: 0.2em; cursor: pointer; }
+
+  .sidebar-mostread-num {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.48em;
+    letter-spacing: 0.1em;
+    color: #B8952A;
+    display: block;
+  }
+
+  .sidebar-mostread-link {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95em;
+    color: #2C1F0E;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.35;
+    transition: color 0.2s;
+  }
+  .sidebar-mostread-link:hover { color: #B8952A; text-decoration: none; }
+
+  /* CTA dark card */
+  .sidebar-cta-dark {
+    background: #2C1F0E;
+    color: #FDFAF4;
+    padding: 2em;
+  }
+
+  .sidebar-cta-eyebrow {
+    display: block;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.48em;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #D4AF6A;
+    margin-bottom: 1em;
+  }
+
+  .sidebar-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #FDFAF4;
+    margin: 0 0 0.75em;
+    line-height: 1.2;
+  }
+
+  .sidebar-cta-desc {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85em;
+    font-style: italic;
+    color: rgba(245,239,224,0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+  }
+
+  .sidebar-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.5em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #D4AF6A;
+    text-decoration: none;
+    border: 1px solid rgba(212,175,106,0.4);
+    padding: 0.75em 1.5em;
+    transition: background 0.2s;
+  }
+  .sidebar-cta-link:hover { background: rgba(212,175,106,0.1); text-decoration: none; color: #D4AF6A; }
+
+  /* ——— Ornamento ——— */
+  .home-ornament {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184,149,42,0.4), transparent);
+    margin: 4em 0;
+  }
+
+  /* ——— Expedientes / Disciplinas ——— */
+  .expedientes-section { margin-top: 2em; }
+
+  .expedientes-header {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 3em;
+  }
+
+  .expedientes-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2C1F0E;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .expedientes-line {
+    height: 1px;
+    width: 100%;
+    background: rgba(184,149,42,0.2);
+  }
+
+  .expedientes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+  }
+
+  .expediente-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    padding: 2em 1.75em;
+    background: rgba(245,239,224,0.3);
+    border: 1px solid rgba(184,149,42,0.12);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+  .expediente-card:hover {
+    border-color: rgba(184,149,42,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(44,31,14,0.06);
+    text-decoration: none;
+  }
+
+  .expediente-icon {
+    font-size: 2em !important;
+    color: #B8952A;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  .expediente-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #2C1F0E;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .expediente-desc {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85em;
+    color: #7A6840;
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+  }
+
+  .expediente-cta {
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.48em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #B8952A;
+    font-weight: 700;
+  }
+
+  /* ——— Responsive ——— */
+  @media (max-width: 1024px) {
+    .home-grid { grid-template-columns: 1fr; gap: 3em; }
+    .home-sidebar { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2em; }
+    .sidebar-cta-dark { grid-column: 1 / -1; }
+    .expedientes-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 720px) {
+    .featured-article { grid-template-columns: 1fr; }
+    .secondary-grid { grid-template-columns: 1fr; }
+    .secondary-card--text { border-left: none; padding-left: 0; border-top: 1px solid rgba(184,149,42,0.2); padding-top: 2em; }
+    .home-sidebar { grid-template-columns: 1fr; }
+    .expedientes-grid { grid-template-columns: 1fr; }
+    .home-hero-title { font-size: 2.2em; }
+    .case-card { flex-direction: column; }
+    .home-meta-bar { flex-direction: column; gap: 0.5em; }
+  }
 </style>

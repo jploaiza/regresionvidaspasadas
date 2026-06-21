@@ -1,8 +1,10 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+interface Props { transparent?: boolean; }
+const { transparent = false } = Astro.props;
 ---
 
-<header>
+<header class:list={[{ 'header--transparent': transparent }]}>
 	<nav>
 		<a href="/" class="site-logo">
 			<span class="logo-eyebrow">Portal de conocimiento</span>
@@ -38,6 +40,16 @@ import HeaderLink from './HeaderLink.astro';
 	const navLinks = document.getElementById('nav-links');
 	const searchTrigger = document.getElementById('search-trigger');
 
+	// Transparent header scroll detection
+	const header = document.querySelector('header.header--transparent');
+	if (header) {
+		const onScroll = () => {
+			header.classList.toggle('scrolled', window.scrollY > 60);
+		};
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+	}
+
 	hamburger?.addEventListener('click', () => {
 		const isOpen = navLinks?.classList.toggle('open');
 		hamburger.setAttribute('aria-expanded', String(isOpen));
@@ -64,16 +76,46 @@ import HeaderLink from './HeaderLink.astro';
 		position: sticky;
 		top: 0;
 		z-index: 100;
+		transition: background 0.3s, border-color 0.3s;
 	}
+
+	header.header--transparent {
+		position: absolute;
+		top: 0; left: 0; right: 0;
+		background: transparent;
+		border-bottom-color: transparent;
+	}
+
+	header.header--transparent.scrolled {
+		position: fixed;
+		background: #FDFAF4;
+		border-bottom-color: rgba(184, 149, 42, 0.15);
+	}
+
+	header.header--transparent .logo-eyebrow,
+	header.header--transparent .logo-title,
+	header.header--transparent .nav-links :global(a),
+	header.header--transparent .search-trigger,
+	header.header--transparent .hamburger {
+		color: rgba(255,255,255,0.9);
+	}
+
+	header.header--transparent.scrolled .logo-eyebrow { color: #A89060; }
+	header.header--transparent.scrolled .logo-title { color: #8B6914; }
+	header.header--transparent.scrolled .nav-links :global(a) { color: #7A6840; }
+	header.header--transparent.scrolled .nav-links :global(a:hover),
+	header.header--transparent.scrolled .nav-links :global(a.active) { color: #2C1F0E; }
+	header.header--transparent.scrolled .search-trigger,
+	header.header--transparent.scrolled .hamburger { color: #7A6840; }
 
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 960px;
+		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 1.5em;
-		height: 68px;
+		padding: 0 2em;
+		height: 72px;
 	}
 
 	.site-logo {
@@ -85,33 +127,37 @@ import HeaderLink from './HeaderLink.astro';
 	}
 
 	.logo-eyebrow {
-		font-family: 'Cinzel', serif;
-		font-size: 0.6em;
-		letter-spacing: 0.18em;
+		font-family: 'Public Sans', sans-serif;
+		font-size: 0.52em;
+		letter-spacing: 0.22em;
 		text-transform: uppercase;
 		color: #A89060;
+		transition: color 0.3s;
 	}
 
 	.logo-title {
-		font-family: 'Cinzel', serif;
-		font-size: 0.95em;
-		font-weight: 500;
+		font-family: 'Playfair Display', serif;
+		font-size: 1em;
+		font-weight: 700;
 		color: #8B6914;
-		letter-spacing: 0.04em;
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		transition: color 0.3s;
 	}
 
 	.nav-links {
 		display: flex;
 		align-items: center;
-		gap: 0.25em;
+		gap: 0.15em;
 	}
 
 	.nav-links :global(a) {
-		padding: 0.4em 0.85em;
+		padding: 0.4em 0.75em;
 		color: #7A6840;
-		font-family: 'Cinzel', serif;
-		font-size: 0.75em;
-		letter-spacing: 0.06em;
+		font-family: 'Public Sans', sans-serif;
+		font-size: 0.65em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
 		text-decoration: none;
 		border-bottom: 2px solid transparent;
 		transition: color 0.2s;

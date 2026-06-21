@@ -11,46 +11,46 @@ const allPosts = await getCollection('blog');
 const EXPOSITORES_SRT = [
   {
     slug: 'carl-wickland',
+    icon: 'person',
     nombre: 'Carl Wickland',
     periodo: '1861 – 1945',
     rol: 'El pionero',
-    descripcion: 'Psiquiatra sueco-americano que documentó más de 30 años de sesiones de liberación espiritual junto a su esposa Anna, la médium que hizo posible todo su trabajo. Su libro "Thirty Years Among the Dead" (1924) es el texto fundacional del campo.',
-    libro: 'Thirty Years Among the Dead (1924)',
+    descripcion: 'Psiquiatra que documentó más de 30 años de sesiones de liberación espiritual. Su "Thirty Years Among the Dead" (1924) es el texto fundacional del campo.',
   },
   {
     slug: 'william-baldwin',
+    icon: 'psychology',
     nombre: 'William Baldwin',
     periodo: '1939 – 2004',
     rol: 'El sistematizador',
-    descripcion: 'Psicólogo y exdentista que desarrolló los protocolos más completos y sistemáticos del campo. Su "Spirit Releasement Therapy: A Technique Manual" (1992) es la referencia técnica definitiva. Creó la taxonomía de entidades: humanas, oscuras, no humanas y fragmentos del alma.',
-    libro: 'Spirit Releasement Therapy (1992)',
+    descripcion: 'Psicólogo que desarrolló los protocolos más completos del campo. Creó la taxonomía de entidades: humanas, oscuras, no humanas y fragmentos del alma.',
   },
   {
     slug: 'edith-fiore',
+    icon: 'person',
     nombre: 'Edith Fiore',
     periodo: '1930s –',
     rol: 'La psicóloga clínica',
-    descripcion: 'PhD de la Universidad de Miami, con más de 30 años de práctica en California. Primera psicóloga con credenciales convencionales en documentar sistemáticamente la posesión espiritual desde una perspectiva terapéutica. Formó a más de 2.000 profesionales.',
-    libro: 'The Unquiet Dead (1987)',
+    descripcion: 'PhD de la Universidad de Miami. Primera psicóloga con credenciales convencionales en documentar sistemáticamente la posesión espiritual. Formó a más de 2.000 profesionales.',
   },
   {
     slug: 'alan-sanderson',
+    icon: 'local_hospital',
     nombre: 'Alan Sanderson',
     periodo: '1930s –',
     rol: 'El psiquiatra institucional',
-    descripcion: 'Psiquiatra formado en el Hospital St. Thomas de Londres. Introdujo la liberación espiritual en el NHS y presentó su trabajo al Royal College of Psychiatrists. Fundó la Spirit Release Foundation (2000–2013).',
-    libro: 'Psychiatry and the Spirit World',
+    descripcion: 'Psiquiatra formado en el Hospital St. Thomas de Londres. Introdujo la liberación espiritual en el NHS. Fundó la Spirit Release Foundation.',
   },
 ];
 
 const TEMAS_SRT = [
-  { slug: 'srt-que-es', titulo: '¿Qué es la SRT?' },
-  { slug: 'srt-posesiones-apego', titulo: 'Posesión y apego espiritual' },
-  { slug: 'srt-entidades-oscuras-demonios', titulo: '¿Existen los demonios?' },
-  { slug: 'srt-exorcismo-vs-srt', titulo: 'Exorcismo vs. SRT' },
-  { slug: 'srt-extraterrestres-entidades', titulo: 'Entidades extraterrestres' },
-  { slug: 'srt-magia-negra-mal-de-ojo', titulo: 'Magia negra y mal de ojo' },
-  { slug: 'srt-y-regresion', titulo: 'SRT y Regresión: la conexión' },
+  { slug: 'srt-que-es', icon: 'help_outline', titulo: '¿Qué es la SRT?' },
+  { slug: 'srt-posesiones-apego', icon: 'link', titulo: 'Posesión y apego espiritual' },
+  { slug: 'srt-entidades-oscuras-demonios', icon: 'dark_mode', titulo: '¿Existen los demonios?' },
+  { slug: 'srt-exorcismo-vs-srt', icon: 'compare_arrows', titulo: 'Exorcismo vs. SRT' },
+  { slug: 'srt-extraterrestres-entidades', icon: 'travel_explore', titulo: 'Entidades extraterrestres' },
+  { slug: 'srt-magia-negra-mal-de-ojo', icon: 'remove_red_eye', titulo: 'Magia negra y mal de ojo' },
+  { slug: 'srt-y-regresion', icon: 'auto_awesome', titulo: 'SRT y Regresión: la conexión' },
 ];
 
 function getArticulosPorExpositor(slug: string) {
@@ -107,73 +107,109 @@ const hubSchema = JSON.stringify([
       description="Todo sobre la Spirit Releasement Therapy: posesiones, entidades, magia negra, ataques psíquicos y los grandes referentes del campo — Carl Wickland, William Baldwin, Edith Fiore y Alan Sanderson."
     />
     <script type="application/ld+json" set:html={hubSchema}></script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        font-family: 'Material Symbols Outlined';
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        color: #B8952A;
+      }
+      .ornament { height: 1px; background: linear-gradient(90deg, transparent, #B8952A, transparent); width: 100%; margin: 2.5em 0; }
+      .card-hover { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.3s; }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(44,31,14,0.07); border-color: rgba(184,149,42,0.55); }
+    </style>
   </head>
   <body>
     <Header />
 
-    <div class="page-hero">
-      <Image src={headerImg} alt="Velas encendidas en oscuridad — Terapia de Liberación Espiritual" width={1200} height={420} class="hero-img" />
-      <div class="hero-overlay">
-        <span class="hero-eyebrow">Disciplina · SRT</span>
-        <h1>Terapia de Liberación Espiritual</h1>
-        <p class="hero-desc">Trabaja con entidades que se adhieren al campo energético humano y las libera con compasión, no con combate. Documentada desde 1924.</p>
+    <!-- Hero 614px -->
+    <section class="hub-hero">
+      <div class="hub-hero-bg">
+        <Image src={headerImg} alt="Velas encendidas — Terapia de Liberación Espiritual" width={1400} height={614} class="hub-hero-img" />
+        <div class="hub-hero-overlay"></div>
       </div>
-    </div>
+      <div class="hub-hero-content">
+        <span class="hub-hero-eyebrow">Exploración Académica</span>
+        <h1 class="hub-hero-title">Terapia de Liberación Espiritual</h1>
+        <p class="hub-hero-desc">Trabaja con entidades que se adhieren al campo energético humano y las libera con compasión, no con combate. Documentada desde 1924.</p>
+        <div class="hub-hero-line"></div>
+      </div>
+    </section>
 
     <main class="hub-main">
 
-      <section class="cards-section">
-        <div class="section-eyebrow">
-          <span class="eyebrow-ornament">✦</span>
-          <span class="eyebrow-text">Referentes del campo</span>
+      <!-- Índice editorial -->
+      <section class="hub-index-section">
+        <div class="hub-index-header">
+          <h2 class="hub-index-title">Índice Editorial</h2>
+          <div class="hub-index-meta">
+            <div class="hub-index-line"></div>
+            <span class="hub-index-label">Referentes del campo</span>
+            <div class="hub-index-line"></div>
+          </div>
         </div>
-        <div class="cards-grid">
+
+        <div class="hub-cards-grid">
           {EXPOSITORES_SRT.map(exp => {
             const articulos = getArticulosPorExpositor(exp.slug);
             const firstArt = articulos[0];
             return (
-              <a href={firstArt ? `/blog/${firstArt.id}/` : '#'} class="hub-card">
-                <span class="card-initial">{exp.nombre[0]}</span>
-                <div class="card-body">
-                  <span class="card-role">{exp.rol} · {exp.periodo}</span>
-                  <h3 class="card-title">{exp.nombre}</h3>
-                  <p class="card-desc">{exp.descripcion}</p>
-                  <span class="card-cta">Ver artículos →</span>
+              <a href={firstArt ? `/blog/${firstArt.id}/` : '#'} class="hub-card card-hover">
+                <div class="hub-card-icon">
+                  <span class="material-symbols-outlined">{exp.icon}</span>
                 </div>
+                <h3 class="hub-card-title">{exp.nombre}</h3>
+                <p class="hub-card-desc">{exp.descripcion}</p>
+                <span class="hub-card-cta">Ver artículos</span>
               </a>
             );
           })}
         </div>
       </section>
 
-      <section class="cards-section">
-        <div class="section-eyebrow">
-          <span class="eyebrow-ornament">✦</span>
-          <span class="eyebrow-text">Conceptos y fenómenos</span>
+      <div class="ornament"></div>
+
+      <!-- Conceptos y fenómenos -->
+      <section class="hub-index-section">
+        <div class="hub-index-header">
+          <h2 class="hub-index-title">Conceptos y Fenómenos</h2>
+          <div class="hub-index-meta">
+            <div class="hub-index-line"></div>
+            <span class="hub-index-label">Temas del área</span>
+            <div class="hub-index-line"></div>
+          </div>
         </div>
-        <div class="cards-grid">
+
+        <div class="hub-cards-grid">
           {TEMAS_SRT.map(tema => {
             const art = getArticuloPorSlug(tema.slug);
             if (!art) return null;
             return (
-              <a href={`/blog/${art.id}/`} class="hub-card hub-card--tema">
-                <span class="card-symbol">✦</span>
-                <div class="card-body">
-                  <h3 class="card-title">{tema.titulo}</h3>
-                  {art.data.description && <p class="card-desc">{art.data.description}</p>}
-                  <span class="card-cta">Leer artículo →</span>
+              <a href={`/blog/${art.id}/`} class="hub-card hub-card--tema card-hover">
+                <div class="hub-card-icon hub-card-icon--tema">
+                  <span class="material-symbols-outlined">{tema.icon}</span>
                 </div>
+                <h3 class="hub-card-title">{tema.titulo}</h3>
+                {art.data.description && <p class="hub-card-desc">{art.data.description}</p>}
+                <span class="hub-card-cta">Leer artículo</span>
               </a>
             );
           })}
         </div>
       </section>
 
-      <div class="hub-cta">
-        <span class="hub-cta-label">¿Quieres trabajar con un terapeuta?</span>
-        <p>Conoce el trabajo de <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>, especialista en liberación espiritual y regresión.</p>
-        <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="hub-cta-btn">juanpabloloaiza.com →</a>
-      </div>
+      <!-- CTA terapeuta -->
+      <section class="hub-cta-section">
+        <div class="ornament opacity-50"></div>
+        <h3 class="hub-cta-title">¿Quieres explorar este proceso?</h3>
+        <p class="hub-cta-desc">
+          Conoce el trabajo de <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>,
+          terapeuta especializado en liberación espiritual y regresión a vidas pasadas.
+        </p>
+        <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener" class="hub-cta-btn">Conocer al especialista</a>
+      </section>
 
     </main>
     <Footer />
@@ -181,129 +217,97 @@ const hubSchema = JSON.stringify([
 </html>
 
 <style>
-  /* ——— Hero ——— */
-  .page-hero { position: relative; width: 100%; height: 420px; overflow: hidden; }
-  .hero-img { width: 100%; height: 420px; object-fit: cover; filter: sepia(25%) brightness(0.50); display: block; border-radius: 0; }
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 3em 2em;
-    text-align: center;
-    background: linear-gradient(to bottom, rgba(44,10,10,0.1) 0%, rgba(44,10,10,0.72) 100%);
-  }
-  .hero-eyebrow { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.22em; text-transform: uppercase; color: #E08080; margin-bottom: 0.75em; }
-  .hero-overlay h1 { font-family: 'Cinzel', serif; font-size: 2.6em; font-weight: 400; color: #FDFAF4; margin-bottom: 0.4em; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
-  .hero-desc { color: rgba(253,250,244,0.8); font-size: 0.95em; max-width: 540px; line-height: 1.65; margin: 0; }
+  /* Hero */
+  .hub-hero { position: relative; width: 100%; height: 614px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hub-hero-bg { position: absolute; inset: 0; }
+  .hub-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; max-width: none; border-radius: 0; display: block; }
+  .hub-hero-overlay { position: absolute; inset: 0; background: rgba(44,31,14,0.42); }
+  .hub-hero-content { position: relative; z-index: 10; text-align: center; padding: 0 2em; max-width: 700px; }
+  .hub-hero-eyebrow { font-family: 'Libre Caslon Text', serif; color: rgba(255,255,255,0.9); letter-spacing: 0.28em; font-size: 0.55em; text-transform: uppercase; display: block; margin-bottom: 1em; }
+  .hub-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2em, 6vw, 4em); font-weight: 700; color: #fff; margin: 0 0 0.6em; line-height: 1.1; }
+  .hub-hero-desc { font-family: 'EB Garamond', serif; font-size: 1.1em; font-style: italic; color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 1.5em; line-height: 1.65; }
+  .hub-hero-line { width: 6em; height: 1px; background: #B8952A; margin: 0 auto; }
 
-  /* ——— Main ——— */
-  .hub-main { max-width: 1080px; margin: 0 auto; padding: 4em 1.5em 5em; }
+  /* Main */
+  .hub-main { max-width: 1100px; margin: 0 auto; padding: 5em 2em 6em; }
 
-  /* ——— Eyebrow ——— */
-  .section-eyebrow { display: flex; align-items: center; gap: 0.75em; margin-bottom: 1.5em; }
-  .eyebrow-ornament { color: #D4AF6A; font-size: 0.65em; }
-  .eyebrow-text { font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.22em; text-transform: uppercase; color: #A89060; }
+  /* Section header */
+  .hub-index-section { margin-bottom: 4em; }
+  .hub-index-header { margin-bottom: 3em; text-align: center; }
+  .hub-index-title { font-family: 'Playfair Display', serif; font-size: 1.8em; font-weight: 700; color: #2C1F0E; margin: 0 0 1em; }
+  .hub-index-meta { display: flex; align-items: center; justify-content: center; gap: 1em; }
+  .hub-index-line { height: 1px; width: 3em; background: rgba(184,149,42,0.25); }
+  .hub-index-label { font-family: 'Libre Caslon Text', serif; font-size: 0.52em; letter-spacing: 0.2em; text-transform: uppercase; color: #7A6840; white-space: nowrap; }
 
-  /* ——— Cards section ——— */
-  .cards-section { margin-bottom: 3.5em; }
-
-  .cards-grid {
+  /* Cards grid */
+  .hub-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25em;
+    gap: 2em;
   }
 
   .hub-card {
     display: flex;
     flex-direction: column;
-    gap: 0.75em;
-    padding: 1.75em 1.5em;
-    background: #F5EFE0;
-    border: 1px solid rgba(184,149,42,0.15);
-    border-top: 3px solid #8B3A3A;
-    border-radius: 0 0 6px 6px;
+    align-items: center;
+    text-align: center;
+    padding: 2.5em 2em;
+    background: rgba(245,239,224,0.3);
+    border: 1px solid rgba(184,149,42,0.22);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .hub-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(44,10,10,0.1); }
+  .hub-card:hover { text-decoration: none; color: inherit; }
 
-  .hub-card--tema { border-top-color: #B8952A; }
-  .hub-card--tema .card-cta { color: #B8952A; }
-
-  .card-initial {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(139,58,58,0.12);
-    border: 1px solid rgba(139,58,58,0.25);
-    color: #8B3A3A;
-    font-family: 'Cinzel', serif;
-    font-size: 1.1em;
+  .hub-card-icon {
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    margin-bottom: 1.5em;
   }
+  .hub-card-icon .material-symbols-outlined { font-size: 2.2em !important; color: #B8952A; }
+  .hub-card-icon--tema .material-symbols-outlined { color: #8B3A3A; }
+  .hub-card--tema { border-color: rgba(139,58,58,0.2); }
+  .hub-card--tema:hover { border-color: rgba(139,58,58,0.5); }
 
-  .card-symbol { font-size: 0.9em; color: #B8952A; }
+  .hub-card-title { font-family: 'Playfair Display', serif; font-size: 1.1em; font-weight: 700; color: #2C1F0E; margin: 0 0 0.75em; line-height: 1.25; transition: color 0.2s; }
+  .hub-card:hover .hub-card-title { color: #B8952A; }
 
-  .card-body { display: flex; flex-direction: column; gap: 0.4em; flex: 1; }
+  .hub-card-desc { font-family: 'EB Garamond', serif; font-size: 0.9em; color: #7A6840; line-height: 1.65; flex: 1; margin: 0 0 1.5em; }
 
-  .card-role { font-family: 'Cinzel', serif; font-size: 0.6em; letter-spacing: 0.12em; text-transform: uppercase; color: #8B3A3A; }
+  .hub-card-cta { font-family: 'Libre Caslon Text', serif; font-size: 0.5em; letter-spacing: 0.2em; text-transform: uppercase; color: #2C1F0E; border-bottom: 1px solid #B8952A; padding-bottom: 0.1em; transition: color 0.2s; margin-top: auto; }
+  .hub-card:hover .hub-card-cta { color: #B8952A; }
 
-  .card-title { font-family: 'Cinzel', serif; font-size: 0.88em; font-weight: 400; color: #2C1F0E; line-height: 1.3; margin: 0; }
-
-  .card-desc {
-    font-size: 0.82em;
-    color: #7A6840;
-    line-height: 1.6;
-    flex: 1;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .card-cta { font-family: 'Cinzel', serif; font-size: 0.62em; letter-spacing: 0.1em; color: #8B3A3A; margin-top: 0.5em; }
-
-  /* ——— Hub CTA ——— */
-  .hub-cta {
-    background: #F5EFE0;
-    border: 1px solid rgba(184,149,42,0.2);
-    border-radius: 8px;
-    padding: 2.5em 2em;
-    text-align: center;
-    margin-top: 2em;
-  }
-  .hub-cta-label { display: block; font-family: 'Cinzel', serif; font-size: 0.68em; letter-spacing: 0.18em; text-transform: uppercase; color: #A89060; margin-bottom: 0.75em; }
-  .hub-cta p { font-size: 0.9em; color: #5A4830; line-height: 1.7; margin-bottom: 1.5em; }
-  .hub-cta a { color: #8B6914; text-decoration: none; }
-  .hub-cta a:hover { text-decoration: underline; }
+  /* CTA section */
+  .hub-cta-section { background: #F5EFE0; padding: 4em 3em; text-align: center; }
+  .hub-cta-title { font-family: 'Playfair Display', serif; font-size: 1.6em; font-weight: 700; font-style: italic; color: #2C1F0E; margin: 0 0 0.75em; }
+  .hub-cta-desc { font-family: 'EB Garamond', serif; font-size: 1em; color: #7A6840; line-height: 1.7; max-width: 500px; margin: 0 auto 2em; }
+  .hub-cta-desc a { color: #8B6914; text-decoration: none; }
+  .hub-cta-desc a:hover { text-decoration: underline; }
   .hub-cta-btn {
     display: inline-block;
-    font-family: 'Cinzel', serif;
-    font-size: 0.72em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     background: #B8952A;
-    color: #FDFAF4 !important;
-    text-decoration: none !important;
-    border-radius: 4px;
-    padding: 0.85em 2em;
+    color: #fff;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 0.55em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    text-decoration: none;
     transition: background 0.2s;
   }
-  .hub-cta-btn:hover { background: #9A7A20 !important; }
+  .hub-cta-btn:hover { background: #8B6914; text-decoration: none; color: #fff; }
 
+  /* Responsive */
   @media (max-width: 860px) {
-    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .hub-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .hub-hero { height: 480px; }
   }
   @media (max-width: 560px) {
-    .hero-overlay h1 { font-size: 1.9em; }
-    .page-hero, .hero-img { height: 320px; }
-    .cards-grid { grid-template-columns: 1fr; }
+    .hub-cards-grid { grid-template-columns: 1fr; }
+    .hub-hero { height: 380px; }
+    .hub-hero-title { font-size: 1.9em; }
   }
 </style>
