@@ -5,7 +5,29 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import SearchModal from '../../components/SearchModal.astro';
+import { SITE_TITLE, CATEGORY } from '../../consts';
+
+import imgVelasSeance from '../../assets/blog/srt-velas-seance.jpg';
+import imgVelaOscuridad from '../../assets/blog/srt-vela-oscuridad.jpg';
+import imgManosLuz from '../../assets/blog/srt-manos-luz.jpg';
+import imgOjoMistico from '../../assets/blog/hipnosis-ojo-mistico.jpg';
+import imgMeditacion from '../../assets/blog/rvp-meditacion.jpg';
+import imgDefault from '../../assets/blog/hero-meditacion-amanecer.jpg';
+import type { ImageMetadata } from 'astro';
+
+const IMG_MAP: Record<string, ImageMetadata> = {
+  'carl-wickland': imgVelasSeance,
+  'william-baldwin': imgManosLuz,
+  'edith-fiore': imgMeditacion,
+  'alan-sanderson': imgMeditacion,
+  'srt': imgVelaOscuridad,
+  'hipnosis': imgOjoMistico,
+};
+
+function getPostImage(expositor?: string): ImageMetadata {
+  return (expositor && IMG_MAP[expositor]) ?? imgDefault;
+}
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -13,102 +35,282 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
-			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
+		<BaseHead title={`Artículos · ${SITE_TITLE}`} description="Todos los artículos sobre regresión a vidas pasadas, hipnosis clínica y terapia de liberación espiritual." />
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+		<SearchModal />
+		<main class="page-wrap">
+			<div class="page-header">
+				<span class="ornament">✦</span>
+				<h1>Artículos</h1>
+				<p class="page-desc">{posts.length} artículos sobre regresión, hipnosis y liberación espiritual.</p>
+			</div>
+
+			<div class="filter-bar" role="tablist" aria-label="Filtrar por categoría">
+				<button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+				<button class="filter-btn" data-filter="rvp" role="tab" aria-selected="false">Expositores RVP</button>
+				<button class="filter-btn" data-filter="srt" role="tab" aria-selected="false">SRT</button>
+				<button class="filter-btn" data-filter="hipnosis" role="tab" aria-selected="false">Hipnosis</button>
+			</div>
+
+			<ul class="posts-grid" id="posts-grid">
+				{
+					posts.map((post) => {
+						const cat = post.data.expositor ? CATEGORY[post.data.expositor] : undefined;
+						const thumb = post.data.heroImage ?? getPostImage(post.data.expositor);
+						const group = cat?.group ?? 'rvp';
+						return (
+							<li data-cat={group}>
+								<a href={`/blog/${post.id}/`} class="post-card">
+									<div class="card-img">
+										<Image src={thumb} alt={post.data.title} width={400} height={225} loading="lazy" />
+										{cat && (
+											<span class="card-badge" style={`background:${cat.color}; color:#fff`}>
+												{cat.label}
+											</span>
+										)}
+									</div>
+									<div class="card-body">
+										<h2 class="card-title">{post.data.title}</h2>
+										<p class="card-excerpt">{post.data.description}</p>
+										<span class="card-date"><FormattedDate date={post.data.pubDate} /></span>
+									</div>
 								</a>
 							</li>
-						))
-					}
-				</ul>
-			</section>
+						);
+					})
+				}
+			</ul>
+
+			<p class="results-count" id="results-count"></p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<script>
+	const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+	const items = document.querySelectorAll<HTMLLIElement>('#posts-grid li');
+	const countEl = document.getElementById('results-count');
+
+	function updateCount() {
+		const visible = Array.from(items).filter(li => !li.classList.contains('hidden')).length;
+		if (countEl) countEl.textContent = `Mostrando ${visible} artículos`;
+	}
+
+	buttons.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const filter = btn.dataset.filter;
+			buttons.forEach(b => {
+				b.classList.remove('active');
+				b.setAttribute('aria-selected', 'false');
+			});
+			btn.classList.add('active');
+			btn.setAttribute('aria-selected', 'true');
+
+			items.forEach(li => {
+				if (filter === 'all' || li.dataset.cat === filter) {
+					li.classList.remove('hidden');
+				} else {
+					li.classList.add('hidden');
+				}
+			});
+			updateCount();
+		});
+	});
+
+	updateCount();
+</script>
+
+<style>
+	.page-wrap {
+		max-width: 1060px;
+		margin: 0 auto;
+		padding: 0 1.5em 4em;
+	}
+
+	.page-header {
+		text-align: center;
+		padding: 3em 0 2em;
+	}
+
+	.ornament {
+		display: block;
+		color: #D4AF6A;
+		font-size: 0.85em;
+		letter-spacing: 0.5em;
+		margin-bottom: 0.75em;
+	}
+
+	.page-header h1 {
+		font-family: 'Cinzel', serif;
+		font-size: 2.5em;
+		font-weight: 400;
+		color: #2C1F0E;
+		margin-bottom: 0.4em;
+	}
+
+	.page-desc {
+		color: #A89060;
+		font-size: 0.9em;
+		font-family: 'Cinzel', serif;
+		letter-spacing: 0.05em;
+	}
+
+	.filter-bar {
+		display: flex;
+		gap: 0.5em;
+		margin-bottom: 2em;
+		flex-wrap: wrap;
+	}
+
+	.filter-btn {
+		font-family: 'Cinzel', serif;
+		font-size: 0.7em;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		padding: 0.5em 1.1em;
+		border: 1px solid rgba(184, 149, 42, 0.3);
+		border-radius: 20px;
+		background: transparent;
+		color: #7A6840;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.filter-btn:hover {
+		border-color: #B8952A;
+		color: #2C1F0E;
+		background: rgba(184, 149, 42, 0.06);
+	}
+
+	.filter-btn.active {
+		background: #B8952A;
+		border-color: #B8952A;
+		color: #FDFAF4;
+	}
+
+	.posts-grid {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5em;
+	}
+
+	.posts-grid li.hidden {
+		display: none;
+	}
+
+	.post-card {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		border-radius: 8px;
+		overflow: hidden;
+		background: #F5EFE0;
+		border: 1px solid rgba(184, 149, 42, 0.1);
+		transition: transform 0.2s, box-shadow 0.2s;
+		height: 100%;
+	}
+
+	.post-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 24px rgba(44, 31, 14, 0.1);
+	}
+
+	.card-img {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+	}
+
+	.card-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: sepia(12%) saturate(0.9);
+		transition: transform 0.3s, filter 0.3s;
+	}
+
+	.post-card:hover .card-img img {
+		transform: scale(1.04);
+		filter: sepia(5%) saturate(1.05);
+	}
+
+	.card-badge {
+		position: absolute;
+		bottom: 0.6em;
+		left: 0.6em;
+		font-family: 'Cinzel', serif;
+		font-size: 0.6em;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		padding: 0.25em 0.6em;
+		border-radius: 3px;
+	}
+
+	.card-body {
+		padding: 1em 1.1em 1.1em;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	}
+
+	.card-title {
+		font-family: 'Cinzel', serif;
+		font-size: 0.88em;
+		font-weight: 400;
+		color: #2C1F0E;
+		line-height: 1.35;
+		margin-bottom: 0.5em;
+		transition: color 0.2s;
+	}
+
+	.post-card:hover .card-title {
+		color: #8B6914;
+	}
+
+	.card-excerpt {
+		font-size: 0.82em;
+		color: #7A6840;
+		line-height: 1.55;
+		flex: 1;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		margin-bottom: 0.75em;
+	}
+
+	.card-date {
+		font-family: 'Cinzel', serif;
+		font-size: 0.65em;
+		letter-spacing: 0.08em;
+		color: #A89060;
+		margin-top: auto;
+	}
+
+	.results-count {
+		font-family: 'Cinzel', serif;
+		font-size: 0.7em;
+		letter-spacing: 0.1em;
+		color: #A89060;
+		text-align: center;
+		margin-top: 2.5em;
+	}
+
+	@media (max-width: 900px) {
+		.posts-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@media (max-width: 540px) {
+		.posts-grid { grid-template-columns: 1fr; }
+		.page-header h1 { font-size: 1.8em; }
+	}
+</style>

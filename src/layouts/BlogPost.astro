@@ -5,6 +5,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import SearchModal from '../components/SearchModal.astro';
+import { CATEGORY } from '../consts';
 
 import imgVelasSeance    from '../assets/blog/srt-velas-seance.jpg';
 import imgVelaOscuridad  from '../assets/blog/srt-vela-oscuridad.jpg';
@@ -28,11 +30,38 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, expositor } = Astro.props;
 const displayImage = heroImage ?? (expositor ? CATEGORY_IMG[expositor] : undefined) ?? imgDefault;
+const cat = expositor ? CATEGORY[expositor] : undefined;
+
+const siteUrl = Astro.site ?? 'https://www.regresionvidaspasadas.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const ogImage = new URL(displayImage.src, siteUrl);
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  ...(updatedDate ? { dateModified: updatedDate.toISOString() } : {}),
+  image: ogImage.href,
+  url: canonicalUrl.href,
+  author: {
+    '@type': 'Person',
+    name: 'Juan Pablo Loaiza',
+    url: 'https://www.juanpabloloaiza.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Regresión a Vidas Pasadas',
+    url: siteUrl.toString(),
+  },
+});
 ---
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={displayImage} />
+		<script type="application/ld+json" set:html={jsonLd}></script>
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -94,6 +123,17 @@ const displayImage = heroImage ?? (expositor ? CATEGORY_IMG[expositor] : undefin
 				margin: 0.5em auto 0;
 				line-height: 1.65;
 			}
+			.post-category {
+				display: inline-block;
+				font-family: 'Cinzel', serif;
+				font-size: 0.62em;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				padding: 0.3em 0.8em;
+				border-radius: 3px;
+				margin-top: 1em;
+				border: 1px solid;
+			}
 			.title-divider {
 				width: 60px;
 				height: 1px;
@@ -134,6 +174,7 @@ const displayImage = heroImage ?? (expositor ? CATEGORY_IMG[expositor] : undefin
 
 	<body>
 		<Header />
+		<SearchModal />
 		<main>
 			<article>
 				<div class="hero-image">
@@ -147,6 +188,11 @@ const displayImage = heroImage ?? (expositor ? CATEGORY_IMG[expositor] : undefin
 							{updatedDate && <span> · Actualizado: <FormattedDate date={updatedDate} /></span>}
 						</div>
 						<h1>{title}</h1>
+						{cat && (
+							<span class="post-category" style={`color:${cat.color}; border-color:${cat.color}40; background:${cat.color}12`}>
+								{cat.label}
+							</span>
+						)}
 						{description && <p class="post-description">{description}</p>}
 						<div class="title-divider"></div>
 					</div>

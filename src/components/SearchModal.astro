@@ -1,0 +1,183 @@
+---
+// Pagefind search modal — included once in each layout
+---
+
+<dialog id="search-dialog" aria-label="Buscar en el sitio">
+	<div class="search-inner">
+		<div class="search-header">
+			<span class="search-title">Buscar</span>
+			<button class="search-close" id="search-close" aria-label="Cerrar búsqueda">✕</button>
+		</div>
+		<div id="search-box"></div>
+	</div>
+</dialog>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+
+<script>
+	const dialog = document.getElementById('search-dialog') as HTMLDialogElement | null;
+	const closeBtn = document.getElementById('search-close');
+	let initialized = false;
+
+	async function initSearch() {
+		if (initialized) return;
+		initialized = true;
+		// Load pagefind via script tag to avoid Vite static analysis (pagefind is generated at postbuild)
+		await new Promise<void>((resolve, reject) => {
+			const s = document.createElement('script');
+			s.src = '/pagefind/pagefind-ui.js';
+			s.onload = () => resolve();
+			s.onerror = reject;
+			document.head.appendChild(s);
+		});
+		// @ts-ignore
+		new window.PagefindUI({
+			element: '#search-box',
+			showSubResults: false,
+			translations: {
+				placeholder: 'Buscar artículos...',
+				zero_results: 'Sin resultados para "[SEARCH_TERM]"',
+			},
+		});
+	}
+
+	dialog?.addEventListener('click', (e) => {
+		if (e.target === dialog) dialog.close();
+	});
+
+	dialog?.addEventListener('close', () => {
+		// Reset search when closed
+		const input = dialog.querySelector('input');
+		if (input) input.value = '';
+	});
+
+	closeBtn?.addEventListener('click', () => dialog?.close());
+
+	// Init on first open
+	dialog?.addEventListener('toggle', () => {
+		if (dialog.open) initSearch();
+	}, { once: true });
+</script>
+
+<style>
+	dialog {
+		position: fixed;
+		inset: 0;
+		margin: auto;
+		width: 90%;
+		max-width: 640px;
+		max-height: 80vh;
+		border: 1px solid rgba(184, 149, 42, 0.25);
+		border-radius: 10px;
+		background: #FDFAF4;
+		box-shadow: 0 20px 60px rgba(44, 31, 14, 0.2);
+		padding: 0;
+		overflow: hidden;
+	}
+
+	dialog::backdrop {
+		background: rgba(44, 31, 14, 0.45);
+		backdrop-filter: blur(2px);
+	}
+
+	.search-inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		max-height: 80vh;
+	}
+
+	.search-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em 1.25em 0.75em;
+		border-bottom: 1px solid rgba(184, 149, 42, 0.12);
+	}
+
+	.search-title {
+		font-family: 'Cinzel', serif;
+		font-size: 0.75em;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		color: #A89060;
+	}
+
+	.search-close {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: #A89060;
+		font-size: 1em;
+		padding: 0.25em 0.5em;
+		border-radius: 4px;
+		transition: color 0.2s, background 0.2s;
+		line-height: 1;
+	}
+
+	.search-close:hover {
+		color: #2C1F0E;
+		background: rgba(184, 149, 42, 0.1);
+	}
+
+	#search-box {
+		padding: 1em 1.25em;
+		overflow-y: auto;
+		flex: 1;
+	}
+
+	/* Pagefind UI overrides to match site palette */
+	#search-box :global(.pagefind-ui__search-input) {
+		font-family: 'Crimson Text', serif;
+		font-size: 1.1em;
+		border: 1px solid rgba(184, 149, 42, 0.35);
+		border-radius: 6px;
+		padding: 0.65em 1em;
+		background: #F5EFE0;
+		color: #2C1F0E;
+		width: 100%;
+		outline: none;
+	}
+
+	#search-box :global(.pagefind-ui__search-input:focus) {
+		border-color: #B8952A;
+		box-shadow: 0 0 0 3px rgba(184, 149, 42, 0.12);
+	}
+
+	#search-box :global(.pagefind-ui__result) {
+		border-top: 1px solid rgba(184, 149, 42, 0.1);
+		padding: 0.85em 0;
+	}
+
+	#search-box :global(.pagefind-ui__result-title) {
+		font-family: 'Cinzel', serif;
+		font-size: 0.9em;
+		color: #2C1F0E;
+	}
+
+	#search-box :global(.pagefind-ui__result-title a) {
+		color: #8B6914;
+		text-decoration: none;
+	}
+
+	#search-box :global(.pagefind-ui__result-title a:hover) {
+		text-decoration: underline;
+	}
+
+	#search-box :global(.pagefind-ui__result-excerpt) {
+		font-size: 0.85em;
+		color: #7A6840;
+		line-height: 1.55;
+		margin-top: 0.25em;
+	}
+
+	#search-box :global(mark) {
+		background: rgba(184, 149, 42, 0.2);
+		color: #2C1F0E;
+		border-radius: 2px;
+	}
+
+	#search-box :global(.pagefind-ui__search-clear) {
+		color: #A89060;
+	}
+</style>
