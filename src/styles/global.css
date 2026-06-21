@@ -28,9 +28,10 @@ body {
 }
 
 main {
-	width: 760px;
-	max-width: calc(100% - 2em);
-	margin: auto;
+	width: 100%;
+	max-width: 760px;
+	box-sizing: border-box;
+	margin: 0 auto;
 	padding: 3em 1em;
 }
 
@@ -73,7 +74,6 @@ table    { width: 100%; }
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 6px;
 }
 
 code {

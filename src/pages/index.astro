@@ -129,13 +129,14 @@ const RESEARCHERS = [
 	<body>
 		<Header />
 		<SearchModal />
-		<main>
+		<!-- Hero fuera de <main> para ser full-width -->
+		<div class="hero-image-wrap">
+			<Image src={heroImg} alt="Meditación espiritual al amanecer" width={1200} height={480} class="hero-img" />
+			<div class="hero-image-overlay"></div>
+		</div>
+		<main class="home-main">
 
-			<!-- ① HERO -->
-			<div class="hero-image-wrap">
-				<Image src={heroImg} alt="Meditación espiritual al amanecer" width={1200} height={480} class="hero-img" />
-				<div class="hero-image-overlay"></div>
-			</div>
+			<!-- ① HERO text + CTAs -->
 			<section class="hero">
 				<div class="hero-ornament">✦ ✦ ✦</div>
 				<h1>Regresión a<br />Vidas Pasadas</h1>
@@ -235,6 +236,12 @@ const RESEARCHERS = [
 </html>
 
 <style>
+	/* ——— Override global main width for homepage ——— */
+	.home-main {
+		max-width: 1080px;
+		padding-top: 0;
+	}
+
 	/* ——— Hero ——— */
 	.hero-image-wrap {
 		position: relative;
@@ -249,6 +256,7 @@ const RESEARCHERS = [
 		object-fit: cover;
 		object-position: center 30%;
 		filter: sepia(20%) brightness(0.92) saturate(0.85);
+		border-radius: 0;
 	}
 
 	.hero-image-overlay {

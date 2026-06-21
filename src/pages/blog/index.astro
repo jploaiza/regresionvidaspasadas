@@ -295,6 +295,11 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		letter-spacing: 0.05em;
 	}
 
+	/* ——— Override global main width ——— */
+	.page-wrap {
+		width: auto;
+	}
+
 	/* ——— Featured card ——— */
 	.featured-card {
 		display: block;
@@ -315,6 +320,7 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		filter: brightness(0.5) saturate(0.8);
 		transition: transform 0.4s, filter 0.4s;
 		display: block;
+		border-radius: 0;
 	}
 
 	.featured-card:hover .featured-img {
