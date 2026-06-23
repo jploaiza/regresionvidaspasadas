@@ -217,16 +217,17 @@ const EXPEDIENTES = [
         <!-- SIDEBAR -->
         <aside class="home-sidebar">
 
-          <!-- Newsletter (decorativo) -->
+          <!-- Newsletter -->
           <div class="sidebar-newsletter">
             <div class="sidebar-newsletter-icon">
               <span class="material-symbols-outlined">mail</span>
             </div>
             <h4 class="sidebar-newsletter-title">Boletín de Investigación</h4>
             <p class="sidebar-newsletter-desc">Reciba mensualmente los últimos hallazgos sobre RVP, SRT y estudios de la consciencia.</p>
-            <form class="sidebar-newsletter-form" onsubmit="return false;">
-              <input class="sidebar-newsletter-input" type="email" placeholder="Correo electrónico" />
+            <form class="sidebar-newsletter-form" id="newsletter-form-home">
+              <input class="sidebar-newsletter-input" type="email" placeholder="Correo electrónico" required />
               <button class="sidebar-newsletter-btn" type="submit">Suscribirse al Portal</button>
+              <p class="newsletter-msg" id="newsletter-msg-home" aria-live="polite"></p>
             </form>
           </div>
 
@@ -278,6 +279,48 @@ const EXPEDIENTES = [
 
     </main>
     <Footer />
+
+    <script>
+      function setupNewsletter(formId: string, msgId: string) {
+        const form = document.getElementById(formId) as HTMLFormElement | null;
+        const msg = document.getElementById(msgId) as HTMLElement | null;
+        if (!form || !msg) return;
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const input = form.querySelector('input[type="email"]') as HTMLInputElement;
+          const btn = form.querySelector('button') as HTMLButtonElement;
+          const email = input?.value.trim();
+          if (!email) return;
+          btn.disabled = true;
+          btn.textContent = 'Enviando…';
+          try {
+            const res = await fetch('/api/subscribe', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email }),
+            });
+            const data = await res.json();
+            if (res.ok) {
+              msg.textContent = data.message ?? '¡Suscrito!';
+              msg.style.color = '#B8952A';
+              input.value = '';
+              btn.textContent = '✓ Suscrito';
+            } else {
+              msg.textContent = data.error ?? 'Error. Intente nuevamente.';
+              msg.style.color = '#c0392b';
+              btn.disabled = false;
+              btn.textContent = 'Suscribirse al Portal';
+            }
+          } catch {
+            msg.textContent = 'Error de conexión.';
+            msg.style.color = '#c0392b';
+            btn.disabled = false;
+            btn.textContent = 'Suscribirse al Portal';
+          }
+        });
+      }
+      setupNewsletter('newsletter-form-home', 'newsletter-msg-home');
+    </script>
   </body>
 </html>
 
@@ -659,6 +702,8 @@ const EXPEDIENTES = [
     transition: background 0.2s;
   }
   .sidebar-newsletter-btn:hover { background: #9A7A20; }
+  .sidebar-newsletter-btn:disabled { opacity: 0.7; cursor: default; }
+  .newsletter-msg { font-family: 'EB Garamond', serif; font-size: 0.82em; min-height: 1.2em; margin: 0; }
 
   /* Lo más leído */
   .sidebar-section-title {
