@@ -6,6 +6,11 @@ import Footer from '../components/Footer.astro';
 
 const allPosts = await getCollection('blog');
 
+const JP = 'https://www.juanpabloloaiza.com';
+const JP_FOTO = 'https://media.juanpabloloaiza.com/images/jpl-newwsp.jpeg';
+const JP_WHATSAPP = 'https://api.whatsapp.com/send?phone=56962081884&text=' +
+  encodeURIComponent('Hola Juan Pablo, te escribo desde la página de expositores de regresionvidaspasadas.com.');
+
 const EXPOSITORES = [
   {
     slug: 'brian-weiss',
@@ -14,6 +19,23 @@ const EXPOSITORES = [
     disciplina: 'Psiquiatría · Regresión clínica',
     descripcion: 'Psiquiatra de Yale y Mount Sinai. Su caso con la paciente Catherine —documentado en "Muchas Vidas, Muchos Maestros" (1988)— convirtió la regresión terapéutica en un fenómeno mundial.',
     libro: 'Muchas Vidas, Muchos Maestros (1988)',
+  },
+  {
+    slug: 'juan-pablo-loaiza',
+    destacado: true,
+    nombre: 'Juan Pablo Loaiza',
+    periodo: 'Terapeuta en ejercicio',
+    disciplina: 'Regresión a Vidas Pasadas · Hipnosis clínica · SRT',
+    descripcion: 'Terapeuta de Regresión a Vidas Pasadas (TRVP) con más de 19 años de experiencia. Realiza sesiones de regresión, hipnosis clínica y Terapia de Liberación Espiritual (SRT), de forma online para personas de todo el mundo, y escribe este portal.',
+    libro: '',
+    enlaces: [
+      { texto: 'Su sitio web', detalle: 'juanpabloloaiza.com', href: JP },
+      { texto: 'Sesiones de regresión a vidas pasadas', detalle: 'Cómo funciona el proceso', href: `${JP}/#QueEsTRVP` },
+      { texto: 'Liberación espiritual (SRT)', detalle: 'Qué es y cómo se trabaja', href: `${JP}/#liberacion` },
+      { texto: 'Su blog', detalle: 'Artículos de Juan Pablo', href: `${JP}/blog` },
+      { texto: 'Videos', detalle: 'Contenido en video', href: `${JP}/videos` },
+      { texto: 'Escríbele por WhatsApp', detalle: 'Consultas y sesiones', href: JP_WHATSAPP },
+    ],
   },
   {
     slug: 'michael-newton',
@@ -81,11 +103,9 @@ const expositoresSchema = JSON.stringify([
     url: HUB_URL,
     inLanguage: 'es',
     publisher: { '@id': `${SITEURL}/#organization` },
-    mentions: EXPOSITORES.map(e => ({
-      '@type': 'Person',
-      name: e.nombre,
-      description: e.descripcion,
-    })),
+    mentions: EXPOSITORES.map(e => (e.destacado
+      ? { '@type': 'Person', '@id': `${JP}/#person`, name: e.nombre, description: e.descripcion, url: JP }
+      : { '@type': 'Person', name: e.nombre, description: e.descripcion })),
     hasPart: expositorPosts.map(p => ({
       '@type': 'Article',
       '@id': `${SITEURL}/blog/${p.id}/#article`,
@@ -130,18 +150,49 @@ const expositoresSchema = JSON.stringify([
       {EXPOSITORES.map(exp => {
         const articulos = getArticulosPorExpositor(exp.slug);
         return (
-          <section class="expositor-section">
+          <section class:list={['expositor-section', { 'expositor-section--destacado': exp.destacado }]}>
             <div class="expositor-header">
               <div class="expositor-meta">
                 <span class="expositor-periodo">{exp.periodo}</span>
                 <span class="expositor-disciplina">{exp.disciplina}</span>
               </div>
-              <h2 class="expositor-nombre">{exp.nombre}</h2>
-              <p class="expositor-desc">{exp.descripcion}</p>
-              <p class="expositor-libro">
-                <span class="libro-label">Obra principal:</span> {exp.libro}
-              </p>
+              {exp.destacado ? (
+                <div class="expositor-perfil">
+                  <img class="expositor-foto" src={JP_FOTO} alt="Juan Pablo Loaiza, terapeuta de Regresión a Vidas Pasadas" width="132" height="132" loading="lazy" decoding="async" />
+                  <div>
+                    <h2 class="expositor-nombre"><a href={JP} rel="author">{exp.nombre}</a></h2>
+                    <p class="expositor-desc">{exp.descripcion}</p>
+                    <ul class="expositor-datos">
+                      <li>+19 años de experiencia</li>
+                      <li>Regresión a vidas pasadas</li>
+                      <li>Terapia de Liberación Espiritual (SRT)</li>
+                      <li>Sesiones online en todo el mundo</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <h2 class="expositor-nombre">{exp.nombre}</h2>
+                  <p class="expositor-desc">{exp.descripcion}</p>
+                  <p class="expositor-libro">
+                    <span class="libro-label">Obra principal:</span> {exp.libro}
+                  </p>
+                </>
+              )}
             </div>
+
+            {exp.destacado && (
+              <ul class="articulos-grid">
+                {exp.enlaces.map(l => (
+                  <li>
+                    <a href={l.href} class="articulo-card" target="_blank" rel="noopener">
+                      <span class="art-title">{l.texto}<small class="art-detalle">{l.detalle}</small></span>
+                      <span class="art-arrow">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {articulos.length > 0 && (
               <ul class="articulos-grid">
@@ -204,6 +255,48 @@ const expositoresSchema = JSON.stringify([
     height: 1px;
     background: linear-gradient(90deg, transparent, #F5DC98, transparent);
     margin: 0 auto;
+  }
+
+  .expositor-section--destacado {
+    background: linear-gradient(160deg, rgba(27,38,37,0.7), rgba(9,14,13,0.85));
+    border: 1px solid rgba(230,200,117,0.35);
+    border-radius: 18px;
+    padding: 1.75em 1.75em 1.5em;
+    box-shadow: 0 10px 35px -10px rgba(0,0,0,0.6), 0 0 0 1px rgba(230,200,117,0.06);
+  }
+  .expositor-perfil { display: flex; gap: 1.5em; align-items: flex-start; }
+  .expositor-foto {
+    flex-shrink: 0;
+    width: 132px; height: 132px;
+    border-radius: 50%;
+    object-fit: cover; object-position: 50% 22%;
+    border: 3px solid #E6C875;
+    box-shadow: 0 4px 16px rgba(230,200,117,0.25);
+  }
+  .expositor-nombre a { color: inherit; text-decoration: none; }
+  .expositor-nombre a:hover { color: #E6C875; }
+  .expositor-datos {
+    list-style: none; margin: 0.9em 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 0.5em 0.6em;
+  }
+  .expositor-datos li {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.5em; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #E6C875;
+    border: 1px solid rgba(230,200,117,0.35);
+    border-radius: 999px;
+    padding: 0.5em 1em;
+  }
+  .art-detalle {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.68em; font-weight: 400;
+    color: rgba(250,247,242,0.6);
+    margin-top: 0.15em;
+  }
+  @media (max-width: 640px) {
+    .expositor-perfil { flex-direction: column; align-items: center; text-align: center; }
+    .expositor-datos { justify-content: center; }
   }
 
   .expositor-section {

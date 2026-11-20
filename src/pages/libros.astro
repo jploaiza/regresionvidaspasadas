@@ -168,9 +168,14 @@ const CATEGORIAS = [
   },
 ];
 
-function coverUrl(isbn: string) {
-  return `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`;
-}
+// Portadas guardadas en /public/portadas (webp). Si un libro no tiene portada
+// fiable, se dibuja una portada tipográfica con su título y autor.
+const CON_PORTADA = new Set([
+  '0671657860', '1567183204', '055313613X', '0553345788', '0345332520', '1250050502',
+  '0854370005', '1882658000', '0345350839', '0829011536', '0393301354', '8598161403',
+  '8437237025', '1451695195', '1577311523', '0813908728',
+]);
+const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
 ---
 
 <!doctype html>
@@ -201,17 +206,21 @@ function coverUrl(isbn: string) {
             {cat.libros.map(libro => (
               <li class="libro-card">
                 <div class="libro-cover">
-                  <img
-                    src={coverUrl(libro.isbn)}
-                    alt={`Portada de ${libro.titulo}`}
-                    width="90"
-                    height="130"
-                    loading="lazy"
-                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-                  />
-                  <div class="cover-fallback" style={`background: ${cat.color}18; border-color: ${cat.color}44`}>
-                    <span>{libro.año}</span>
-                  </div>
+                  {CON_PORTADA.has(libro.isbn) ? (
+                    <img
+                      src={coverUrl(libro.isbn)}
+                      alt={`Portada de ${libro.titulo}, de ${libro.autor}`}
+                      width="96"
+                      height="140"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div class="cover-fallback" role="img" aria-label={`Portada de ${libro.titulo}`} style={`--cat: ${cat.color}`}>
+                      <span class="cover-fallback-title">{libro.titulo}</span>
+                      <span class="cover-fallback-author">{libro.autor}</span>
+                    </div>
+                  )}
                 </div>
                 <div class="libro-body">
                   <div class="libro-header">
@@ -322,29 +331,47 @@ function coverUrl(isbn: string) {
 
   .libro-cover {
     flex-shrink: 0;
-    width: 72px;
+    width: 96px;
   }
 
   .libro-cover img {
-    width: 72px;
-    height: 104px;
+    width: 96px;
+    height: 140px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5), 0 0 0 1px rgba(230,200,117,0.18);
     display: block;
   }
 
   .cover-fallback {
-    display: none;
-    width: 72px;
-    height: 104px;
-    border-radius: 10px;
-    border: 1px solid;
+    width: 96px;
+    height: 140px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 0.8em 0.6em;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Syne', serif;
-    font-size: 0.75em;
-    color: #E6C875;
+    gap: 0.6em;
+    text-align: center;
+    background: linear-gradient(160deg, #1B2625 0%, #090E0D 100%);
+    border: 1px solid var(--cat, #E6C875);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  }
+  .cover-fallback-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95em;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #FAF7F2;
+  }
+  .cover-fallback-author {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.42em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cat, #E6C875);
   }
 
   .libro-body { flex: 1; min-width: 0; }

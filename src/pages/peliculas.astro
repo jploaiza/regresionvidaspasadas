@@ -4,6 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import headerImg from '../assets/blog/peliculas-cine-film.jpg';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const CATEGORIAS = [
   {
@@ -11,20 +13,14 @@ const CATEGORIAS = [
     icono: '✨',
     items: [
       {
-        titulo: 'Nosso Lar',
+        titulo: 'Nosso Lar (Astral City)',
+        buscar: 'Nosso Lar',
+        slug: 'nosso-lar',
         tipo: 'Película',
         año: '2010',
         origen: 'Brasil',
-        descripcion: 'La adaptación cinematográfica del libro de Chico Xavier. Un médico muere y despierta en una ciudad espiritual llamada Nosso Lar. La producción espírita más influyente del cine latinoamericano.',
+        descripcion: 'La adaptación cinematográfica del libro de Chico Xavier (distribuida internacionalmente como Astral City: A Spiritual Journey). Un médico muere y despierta en una ciudad espiritual llamada Nosso Lar. La producción espírita más influyente del cine latinoamericano.',
         porque: 'La representación más completa y emocionalmente honesta del proceso de transición hacia el plano espiritual. Imprescindible.',
-      },
-      {
-        titulo: 'Astral City: A Spiritual Journey',
-        tipo: 'Película',
-        año: '2010',
-        origen: 'Brasil',
-        descripcion: 'Otro nombre para la misma película de Nosso Lar, en su versión para el mercado internacional en inglés.',
-        porque: 'Ver con subtítulos en español si no está disponible en español — la experiencia vale la pena.',
       },
       {
         titulo: 'Hereafter',
@@ -159,6 +155,24 @@ const CATEGORIAS = [
     ],
   },
 ];
+
+const PAISES = [
+  { cc: 'es', nombre: 'España' },
+  { cc: 'mx', nombre: 'México' },
+  { cc: 'ar', nombre: 'Argentina' },
+  { cc: 'cl', nombre: 'Chile' },
+  { cc: 'co', nombre: 'Colombia' },
+];
+
+const slugify = (s: string) =>
+  s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+// Pósters guardados en /public/peliculas/{slug}.webp. Si falta uno, se dibuja un póster tipográfico.
+const tienePoster = (slug: string) => fs.existsSync(path.join(process.cwd(), 'public', 'peliculas', `${slug}.webp`));
+
+// Entradas sin póster ni enlaces de visionado: no son una obra concreta (Hypnosis: A New Film)
+// o su título no se pudo verificar (Flipped); revisar con Juan Pablo.
+const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
 ---
 
 <!doctype html>
@@ -190,8 +204,23 @@ const CATEGORIAS = [
             {cat.titulo}
           </h2>
           <ul class="items-lista">
-            {cat.items.map(item => (
+            {cat.items.map(item => {
+              const slug = item.slug ?? slugify(item.titulo);
+              const buscar = item.buscar ?? item.titulo;
+              const conFicha = !SIN_FICHA.has(item.titulo);
+              return (
               <li class="item-card">
+                <div class="item-poster">
+                  {conFicha && tienePoster(slug) ? (
+                    <img src={`/peliculas/${slug}.webp`} alt={`Póster de ${item.titulo}`} width="110" height="160" loading="lazy" decoding="async" />
+                  ) : (
+                    <div class="poster-fallback" role="img" aria-label={`Póster de ${item.titulo}`}>
+                      <span class="poster-fallback-title">{item.titulo}</span>
+                      <span class="poster-fallback-year">{item.año}</span>
+                    </div>
+                  )}
+                </div>
+                <div class="item-body">
                 <div class="item-header">
                   <div class="item-meta">
                     <span class="item-tipo">{item.tipo}</span>
@@ -204,8 +233,19 @@ const CATEGORIAS = [
                 <p class="item-porque">
                   <span class="porque-label">Por qué verla:</span> {item.porque}
                 </p>
+                {conFicha && (
+                  <div class="item-ver">
+                    <span class="ver-label">Dónde verla:</span>
+                    {PAISES.map(pais => (
+                      <a class="ver-chip" href={`https://www.justwatch.com/${pais.cc}/buscar?q=${encodeURIComponent(buscar)}`} target="_blank" rel="noopener" title={`Ver en qué plataformas está disponible en ${pais.nombre}`}>{pais.nombre}</a>
+                    ))}
+                    <a class="ver-chip ver-chip--trailer" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(buscar + ' ' + item.año + ' tráiler oficial')}`} target="_blank" rel="noopener">▶ Tráiler</a>
+                  </div>
+                )}
+                </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </section>
       ))}
@@ -318,7 +358,50 @@ const CATEGORIAS = [
     border-radius: 16px;
     padding: 1.25em 1.5em;
     border-left: 3px solid rgba(230,200,117,0.25);
+    display: flex;
+    gap: 1.25em;
+    align-items: flex-start;
   }
+
+  .item-poster { flex-shrink: 0; width: 110px; }
+  .item-poster img {
+    width: 110px; height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5), 0 0 0 1px rgba(230,200,117,0.18);
+    display: block;
+  }
+  .poster-fallback {
+    width: 110px; height: 160px;
+    box-sizing: border-box;
+    padding: 0.8em 0.6em;
+    border-radius: 8px;
+    border: 1px solid rgba(230,200,117,0.4);
+    background: linear-gradient(160deg, #1B2625 0%, #090E0D 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6em;
+    text-align: center;
+  }
+  .poster-fallback-title { font-family: 'Cormorant Garamond', serif; font-size: 0.95em; font-weight: 600; line-height: 1.1; color: #FAF7F2; }
+  .poster-fallback-year { font-family: 'Syne', sans-serif; font-size: 0.45em; letter-spacing: 0.16em; color: #E6C875; }
+  .item-body { flex: 1; min-width: 0; }
+
+  .item-ver {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.5em;
+    margin-top: 0.9em; padding-top: 0.8em;
+    border-top: 1px solid rgba(230,200,117,0.15);
+  }
+  .ver-label {
+    font-family: 'Syne', sans-serif; font-size: 0.5em; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase; color: #BA9C4B; margin-right: 0.3em;
+  }
+  .ver-chip {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.62em; font-weight: 600;
+    color: #FAF7F2; text-decoration: none;
+    border: 1px solid rgba(230,200,117,0.4); border-radius: 999px; padding: 0.35em 0.9em;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .ver-chip:hover { background: rgba(230,200,117,0.12); border-color: #E6C875; color: #E6C875; text-decoration: none; }
+  .ver-chip--trailer { background: rgba(230,200,117,0.12); color: #E6C875; }
 
   .item-meta {
     display: flex;
@@ -378,6 +461,8 @@ const CATEGORIAS = [
 
   @media (max-width: 600px) {
     .page-header h1 { font-size: 1.8em; }
-    .item-card { padding: 1em; }
+    .item-card { padding: 1em; gap: 0.9em; }
+    .item-poster, .item-poster img, .poster-fallback { width: 78px; }
+    .item-poster img, .poster-fallback { height: 114px; }
   }
 </style>
