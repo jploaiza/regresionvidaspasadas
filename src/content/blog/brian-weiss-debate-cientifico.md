@@ -1,17 +1,17 @@
 ---
 title: 'Brian Weiss y la ciencia: el debate que nunca terminó'
-description: '¿Qué dice la comunidad científica sobre el trabajo de Brian Weiss? Un análisis equilibrado de las críticas, los contraargumentos y la posición que Weiss mismo mantiene sobre los límites de la verificación empírica.'
+description: '¿Qué dice la ciencia sobre el trabajo de Brian Weiss? Un análisis equilibrado de críticas, respuestas y los límites de la verificación empírica.'
 pubDate: '2025-02-14'
 expositor: 'brian-weiss'
 ---
 
-Ningún análisis honesto del trabajo de Brian Weiss puede ignorar el debate científico que rodea su obra. Weiss mismo no lo ignora: ha pasado décadas navegando la tensión entre su formación empírica y sus hallazgos clínicos, y ha sido cuidadoso —más de lo que sus críticos suelen reconocer— en no hacer afirmaciones que excedan lo que su evidencia puede sostener.
+Ningún análisis honesto del trabajo de [Brian Weiss](/blog/brian-weiss-quien-es/) puede ignorar el debate científico que rodea su obra. Weiss mismo no lo ignora: ha pasado décadas navegando la tensión entre su formación empírica y sus hallazgos clínicos, y ha sido cuidadoso —más de lo que sus críticos suelen reconocer— en no hacer afirmaciones que excedan lo que su evidencia puede sostener.
 
 ## La crítica central: ausencia de verificación independiente
 
 El argumento más sólido contra el trabajo de Weiss es metodológico: los relatos de vidas pasadas que emergen en las sesiones de regresión no han sido verificados de forma independiente y sistemática. Catherine describió escenas de vidas en el Egipto antiguo o la Grecia clásica —contextos tan remotos que es prácticamente imposible confirmar o refutar los detalles históricos que proporcionó.
 
-Esto es diferente a los casos de niños estudiados por Ian Stevenson, donde los recuerdos podían verificarse contra registros de personas fallecidas identificables. En la regresión hipnótica de adultos, el material histórico es virtualmente inverificable.
+Esto es diferente a los casos de niños estudiados por [Ian Stevenson](/blog/ian-stevenson-quien-es/), donde los recuerdos podían verificarse contra registros de personas fallecidas identificables. En la regresión hipnótica de adultos, el material histórico es virtualmente inverificable.
 
 ## El problema de la criptomnesia
 
@@ -31,7 +31,7 @@ Weiss extiende ese pragmatismo a la regresión: "No necesito que la ciencia conf
 
 ## La hipnosis como zona gris
 
-Otro punto de debate es la confiabilidad de la hipnosis como método de acceso a memorias. La psicología cognitiva ha documentado bien que la hipnosis puede generar **falsos recuerdos** —memorias que el sujeto experimenta como reales pero que son elaboraciones del inconsciente bajo la influencia de las expectativas del entorno.
+Otro punto de debate es la confiabilidad de la [hipnosis](/blog/hipnosis-que-es-realmente/) como método de acceso a memorias. La psicología cognitiva ha documentado bien que la hipnosis puede generar **falsos recuerdos** —memorias que el sujeto experimenta como reales pero que son elaboraciones del inconsciente bajo la influencia de las expectativas del entorno.
 
 Esto plantea una pregunta incómoda: ¿qué parte de lo que emerge en una sesión de regresión hipnótica es material genuino y qué parte es construcción narrativa?
 

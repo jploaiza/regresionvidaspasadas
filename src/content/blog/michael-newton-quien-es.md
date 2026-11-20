@@ -1,11 +1,11 @@
 ---
 title: 'Michael Newton: el explorador de lo que hay entre vidas'
-description: 'Biografía de Michael Newton, el hipnoterapeuta que desarrolló la Vida entre Vidas (LBL) y documentó lo que ocurre con el alma en el período entre una encarnación y la siguiente.'
+description: 'Biografía de Michael Newton, el hipnoterapeuta que creó la terapia de Vida entre Vidas (LBL) y documentó el período entre encarnaciones.'
 pubDate: '2025-02-21'
 expositor: 'michael-newton'
 ---
 
-Si Brian Weiss se hizo la pregunta de qué hay en las vidas pasadas, Michael Newton se hizo la pregunta que viene después: ¿y qué hay entre ellas?
+Si [Brian Weiss](/blog/brian-weiss-quien-es/) se hizo la pregunta de qué hay en las vidas pasadas, Michael Newton se hizo la pregunta que viene después: ¿y qué hay entre ellas?
 
 Su respuesta —construida a lo largo de décadas de trabajo hipnoterapéutico y documentada en una serie de libros que se convirtieron en textos de referencia— trazó un mapa del período que el alma habita entre una encarnación y la siguiente. Un mapa que, según Newton, emerge de forma sorprendentemente consistente en cientos de personas que nunca se han conocido entre sí.
 
@@ -13,7 +13,7 @@ Su respuesta —construida a lo largo de décadas de trabajo hipnoterapéutico y
 
 Michael Newton nació en 1931 y desarrolló su carrera como psicólogo clínico y maestro hipnoterapeuta certificado. Obtuvo su doctorado en Psicología Clínica y ejerció durante años en Los Ángeles, donde trabajó como terapeuta y docente universitario.
 
-Su entrada al campo de la regresión fue, como la de Weiss, accidental: trabajando con un paciente en hipnosis profunda, este comenzó a describir no una vida pasada sino algo diferente —el período entre dos vidas, un estado de existencia que el paciente describía como luminoso, tranquilo y marcado por una claridad que no tenía en estado de vigilia.
+Su entrada al campo de la regresión fue, como la de Weiss, accidental: trabajando con un paciente en [hipnosis](/blog/hipnosis-que-es-realmente/) profunda, este comenzó a describir no una vida pasada sino algo diferente —el período entre dos vidas, un estado de existencia que el paciente describía como luminoso, tranquilo y marcado por una claridad que no tenía en estado de vigilia.
 
 Newton quedó fascinado. Decidió explorar ese territorio sistemáticamente.
 
@@ -21,7 +21,7 @@ Newton quedó fascinado. Decidió explorar ese territorio sistemáticamente.
 
 Lo que distingue a Newton del resto del campo es la especificidad de su enfoque. Weiss trabaja principalmente con vidas pasadas —las escenas, los traumas, las emociones atrapadas en existencias anteriores. Newton fue más allá y desarrolló una técnica específica para acceder a lo que ocurre entre vidas: la revisión de la vida recién concluida, la reunión con el grupo de almas, la preparación para la siguiente encarnación.
 
-Este enfoque tiene un nombre propio: **Life Between Lives** (LBL), o Vida entre Vidas en español. Y tiene sus propios protocolos, su propia inducción hipnótica y su propia estructura de trabajo, claramente diferenciada de la regresión a vidas pasadas estándar.
+Este enfoque tiene un nombre propio: **Life Between Lives** (LBL), o Vida entre Vidas en español. Y tiene sus propios protocolos, su propia inducción hipnótica y su propia estructura de trabajo, claramente diferenciada de la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/) estándar.
 
 ## El rigor metodológico de Newton
 

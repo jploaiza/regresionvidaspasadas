@@ -1,13 +1,13 @@
 ---
 title: 'Entidades extraterrestres y de otras dimensiones en la SRT'
-description: 'El territorio más fronterizo de la Terapia de Liberación Espiritual: los casos donde las entidades adheridas no son humanas ni oscuras sino de origen aparentemente no terrestre — lo que Baldwin llamó CE-VI y cómo los practicantes trabajan con este tipo de presencias.'
+description: 'El territorio más fronterizo de la SRT: entidades adheridas de origen aparentemente no terrestre y cómo trabajan los terapeutas con ellas.'
 pubDate: '2026-01-17'
 expositor: 'srt'
 ---
 
-Hay un territorio en la Terapia de Liberación Espiritual que incluso sus practicantes más serios abordan con cautela: los casos donde las entidades que emergen en las sesiones no se identifican ni como espíritus humanos adheridos ni como entidades oscuras del tipo que la tradición religiosa llamaría demonios — sino como algo que los propios pacientes describen como extraterrestre, interdimensional, o simplemente "no de aquí".
+Hay un territorio en la [Terapia de Liberación Espiritual](/blog/srt-que-es/) que incluso sus practicantes más serios abordan con cautela: los casos donde las entidades que emergen en las sesiones no se identifican ni como espíritus humanos adheridos ni como entidades oscuras del tipo que la tradición religiosa llamaría demonios — sino como algo que los propios pacientes describen como extraterrestre, interdimensional, o simplemente "no de aquí".
 
-William Baldwin fue el primero en intentar sistematizar este territorio. Lo llamó CE-VI: *Close Encounters of the Possession Kind* — una referencia deliberada a la escala de Hynek de encuentros cercanos, llevada al campo de la adhesión espiritual.
+[William Baldwin](/blog/william-baldwin-quien-es/) fue el primero en intentar sistematizar este territorio. Lo llamó CE-VI: *Close Encounters of the Possession Kind* — una referencia deliberada a la escala de Hynek de encuentros cercanos, llevada al campo de la adhesión espiritual.
 
 ## Qué emerge en las sesiones
 

@@ -1,11 +1,11 @@
 ---
 title: 'Antes de Mesmer: chamanes, sueños y el trance como medicina ancestral'
-description: 'La hipnosis no comenzó con Mesmer. El trance inducido ha sido la herramienta central de la medicina espiritual en prácticamente todas las culturas humanas: los chamanes siberianos, las Pythiai de Delfos, los templos del sueño de Grecia y la incubación onírica del Antiguo Egipto.'
+description: 'La hipnosis no empezó con Mesmer: chamanes, el oráculo de Delfos y los templos del sueño usaron el trance como medicina espiritual.'
 pubDate: '2026-02-21'
 expositor: 'hipnosis'
 ---
 
-James Braid nombró la hipnosis en 1843. Mesmer la convirtió en espectáculo en 1778. Pero la inducción intencional de estados alterados de conciencia para propósitos terapéuticos, espirituales o adivinatorios es una práctica tan antigua como la humanidad misma.
+James Braid nombró la [hipnosis](/blog/hipnosis-que-es-realmente/) en 1843. Mesmer la convirtió en espectáculo en 1778. Pero la inducción intencional de estados alterados de conciencia para propósitos terapéuticos, espirituales o adivinatorios es una práctica tan antigua como la humanidad misma.
 
 Antes de que existiera la palabra "hipnosis", existía el trance. Y el trance era la herramienta médica más potente de la mayor parte de las culturas humanas.
 

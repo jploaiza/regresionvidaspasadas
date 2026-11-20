@@ -1,11 +1,11 @@
 ---
 title: 'Mitos y realidades sobre la hipnosis: lo que necesitas saber antes de tu primera sesión'
-description: 'Los 7 mitos más comunes sobre la hipnosis respondidos con evidencia: ¿te quedas dormido?, ¿el hipnoterapeuta controla tu mente?, ¿puedes quedarte "atrapado" en trance?, ¿qué pasa si eres muy racional?'
+description: 'Los 7 mitos más comunes sobre la hipnosis, respondidos con evidencia: ¿te quedas dormido?, ¿te controlan la mente?, ¿puedes quedar atrapado en trance?'
 pubDate: '2026-03-14'
 expositor: 'hipnosis'
 ---
 
-La hipnosis tiene más mitos que cualquier otra modalidad terapéutica. Muchos vienen del cine, muchos del espectáculo, y algunos de una larga historia de uso sensacionalista que dificultó su aceptación en la medicina convencional.
+La [hipnosis](/blog/hipnosis-que-es-realmente/) tiene más mitos que cualquier otra modalidad terapéutica. Muchos vienen del cine, muchos del espectáculo, y algunos de una larga historia de uso sensacionalista que dificultó su aceptación en la medicina convencional.
 
 Antes de una primera sesión de hipnoterapia o de regresión, conviene separar lo que es real de lo que es ficción.
 

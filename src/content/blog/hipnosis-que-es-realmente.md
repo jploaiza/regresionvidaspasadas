@@ -1,6 +1,6 @@
 ---
 title: '¿Qué es realmente la hipnosis? La ciencia detrás del trance'
-description: 'Una introducción honesta a lo que la hipnosis es según la investigación científica actual: un estado de atención focalizada y sugestibilidad elevada que el cerebro produce naturalmente, sin pérdida de conciencia, sin sueño y sin pérdida de control.'
+description: 'Qué es la hipnosis según la ciencia: un estado de atención focalizada y sugestibilidad elevada, sin sueño ni pérdida de control.'
 pubDate: '2026-02-07'
 expositor: 'hipnosis'
 ---
@@ -39,7 +39,7 @@ Estas diferencias son razonablemente estables a lo largo del tiempo y no depende
 
 ## Por qué importa esto para la regresión
 
-La terapia de regresión a vidas pasadas usa la hipnosis como herramienta de acceso: el estado hipnótico reduce la vigilancia crítica habitual y permite que material que normalmente permanece fuera de la consciencia ordinaria emerja y sea explorado.
+La terapia de [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/) usa la hipnosis como herramienta de acceso: el estado hipnótico reduce la vigilancia crítica habitual y permite que material que normalmente permanece fuera de la consciencia ordinaria emerja y sea explorado.
 
 Eso funciona mejor con personas que tienen niveles moderados a altos de sugestibilidad hipnótica. No porque la regresión "no sea real" en personas menos sugestibles, sino porque el acceso al material subconsciente es más fluido cuando el sistema nervioso entra más fácilmente en el estado que hace ese acceso posible.
 

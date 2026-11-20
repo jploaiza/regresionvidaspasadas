@@ -1,11 +1,11 @@
 ---
 title: 'Helen Wambach: la psicóloga que investigó la regresión con estadística'
-description: 'Biografía de Helen Wambach (1925-1986), la psicóloga clínica de la Universidad JFK que condujo sesiones de hipnosis grupal con más de 1.000 personas y analizó estadísticamente los patrones de sus recuerdos de vidas pasadas.'
+description: 'Biografía de Helen Wambach (1925-1986): la psicóloga que analizó estadísticamente más de 1.000 regresiones grupales a vidas pasadas.'
 pubDate: '2025-08-08'
 expositor: 'helen-wambach'
 ---
 
-En el campo de la regresión a vidas pasadas, Helen Wambach ocupa un lugar singular: es la investigadora que intentó con más seriedad aplicar el método estadístico al estudio del fenómeno. En un campo dominado por casos individuales y relatos cualitativos, Wambach apostó por los números —y lo que encontró sigue siendo difícil de explicar.
+En el campo de la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/), Helen Wambach ocupa un lugar singular: es la investigadora que intentó con más seriedad aplicar el método estadístico al estudio del fenómeno. En un campo dominado por casos individuales y relatos cualitativos, Wambach apostó por los números —y lo que encontró sigue siendo difícil de explicar.
 
 ## Orígenes y formación
 
@@ -15,7 +15,7 @@ Su interés en la regresión a vidas pasadas no comenzó desde una posición de 
 
 ## La apuesta metodológica: la hipnosis grupal
 
-La innovación de Wambach no fue solo estadística —fue metodológica. En lugar de trabajar con pacientes individuales en sesiones privadas, Wambach organizó talleres donde regresaba a grupos de veinte, cincuenta o incluso cien personas simultáneamente usando un protocolo de hipnosis grupal estandarizado.
+La innovación de Wambach no fue solo estadística —fue metodológica. En lugar de trabajar con pacientes individuales en sesiones privadas, Wambach organizó talleres donde regresaba a grupos de veinte, cincuenta o incluso cien personas simultáneamente usando un protocolo de [hipnosis](/blog/hipnosis-que-es-realmente/) grupal estandarizado.
 
 La ventaja de este enfoque era doble. Por un lado, permitía recoger grandes cantidades de datos en relativamente poco tiempo. Por otro, reducía uno de los problemas centrales de la regresión individual: la influencia del terapeuta sobre el sujeto. En un grupo grande, el terapeuta no puede personalizar la inducción ni las preguntas para cada sujeto —lo que emerge es más probable que sea producción del sujeto que contaminación del facilitador.
 

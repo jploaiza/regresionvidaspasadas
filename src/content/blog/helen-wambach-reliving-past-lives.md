@@ -1,11 +1,11 @@
 ---
 title: 'Reliving Past Lives: el estudio de 1.000 regresiones de Helen Wambach'
-description: 'Análisis del libro más importante de Helen Wambach (1978): qué encontró al analizar estadísticamente los datos de más de 1.000 regresiones grupales, qué patrones emergieron y por qué los resultados siguen siendo difíciles de descartar.'
+description: 'Reliving Past Lives (1978) de Helen Wambach: el análisis estadístico de más de 1.000 regresiones, sus patrones y por qué siguen siendo difíciles de descartar.'
 pubDate: '2025-08-15'
 expositor: 'helen-wambach'
 ---
 
-Publicado en 1978, *Reliving Past Lives: The Evidence Under Hypnosis* es el documento más completo del experimento más inusual de la historia de la psicología: una investigadora que condujo sesiones de hipnosis grupal con más de 1.000 personas, recopiló sus datos de forma sistemática y los analizó estadísticamente para determinar si los relatos de vidas pasadas eran compatibles con el registro histórico.
+Publicado en 1978, *Reliving Past Lives: The Evidence Under Hypnosis* es el documento más completo del experimento más inusual de la historia de la psicología: una investigadora que condujo sesiones de [hipnosis](/blog/hipnosis-que-es-realmente/) grupal con más de 1.000 personas, recopiló sus datos de forma sistemática y los analizó estadísticamente para determinar si los relatos de vidas pasadas eran compatibles con el registro histórico.
 
 ## El diseño del estudio
 

@@ -1,6 +1,6 @@
 ---
 title: '¿Qué es la Terapia de Liberación Espiritual (SRT)?'
-description: 'Una introducción completa a la Spirit Releasement Therapy: qué es, en qué se diferencia del exorcismo y de la psicoterapia convencional, quién puede beneficiarse y qué esperar de un proceso de liberación espiritual.'
+description: 'Qué es la Terapia de Liberación Espiritual (SRT): en qué se diferencia del exorcismo y la psicoterapia, a quién ayuda y qué esperar del proceso.'
 pubDate: '2025-12-13'
 expositor: 'srt'
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Los patrones históricos en las regresiones de Wambach'
-description: 'Qué encontró Helen Wambach al analizar los detalles históricos de 1.000 regresiones: por qué la distribución de épocas, géneros y clases no corresponde con lo que la fantasía produciría y qué implica eso para el debate sobre la regresión.'
+description: 'Qué halló Helen Wambach al analizar 1.000 regresiones: épocas, géneros y clases sociales que la fantasía no explica y qué implica para el debate.'
 pubDate: '2025-09-05'
 expositor: 'helen-wambach'
 ---
@@ -9,7 +9,7 @@ El argumento central de Wambach no era que la regresión era real —era que los
 
 ## El sesgo esperado en la fantasía histórica
 
-Para entender por qué los resultados de Wambach son llamativos, hay que partir de lo que la fantasía histórica típicamente produce. Cuando las personas imaginan libremente vidas en el pasado —sin hipnosis, como en juegos de rol o en fantasías conscientes— los sesgos son predecibles:
+Para entender por qué los resultados de Wambach son llamativos, hay que partir de lo que la fantasía histórica típicamente produce. Cuando las personas imaginan libremente vidas en el pasado —sin [hipnosis](/blog/hipnosis-que-es-realmente/), como en juegos de rol o en fantasías conscientes— los sesgos son predecibles:
 
 - Sobrerrepresentación de períodos históricos famosos: Egipto antiguo, Roma, la Edad Media caballeresca.
 - Sobrerrepresentación de géneros masculinos (especialmente entre mujeres que imaginan períodos donde los hombres tenían más poder y libertad).

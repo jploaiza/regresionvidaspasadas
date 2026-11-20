@@ -1,11 +1,11 @@
 ---
 title: '"Thirty Years Among the Dead": el libro que fundó la liberación espiritual'
-description: 'Análisis del libro de 1924 de Carl Wickland: qué casos documenta, qué teoría propone, por qué fue tan controversial y por qué sigue siendo la referencia histórica más importante de la Terapia de Liberación Espiritual.'
+description: 'Análisis de Treinta años entre los muertos (1924), de Carl Wickland: casos, teoría y por qué sigue siendo una referencia de la liberación espiritual.'
 pubDate: '2025-10-04'
 expositor: 'carl-wickland'
 ---
 
-Hay libros que son productos de su época y hay libros que pertenecen a ninguna época en particular porque tratan con preguntas que ninguna época ha resuelto. *Thirty Years Among the Dead*, publicado por Carl Wickland en 1924, es de los segundos.
+Hay libros que son productos de su época y hay libros que pertenecen a ninguna época en particular porque tratan con preguntas que ninguna época ha resuelto. *Thirty Years Among the Dead*, publicado por [Carl Wickland](/blog/carl-wickland-quien-es/) en 1924, es de los segundos.
 
 El libro es, en su superficie, un archivo de casos clínicos. Pero debajo de esa superficie es algo más ambicioso: un intento de reformular completamente la relación entre la mente, el alma y la enfermedad desde una perspectiva que la psiquiatría de su época no tenía marcos para evaluar.
 
@@ -31,6 +31,6 @@ Lo que es más interesante es que el libro tampoco fue aceptado completamente po
 
 ## El legado
 
-Hoy, *Thirty Years Among the Dead* se lee principalmente en los círculos de la Terapia de Liberación Espiritual como el texto fundacional del campo. William Baldwin lo cita extensamente en su manual. Edith Fiore construyó sobre sus intuiciones centrales. Los practicantes modernos de liberación espiritual reconocen en el trabajo de los Wickland la formulación más temprana y más documentada de los principios que guían su práctica.
+Hoy, *Thirty Years Among the Dead* se lee principalmente en los círculos de la [Terapia de Liberación Espiritual](/blog/srt-que-es/) como el texto fundacional del campo. [William Baldwin](/blog/william-baldwin-quien-es/) lo cita extensamente en su manual. [Edith Fiore](/blog/edith-fiore-quien-es/) construyó sobre sus intuiciones centrales. Los practicantes modernos de liberación espiritual reconocen en el trabajo de los Wickland la formulación más temprana y más documentada de los principios que guían su práctica.
 
 El libro está disponible de forma gratuita en varias plataformas de libros digitales —es de dominio público desde hace décadas— y su lectura sigue siendo relevante no solo como historia del campo sino como documento clínico con preguntas que todavía no tienen respuesta satisfactoria.

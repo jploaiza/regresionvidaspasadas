@@ -1,11 +1,11 @@
 ---
 title: 'Roger Woolger: cuando Jung se encontró con las vidas pasadas'
-description: 'Quién fue Roger Woolger (1944-2011): el analista junguiano de Oxford que integró la psicología profunda con la terapia de regresión, creando el Deep Memory Process y abriendo un diálogo riguroso entre Jung y la reencarnación.'
+description: 'Quién fue Roger Woolger (1944-2011): el analista junguiano de Oxford que creó el Deep Memory Process y unió a Jung con la terapia de regresión.'
 pubDate: '2025-05-16'
 expositor: 'roger-woolger'
 ---
 
-En el campo de la regresión a vidas pasadas, la mayoría de los grandes exponentes llegaron desde la hipnoterapia o desde la experiencia espiritual personal. Roger Woolger llegó desde Jung —y esa diferencia de origen es lo que hace su contribución tan particular y, para muchos profesionales de la salud mental, más accesible que la de sus contemporáneos.
+En el campo de la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/), la mayoría de los grandes exponentes llegaron desde la hipnoterapia o desde la experiencia espiritual personal. Roger Woolger llegó desde Jung —y esa diferencia de origen es lo que hace su contribución tan particular y, para muchos profesionales de la salud mental, más accesible que la de sus contemporáneos.
 
 ## Formación académica y el encuentro con Jung
 
@@ -29,7 +29,7 @@ Esta posición —pragmática, epistemológicamente cuidadosa, orientada al resu
 
 ## Enseñanza y práctica
 
-Woolger enseñó en universidades e institutos de formación junguiana en Europa y América del Norte. Desarrolló el **Deep Memory Process** (DMP), su método propio de trabajo con vidas pasadas, que combina elementos de la hipnosis, el trabajo corporal y el psicodrama junguiano.
+Woolger enseñó en universidades e institutos de formación junguiana en Europa y América del Norte. Desarrolló el **Deep Memory Process** (DMP), su método propio de trabajo con vidas pasadas, que combina elementos de la [hipnosis](/blog/hipnosis-que-es-realmente/), el trabajo corporal y el psicodrama junguiano.
 
 Impartió talleres y supervisó terapeutas hasta poco antes de su muerte en 2011. Su influencia en el campo de la psicología transpersonal europea fue considerable, especialmente en Gran Bretaña y Alemania, donde la tradición junguiana tiene mayor arraigo académico que en América.
 

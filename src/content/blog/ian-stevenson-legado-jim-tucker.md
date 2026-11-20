@@ -1,11 +1,11 @@
 ---
 title: 'El legado de Stevenson y Jim Tucker: la ciencia de la reencarnación continúa'
-description: 'Cómo Jim Tucker continuó y amplió el trabajo de Ian Stevenson en la Universidad de Virginia: sus propios libros, las actualizaciones metodológicas y el estado actual de la investigación científica sobre reencarnación.'
+description: 'Cómo Jim Tucker continuó el trabajo de Ian Stevenson en la Universidad de Virginia y el estado actual de la investigación sobre reencarnación.'
 pubDate: '2025-08-01'
 expositor: 'ian-stevenson'
 ---
 
-Ian Stevenson tuvo la rara fortuna de encontrar un sucesor a la altura: Jim Tucker, psiquiatra de la Universidad de Virginia, que continuó el trabajo con el mismo rigor metodológico y una adaptación a los medios y las herramientas del siglo XXI que Stevenson no alcanzó a hacer.
+[Ian Stevenson](/blog/ian-stevenson-quien-es/) tuvo la rara fortuna de encontrar un sucesor a la altura: Jim Tucker, psiquiatra de la Universidad de Virginia, que continuó el trabajo con el mismo rigor metodológico y una adaptación a los medios y las herramientas del siglo XXI que Stevenson no alcanzó a hacer.
 
 ## Quién es Jim Tucker
 

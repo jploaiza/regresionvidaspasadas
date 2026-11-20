@@ -1,11 +1,11 @@
 ---
 title: 'Marcas de nacimiento y vidas anteriores: la investigación biológica de Stevenson'
-description: 'El trabajo más sorprendente de Ian Stevenson: 225 casos donde marcas de nacimiento o malformaciones congénitas del niño correspondían con heridas letales de la persona cuya vida ese niño recordaba.'
+description: '225 casos donde las marcas de nacimiento de un niño coincidían con las heridas mortales de la vida que recordaba: la investigación de Ian Stevenson.'
 pubDate: '2025-07-18'
 expositor: 'ian-stevenson'
 ---
 
-De toda la investigación de Ian Stevenson, la más difícil de explicar desde cualquier marco alternativo es quizás la que documentó en su obra de dos volúmenes *Reincarnation and Biology* (1997): 225 casos donde las marcas de nacimiento o malformaciones congénitas de niños con recuerdos de vidas pasadas correspondían, de forma anatómicamente precisa, con heridas sufridas por la persona cuya vida ese niño recordaba.
+De toda la investigación de [Ian Stevenson](/blog/ian-stevenson-quien-es/), la más difícil de explicar desde cualquier marco alternativo es quizás la que documentó en su obra de dos volúmenes *Reincarnation and Biology* (1997): 225 casos donde las marcas de nacimiento o malformaciones congénitas de niños con recuerdos de vidas pasadas correspondían, de forma anatómicamente precisa, con heridas sufridas por la persona cuya vida ese niño recordaba.
 
 ## El argumento
 

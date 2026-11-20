@@ -1,6 +1,6 @@
 ---
 title: 'Carl Wickland: el psiquiatra que habló con los muertos para curar a los vivos'
-description: 'Quién fue el Dr. Carl A. Wickland, psiquiatra sueco-americano que dedicó más de 30 años a demostrar que muchas enfermedades psiquiátricas eran causadas por espíritus de fallecidos adheridos a los vivos — y cómo su esposa Anna fue la clave de todo su trabajo.'
+description: 'Quién fue Carl Wickland, el psiquiatra que dedicó 30 años a estudiar el apego espiritual como causa de trastornos mentales, junto a su esposa Anna.'
 pubDate: '2025-09-20'
 expositor: 'carl-wickland'
 ---
@@ -37,4 +37,4 @@ Lo que distingue a Wickland de los innumerables espiritualistas de su época es 
 
 Esa documentación es imperfecta desde los estándares actuales — no hay grupos de control, los criterios de diagnóstico eran diferentes, y la verificación independiente es imposible. Pero como archivo histórico de un método de trabajo, no tiene igual en la literatura del campo.
 
-El trabajo de Wickland fue la semilla de lo que hoy se conoce como Terapia de Liberación Espiritual, y su nombre aparece en la genealogía de todo practicante serio del campo.
+El trabajo de Wickland fue la semilla de lo que hoy se conoce como [Terapia de Liberación Espiritual](/blog/srt-que-es/), y su nombre aparece en la genealogía de todo practicante serio del campo.

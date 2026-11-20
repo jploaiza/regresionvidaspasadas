@@ -1,11 +1,11 @@
 ---
 title: 'QHHT: Quantum Healing Hypnosis Technique explicado'
-description: 'Qué es el Quantum Healing Hypnosis Technique de Dolores Cannon, cómo funciona una sesión, qué rol juega el "Subconsciente" y en qué se diferencia de otras formas de hipnoterapia y regresión.'
+description: 'Qué es la técnica QHHT de Dolores Cannon, cómo es una sesión, qué papel tiene el Subconsciente y en qué se diferencia de otras regresiones.'
 pubDate: '2025-04-11'
 expositor: 'dolores-cannon'
 ---
 
-El Quantum Healing Hypnosis Technique —QHHT— es la metodología que Dolores Cannon desarrolló a lo largo de décadas y que se distingue de otras formas de hipnoterapia y regresión en aspectos técnicos y filosóficos concretos. Entender esas diferencias ayuda a decidir si este es el proceso adecuado para lo que cada persona busca.
+El Quantum Healing Hypnosis Technique —QHHT— es la metodología que [Dolores Cannon](/blog/dolores-cannon-quien-es/) desarrolló a lo largo de décadas y que se distingue de otras formas de hipnoterapia y regresión en aspectos técnicos y filosóficos concretos. Entender esas diferencias ayuda a decidir si este es el proceso adecuado para lo que cada persona busca.
 
 ## La premisa central: el Subconsciente
 
@@ -23,7 +23,7 @@ Este nivel de profundidad es, según los practicantes de QHHT, lo que permite qu
 
 Una sesión típica de QHHT tiene tres fases:
 
-**1. La entrevista previa.** Antes de comenzar la hipnosis, el practicante tiene una conversación extensa con el cliente —puede durar una a dos horas— para entender su historia, sus preguntas y lo que lo trae al proceso. Cannon era muy específica sobre la importancia de esta fase: la calidad del material que emerge en el trance está directamente relacionada con la claridad de las intenciones del cliente.
+**1. La entrevista previa.** Antes de comenzar la [hipnosis](/blog/hipnosis-que-es-realmente/), el practicante tiene una conversación extensa con el cliente —puede durar una a dos horas— para entender su historia, sus preguntas y lo que lo trae al proceso. Cannon era muy específica sobre la importancia de esta fase: la calidad del material que emerge en el trance está directamente relacionada con la claridad de las intenciones del cliente.
 
 **2. La sesión de hipnosis.** Después de la inducción profunda, el sujeto accede a vidas pasadas relevantes para sus preguntas actuales. Luego, cuando el practicante considera que el momento es apropiado, invita al Subconsciente a hablar directamente. En este estado, el sujeto típicamente responde en primera persona desde una perspectiva más amplia que la de su personalidad ordinaria.
 

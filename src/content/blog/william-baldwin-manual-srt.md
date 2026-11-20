@@ -1,17 +1,17 @@
 ---
 title: 'Spirit Releasement Therapy: el manual técnico que Baldwin escribió para los terapeutas'
-description: 'Análisis del libro de 1992 de William Baldwin: qué contiene, cómo organiza la teoría y los protocolos, y por qué sigue siendo la referencia técnica más completa para cualquier practicante de liberación espiritual.'
+description: 'Análisis del manual de William Baldwin sobre Terapia de Liberación Espiritual (1992): teoría, protocolos y por qué sigue siendo la guía técnica de referencia.'
 pubDate: '2025-10-25'
 expositor: 'william-baldwin'
 ---
 
-Cuando William Baldwin publicó *Spirit Releasement Therapy: A Technique Manual* en 1992, no estaba escribiendo para el gran público. Estaba escribiendo para los terapeutas.
+Cuando [William Baldwin](/blog/william-baldwin-quien-es/) publicó *Spirit Releasement Therapy: A Technique Manual* en 1992, no estaba escribiendo para el gran público. Estaba escribiendo para los terapeutas.
 
 El resultado fue el libro más técnicamente exigente del campo de la liberación espiritual — y también el más influyente. Más de tres décadas después de su publicación, sigue siendo el texto de referencia que cualquier practicante serio debe conocer antes de empezar a trabajar.
 
 ## La arquitectura del libro
 
-El manual de Baldwin está organizado alrededor de tres ejes que él veía como inseparables: la Terapia de Vidas Pasadas (PLT), la Terapia de Liberación Espiritual (SRT) y la Recuperación de Fragmentos del Alma (RSF). Los tres ejes son, para Baldwin, manifestaciones distintas del mismo fenómeno subyacente: la posibilidad de que la psique humana no sea completamente autónoma, sino que esté en contacto —a veces involuntario— con realidades que la trascienden.
+El manual de Baldwin está organizado alrededor de tres ejes que él veía como inseparables: la Terapia de Vidas Pasadas (PLT), la [Terapia de Liberación Espiritual](/blog/srt-que-es/) (SRT) y la Recuperación de Fragmentos del Alma (RSF). Los tres ejes son, para Baldwin, manifestaciones distintas del mismo fenómeno subyacente: la posibilidad de que la psique humana no sea completamente autónoma, sino que esté en contacto —a veces involuntario— con realidades que la trascienden.
 
 La PLT cubre lo que la mayoría de los lectores de este sitio ya conocen: el acceso hipnótico a memorias de vidas anteriores y su uso terapéutico. La RSF aborda un fenómeno diferente: la idea de que traumas severos pueden causar la disociación de fragmentos de la propia alma, que quedan "atrapados" en el momento del trauma y necesitan ser recuperados e integrados.
 
@@ -19,7 +19,7 @@ Y la SRT es el núcleo del libro: los protocolos para identificar entidades adhe
 
 ## El sistema de diagnóstico
 
-Uno de los aportes más concretos del libro es el sistema de diagnóstico que Baldwin desarrolló para determinar si un paciente tiene entidades adheridas. El sistema incluye preguntas específicas que se hacen al paciente bajo hipnosis, patrones de respuesta que sugieren presencia de entidades versus patrones que sugieren otro tipo de material intrapsíquico, y técnicas para distinguir entre las proyecciones de la propia mente del paciente y la presencia genuina de una entidad externa.
+Uno de los aportes más concretos del libro es el sistema de diagnóstico que Baldwin desarrolló para determinar si un paciente tiene entidades adheridas. El sistema incluye preguntas específicas que se hacen al paciente bajo [hipnosis](/blog/hipnosis-que-es-realmente/), patrones de respuesta que sugieren presencia de entidades versus patrones que sugieren otro tipo de material intrapsíquico, y técnicas para distinguir entre las proyecciones de la propia mente del paciente y la presencia genuina de una entidad externa.
 
 Esta distinción no es menor: el error más común en practicantes inexpertos es interpretar como entidad lo que en realidad es material disociativo propio del paciente — lo que puede llevar a intervenciones inapropiadas y potencialmente dañinas.
 

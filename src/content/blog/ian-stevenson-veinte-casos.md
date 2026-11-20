@@ -1,11 +1,11 @@
 ---
 title: 'Veinte Casos Sugestivos de Reencarnación: la obra fundacional de Stevenson'
-description: 'Análisis de la obra principal de Ian Stevenson (1966): qué encontró en los 20 casos que documentó, qué metodología usó y por qué el libro sigue siendo la referencia más sólida en la investigación científica sobre reencarnación.'
+description: 'Análisis de Veinte casos que sugieren reencarnación (1966), de Ian Stevenson: metodología, hallazgos y por qué sigue siendo una referencia.'
 pubDate: '2025-07-04'
 expositor: 'ian-stevenson'
 ---
 
-En 1966, Ian Stevenson publicó *Twenty Cases Suggestive of Reincarnation* en los *Proceedings of the American Society for Psychical Research*. El título fue deliberadamente cuidadoso: no "Veinte Casos que Prueban la Reencarnación" sino "Veinte Casos Sugestivos de Reencarnación". La distinción es característica de Stevenson: toda la vida mantuvo una posición de afirmación cuidadosa más que de certeza.
+En 1966, [Ian Stevenson](/blog/ian-stevenson-quien-es/) publicó *Twenty Cases Suggestive of Reincarnation* en los *Proceedings of the American Society for Psychical Research*. El título fue deliberadamente cuidadoso: no "Veinte Casos que Prueban la Reencarnación" sino "Veinte Casos Sugestivos de Reencarnación". La distinción es característica de Stevenson: toda la vida mantuvo una posición de afirmación cuidadosa más que de certeza.
 
 El libro se convirtió en el texto fundacional de la investigación científica sobre la reencarnación —y, décadas después, sigue siendo la referencia más citada por quienes quieren tomar el tema en serio desde una perspectiva académica.
 
@@ -17,7 +17,7 @@ Los casos provinieron principalmente de India, Sri Lanka, Brasil, Líbano y Alas
 
 ## La metodología de investigación
 
-Stevenson no trabajaba con hipnosis. Su método era puro trabajo de campo: entrevistas, verificación de registros, confrontación de testimonios. El proceso típico seguía estos pasos:
+Stevenson no trabajaba con [hipnosis](/blog/hipnosis-que-es-realmente/). Su método era puro trabajo de campo: entrevistas, verificación de registros, confrontación de testimonios. El proceso típico seguía estos pasos:
 
 1. Recepción del reporte inicial de un caso.
 2. Viaje al lugar para entrevistar al niño, a sus padres y a los testigos de sus declaraciones.

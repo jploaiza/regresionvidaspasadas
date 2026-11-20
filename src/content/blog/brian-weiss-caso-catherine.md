@@ -1,6 +1,6 @@
 ---
 title: 'El caso de Catherine: la paciente que transformó a Brian Weiss'
-description: 'La historia clínica detrás de "Muchas Vidas, Muchos Maestros": quién era Catherine, qué síntomas tenía, qué emergió bajo hipnosis y cómo resolvió lo que 18 meses de terapia convencional no habían logrado.'
+description: 'El caso clínico detrás de Muchas Vidas, Muchos Maestros: quién era Catherine, qué emergió bajo hipnosis y cómo resolvió lo que 18 meses de terapia no.'
 pubDate: '2025-01-24'
 expositor: 'brian-weiss'
 ---
@@ -9,7 +9,7 @@ En la literatura de la regresión terapéutica, hay un caso que precede a todos 
 
 ## Quién era Catherine
 
-Catherine (nombre ficticio que Weiss usó para proteger su identidad) tenía 27 años cuando llegó a la consulta de Brian Weiss en 1980, en Miami. Era técnica de laboratorio en el hospital donde Weiss ejercía. Su historia clínica era la de alguien que sufría en silencio: múltiples fobias sin explicación aparente —al agua, a la oscuridad, a ahogarse— junto con ataques de pánico recurrentes y una ansiedad generalizada que hacía difícil su vida cotidiana.
+Catherine (nombre ficticio que Weiss usó para proteger su identidad) tenía 27 años cuando llegó a la consulta de [Brian Weiss](/blog/brian-weiss-quien-es/) en 1980, en Miami. Era técnica de laboratorio en el hospital donde Weiss ejercía. Su historia clínica era la de alguien que sufría en silencio: múltiples fobias sin explicación aparente —al agua, a la oscuridad, a ahogarse— junto con ataques de pánico recurrentes y una ansiedad generalizada que hacía difícil su vida cotidiana.
 
 No era el tipo de caso que llamaría la atención de un jefe de psiquiatría de prestigio. Era simplemente una paciente más con un cuadro complejo que no respondía al tratamiento estándar.
 
@@ -17,7 +17,7 @@ No era el tipo de caso que llamaría la atención de un jefe de psiquiatría de 
 
 Weiss trabajó con Catherine durante año y medio usando los métodos ortodoxos de su formación: psicoterapia de corte psicodinámico, exploración de traumas de infancia, técnicas de desensibilización para las fobias. Los resultados fueron mínimos. Catherine mejoraba marginalmente en algunos aspectos, pero los síntomas centrales permanecían intactos.
 
-Fue en ese punto de impasse cuando Weiss propuso la hipnosis —no como técnica de regresión a vidas pasadas, sino como herramienta para acceder a memorias de infancia que pudieran estar relacionadas con los miedos. Era un recurso complementario dentro del marco convencional.
+Fue en ese punto de impasse cuando Weiss propuso la [hipnosis](/blog/hipnosis-que-es-realmente/) —no como técnica de [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/), sino como herramienta para acceder a memorias de infancia que pudieran estar relacionadas con los miedos. Era un recurso complementario dentro del marco convencional.
 
 ## Lo que emergió bajo hipnosis
 

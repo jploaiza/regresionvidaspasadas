@@ -1,6 +1,6 @@
 ---
 title: 'Ian Stevenson: el científico que investigó la reencarnación con método'
-description: 'Biografía de Ian Stevenson (1918-2007), psiquiatra de la Universidad de Virginia que investigó durante 40 años los casos de niños con recuerdos espontáneos de vidas pasadas, documentando más de 3.000 casos en todo el mundo.'
+description: 'Biografía de Ian Stevenson (1918-2007): el psiquiatra que investigó durante 40 años más de 3.000 casos de niños con recuerdos de vidas pasadas.'
 pubDate: '2025-06-27'
 expositor: 'ian-stevenson'
 ---

@@ -1,17 +1,17 @@
 ---
 title: 'SRT y Regresión a Vidas Pasadas: la conexión terapéutica'
-description: 'Cómo la Terapia de Liberación Espiritual y la Regresión a Vidas Pasadas se complementan en la práctica clínica: qué aporta cada una, cuándo se recomienda una u otra, y por qué muchos terapeutas trabajan con ambas modalidades de forma integrada.'
+description: 'Cómo se complementan la Terapia de Liberación Espiritual y la Regresión a Vidas Pasadas en la práctica clínica y cuándo se recomienda cada una.'
 pubDate: '2026-01-24'
 expositor: 'srt'
 ---
 
-La Terapia de Liberación Espiritual y la Regresión a Vidas Pasadas son modalidades diferentes con objetivos y protocolos diferentes. Pero en la práctica clínica, se encuentran con más frecuencia de lo que cualquiera de sus marcos teóricos independientes predice.
+La [Terapia de Liberación Espiritual](/blog/srt-que-es/) y la Regresión a Vidas Pasadas son modalidades diferentes con objetivos y protocolos diferentes. Pero en la práctica clínica, se encuentran con más frecuencia de lo que cualquiera de sus marcos teóricos independientes predice.
 
 Hay razones para eso — y entenderlas ayuda a comprender mejor qué hace cada modalidad y cuándo es relevante cada una.
 
 ## Lo que cada modalidad hace
 
-La **Regresión a Vidas Pasadas** trabaja con la memoria del alma: accede, bajo hipnosis, a experiencias de vidas anteriores que están influyendo en la vida presente, y las procesa terapéuticamente. El objetivo es liberar patrones kármicos, comprender el origen de miedos, bloqueos o relaciones difíciles, y encontrar recursos en experiencias pasadas que pueden fortalecer el presente.
+La **Regresión a Vidas Pasadas** trabaja con la memoria del alma: accede, bajo [hipnosis](/blog/hipnosis-que-es-realmente/), a experiencias de vidas anteriores que están influyendo en la vida presente, y las procesa terapéuticamente. El objetivo es liberar patrones kármicos, comprender el origen de miedos, bloqueos o relaciones difíciles, y encontrar recursos en experiencias pasadas que pueden fortalecer el presente.
 
 La **Terapia de Liberación Espiritual** trabaja con el campo energético del individuo en su vida actual: identifica y libera entidades externas que se han adherido a ese campo e influyen en él. El objetivo no es acceder a la propia historia del alma sino remover influencias que vienen de fuera.
 

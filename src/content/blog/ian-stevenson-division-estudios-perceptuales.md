@@ -1,11 +1,11 @@
 ---
 title: 'La División de Estudios Perceptuales de la Universidad de Virginia'
-description: 'Cómo Ian Stevenson construyó dentro de una universidad de investigación de primer nivel el único departamento académico del mundo dedicado al estudio científico de la reencarnación, y qué hace ese departamento hoy.'
+description: 'Cómo Ian Stevenson fundó en la Universidad de Virginia el único departamento académico dedicado al estudio científico de la reencarnación.'
 pubDate: '2025-07-25'
 expositor: 'ian-stevenson'
 ---
 
-Una de las contribuciones más duraderas de Ian Stevenson no fue ningún caso específico ni ningún libro: fue una institución. La **División de Estudios Perceptuales** (DOPS) de la Universidad de Virginia es el único departamento permanente en una universidad de investigación de primer nivel dedicado al estudio científico de fenómenos que la ciencia convencional generalmente descarta: reencarnación, experiencias cercanas a la muerte, visiones de muerte, experiencias fuera del cuerpo.
+Una de las contribuciones más duraderas de [Ian Stevenson](/blog/ian-stevenson-quien-es/) no fue ningún caso específico ni ningún libro: fue una institución. La **División de Estudios Perceptuales** (DOPS) de la Universidad de Virginia es el único departamento permanente en una universidad de investigación de primer nivel dedicado al estudio científico de fenómenos que la ciencia convencional generalmente descarta: reencarnación, experiencias cercanas a la muerte, visiones de muerte, experiencias fuera del cuerpo.
 
 ## Los orígenes
 

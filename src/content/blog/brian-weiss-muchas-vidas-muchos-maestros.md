@@ -1,11 +1,11 @@
 ---
 title: 'Muchas Vidas, Muchos Maestros: el libro que legitimó la regresión'
-description: 'Análisis del libro fundacional de Brian Weiss publicado en 1988: qué cuenta, por qué fue revolucionario y qué convirtió a un informe clínico en un fenómeno editorial global.'
+description: 'Análisis de Muchas Vidas, Muchos Maestros (1988) de Brian Weiss: qué cuenta, por qué fue revolucionario y cómo se volvió un fenómeno editorial.'
 pubDate: '2025-01-17'
 expositor: 'brian-weiss'
 ---
 
-Cuando Brian Weiss publicó *Many Lives, Many Masters* en 1988, estaba haciendo algo que ningún psiquiatra con credenciales académicas había hecho antes: relatar, con nombres y datos clínicos, la historia de un paciente que había accedido a vidas pasadas bajo hipnosis y se había curado de síntomas que la psiquiatría convencional no había podido resolver.
+Cuando [Brian Weiss](/blog/brian-weiss-quien-es/) publicó *Many Lives, Many Masters* en 1988, estaba haciendo algo que ningún psiquiatra con credenciales académicas había hecho antes: relatar, con nombres y datos clínicos, la historia de un paciente que había accedido a vidas pasadas bajo [hipnosis](/blog/hipnosis-que-es-realmente/) y se había curado de síntomas que la psiquiatría convencional no había podido resolver.
 
 El libro fue recibido con el tipo de silencio que precede a los terremotos.
 

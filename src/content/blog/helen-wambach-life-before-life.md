@@ -1,6 +1,6 @@
 ---
 title: 'Life Before Life: lo que emerge antes del nacimiento'
-description: 'El segundo libro de Helen Wambach (1979) exploró el período prenatal bajo hipnosis: qué reportaron sus sujetos sobre la experiencia de elegir encarnar, la entrada al cuerpo y la memoria del período entre vidas.'
+description: 'Life Before Life (1979) de Helen Wambach: qué reportaron sus sujetos sobre elegir encarnar, entrar al cuerpo y el período entre vidas.'
 pubDate: '2025-08-29'
 expositor: 'helen-wambach'
 ---
@@ -9,7 +9,7 @@ Si *Reliving Past Lives* fue el experimento que puso a Wambach en el mapa, *Life
 
 ## La pregunta central
 
-En sus talleres de hipnosis grupal, Wambach comenzó a explorar qué ocurría cuando guiaba a los participantes no solo hacia vidas pasadas sino hacia el período previo al nacimiento en su vida actual. La pregunta era simple y radical: ¿qué recuerdan —si es que recuerdan algo— sobre el período antes de entrar a este cuerpo?
+En sus talleres de [hipnosis](/blog/hipnosis-que-es-realmente/) grupal, Wambach comenzó a explorar qué ocurría cuando guiaba a los participantes no solo hacia vidas pasadas sino hacia el período previo al nacimiento en su vida actual. La pregunta era simple y radical: ¿qué recuerdan —si es que recuerdan algo— sobre el período antes de entrar a este cuerpo?
 
 Lo que encontró fue lo que da título al libro: muchos de sus sujetos reportaban experiencias de un estado previo al nacimiento —de lo que podría llamarse vida antes de la vida.
 
@@ -27,7 +27,7 @@ Los reportes de los participantes no eran uniformes, pero mostraban ciertos patr
 
 ## Las coincidencias con Newton
 
-Lo notable es que Wambach llegó a estos resultados de forma independiente a Michael Newton, cuya investigación sobre la Vida entre Vidas se publicaría quince años después. Ambos, trabajando con metodologías diferentes y sin coordinación entre sí, encontraron patrones similares: la deliberación previa a la encarnación, el período de existencia entre vidas, la sensación de propósito asociada a la decisión de encarnar.
+Lo notable es que Wambach llegó a estos resultados de forma independiente a [Michael Newton](/blog/michael-newton-quien-es/), cuya investigación sobre la Vida entre Vidas se publicaría quince años después. Ambos, trabajando con metodologías diferentes y sin coordinación entre sí, encontraron patrones similares: la deliberación previa a la encarnación, el período de existencia entre vidas, la sensación de propósito asociada a la decisión de encarnar.
 
 Esta convergencia independiente es uno de los argumentos más interesantes a favor de que algo consistente emerge cuando se explora este territorio —aunque sigue siendo insuficiente como evidencia científica en el sentido verificable.
 

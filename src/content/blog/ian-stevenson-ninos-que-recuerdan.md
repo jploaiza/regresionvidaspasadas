@@ -1,6 +1,6 @@
 ---
 title: 'Los niños que recuerdan vidas pasadas: la evidencia de Stevenson'
-description: 'Qué encontró Ian Stevenson en su investigación con niños que recuerdan espontáneamente vidas anteriores: los patrones comunes, los tipos de casos más sólidos y qué hacen con esos recuerdos a medida que crecen.'
+description: 'Qué halló Ian Stevenson en niños que recuerdan vidas anteriores: patrones comunes, los casos más sólidos y qué pasa con esos recuerdos al crecer.'
 pubDate: '2025-07-11'
 expositor: 'ian-stevenson'
 ---

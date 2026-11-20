@@ -1,11 +1,11 @@
 ---
 title: 'El legado de Roger Woolger en la psicoterapia transpersonal'
-description: 'Cómo la obra de Roger Woolger —fallecido en 2011— sigue influyendo en la psicoterapia transpersonal europea y en el diálogo entre psicología analítica y regresión a vidas pasadas.'
+description: 'El legado de Roger Woolger (fallecido en 2011) en la psicoterapia transpersonal y el diálogo entre la psicología analítica y la regresión.'
 pubDate: '2025-06-20'
 expositor: 'roger-woolger'
 ---
 
-Roger Woolger murió en 2011, pero su influencia en el campo de la psicoterapia transpersonal —especialmente en Europa— permanece viva en múltiples formas: en los terapeutas que él formó directamente, en el vocabulario conceptual que su síntesis de Jung y regresión aportó al campo, y en *Other Lives, Other Selves*, que sigue siendo un texto de referencia.
+[Roger Woolger](/blog/roger-woolger-quien-es/) murió en 2011, pero su influencia en el campo de la psicoterapia transpersonal —especialmente en Europa— permanece viva en múltiples formas: en los terapeutas que él formó directamente, en el vocabulario conceptual que su síntesis de Jung y regresión aportó al campo, y en *Other Lives, Other Selves*, que sigue siendo un texto de referencia.
 
 ## El impacto en la formación de terapeutas
 

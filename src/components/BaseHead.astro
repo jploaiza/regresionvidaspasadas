@@ -24,7 +24,7 @@ const siteSchemas = JSON.stringify([
     name: 'Regresión a Vidas Pasadas',
     url: SITE_URL,
     description: 'Portal editorial especializado en regresión a vidas pasadas, hipnosis clínica y liberación espiritual.',
-    sameAs: ['https://www.juanpabloloaiza.com'],
+    founder: { '@id': 'https://www.juanpabloloaiza.com/#person' },
   },
   {
     '@context': 'https://schema.org',
@@ -32,6 +32,11 @@ const siteSchemas = JSON.stringify([
     '@id': 'https://www.juanpabloloaiza.com/#person',
     name: 'Juan Pablo Loaiza',
     url: 'https://www.juanpabloloaiza.com',
+    sameAs: [
+      'https://www.youtube.com/@jploaizao',
+      'https://www.instagram.com/jploaizao',
+      'https://www.tiktok.com/@jploaizao',
+    ],
     jobTitle: 'Terapeuta de Regresión a Vidas Pasadas',
     knowsAbout: [
       'Regresión a Vidas Pasadas',

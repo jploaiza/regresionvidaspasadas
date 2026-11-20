@@ -1,11 +1,11 @@
 ---
 title: 'El Deep Memory Process: la técnica terapéutica de Roger Woolger'
-description: 'Qué es el Deep Memory Process (DMP) que Roger Woolger desarrolló: cómo combina hipnosis, trabajo corporal y psicodrama junguiano para acceder y sanar el material de vidas pasadas desde la psicología somática.'
+description: 'Qué es el Deep Memory Process de Roger Woolger: hipnosis, trabajo corporal y psicodrama junguiano para acceder y sanar memorias de vidas pasadas.'
 pubDate: '2025-05-30'
 expositor: 'roger-woolger'
 ---
 
-Roger Woolger no solo teorizó sobre la relación entre Jung y las vidas pasadas —desarrolló un método terapéutico propio para trabajar con ese material. Lo llamó **Deep Memory Process** (DMP), y su característica más distintiva es que no trabaja solo con la mente: trabaja con el cuerpo.
+[Roger Woolger](/blog/roger-woolger-quien-es/) no solo teorizó sobre la relación entre Jung y las vidas pasadas —desarrolló un método terapéutico propio para trabajar con ese material. Lo llamó **Deep Memory Process** (DMP), y su característica más distintiva es que no trabaja solo con la mente: trabaja con el cuerpo.
 
 ## La premisa somática
 

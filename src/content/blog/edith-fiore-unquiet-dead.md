@@ -1,6 +1,6 @@
 ---
 title: '"The Unquiet Dead": lo que los espíritus le enseñaron a una psicóloga clínica'
-description: 'Análisis del libro de Edith Fiore (1987): los casos que documenta, los patrones que identificó en décadas de práctica, y por qué "The Unquiet Dead" sigue siendo la referencia más accesible para profesionales de la salud mental que se acercan a la liberación espiritual.'
+description: 'Análisis de The Unquiet Dead (1987) de Edith Fiore: casos, patrones clínicos y por qué sigue siendo una referencia para profesionales de la salud.'
 pubDate: '2025-11-15'
 expositor: 'edith-fiore'
 ---
@@ -11,7 +11,7 @@ expositor: 'edith-fiore'
 
 El libro de Fiore está organizado alrededor de los casos clínicos que vivió a lo largo de sus años de práctica. Son casos diversos: pacientes con depresión severa que no respondía a tratamiento convencional, personas con adicciones que recaían repetidamente, individuos que experimentaban cambios de personalidad que ellos mismos describían como "sentirse habitados por alguien más".
 
-Lo que todos estos casos tienen en común, según Fiore, es que cuando los pacientes eran guiados bajo hipnosis a explorar el origen de sus síntomas, emergía material que no correspondía a su propia historia de vida. Personalidades que se identificaban con otros nombres, otros cuerpos, otras historias. Emociones que los pacientes describían como "no mías" pero que experimentaban como propias.
+Lo que todos estos casos tienen en común, según Fiore, es que cuando los pacientes eran guiados bajo [hipnosis](/blog/hipnosis-que-es-realmente/) a explorar el origen de sus síntomas, emergía material que no correspondía a su propia historia de vida. Personalidades que se identificaban con otros nombres, otros cuerpos, otras historias. Emociones que los pacientes describían como "no mías" pero que experimentaban como propias.
 
 Y cuando ese material era explorado, comunicado y —en el lenguaje de Fiore— "liberado", los síntomas mejoraban o desaparecían.
 

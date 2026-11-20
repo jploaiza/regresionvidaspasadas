@@ -1,11 +1,11 @@
 ---
 title: 'Las Tres Olas de Voluntarios: la visión cósmica de Dolores Cannon'
-description: 'Qué son las Tres Olas de Voluntarios según Dolores Cannon, por qué esta idea resonó con millones de personas y qué relación tiene con la terapia de regresión y la visión del alma en la Tierra.'
+description: 'Las Tres Olas de Voluntarios según Dolores Cannon: por qué esta idea resonó con millones y cómo se relaciona con la terapia de regresión.'
 pubDate: '2025-04-25'
 expositor: 'dolores-cannon'
 ---
 
-Entre todos los conceptos que Dolores Cannon desarrolló a lo largo de su carrera, hay uno que generó una resonancia cultural particularmente intensa: la teoría de las **Tres Olas de Voluntarios**. Publicada en 2011 en el libro homónimo, la idea de que hay personas que han elegido encarnar en la Tierra en este período histórico con una misión de transformación colectiva conectó con algo profundo en millones de lectores que no encontraban explicación para su sentido de diferencia o extrañeza en el mundo.
+Entre todos los conceptos que [Dolores Cannon](/blog/dolores-cannon-quien-es/) desarrolló a lo largo de su carrera, hay uno que generó una resonancia cultural particularmente intensa: la teoría de las **Tres Olas de Voluntarios**. Publicada en 2011 en el libro homónimo, la idea de que hay personas que han elegido encarnar en la Tierra en este período histórico con una misión de transformación colectiva conectó con algo profundo en millones de lectores que no encontraban explicación para su sentido de diferencia o extrañeza en el mundo.
 
 ## La premisa
 

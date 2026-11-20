@@ -1,11 +1,11 @@
 ---
 title: 'La taxonomía de entidades de Baldwin: quién se adhiere y por qué'
-description: 'El sistema de clasificación de entidades de William Baldwin: espíritus humanos, entidades de fuerza oscura, fragmentos del alma y entidades no humanas — cómo se distinguen, por qué se adhieren y qué protocolos requiere cada tipo.'
+description: 'La clasificación de entidades de William Baldwin: humanas, de fuerza oscura, fragmentos del alma y no humanas, y el protocolo de cada tipo.'
 pubDate: '2025-11-01'
 expositor: 'william-baldwin'
 ---
 
-Una de las contribuciones más importantes de William Baldwin al campo de la Terapia de Liberación Espiritual es algo que ningún investigador anterior había hecho con tanta sistematicidad: un mapa.
+Una de las contribuciones más importantes de [William Baldwin](/blog/william-baldwin-quien-es/) al campo de la [Terapia de Liberación Espiritual](/blog/srt-que-es/) es algo que ningún investigador anterior había hecho con tanta sistematicidad: un mapa.
 
 No un mapa geográfico sino un mapa conceptual de lo que puede adherirse a un ser humano, por qué lo hace y cómo difiere el trabajo con cada tipo. La taxonomía de Baldwin es el resultado de más de una década de sesiones clínicas en las que observó que no todas las entidades se comportaban igual — y que tratarlas como si fueran todas del mismo tipo llevaba a resultados inconsistentes.
 

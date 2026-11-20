@@ -1,11 +1,11 @@
 ---
 title: 'Exorcismo vs. SRT: la diferencia que cambia todo'
-description: 'Por qué la Terapia de Liberación Espiritual no es un exorcismo y qué implica esa diferencia en la práctica: el modelo del combate versus el modelo de la compasión, y por qué el enfoque importa tanto para el resultado.'
+description: 'Por qué la Terapia de Liberación Espiritual no es un exorcismo: el modelo del combate frente al de la compasión y por qué importa para el resultado.'
 pubDate: '2025-12-27'
 expositor: 'srt'
 ---
 
-La confusión entre exorcismo y Terapia de Liberación Espiritual es comprensible. Ambas buscan lo mismo: remover una presencia espiritual no deseada de una persona. Pero la forma en que lo hacen —y el modelo del mundo que subyace a cada una— son tan diferentes que tratarlas como equivalentes es un error que tiene consecuencias prácticas.
+La confusión entre exorcismo y [Terapia de Liberación Espiritual](/blog/srt-que-es/) es comprensible. Ambas buscan lo mismo: remover una presencia espiritual no deseada de una persona. Pero la forma en que lo hacen —y el modelo del mundo que subyace a cada una— son tan diferentes que tratarlas como equivalentes es un error que tiene consecuencias prácticas.
 
 ## El modelo del exorcismo
 

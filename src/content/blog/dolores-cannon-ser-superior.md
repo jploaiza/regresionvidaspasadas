@@ -1,11 +1,11 @@
 ---
 title: 'El Ser Superior según Dolores Cannon: la voz que sana'
-description: 'Qué entendía Dolores Cannon por "Subconsciente" o Ser Superior, cómo se diferencia de la noción psicológica estándar, y qué ocurre cuando esa instancia del alma habla directamente durante una sesión de QHHT.'
+description: 'Qué entendía Dolores Cannon por Subconsciente o Ser Superior, en qué se distingue de la psicología estándar y qué ocurre en una sesión de QHHT.'
 pubDate: '2025-04-18'
 expositor: 'dolores-cannon'
 ---
 
-El concepto más original —y más debatido— del trabajo de Dolores Cannon no es la técnica hipnótica en sí ni los relatos de vidas pasadas que emergían en sus sesiones. Es lo que ella llamaba "el Subconsciente" —a veces referido por sus practicantes como el Ser Superior o Higher Self— y la afirmación de que esa instancia puede comunicarse directamente durante una sesión de QHHT con propósitos de comprensión y sanación.
+El concepto más original —y más debatido— del trabajo de [Dolores Cannon](/blog/dolores-cannon-quien-es/) no es la técnica hipnótica en sí ni los relatos de vidas pasadas que emergían en sus sesiones. Es lo que ella llamaba "el Subconsciente" —a veces referido por sus practicantes como el Ser Superior o Higher Self— y la afirmación de que esa instancia puede comunicarse directamente durante una sesión de QHHT con propósitos de comprensión y sanación.
 
 ## La distinción terminológica
 

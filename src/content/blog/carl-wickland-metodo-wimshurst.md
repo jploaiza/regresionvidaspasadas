@@ -1,11 +1,11 @@
 ---
 title: 'La máquina de Wimshurst y el método clínico de Carl Wickland'
-description: 'Cómo funcionaba exactamente el protocolo terapéutico de los Wickland: el uso de electricidad estática para dislodgar entidades adheridas, el rol de Anna como médium receptora, y el proceso de comunicación y liberación que siguió en cientos de sesiones.'
+description: 'El protocolo terapéutico de los Wickland: electricidad estática con la máquina Wimshurst, Anna como médium y el proceso de liberación de entidades.'
 pubDate: '2025-10-11'
 expositor: 'carl-wickland'
 ---
 
-Uno de los elementos más inusuales del trabajo de Carl Wickland —y uno de los que más preguntas genera entre quienes lo encuentran por primera vez— es su uso de una máquina de Wimshurst en las sesiones de liberación espiritual.
+Uno de los elementos más inusuales del trabajo de [Carl Wickland](/blog/carl-wickland-quien-es/) —y uno de los que más preguntas genera entre quienes lo encuentran por primera vez— es su uso de una máquina de Wimshurst en las sesiones de liberación espiritual.
 
 La máquina de Wimshurst es un generador electrostático inventado en 1880 por James Wimshurst. Produce descargas de electricidad estática de alta tensión pero muy bajo amperaje —suficientes para ser sentidas y potencialmente dolorosas, pero no suficientes para causar daño significativo con un uso controlado.
 
@@ -41,7 +41,7 @@ Wickland mismo reconocía que no todos los casos respondían al tratamiento. Doc
 
 ## La herencia metodológica
 
-Lo que la práctica moderna de la Terapia de Liberación Espiritual conserva del trabajo de Wickland no es la máquina de Wimshurst —ese elemento específico quedó en el siglo XX— sino los principios que la fundamentaban:
+Lo que la práctica moderna de la [Terapia de Liberación Espiritual](/blog/srt-que-es/) conserva del trabajo de Wickland no es la máquina de Wimshurst —ese elemento específico quedó en el siglo XX— sino los principios que la fundamentaban:
 
 - El diálogo compasivo con la entidad como herramienta principal de liberación.
 - La orientación de la entidad sobre su situación como paso necesario antes de cualquier liberación.

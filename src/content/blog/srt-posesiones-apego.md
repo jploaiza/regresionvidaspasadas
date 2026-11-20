@@ -1,11 +1,11 @@
 ---
 title: 'Posesión y apego espiritual: ¿qué ocurre realmente cuando un espíritu se adhiere?'
-description: 'La diferencia entre posesión plena y apego espiritual parcial, cómo ocurre la adhesión de entidades, qué síntomas produce y por qué la mayoría de los casos de "posesión" que documenta la SRT no son lo que las películas de terror muestran.'
+description: 'Posesión plena frente a apego espiritual parcial: cómo ocurre, qué síntomas da y por qué la SRT no se parece a las películas de terror.'
 pubDate: '2025-12-20'
 expositor: 'srt'
 ---
 
-La palabra "posesión" evoca imágenes cinematográficas: cuerpos que giran, voces que cambian, comportamientos violentos y extraordinarios. Esas imágenes vienen del cine de terror y de las versiones más dramáticas de los rituales de exorcismo —y tienen muy poco que ver con lo que los practicantes de la Terapia de Liberación Espiritual encuentran en su trabajo clínico cotidiano.
+La palabra "posesión" evoca imágenes cinematográficas: cuerpos que giran, voces que cambian, comportamientos violentos y extraordinarios. Esas imágenes vienen del cine de terror y de las versiones más dramáticas de los rituales de exorcismo —y tienen muy poco que ver con lo que los practicantes de la [Terapia de Liberación Espiritual](/blog/srt-que-es/) encuentran en su trabajo clínico cotidiano.
 
 La mayoría de las situaciones de adhesión espiritual no tienen nada de dramático. Se parecen mucho más a una depresión, a una adicción o a un estado de ansiedad crónica que a lo que Linda Blair interpretó en *El Exorcista*.
 

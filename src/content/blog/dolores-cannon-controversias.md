@@ -1,17 +1,17 @@
 ---
 title: 'Las controversias en torno a Dolores Cannon'
-description: 'Un análisis equilibrado de las principales críticas al trabajo de Dolores Cannon: la falta de formación académica, las afirmaciones no verificables, la apelación a la física cuántica y la cuestión de la sugestión en hipnosis profunda.'
+description: 'Las críticas al trabajo de Dolores Cannon, analizadas con equilibrio: falta de formación académica, afirmaciones no verificables y sugestión.'
 pubDate: '2025-05-09'
 expositor: 'dolores-cannon'
 ---
 
-Dolores Cannon es quizás la figura del campo de la regresión que genera las reacciones más polarizadas: admiración intensa en sus seguidores, rechazo tajante en sus críticos. Entender las razones de ese rechazo —más allá del prejuicio anti-espiritual— ayuda a situar su obra con más honestidad.
+[Dolores Cannon](/blog/dolores-cannon-quien-es/) es quizás la figura del campo de la regresión que genera las reacciones más polarizadas: admiración intensa en sus seguidores, rechazo tajante en sus críticos. Entender las razones de ese rechazo —más allá del prejuicio anti-espiritual— ayuda a situar su obra con más honestidad.
 
 ## La ausencia de formación clínica
 
 La crítica más obvia es la que Cannon nunca pudo responder completamente: no tenía formación académica en psicología, psiquiatría ni hipnoterapia en el sentido convencional del término. Su método fue autodidacta, construido desde la práctica empírica sin el marco teórico ni el supervisión que la formación profesional proporciona.
 
-Esto tiene consecuencias prácticas. Un terapeuta formado en psicología clínica sabe cómo manejar una crisis disociativa, cómo reconocer un trastorno de personalidad, cómo hacer el cribado clínico necesario antes de trabajar con hipnosis profunda. Cannon, sin esa formación, trabajaba en un territorio emocionalmente delicado sin esas herramientas.
+Esto tiene consecuencias prácticas. Un terapeuta formado en psicología clínica sabe cómo manejar una crisis disociativa, cómo reconocer un trastorno de personalidad, cómo hacer el cribado clínico necesario antes de trabajar con [hipnosis](/blog/hipnosis-que-es-realmente/) profunda. Cannon, sin esa formación, trabajaba en un territorio emocionalmente delicado sin esas herramientas.
 
 Sus defensores señalan que aprendió lo necesario de décadas de práctica. Puede ser cierto. Pero no es lo mismo, y la diferencia importa cuando se trabaja con la psique de personas vulnerables.
 

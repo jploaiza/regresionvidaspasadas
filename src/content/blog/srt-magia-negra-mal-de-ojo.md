@@ -1,13 +1,13 @@
 ---
 title: 'Magia negra, mal de ojo y ataques psíquicos: la SRT y las energías enviadas'
-description: 'Cómo aborda la Terapia de Liberación Espiritual los fenómenos de la magia negra, el mal de ojo y los ataques psíquicos: la diferencia entre entidades adheridas espontáneas y energías dirigidas intencionalmente, y qué recursos existen para trabajar con ellas.'
+description: 'Cómo aborda la SRT la magia negra, el mal de ojo y los ataques psíquicos: apegos espontáneos frente a energías dirigidas y recursos disponibles.'
 pubDate: '2026-01-03'
 expositor: 'srt'
 ---
 
 El mal de ojo. Las maldiciones. La magia negra. Los ataques psíquicos. Son conceptos que aparecen en prácticamente todas las culturas humanas —en las tradiciones médicas de Latinoamérica, en el folklore europeo, en las prácticas chamánicas de Asia y África, en la magia ceremonial occidental.
 
-La Terapia de Liberación Espiritual no nació en ninguna de estas tradiciones culturales específicas. Surgió de la psiquiatría y la hipnoterapia de habla inglesa del siglo XX. Pero con el tiempo, sus practicantes se encontraron ante fenómenos que esas categorías culturales —mal de ojo, magia negra, ataque psíquico— describían con más precisión que cualquier término clínico disponible.
+La [Terapia de Liberación Espiritual](/blog/srt-que-es/) no nació en ninguna de estas tradiciones culturales específicas. Surgió de la psiquiatría y la hipnoterapia de habla inglesa del siglo XX. Pero con el tiempo, sus practicantes se encontraron ante fenómenos que esas categorías culturales —mal de ojo, magia negra, ataque psíquico— describían con más precisión que cualquier término clínico disponible.
 
 ## La diferencia con el apego espontáneo
 

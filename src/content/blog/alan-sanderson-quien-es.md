@@ -1,11 +1,11 @@
 ---
 title: 'Alan Sanderson: el psiquiatra del NHS que introdujo la liberación espiritual en la medicina'
-description: 'Quién fue el Dr. Alan Sanderson: su formación en el Hospital St. Thomas de Londres, sus décadas como psiquiatra consultor, cómo introdujo la terapia de liberación espiritual en el NHS y por qué fundó la Spirit Release Foundation.'
+description: 'Quién fue Alan Sanderson: el psiquiatra británico que llevó la terapia de liberación espiritual al NHS y fundó la Spirit Release Foundation.'
 pubDate: '2025-11-29'
 expositor: 'alan-sanderson'
 ---
 
-Si la legitimidad académica de Edith Fiore era notable —una psicóloga con PhD de una universidad reconocida— la de Alan Sanderson era directamente extraordinaria dentro del contexto de la liberación espiritual: un psiquiatra consultor formado en uno de los hospitales de enseñanza más prestigiosos de Reino Unido, con décadas de práctica dentro del sistema nacional de salud británico.
+Si la legitimidad académica de [Edith Fiore](/blog/edith-fiore-quien-es/) era notable —una psicóloga con PhD de una universidad reconocida— la de Alan Sanderson era directamente extraordinaria dentro del contexto de la liberación espiritual: un psiquiatra consultor formado en uno de los hospitales de enseñanza más prestigiosos de Reino Unido, con décadas de práctica dentro del sistema nacional de salud británico.
 
 Sanderson no llegó a la liberación espiritual desde los márgenes. Llegó desde el centro de la psiquiatría institucional, lo que hace su trayectoria tanto más inusual y tanto más significativa para el campo.
 

@@ -6,5 +6,6 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
 	site: 'https://www.regresionvidaspasadas.com',
+	trailingSlash: 'always',
 	integrations: [mdx(), sitemap()],
 });

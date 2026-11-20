@@ -1,11 +1,11 @@
 ---
 title: 'Cuerpo, emoción y vida pasada: el enfoque somático de Woolger'
-description: 'Cómo Roger Woolger integró la psicología somática con la regresión a vidas pasadas: por qué el cuerpo guarda memorias de otras vidas, cómo se manifiestan como síntomas físicos y qué ocurre cuando se liberan.'
+description: 'Cómo Roger Woolger unió la psicología somática y la regresión: por qué el cuerpo guarda memorias de otras vidas y qué pasa al liberarlas.'
 pubDate: '2025-06-06'
 expositor: 'roger-woolger'
 ---
 
-La contribución más original de Roger Woolger al campo de la regresión no fue filosófica sino clínica: fue la integración sistemática del cuerpo en el proceso de trabajo con vidas pasadas. Antes de Woolger, la regresión era principalmente un fenómeno mental —imágenes, narrativas, emociones. Woolger agregó el cuerpo como territorio de memoria, de síntoma y de sanación.
+La contribución más original de [Roger Woolger](/blog/roger-woolger-quien-es/) al campo de la regresión no fue filosófica sino clínica: fue la integración sistemática del cuerpo en el proceso de trabajo con vidas pasadas. Antes de Woolger, la regresión era principalmente un fenómeno mental —imágenes, narrativas, emociones. Woolger agregó el cuerpo como territorio de memoria, de síntoma y de sanación.
 
 ## El cuerpo como archivo
 

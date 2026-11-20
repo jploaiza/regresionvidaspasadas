@@ -1,11 +1,11 @@
 ---
 title: 'La herencia junguiana en la regresión: sombra, karma y arquetipos'
-description: 'Cómo Roger Woolger utilizó los conceptos centrales de Carl Jung —la sombra, el inconsciente colectivo, la individuación— para crear un marco comprensivo para la terapia de regresión que no requiere creer en la reencarnación literal.'
+description: 'Cómo Roger Woolger usó la sombra, el inconsciente colectivo y la individuación de Jung para una regresión que no exige creer en la reencarnación.'
 pubDate: '2025-06-13'
 expositor: 'roger-woolger'
 ---
 
-Carl Gustav Jung nunca habló explícitamente de vidas pasadas como fenómeno terapéutico. Pero hay en su obra suficiente material para construir un puente hacia ese territorio —y Roger Woolger fue quien lo construyó con más rigor y más articulación teórica.
+Carl Gustav Jung nunca habló explícitamente de vidas pasadas como fenómeno terapéutico. Pero hay en su obra suficiente material para construir un puente hacia ese territorio —y [Roger Woolger](/blog/roger-woolger-quien-es/) fue quien lo construyó con más rigor y más articulación teórica.
 
 ## Jung y la reencarnación: una relación ambigua
 

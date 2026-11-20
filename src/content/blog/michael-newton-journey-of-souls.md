@@ -1,11 +1,11 @@
 ---
 title: 'Journey of Souls: lo que ocurre cuando el alma deja el cuerpo'
-description: 'Análisis del libro fundacional de Michael Newton: qué encontró en 29 casos de hipnosis profunda sobre el período entre vidas, qué patrones emergieron y por qué el libro sigue siendo una referencia tres décadas después.'
+description: 'Journey of Souls de Michael Newton: qué halló en 29 casos de hipnosis profunda sobre la vida entre vidas y por qué sigue siendo una referencia.'
 pubDate: '2025-02-28'
 expositor: 'michael-newton'
 ---
 
-Publicado en 1994 por Llewellyn Publications, *Journey of Souls: Case Studies of Life Between Lives* es el libro que convirtió a Michael Newton en una figura central del campo de la investigación sobre la conciencia. No porque sea el primero en explorar el más allá —esa literatura existe desde los albores de la historia humana— sino porque lo hace desde un ángulo específico y documentado: los relatos de personas en hipnosis profunda sobre lo que recuerdan haber vivido entre una encarnación y la siguiente.
+Publicado en 1994 por Llewellyn Publications, *Journey of Souls: Case Studies of Life Between Lives* es el libro que convirtió a [Michael Newton](/blog/michael-newton-quien-es/) en una figura central del campo de la investigación sobre la conciencia. No porque sea el primero en explorar el más allá —esa literatura existe desde los albores de la historia humana— sino porque lo hace desde un ángulo específico y documentado: los relatos de personas en [hipnosis](/blog/hipnosis-que-es-realmente/) profunda sobre lo que recuerdan haber vivido entre una encarnación y la siguiente.
 
 ## El punto de partida metodológico
 

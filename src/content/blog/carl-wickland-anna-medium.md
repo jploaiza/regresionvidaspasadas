@@ -1,11 +1,11 @@
 ---
 title: 'Anna Wickland: la médium que hizo posible la obra de Carl'
-description: 'Sin Anna Wickland no habría existido Thirty Years Among the Dead. El retrato de la mujer cuya capacidad mediúmnica fue el instrumento de todo el trabajo clínico de su marido — y de la colaboración extraordinaria entre ambos durante más de 30 años.'
+description: 'Anna Wickland, la médium cuyo don hizo posible Treinta años entre los muertos: su papel en el trabajo clínico y la colaboración con su marido.'
 pubDate: '2025-09-27'
 expositor: 'carl-wickland'
 ---
 
-En la historia de la Terapia de Liberación Espiritual, el nombre que aparece en la portada del libro es Carl Wickland. Pero el trabajo que ese libro documenta no habría sido posible sin la mujer que nunca aparece en la portada: Anna Wickland.
+En la historia de la [Terapia de Liberación Espiritual](/blog/srt-que-es/), el nombre que aparece en la portada del libro es [Carl Wickland](/blog/carl-wickland-quien-es/). Pero el trabajo que ese libro documenta no habría sido posible sin la mujer que nunca aparece en la portada: Anna Wickland.
 
 Anna fue la médium. El instrumento. La persona que permitía que las entidades adheridas a los pacientes de Carl se expresaran a través de su cuerpo mientras él las interrogaba, les explicaba su situación y las guiaba hacia el plano siguiente. Y lo hizo durante más de tres décadas, en cientos de sesiones, con una consistencia y una entrega que difícilmente pueden entenderse sin comprender quién era Anna y qué significó su rol.
 

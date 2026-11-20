@@ -1,11 +1,11 @@
 ---
 title: 'Hipnosis de espectáculo vs. hipnosis clínica: la diferencia que importa'
-description: 'Por qué la hipnosis de entretenimiento y la hipnosis terapéutica son casi dos cosas diferentes: qué hace el hipnotizador de escenario que el clínico no hace, qué hace el clínico que el de escenario no necesita, y cómo esa diferencia cambia completamente la experiencia.'
+description: 'Hipnosis de espectáculo vs. hipnosis clínica: qué hace cada una, qué no necesita la otra y cómo cambia por completo la experiencia.'
 pubDate: '2026-03-07'
 expositor: 'hipnosis'
 ---
 
-La hipnosis de espectáculo y la hipnosis clínica usan el mismo nombre y el mismo mecanismo básico — el estado de atención focalizada y sugestibilidad aumentada que el sistema nervioso puede producir. Pero son experiencias fundamentalmente diferentes, con objetivos diferentes, con protocolos diferentes y con selección de participantes diferente.
+La [hipnosis](/blog/hipnosis-que-es-realmente/) de espectáculo y la hipnosis clínica usan el mismo nombre y el mismo mecanismo básico — el estado de atención focalizada y sugestibilidad aumentada que el sistema nervioso puede producir. Pero son experiencias fundamentalmente diferentes, con objetivos diferentes, con protocolos diferentes y con selección de participantes diferente.
 
 Confundirlas explica la mayor parte del miedo, la resistencia y el escepticismo que la gente tiene sobre la hipnosis cuando llega a un consultorio terapéutico.
 
@@ -29,7 +29,7 @@ Las diferencias concretas son importantes:
 
 **No selecciona a los más sugestibles.** Trabaja con quien llega a su consulta, adaptando el protocolo de inducción a las características específicas de ese paciente. Alguien que no entra fácilmente en trance profundo puede aun así beneficiarse de la hipnoterapia a través de técnicas diferentes.
 
-**La profundidad del trance no es el objetivo.** En el espectáculo, la profundidad del trance es el espectáculo. En la terapia, el nivel de trance necesario varía según el trabajo: algunas intervenciones funcionan con trances ligeros; la regresión a vidas pasadas generalmente requiere trances más profundos, pero "más profundo" no siempre significa "mejor".
+**La profundidad del trance no es el objetivo.** En el espectáculo, la profundidad del trance es el espectáculo. En la terapia, el nivel de trance necesario varía según el trabajo: algunas intervenciones funcionan con trances ligeros; la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/) generalmente requiere trances más profundos, pero "más profundo" no siempre significa "mejor".
 
 **El paciente recuerda.** En el espectáculo, el hipnotizador frecuentemente sugiere amnesia post-hipnótica para que el sujeto "no recuerde" lo que hizo en el escenario — lo que añade al entretenimiento. En la terapia, el objetivo es generalmente lo contrario: que el paciente recuerde lo que emergió en el trance para poder integrarlo conscientemente.
 

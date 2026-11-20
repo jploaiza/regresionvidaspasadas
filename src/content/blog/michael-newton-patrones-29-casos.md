@@ -1,11 +1,11 @@
 ---
 title: 'Los 29 casos de Newton: patrones del alma entre vidas'
-description: 'Un análisis detallado de los patrones que Michael Newton encontró en los 29 casos documentados en Journey of Souls: el grupo de almas, los guías, la revisión de vida y la elección de encarnación.'
+description: 'Los patrones de los 29 casos de Journey of Souls: el grupo de almas, los guías, la revisión de vida y la elección de la siguiente encarnación.'
 pubDate: '2025-03-14'
 expositor: 'michael-newton'
 ---
 
-La contribución más singular de Michael Newton al campo de la investigación sobre la conciencia no fue ningún caso individual espectacular —fue el patrón. Lo que emerge de leer *Journey of Souls* no es la historia de una persona con una experiencia extraordinaria, sino la arquitectura de algo que aparece consistentemente en personas que no se conocen entre sí y que vienen de contextos culturales y religiosos completamente distintos.
+La contribución más singular de [Michael Newton](/blog/michael-newton-quien-es/) al campo de la investigación sobre la conciencia no fue ningún caso individual espectacular —fue el patrón. Lo que emerge de leer *Journey of Souls* no es la historia de una persona con una experiencia extraordinaria, sino la arquitectura de algo que aparece consistentemente en personas que no se conocen entre sí y que vienen de contextos culturales y religiosos completamente distintos.
 
 Veamos los patrones principales que Newton documentó en sus 29 casos iniciales y que luego amplió en cientos más.
 

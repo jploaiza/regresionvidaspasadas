@@ -1,11 +1,11 @@
 ---
 title: 'Los talleres de Brian Weiss: de la clínica privada al movimiento global'
-description: 'Cómo Brian Weiss pasó de ser un psiquiatra con un caso clínico inusual a crear una red global de formación en regresión. Sus talleres, el Instituto Weiss y su impacto en miles de terapeutas.'
+description: 'Cómo Brian Weiss creó una red global de formación en regresión: sus talleres, el Instituto Weiss y su impacto en miles de terapeutas.'
 pubDate: '2025-02-07'
 expositor: 'brian-weiss'
 ---
 
-Hay una diferencia importante entre publicar un libro y construir un movimiento. Brian Weiss hizo las dos cosas. Después del éxito de *Muchas Vidas, Muchos Maestros*, podría haberse quedado en el papel de autor de un bestseller espiritual. En cambio, decidió convertir su experiencia clínica en un sistema de formación que hoy abarca a terapeutas en decenas de países.
+Hay una diferencia importante entre publicar un libro y construir un movimiento. [Brian Weiss](/blog/brian-weiss-quien-es/) hizo las dos cosas. Después del éxito de *Muchas Vidas, Muchos Maestros*, podría haberse quedado en el papel de autor de un bestseller espiritual. En cambio, decidió convertir su experiencia clínica en un sistema de formación que hoy abarca a terapeutas en decenas de países.
 
 ## De la consulta privada al escenario público
 

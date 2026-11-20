@@ -1,13 +1,13 @@
 ---
 title: 'Edith Fiore: la psicóloga clínica que legitimó la liberación espiritual'
-description: 'Quién fue la Dra. Edith Fiore: su formación en la Universidad de Miami, sus tres décadas de práctica clínica en California y cómo se convirtió en la primera psicóloga con credenciales convencionales en documentar sistemáticamente casos de posesión espiritual.'
+description: 'Quién fue Edith Fiore: la psicóloga de California que documentó de forma sistemática casos de apego espiritual en tres décadas de práctica.'
 pubDate: '2025-11-08'
 expositor: 'edith-fiore'
 ---
 
 En el campo de la liberación espiritual, hay una escasez histórica de personas con credenciales académicas convencionales. La mayor parte de los practicantes del siglo XX venían de tradiciones espiritualistas o religiosas, o eran —como Wickland— figuras que habían migrado hacia los márgenes de su disciplina de origen.
 
-Edith Fiore fue diferente. Obtuvo su doctorado en psicología de la Universidad de Miami, ejerció durante más de treinta años como psicóloga clínica en California, y llegó a la liberación espiritual no desde ninguna tradición esotérica sino desde la práctica clínica —desde los pacientes que no mejoraban con los enfoques convencionales y que, bajo hipnosis, revelaban fenómenos que su formación académica no le había enseñado a interpretar.
+Edith Fiore fue diferente. Obtuvo su doctorado en psicología de la Universidad de Miami, ejerció durante más de treinta años como psicóloga clínica en California, y llegó a la liberación espiritual no desde ninguna tradición esotérica sino desde la práctica clínica —desde los pacientes que no mejoraban con los enfoques convencionales y que, bajo [hipnosis](/blog/hipnosis-que-es-realmente/), revelaban fenómenos que su formación académica no le había enseñado a interpretar.
 
 ## La trayectoria clínica
 

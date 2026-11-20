@@ -1,11 +1,11 @@
 ---
 title: 'El Universo Convoluto: los libros más ambiciosos de Dolores Cannon'
-description: 'Análisis de la serie "The Convoluted Universe" de Dolores Cannon: cuatro volúmenes que documentan los materiales más complejos e inusuales emergidos en sus sesiones de QHHT, desde cosmología hasta física cuántica.'
+description: 'La serie El Universo Convoluto de Dolores Cannon: cuatro volúmenes con los materiales más complejos surgidos en sus sesiones de QHHT.'
 pubDate: '2025-05-02'
 expositor: 'dolores-cannon'
 ---
 
-Si *Conversations with Nostradamus* fue el libro que lanzó a Dolores Cannon al mapa editorial, y *Three Waves of Volunteers* fue su obra más accesible, la serie **The Convoluted Universe** —cuatro volúmenes publicados entre 2001 y 2012— es su trabajo más ambicioso, más extraño y más difícil de categorizar.
+Si *Conversations with Nostradamus* fue el libro que lanzó a [Dolores Cannon](/blog/dolores-cannon-quien-es/) al mapa editorial, y *Three Waves of Volunteers* fue su obra más accesible, la serie **The Convoluted Universe** —cuatro volúmenes publicados entre 2001 y 2012— es su trabajo más ambicioso, más extraño y más difícil de categorizar.
 
 El título lo dice todo: "convoluto" en el sentido de enrevesado, complejo, difícil de seguir. Cannon usó el término con conciencia plena —era consciente de que lo que documentaba en esos libros estaba muy lejos de ser asimilable para la mayoría de los lectores.
 
@@ -33,7 +33,7 @@ La apelación a la física cuántica como "validación" de ideas espirituales es
 
 ## Por qué los libros tienen lectores apasionados
 
-A pesar de estas limitaciones, los cuatro volúmenes de *The Convoluted Universe* tienen un seguimiento leal y extenso. La razón es probablemente la misma que explica el atractivo de toda la obra de Cannon: el material no viene del intelecto de la autora sino de lo que emergió en cientos de sesiones con personas ordinarias que, bajo hipnosis profunda, hablaban sobre cosas que no podían haber elaborado conscientemente con esa consistencia.
+A pesar de estas limitaciones, los cuatro volúmenes de *The Convoluted Universe* tienen un seguimiento leal y extenso. La razón es probablemente la misma que explica el atractivo de toda la obra de Cannon: el material no viene del intelecto de la autora sino de lo que emergió en cientos de sesiones con personas ordinarias que, bajo [hipnosis](/blog/hipnosis-que-es-realmente/) profunda, hablaban sobre cosas que no podían haber elaborado conscientemente con esa consistencia.
 
 Si se suspende temporalmente el juicio sobre la naturaleza de ese material —si se lee como exploración en lugar de como propuesta de realidad— la serie abre preguntas genuinamente interesantes sobre la naturaleza de la conciencia y la experiencia humana.
 

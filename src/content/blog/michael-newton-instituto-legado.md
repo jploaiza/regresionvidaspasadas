@@ -1,11 +1,11 @@
 ---
 title: 'El Instituto Newton: el legado institucional de la Vida entre Vidas'
-description: 'Cómo Michael Newton convirtió su metodología en una organización global. El Michael Newton Institute, sus estándares de formación, los países donde opera y lo que significa para la práctica de la LBL.'
+description: 'Cómo Michael Newton convirtió su método en una organización global: el Michael Newton Institute, su formación y su alcance internacional.'
 pubDate: '2025-03-21'
 expositor: 'michael-newton'
 ---
 
-Cuando Michael Newton murió en 2016, dejó atrás algo que pocos pioneros del campo de la regresión han logrado construir: una institución. El **Michael Newton Institute for Life Between Lives Hypnotherapy** —conocido como TNI— no es una organización espiritual informal ni una red de entusiastas. Es una asociación profesional con estándares de formación rigurosos, procesos de certificación exigentes y presencia activa en más de 35 países.
+Cuando [Michael Newton](/blog/michael-newton-quien-es/) murió en 2016, dejó atrás algo que pocos pioneros del campo de la regresión han logrado construir: una institución. El **Michael Newton Institute for Life Between Lives Hypnotherapy** —conocido como TNI— no es una organización espiritual informal ni una red de entusiastas. Es una asociación profesional con estándares de formación rigurosos, procesos de certificación exigentes y presencia activa en más de 35 países.
 
 ## La decisión de institucionalizar
 

@@ -1,17 +1,17 @@
 ---
 title: 'Entidades oscuras: ¿existen los demonios?'
-description: 'Lo que la Terapia de Liberación Espiritual dice sobre las entidades de fuerza oscura: qué son, en qué se diferencian de los espíritus humanos adheridos, cómo trabaja la SRT con ellas, y por qué los practicantes del campo prefieren no usar la palabra "demonio".'
+description: 'Qué dice la Terapia de Liberación Espiritual de las entidades de fuerza oscura, cómo se distinguen de los espíritus y por qué evita hablar de demonios.'
 pubDate: '2026-01-10'
 expositor: 'srt'
 ---
 
-La palabra "demonio" carga con dos mil años de teología, folklore y cinematografía. Evoca al Belcebú de Milton, al Pazuzu de Linda Blair, al Mefistófeles de Goethe. Es una palabra que, antes de describir, ya interpreta — ya sitúa el fenómeno dentro de un marco moral y cosmológico específico que no todos los practicantes de la Terapia de Liberación Espiritual comparten.
+La palabra "demonio" carga con dos mil años de teología, folklore y cinematografía. Evoca al Belcebú de Milton, al Pazuzu de Linda Blair, al Mefistófeles de Goethe. Es una palabra que, antes de describir, ya interpreta — ya sitúa el fenómeno dentro de un marco moral y cosmológico específico que no todos los practicantes de la [Terapia de Liberación Espiritual](/blog/srt-que-es/) comparten.
 
 Por eso, cuando los practicantes de SRT encuentran entidades que no se comportan como espíritus humanos confundidos, tienden a usar un vocabulario diferente: Entidades de Fuerza Oscura, entidades no humanas, presencias hostiles. El fenómeno que describen puede ser el mismo que las tradiciones religiosas llaman "demonios". Pero la forma de trabajar con él es diferente.
 
 ## Lo que los practicantes de SRT encuentran
 
-En la experiencia de practicantes como William Baldwin, no todas las entidades que se adhieren a los seres humanos son espíritus de personas fallecidas. Existe una categoría de presencias que se distingue por características específicas:
+En la experiencia de practicantes como [William Baldwin](/blog/william-baldwin-quien-es/), no todas las entidades que se adhieren a los seres humanos son espíritus de personas fallecidas. Existe una categoría de presencias que se distingue por características específicas:
 
 **No tienen historia humana.** A diferencia de los espíritus adheridos que relatan quiénes fueron en vida, estas entidades no tienen una narrativa de vida pasada que contar. Cuando se les pregunta sobre su historia, la respuesta suele ser evasiva o francamente hostil.
 

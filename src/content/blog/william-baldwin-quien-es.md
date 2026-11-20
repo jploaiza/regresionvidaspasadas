@@ -1,13 +1,13 @@
 ---
 title: 'William Baldwin: el dentista que escribió el manual definitivo de la liberación espiritual'
-description: 'Quién fue el Dr. William J. Baldwin (1939–2004): su doble carrera como dentista y psicólogo clínico, cómo llegó a la Terapia de Liberación Espiritual y por qué su manual de 1992 sigue siendo la referencia técnica más completa del campo.'
+description: 'Quién fue William Baldwin (1939-2004): dentista y psicólogo clínico que sistematizó la Terapia de Liberación Espiritual y escribió su manual de 1992.'
 pubDate: '2025-10-18'
 expositor: 'william-baldwin'
 ---
 
-Hay algo que inmediatamente distingue a William Baldwin de los demás grandes nombres de la Terapia de Liberación Espiritual: antes de ser psicólogo, fue dentista.
+Hay algo que inmediatamente distingue a William Baldwin de los demás grandes nombres de la [Terapia de Liberación Espiritual](/blog/srt-que-es/): antes de ser psicólogo, fue dentista.
 
-Durante años ejerció la odontología en California mientras simultáneamente desarrollaba un interés en la hipnosis clínica —inicialmente como herramienta para reducir la ansiedad de sus pacientes dentales, y gradualmente como puerta de acceso a territorios mucho más amplios de la psique humana.
+Durante años ejerció la odontología en California mientras simultáneamente desarrollaba un interés en la [hipnosis](/blog/hipnosis-que-es-realmente/) clínica —inicialmente como herramienta para reducir la ansiedad de sus pacientes dentales, y gradualmente como puerta de acceso a territorios mucho más amplios de la psique humana.
 
 ## La doble formación
 

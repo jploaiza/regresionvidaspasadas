@@ -1,13 +1,13 @@
 ---
 title: 'La Spirit Release Foundation: cuando la psiquiatría se abrió a lo invisible'
-description: 'La historia de la Spirit Release Foundation (2000–2013), fundada por Alan Sanderson: qué hizo durante 13 años para crear un puente entre la liberación espiritual y la medicina convencional, y qué dejó cuando cerró.'
+description: 'La Spirit Release Foundation (2000-2013), fundada por Alan Sanderson: su labor puente con la medicina convencional y lo que dejó al cerrar.'
 pubDate: '2025-12-06'
 expositor: 'alan-sanderson'
 ---
 
 En el año 2000, un grupo inusual de personas se reunió en el Reino Unido para fundar una organización con un nombre que pocos habrían esperado ver asociado a la medicina académica: la Spirit Release Foundation.
 
-La convocatoria incluía médicos, psiquiatras y terapeutas complementarios. La persona detrás de la iniciativa era Alan Sanderson, un psiquiatra con décadas de experiencia institucional que había llegado a la conclusión de que la liberación espiritual no era una práctica marginal sino un enfoque terapéutico legítimo que necesitaba un hogar institucional si iba a ser tomado en serio.
+La convocatoria incluía médicos, psiquiatras y terapeutas complementarios. La persona detrás de la iniciativa era [Alan Sanderson](/blog/alan-sanderson-quien-es/), un psiquiatra con décadas de experiencia institucional que había llegado a la conclusión de que la liberación espiritual no era una práctica marginal sino un enfoque terapéutico legítimo que necesitaba un hogar institucional si iba a ser tomado en serio.
 
 ## Por qué una fundación
 

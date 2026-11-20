@@ -1,11 +1,11 @@
 ---
 title: 'Milton Erickson: el hombre que revolucionó la hipnosis clínica'
-description: 'Quién fue Milton H. Erickson (1901–1980): su infancia marcada por la enfermedad, cómo descubrió la hipnosis a los 17 años, y por qué su enfoque conversacional y no directivo transformó para siempre la práctica de la hipnoterapia.'
+description: 'Quién fue Milton Erickson (1901-1980): cómo descubrió la hipnosis a los 17 años y por qué su enfoque conversacional transformó la hipnoterapia.'
 pubDate: '2026-02-28'
 expositor: 'hipnosis'
 ---
 
-Si hay un nombre que separa el "antes" del "después" en la hipnosis clínica, es Milton H. Erickson. No porque haya descubierto la hipnosis — Braid, Charcot y Bernheim ya habían hecho eso. Sino porque reformuló completamente lo que la hipnosis podía ser: en lugar de un estado de rendición pasiva al que el sujeto era sometido, la convirtió en un proceso de colaboración activa que respetaba y aprovechaba la singularidad de cada persona.
+Si hay un nombre que separa el "antes" del "después" en la [hipnosis](/blog/hipnosis-que-es-realmente/) clínica, es Milton H. Erickson. No porque haya descubierto la hipnosis — Braid, Charcot y Bernheim ya habían hecho eso. Sino porque reformuló completamente lo que la hipnosis podía ser: en lugar de un estado de rendición pasiva al que el sujeto era sometido, la convirtió en un proceso de colaboración activa que respetaba y aprovechaba la singularidad de cada persona.
 
 ## Una vida marcada por la adversidad
 
@@ -39,4 +39,4 @@ Las contribuciones técnicas de Erickson al campo son numerosas. Las más influy
 
 El enfoque de Erickson generó lo que hoy se conoce como hipnosis ericksoniana o hipnosis clínica moderna, y sus principios están en la base de la Programación Neurolingüística (PNL), de la terapia orientada a soluciones y de múltiples modalidades terapéuticas contemporáneas.
 
-Para la regresión a vidas pasadas, el aporte de Erickson es fundamental: la idea de que el terapeuta no "conduce" al paciente hacia ningún destino predeterminado, sino que crea las condiciones para que el paciente acceda a lo que necesita acceder, es el principio operativo de toda regresión respetuosa y efectiva.
+Para la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/), el aporte de Erickson es fundamental: la idea de que el terapeuta no "conduce" al paciente hacia ningún destino predeterminado, sino que crea las condiciones para que el paciente acceda a lo que necesita acceder, es el principio operativo de toda regresión respetuosa y efectiva.

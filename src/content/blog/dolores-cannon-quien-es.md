@@ -1,6 +1,6 @@
 ---
 title: 'Dolores Cannon: la hipnoterapeuta autodidacta que transformó el campo'
-description: 'Biografía de Dolores Cannon (1931-2014): cómo una ama de casa de Missouri se convirtió en una de las hipnoterapeutas más influyentes del mundo, creadora del QHHT y autora de más de 20 libros.'
+description: 'Biografía de Dolores Cannon (1931-2014): de ama de casa en Missouri a creadora del QHHT y autora de más de 20 libros sobre regresión.'
 pubDate: '2025-04-04'
 expositor: 'dolores-cannon'
 ---
@@ -9,7 +9,7 @@ Hay algo deliberadamente paradójico en la historia de Dolores Cannon: una mujer
 
 ## Orígenes en el Missouri de los años 50
 
-Dolores Eileen Cannon nació el 15 de abril de 1931 en St. Louis, Missouri. Creció en un contexto familiar convencional, se casó joven y acompañó a su marido Johnny, oficial de la Marina de los Estados Unidos, en sus distintos destinos. Fue durante esos años de vida itinerante cuando Johnny comenzó a explorar la hipnosis como hobby —una práctica relativamente común entre aficionados en la época.
+Dolores Eileen Cannon nació el 15 de abril de 1931 en St. Louis, Missouri. Creció en un contexto familiar convencional, se casó joven y acompañó a su marido Johnny, oficial de la Marina de los Estados Unidos, en sus distintos destinos. Fue durante esos años de vida itinerante cuando Johnny comenzó a explorar la [hipnosis](/blog/hipnosis-que-es-realmente/) como hobby —una práctica relativamente común entre aficionados en la época.
 
 A finales de los años 60, el matrimonio Cannon comenzó a hacer sesiones de hipnosis con amigos y vecinos. En 1968, algo extraordinario ocurrió: una paciente bajo hipnosis comenzó a describir una vida anterior con un nivel de detalle y coherencia que ninguno de los dos sabía cómo procesar.
 
@@ -23,7 +23,7 @@ Durante los años 70, después de la muerte de su marido, Cannon continuó sola.
 
 ## La creación del QHHT
 
-Con los años, Cannon refinó su técnica hasta formalizarla como **Quantum Healing Hypnosis Technique** (QHHT) —nombre que adoptó alrededor de 2002 cuando sus alumnos le señalaron que el término "regresión a vidas pasadas avanzada" no capturaba lo que ella hacía.
+Con los años, Cannon refinó su técnica hasta formalizarla como **Quantum Healing Hypnosis Technique** (QHHT) —nombre que adoptó alrededor de 2002 cuando sus alumnos le señalaron que el término "[regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/) avanzada" no capturaba lo que ella hacía.
 
 El QHHT tiene características específicas que lo diferencian de otros enfoques: es siempre presencial (Cannon nunca aceptó el online como sustituto), usa una inducción larga que lleva al sujeto a un nivel de trance muy profundo, y trabaja centralmente con lo que Cannon llamaba "el Subconsciente" —una instancia de la psique que, en su marco, tiene acceso a la historia completa del alma y puede facilitar sanación en el cuerpo físico.
 

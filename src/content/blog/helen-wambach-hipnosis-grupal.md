@@ -1,11 +1,11 @@
 ---
 title: 'La hipnosis grupal como método de investigación: la apuesta de Wambach'
-description: 'Por qué Helen Wambach eligió la hipnosis grupal en lugar de sesiones individuales para investigar la regresión, qué ventajas metodológicas tiene ese enfoque y qué críticas recibió.'
+description: 'Por qué Helen Wambach investigó la regresión con hipnosis grupal en vez de sesiones individuales, sus ventajas metodológicas y las críticas recibidas.'
 pubDate: '2025-08-22'
 expositor: 'helen-wambach'
 ---
 
-La hipnosis en grupo es una práctica poco habitual. Cuando se piensa en hipnoterapia, se piensa en una relación uno a uno: terapeuta y paciente en un espacio privado, la sugestión adaptada a la historia individual, la confianza construida en una relación personal. Wambach hizo lo contrario —y la razón metodológica detrás de esa decisión es más interesante de lo que parece a primera vista.
+La [hipnosis](/blog/hipnosis-que-es-realmente/) en grupo es una práctica poco habitual. Cuando se piensa en hipnoterapia, se piensa en una relación uno a uno: terapeuta y paciente en un espacio privado, la sugestión adaptada a la historia individual, la confianza construida en una relación personal. Wambach hizo lo contrario —y la razón metodológica detrás de esa decisión es más interesante de lo que parece a primera vista.
 
 ## Por qué el grupo en lugar del individuo
 

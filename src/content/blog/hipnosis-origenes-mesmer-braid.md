@@ -1,11 +1,11 @@
 ---
 title: 'Los orígenes de la hipnosis: de Mesmer y el magnetismo animal a James Braid'
-description: 'La historia de la hipnosis moderna: Franz Anton Mesmer y su teoría del magnetismo animal, la Comisión Real de París que la refutó, y James Braid, el cirujano escocés que dio nombre al fenómeno y lo separó del misticismo.'
+description: 'Historia de la hipnosis moderna: Mesmer y el magnetismo animal, la Comisión Real que lo refutó y James Braid, quien separó el fenómeno del misticismo.'
 pubDate: '2026-02-14'
 expositor: 'hipnosis'
 ---
 
-La hipnosis tiene una historia que combina ciencia, teatro, escándalo y genialidad en proporciones inusuales. Para entender qué es la hipnosis hoy, ayuda saber de dónde viene — y por qué tardó tanto en ser aceptada como lo que es.
+La [hipnosis](/blog/hipnosis-que-es-realmente/) tiene una historia que combina ciencia, teatro, escándalo y genialidad en proporciones inusuales. Para entender qué es la hipnosis hoy, ayuda saber de dónde viene — y por qué tardó tanto en ser aceptada como lo que es.
 
 ## Franz Anton Mesmer y el magnetismo animal
 

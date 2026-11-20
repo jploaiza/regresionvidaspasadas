@@ -1,11 +1,11 @@
 ---
 title: 'El enfoque escéptico de Wambach: ciencia, duda y regresión'
-description: 'Helen Wambach fue la única investigadora del campo que comenzó desde el escepticismo explícito. Qué la hizo cambiar de posición, qué limitaciones reconoció en su propio trabajo y por qué su legado es importante para pensar la regresión con rigor.'
+description: 'Helen Wambach empezó como escéptica. Qué la hizo cambiar, qué límites reconoció en su trabajo y por qué su legado importa al debatir la regresión.'
 pubDate: '2025-09-12'
 expositor: 'helen-wambach'
 ---
 
-Hay algo que distingue a Helen Wambach de prácticamente todos los demás grandes nombres del campo de la regresión a vidas pasadas: comenzó como escéptica.
+Hay algo que distingue a [Helen Wambach](/blog/helen-wambach-quien-es/) de prácticamente todos los demás grandes nombres del campo de la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/): comenzó como escéptica.
 
 No fue alguien que tuvo una experiencia personal de regresión y decidió investigarla porque ya creía. Fue alguien que decidió investigar precisamente porque *no creía* —y quería demostrar, con datos, que el fenómeno era producto de la fantasía y la sugestión.
 
@@ -31,7 +31,7 @@ Lo que hace a Wambach especialmente valiosa como referencia es su honestidad sob
 
 - La selección de la muestra está sesgada: personas que asisten voluntariamente a talleres de regresión.
 - La verificación estadística tiene límites: los registros históricos de densidad poblacional por épocas y clases no son lo suficientemente precisos para comparación rigurosa.
-- La hipnosis grupal, aunque reduce la influencia del terapeuta, no la elimina completamente.
+- La [hipnosis](/blog/hipnosis-que-es-realmente/) grupal, aunque reduce la influencia del terapeuta, no la elimina completamente.
 - Los detalles específicos de los relatos individuales raramente son verificables de forma independiente.
 
 Esta lista de limitaciones —escrita por la propia investigadora en el mismo libro que presenta los resultados— es inusual en el campo de la regresión, donde la tendencia es minimizar las objeciones en lugar de presentarlas con claridad.

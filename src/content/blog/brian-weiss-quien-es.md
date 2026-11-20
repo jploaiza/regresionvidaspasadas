@@ -1,6 +1,6 @@
 ---
 title: 'Brian Weiss: el psiquiatra de Yale que cambió de bando'
-description: 'Conoce la historia de Brian Weiss, el psiquiatra formado en las universidades más prestigiosas de EE.UU. que abandonó el escepticismo al descubrir las vidas pasadas de sus pacientes.'
+description: 'Quién es Brian Weiss: el psiquiatra de Columbia y Yale que dejó atrás su escepticismo al descubrir recuerdos de vidas pasadas en una paciente.'
 pubDate: '2025-01-10'
 expositor: 'brian-weiss'
 ---
@@ -17,7 +17,7 @@ Era exactamente el tipo de psiquiatra que uno esperaría encontrar en los mejore
 
 En 1980, Weiss comenzó a tratar a una paciente que identificó en su libro como "Catherine" —un nombre ficticio para proteger su identidad. Catherine tenía 27 años, sufría de múltiples fobias y estados de ansiedad severos que no respondían a la terapia convencional.
 
-Tras 18 meses de trabajo sin resultados satisfactorios, Weiss decidió intentar una sesión de hipnosis para explorar posibles traumas de infancia. Lo que ocurrió superó con creces cualquier expectativa: Catherine comenzó a describir escenas de vidas que no pertenecían a su existencia actual. Habló de una vida en Egipto hace cuatro mil años, de otra en la Grecia clásica, de vidas en contextos completamente distintos a los que podría haber imaginado.
+Tras 18 meses de trabajo sin resultados satisfactorios, Weiss decidió intentar una sesión de [hipnosis](/blog/hipnosis-que-es-realmente/) para explorar posibles traumas de infancia. Lo que ocurrió superó con creces cualquier expectativa: Catherine comenzó a describir escenas de vidas que no pertenecían a su existencia actual. Habló de una vida en Egipto hace cuatro mil años, de otra en la Grecia clásica, de vidas en contextos completamente distintos a los que podría haber imaginado.
 
 Weiss siguió el proceso, sin saber bien qué estaba pasando, y algo extraordinario ocurrió: los síntomas de Catherine mejoraron. Las fobias fueron remitiendo a medida que "revisitaba" y resolvía experiencias de esas otras vidas.
 
@@ -29,7 +29,7 @@ Fue la paciente la que lo convenció, indirectamente. A través del estado hipn�
 
 ## De la clínica al papel
 
-Después de cuatro años de dilación, Weiss decidió publicar lo ocurrido. En 1988 salió *Muchas Vidas, Muchos Maestros* —en inglés, *Many Lives, Many Masters*— y el impacto fue inmediato. El libro fue un bestseller internacional traducido a más de 40 idiomas, y convirtió a Weiss en la figura más reconocida a nivel mundial del campo de la regresión a vidas pasadas.
+Después de cuatro años de dilación, Weiss decidió publicar lo ocurrido. En 1988 salió *Muchas Vidas, Muchos Maestros* —en inglés, *Many Lives, Many Masters*— y el impacto fue inmediato. El libro fue un bestseller internacional traducido a más de 40 idiomas, y convirtió a Weiss en la figura más reconocida a nivel mundial del campo de la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/).
 
 Lo notable de su trayectoria es que no abandonó el rigor médico: siguió publicando, impartiendo talleres y formando terapeutas bajo estándares documentables. Su credencial como psiquiatra de Yale no es un detalle menor —es la razón por la que su voz tuvo el alcance que tuvo.
 

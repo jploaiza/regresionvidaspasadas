@@ -80,6 +80,21 @@ function resolveImage(): ImageMetadata {
 const displayImage = resolveImage();
 const cat = expositor ? CATEGORY[expositor] : undefined;
 
+const JP = 'https://www.juanpabloloaiza.com';
+const AUTHOR_LINKS = {
+  srt: { href: `${JP}/#liberacion`, anchor: 'sesiones de liberación espiritual' },
+  hipnosis: { href: `${JP}/#ComoFunciona`, anchor: 'cómo es una sesión de hipnosis terapéutica' },
+  rvp: { href: `${JP}/#QueEsTRVP`, anchor: 'sesiones de regresión a vidas pasadas' },
+};
+const authorLink = AUTHOR_LINKS[cat?.group ?? 'rvp'];
+
+const PILLARS = [
+  { slug: 'que-es-la-regresion-a-vidas-pasadas', label: 'Qué es la regresión a vidas pasadas' },
+  { slug: 'como-funciona-una-sesion-de-regresion', label: 'Cómo funciona una sesión de regresión' },
+  { slug: 'srt-que-es', label: 'Qué es la Terapia de Liberación Espiritual' },
+  { slug: 'hipnosis-que-es-realmente', label: 'Qué es realmente la hipnosis' },
+].filter((p) => p.slug !== postId).slice(0, 3);
+
 const siteUrl = Astro.site ?? 'https://www.regresionvidaspasadas.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
 const ogImage = new URL(displayImage.src, siteUrl);
@@ -629,7 +644,7 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
       {description && <p class="article-header-desc">{description}</p>}
       <div class="article-header-meta">
         <span class="article-meta-by">Por</span>
-        <span class="article-meta-author">Regresión a Vidas Pasadas</span>
+        <a class="article-meta-author" href="https://www.juanpabloloaiza.com" rel="author" style="text-decoration:none">Juan Pablo Loaiza</a>
         <span class="article-meta-dot">•</span>
         <span class="article-meta-date"><FormattedDate date={pubDate} /></span>
         {readingTime && (
@@ -711,11 +726,22 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 
         <!-- Author/CTA -->
         <div class="author-cta">
-          <span class="author-cta-label">¿Quieres explorar este proceso?</span>
+          <span class="author-cta-label">Sobre el autor</span>
           <p>
-            Puedes trabajar personalmente la regresión con un terapeuta certificado.
-            Conoce el trabajo de <a href="https://www.juanpabloloaiza.com" target="_blank" rel="noopener">Juan Pablo Loaiza</a>,
-            especialista en RVP.
+            <a href="https://www.juanpabloloaiza.com" rel="author">Juan Pablo Loaiza</a> es terapeuta de Regresión a Vidas Pasadas (TRVP)
+            y escribe este portal. Si quieres vivir el proceso en primera persona, conoce
+            <a href={authorLink.href}>{authorLink.anchor}</a>,
+            lee su <a href={`${JP}/blog`}>blog</a> o <a href={`${JP}/agenda`}>agenda una sesión</a>.
+          </p>
+        </div>
+
+        <!-- Sigue leyendo -->
+        <div class="author-cta" style="margin-top:1.25em">
+          <span class="author-cta-label">Sigue leyendo</span>
+          <p>
+            {PILLARS.map((p, i) => (
+              <>{i > 0 && ' · '}<a href={`/blog/${p.slug}/`}>{p.label}</a></>
+            ))}
           </p>
         </div>
 

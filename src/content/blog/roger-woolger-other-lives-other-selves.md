@@ -1,11 +1,11 @@
 ---
 title: 'Other Lives, Other Selves: el libro que integró Jung y la regresión'
-description: 'Análisis de la obra principal de Roger Woolger publicada en 1987: cómo integró la psicología analítica junguiana con la terapia de regresión y qué aportó al campo de la psicología transpersonal.'
+description: 'Other Lives, Other Selves (1987), de Roger Woolger: cómo integró la psicología junguiana con la regresión y qué aportó al campo transpersonal.'
 pubDate: '2025-05-23'
 expositor: 'roger-woolger'
 ---
 
-Cuando Roger Woolger publicó *Other Lives, Other Selves: A Jungian Psychotherapist Discovers Past Lives* en 1987, no estaba escribiendo para el mercado espiritual de la New Age —aunque terminó siendo leído por él. Estaba escribiendo para sus colegas analistas junguianos, intentando explicar algo que había encontrado en la práctica clínica y que no tenía una explicación satisfactoria dentro del marco de Jung.
+Cuando [Roger Woolger](/blog/roger-woolger-quien-es/) publicó *Other Lives, Other Selves: A Jungian Psychotherapist Discovers Past Lives* en 1987, no estaba escribiendo para el mercado espiritual de la New Age —aunque terminó siendo leído por él. Estaba escribiendo para sus colegas analistas junguianos, intentando explicar algo que había encontrado en la práctica clínica y que no tenía una explicación satisfactoria dentro del marco de Jung.
 
 El resultado fue un libro que todavía, décadas después, es citado por psicoterapeutas que quieren acercarse a la regresión desde un marco conceptual riguroso.
 

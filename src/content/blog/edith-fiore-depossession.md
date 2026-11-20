@@ -1,6 +1,6 @@
 ---
 title: 'La "desposesión" según Fiore: compasión, no combate'
-description: 'El protocolo de intervención de Edith Fiore para liberar entidades adheridas: por qué rechazaba el lenguaje del exorcismo, cómo usaba la hipnosis para trabajar directamente con el paciente, y qué resultados clínicos observó.'
+description: 'El protocolo de Edith Fiore para liberar entidades adheridas con hipnosis: por qué evitaba el exorcismo y qué resultados clínicos observó.'
 pubDate: '2025-11-22'
 expositor: 'edith-fiore'
 ---

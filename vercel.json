@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "regresionvidaspasadas.com" }],
+      "destination": "https://www.regresionvidaspasadas.com/$1",
+      "permanent": true
+    }
+  ]
+}

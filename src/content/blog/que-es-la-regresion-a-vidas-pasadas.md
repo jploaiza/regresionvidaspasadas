@@ -1,11 +1,11 @@
 ---
 title: '¿Qué es la Regresión a Vidas Pasadas?'
-description: 'Una guía completa para entender qué es la terapia de regresión a vidas pasadas, en qué se basa y qué puedes esperar de este proceso terapéutico.'
+description: 'Guía completa: qué es la terapia de regresión a vidas pasadas, en qué se basa, cómo es una sesión y qué puedes esperar del proceso.'
 pubDate: '2024-09-15'
 heroImage: '../../assets/blog/que-es-regresion.jpg'
 ---
 
-La regresión a vidas pasadas es una modalidad terapéutica que permite acceder a memorias o experiencias que el inconsciente guarda más allá de la vida presente. A través de un estado modificado de conciencia —similar a la hipnosis profunda o la meditación guiada— la persona puede explorar escenas, emociones y relaciones que resuenan con conflictos o patrones de su vida actual.
+La regresión a vidas pasadas es una modalidad terapéutica que permite acceder a memorias o experiencias que el inconsciente guarda más allá de la vida presente. A través de un estado modificado de conciencia —similar a la [hipnosis](/blog/hipnosis-que-es-realmente/) profunda o la meditación guiada— la persona puede explorar escenas, emociones y relaciones que resuenan con conflictos o patrones de su vida actual.
 
 No se trata de un proceso espiritual exclusivo de ninguna religión ni de una práctica esotérica: es una herramienta terapéutica que trabaja con el lenguaje del inconsciente para generar comprensión, alivio y sanación.
 
@@ -13,7 +13,7 @@ No se trata de un proceso espiritual exclusivo de ninguna religión ni de una pr
 
 Durante una sesión de regresión, el terapeuta guía al consultante hacia un estado de relajación profunda. Desde ese estado, la mente accede a imágenes, sensaciones y emociones que pueden pertenecer a otras épocas, otros lugares, otras vidas. El objetivo no es "demostrar" que esas vidas existieron —la eficacia terapéutica no depende de esa creencia— sino observar qué emociones emergen y qué relación tienen con la vida presente.
 
-Este enfoque fue popularizado por el psiquiatra Brian Weiss, quien documentó miles de casos clínicos en los que pacientes resolvían traumas, fobias y enfermedades psicosomáticas al explorar experiencias de vidas anteriores bajo hipnosis.
+Este enfoque fue popularizado por el psiquiatra [Brian Weiss](/blog/brian-weiss-quien-es/), quien documentó miles de casos clínicos en los que pacientes resolvían traumas, fobias y enfermedades psicosomáticas al explorar experiencias de vidas anteriores bajo hipnosis.
 
 ## ¿Qué no es la regresión?
 

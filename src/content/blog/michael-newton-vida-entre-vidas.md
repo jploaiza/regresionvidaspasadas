@@ -1,21 +1,21 @@
 ---
 title: 'La Vida entre Vidas (LBL): la técnica que Newton desarrolló'
-description: 'Cómo funciona la Life Between Lives Hypnotherapy de Michael Newton: el protocolo, la inducción profunda, el acceso al estado entre encarnaciones y en qué se diferencia de la regresión a vidas pasadas estándar.'
+description: 'Cómo funciona la hipnoterapia Vida entre Vidas de Michael Newton: protocolo, inducción profunda y diferencias con la regresión estándar.'
 pubDate: '2025-03-07'
 expositor: 'michael-newton'
 ---
 
-La Life Between Lives Hypnotherapy —LBL— es la técnica que Michael Newton desarrolló a lo largo de décadas para acceder no a las vidas pasadas en sí, sino al período que el alma habita entre una encarnación y la siguiente. Es una modalidad con características muy específicas que la distinguen de la regresión convencional, y esas diferencias son importantes para entender tanto sus posibilidades como sus exigencias.
+La Life Between Lives Hypnotherapy —LBL— es la técnica que [Michael Newton](/blog/michael-newton-quien-es/) desarrolló a lo largo de décadas para acceder no a las vidas pasadas en sí, sino al período que el alma habita entre una encarnación y la siguiente. Es una modalidad con características muy específicas que la distinguen de la regresión convencional, y esas diferencias son importantes para entender tanto sus posibilidades como sus exigencias.
 
 ## El prerequisito: una vida pasada primero
 
 Una sesión de LBL no comienza en el estado entre vidas. Comienza con el acceso a una vida pasada, generalmente la vida inmediatamente anterior a la actual. Esto no es arbitrario: Newton observó que acceder primero a la vida pasada facilita la transición hacia el estado entre vidas, porque el sujeto ya está "en el registro" de otra encarnación y el puente hacia el período posterior a esa vida resulta más natural.
 
-Por esta razón, las sesiones de LBL son considerablemente más largas que las de regresión estándar: típicamente duran entre tres y cinco horas. No son apropiadas para personas que no han tenido experiencias previas con hipnosis o regresión.
+Por esta razón, las sesiones de LBL son considerablemente más largas que las de regresión estándar: típicamente duran entre tres y cinco horas. No son apropiadas para personas que no han tenido experiencias previas con [hipnosis](/blog/hipnosis-que-es-realmente/) o regresión.
 
 ## La inducción profunda
 
-La LBL requiere un nivel de trance más profundo que la regresión a vidas pasadas convencional. Newton desarrolló protocolos de inducción específicos para llevar al sujeto a un estado que describía como nivel somnámbulo o "delta profundo" —un estado de profunda relajación donde la mente consciente se retira de forma significativa pero el sujeto mantiene la capacidad de hablar y responder.
+La LBL requiere un nivel de trance más profundo que la [regresión a vidas pasadas](/blog/que-es-la-regresion-a-vidas-pasadas/) convencional. Newton desarrolló protocolos de inducción específicos para llevar al sujeto a un estado que describía como nivel somnámbulo o "delta profundo" —un estado de profunda relajación donde la mente consciente se retira de forma significativa pero el sujeto mantiene la capacidad de hablar y responder.
 
 Este nivel de profundidad es lo que permite acceder al estado entre vidas, que Newton describía como más "sutil" que los registros de vidas pasadas —menos cargado de drama emocional, más luminoso y tranquilo, pero también más difícil de articular desde la conciencia ordinaria.
 

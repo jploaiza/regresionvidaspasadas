@@ -1,15 +1,15 @@
 ---
 title: 'La metodología de Brian Weiss en la sesión de regresión'
-description: 'Cómo trabaja Brian Weiss en una sesión de regresión a vidas pasadas: la inducción hipnótica, el trabajo con la escena y la integración. Una mirada al método que ha formado a miles de terapeutas.'
+description: 'Cómo trabaja Brian Weiss una sesión de regresión: inducción hipnótica, trabajo con la escena e integración. El método que ha formado a miles.'
 pubDate: '2025-01-31'
 expositor: 'brian-weiss'
 ---
 
-A diferencia de muchos exponentes del campo de la regresión, Brian Weiss viene de la psiquiatría académica, y eso se nota en cómo estructura su trabajo. Su metodología no es esotérica ni ritualizada: se parece más a la psicoterapia profunda con un componente hipnótico específico.
+A diferencia de muchos exponentes del campo de la regresión, [Brian Weiss](/blog/brian-weiss-quien-es/) viene de la psiquiatría académica, y eso se nota en cómo estructura su trabajo. Su metodología no es esotérica ni ritualizada: se parece más a la psicoterapia profunda con un componente hipnótico específico.
 
 ## La base: relajación profunda y no-directividad
 
-El punto de partida de una sesión con Weiss —o con los terapeutas que él ha formado— es una inducción de hipnosis de relajación progresiva. No es un trance espectacular al estilo del hipnotismo de escenario: es un proceso gradual de aquietamiento mental y corporal que lleva al consultante a un estado que Weiss describe como similar al que tenemos justo antes de dormir.
+El punto de partida de una sesión con Weiss —o con los terapeutas que él ha formado— es una inducción de [hipnosis](/blog/hipnosis-que-es-realmente/) de relajación progresiva. No es un trance espectacular al estilo del hipnotismo de escenario: es un proceso gradual de aquietamiento mental y corporal que lleva al consultante a un estado que Weiss describe como similar al que tenemos justo antes de dormir.
 
 En ese estado —denominado en la literatura como nivel alfa o trance ligero— la mente consciente relaja su guardia crítica pero el consultante mantiene plena conciencia: puede escuchar, hablar y salir del estado en cualquier momento si así lo decide.
 
