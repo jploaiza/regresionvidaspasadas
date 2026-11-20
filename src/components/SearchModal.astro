@@ -2,7 +2,7 @@
 // Pagefind search modal — included once in each layout
 ---
 
-<dialog id="search-dialog" aria-label="Buscar en el sitio">
+<dialog id="search-dialog" aria-label="Buscar en el sitio" data-pagefind-ignore>
 	<div class="search-inner">
 		<div class="search-header">
 			<span class="search-title">Buscar</span>
@@ -49,14 +49,25 @@
 		// Reset search when closed
 		const input = dialog.querySelector('input');
 		if (input) input.value = '';
+		dialog.querySelector<HTMLButtonElement>('.pagefind-ui__search-clear')?.click();
 	});
 
 	closeBtn?.addEventListener('click', () => dialog?.close());
 
-	// Init on first open
-	dialog?.addEventListener('toggle', () => {
-		if (dialog.open) initSearch();
-	}, { once: true });
+	// Init on first open. No dependemos del evento "toggle" de <dialog>: muchos
+	// navegadores móviles no lo disparan y el buscador se quedaba vacío.
+	function whenOpen() {
+		if (dialog?.open) {
+			initSearch().then(() => {
+				const input = dialog.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+				input?.focus();
+			});
+		}
+	}
+	if (dialog) {
+		new MutationObserver(whenOpen).observe(dialog, { attributes: true, attributeFilter: ['open'] });
+	}
+	document.getElementById('search-trigger')?.addEventListener('click', () => setTimeout(whenOpen, 0));
 </script>
 
 <style>
@@ -78,6 +89,15 @@
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.45);
 		backdrop-filter: blur(2px);
+	}
+
+	@media (max-width: 720px) {
+		dialog {
+			width: calc(100% - 1.5rem);
+			margin: 0.75rem auto auto;
+			max-height: calc(100dvh - 1.5rem);
+		}
+		.search-inner { max-height: calc(100dvh - 1.5rem); }
 	}
 
 	.search-inner {
@@ -145,8 +165,9 @@
 		font-weight: 500;
 		border: 1px solid rgba(230, 200, 117, 0.35);
 		border-radius: 14px;
-		padding: 0 6em 0 3.4em;
-		height: 3.4em;
+		padding: 0 5em 0 3.2em;
+		height: 3.2em;
+		font-size: max(16px, 1em);
 		background-color: #151E1D;
 		color: #FAF7F2;
 		width: 100%;
