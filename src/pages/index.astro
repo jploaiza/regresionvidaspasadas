@@ -310,44 +310,7 @@ const EXPEDIENTES = [
     <Footer />
 
     <script>
-      function setupNewsletter(formId: string, msgId: string) {
-        const form = document.getElementById(formId) as HTMLFormElement | null;
-        const msg = document.getElementById(msgId) as HTMLElement | null;
-        if (!form || !msg) return;
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const input = form.querySelector('input[type="email"]') as HTMLInputElement;
-          const btn = form.querySelector('button') as HTMLButtonElement;
-          const email = input?.value.trim();
-          if (!email) return;
-          btn.disabled = true;
-          btn.textContent = 'Enviando…';
-          try {
-            const res = await fetch('/api/subscribe', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email }),
-            });
-            const data = await res.json();
-            if (res.ok) {
-              msg.textContent = data.message ?? '¡Suscrito!';
-              msg.style.color = '#B8952A';
-              input.value = '';
-              btn.textContent = '✓ Suscrito';
-            } else {
-              msg.textContent = data.error ?? 'Error. Intente nuevamente.';
-              msg.style.color = '#c0392b';
-              btn.disabled = false;
-              btn.textContent = 'Suscribirse al Portal';
-            }
-          } catch {
-            msg.textContent = 'Error de conexión.';
-            msg.style.color = '#c0392b';
-            btn.disabled = false;
-            btn.textContent = 'Suscribirse al Portal';
-          }
-        });
-      }
+      import { setupNewsletter } from '../scripts/newsletter';
       setupNewsletter('newsletter-form-home', 'newsletter-msg-home');
     </script>
   </body>

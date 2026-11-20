@@ -77,6 +77,38 @@ const EXPOSITORES = [
     descripcion: 'Psicóloga clínica. Condujo sesiones de hipnosis grupal con más de 1.000 sujetos y analizó estadísticamente los patrones de sus regresiones. Única investigadora del campo que comenzó desde el escepticismo explícito.',
     libro: 'Reliving Past Lives (1978)',
   },
+  {
+    slug: 'carl-wickland',
+    nombre: 'Carl Wickland',
+    periodo: '1861 – 1945',
+    disciplina: 'Psiquiatría · Liberación espiritual (SRT)',
+    descripcion: 'Psiquiatra sueco-estadounidense que dedicó más de 30 años, junto a su esposa Anna como médium, a estudiar el apego espiritual como posible causa de trastornos mentales. Su libro de 1924 es el texto fundacional de la Terapia de Liberación Espiritual.',
+    libro: 'Thirty Years Among the Dead (1924)',
+  },
+  {
+    slug: 'william-baldwin',
+    nombre: 'William Baldwin',
+    periodo: '1939 – 2004',
+    disciplina: 'Odontología · Psicología clínica · SRT',
+    descripcion: 'Dentista y psicólogo clínico que llegó a la liberación espiritual desde la hipnosis. Sistematizó la Terapia de Liberación Espiritual en un manual de 1992 con protocolos para cada tipo de entidad.',
+    libro: 'Spirit Releasement Therapy (1992)',
+  },
+  {
+    slug: 'edith-fiore',
+    nombre: 'Edith Fiore',
+    periodo: 'Práctica clínica desde los años 70',
+    disciplina: 'Psicología clínica · Hipnosis · SRT',
+    descripcion: 'Psicóloga clínica con doctorado de la Universidad de Miami y más de treinta años de práctica en California. Llegó a la liberación espiritual desde la práctica clínica y la hipnosis, y documentó sus casos con rigor profesional.',
+    libro: 'The Unquiet Dead (1987)',
+  },
+  {
+    slug: 'alan-sanderson',
+    nombre: 'Alan Sanderson',
+    periodo: 'Médico desde 1954',
+    disciplina: 'Psiquiatría · Liberación espiritual (SRT)',
+    descripcion: 'Psiquiatra consultor del NHS británico, formado en el Hospital St. Thomas de Londres. Introdujo la liberación espiritual en la medicina institucional y cofundó en el año 2000 la Spirit Release Foundation, que operó hasta 2013.',
+    libro: 'Psychiatry and the Spirit World',
+  },
 ];
 
 function getArticulosPorExpositor(slug: string) {
@@ -99,7 +131,7 @@ const expositoresSchema = JSON.stringify([
     '@type': 'CollectionPage',
     '@id': `${HUB_URL}#collectionpage`,
     name: 'Investigadores de la Regresión a Vidas Pasadas',
-    description: 'Perfiles de los seis investigadores más influyentes: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson y Helen Wambach.',
+    description: 'Perfiles de los investigadores y terapeutas más influyentes de la regresión a vidas pasadas y la liberación espiritual: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson, Helen Wambach, Carl Wickland, William Baldwin, Edith Fiore y Alan Sanderson, además de Juan Pablo Loaiza.',
     url: HUB_URL,
     inLanguage: 'es',
     publisher: { '@id': `${SITEURL}/#organization` },
@@ -129,7 +161,7 @@ const expositoresSchema = JSON.stringify([
   <head>
     <BaseHead
       title="Expositores de la Regresión a Vidas Pasadas"
-      description="Los seis investigadores y terapeutas más influyentes en el campo de la regresión a vidas pasadas: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson y Helen Wambach."
+      description="Los investigadores y terapeutas más influyentes de la regresión a vidas pasadas y la liberación espiritual: Brian Weiss, Michael Newton, Dolores Cannon, Roger Woolger, Ian Stevenson, Helen Wambach, Carl Wickland, William Baldwin, Edith Fiore y Alan Sanderson."
     />
     <script type="application/ld+json" set:html={expositoresSchema}></script>
   </head>
@@ -141,7 +173,7 @@ const expositoresSchema = JSON.stringify([
         <h1>Grandes Expositores</h1>
         <p class="page-desc">
           Los investigadores, terapeutas y académicos que definieron el campo de la
-          regresión a vidas pasadas. Sus metodologías y sus obras son el fundamento
+          regresión a vidas pasadas y de la liberación espiritual. Sus metodologías y sus obras son el fundamento
           de lo que hoy entendemos sobre este proceso.
         </p>
         <div class="divider"></div>
