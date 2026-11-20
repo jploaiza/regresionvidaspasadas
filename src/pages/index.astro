@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SearchModal from '../components/SearchModal.astro';
+import LogoMark from '../components/LogoMark.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, CATEGORY, EDITORIAL_PICKS, FEATURED_SLUG, SLUG_IMG } from '../consts';
 
 import heroImg        from '../assets/blog/stitch-hero-meditacion.png';
@@ -64,6 +65,8 @@ function getPostImage(id: string, heroImage: ImageMetadata | undefined, exposito
 }
 
 const allPosts = await getCollection('blog');
+const postCount = allPosts.length;
+const expositorCount = new Set(allPosts.map(p => p.data.expositor).filter((e) => e && e !== 'srt' && e !== 'hipnosis')).size;
 
 const featuredPost = allPosts.find(p => p.id === FEATURED_SLUG);
 const featuredCat = featuredPost?.data.expositor ? CATEGORY[featuredPost.data.expositor] : undefined;
@@ -108,35 +111,61 @@ const EXPEDIENTES = [
     </style>
   </head>
   <body>
-    <Header transparent={true} />
+    <Header />
     <SearchModal />
 
-    <!-- ① HERO PANTALLA COMPLETA -->
+    <!-- ① HERO (diseño Stitch · Variante 03) -->
     <section class="home-hero">
-      <div class="home-hero-bg">
-        <Image src={heroImg} alt="Meditación espiritual al amanecer" width={1600} height={900} class="home-hero-img" loading="eager" />
-        <div class="home-hero-overlay"></div>
-      </div>
-      <div class="home-hero-content">
-        <div class="home-hero-badge">
-          <span class="home-hero-badge-text">Portada Editorial</span>
+      <div class="home-hero-glow" aria-hidden="true"></div>
+      <div class="home-hero-inner">
+        <div class="home-hero-copy">
+          <div class="home-hero-badge">
+            <span class="home-hero-dot" aria-hidden="true"></span>
+            <span class="home-hero-badge-text">Portada Editorial</span>
+          </div>
+          <h1 class="home-hero-title">La memoria del alma<br/>a través del <em>tiempo</em></h1>
+          <p class="home-hero-subtitle">
+            Una exploración académica sobre la regresión, la hipnosis y la liberación espiritual en la consciencia contemporánea.
+          </p>
+          <div class="home-hero-actions">
+            <a class="hero-btn hero-btn--primary" href="#portal">Explorar el portal</a>
+            <a class="hero-btn hero-btn--ghost" href="/blog/">Leer artículos</a>
+          </div>
+          <dl class="home-hero-stats">
+            <div><dt>{postCount}</dt><dd>Artículos</dd></div>
+            <span class="home-hero-sep" aria-hidden="true"></span>
+            <div><dt>{expositorCount}</dt><dd>Expositores</dd></div>
+            <span class="home-hero-sep" aria-hidden="true"></span>
+            <div><dt class="home-hero-stat-italic">Hipnosis · Regresión · SRT</dt><dd>Disciplinas</dd></div>
+          </dl>
         </div>
-        <h1 class="home-hero-title">La Memoria del Alma<br/>a través del Tiempo</h1>
-        <p class="home-hero-subtitle">
-          "Una exploración académica sobre la regresión, la hipnosis y la liberación espiritual en la consciencia contemporánea."
-        </p>
-        <div class="home-hero-cta">
-          <span class="home-hero-cta-label">Explorar el portal</span>
-          <span class="material-symbols-outlined home-hero-arrow">arrow_downward</span>
+
+        <div class="home-hero-visual">
+          <div class="home-hero-arch-glow" aria-hidden="true"></div>
+          <div class="home-hero-arch-outline" aria-hidden="true"></div>
+          <div class="home-hero-arch">
+            <Image src={heroImg} alt="Persona meditando sobre una cumbre al amanecer" width={900} height={1100} class="home-hero-img" loading="eager" />
+            <div class="home-hero-arch-shade" aria-hidden="true"></div>
+            <span class="home-hero-spark home-hero-spark--a" aria-hidden="true"></span>
+            <span class="home-hero-spark home-hero-spark--b" aria-hidden="true"></span>
+            <span class="home-hero-spark home-hero-spark--c" aria-hidden="true"></span>
+          </div>
+          <div class="home-hero-card">
+            <LogoMark size={34} />
+            <div>
+              <span class="home-hero-card-label">Portal editorial</span>
+              <span class="home-hero-card-text">Archivo de la consciencia continua</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <main class="home-main">
+    <main class="home-main" id="portal">
 
       <!-- Meta bar académica -->
       <div class="home-meta-bar">
-        <span class="home-meta-left">Portal Independiente · Más de 60 artículos · Actualizado 2025</span>
+        <span class="home-meta-left">Portal Independiente · Más de 60 artículos</span>
         <span class="home-meta-right">Investigación en RVP · SRT · Hipnosis Clínica</span>
       </div>
 
@@ -325,109 +354,257 @@ const EXPEDIENTES = [
 </html>
 
 <style>
-  /* ——— Hero ——— */
+  /* ——— Hero (diseño Stitch · Variante 03) ——— */
   .home-hero {
     position: relative;
     width: 100%;
-    height: 100svh;
-    min-height: 600px;
-    padding-top: 72px; /* descontar altura del header absoluto */
+    min-height: calc(100svh - 77px);
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
     box-sizing: border-box;
+    padding: 3em 2em 4em;
   }
 
-  .home-hero-bg {
+  .home-hero-glow {
     position: absolute;
-    inset: 0;
+    top: -6%; right: 4%;
+    width: 640px; height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(230,200,117,0.16) 0%, rgba(14,21,20,0) 70%);
+    filter: blur(24px);
+    pointer-events: none;
   }
 
-  .home-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-  }
-
-  .home-hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-  }
-
-  .home-hero-content {
+  .home-hero-inner {
     position: relative;
-    z-index: 10;
-    max-width: 800px;
-    padding: 0 2em;
-    text-align: center;
-    color: #fff;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 3.5em;
+    align-items: center;
   }
 
   .home-hero-badge {
-    display: inline-block;
-    padding: 0.4em 1.2em;
-    background: rgba(230,200,117,0.2);
-    border: 1px solid rgba(230,200,117,0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    padding: 0.45em 1.2em;
+    background: rgba(230,200,117,0.07);
+    border: 1px solid rgba(230,200,117,0.35);
     border-radius: 999px;
-    margin-bottom: 2em;
+    margin-bottom: 1.8em;
   }
-
+  .home-hero-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #E6C875;
+    box-shadow: 0 0 8px #E6C875;
+  }
   .home-hero-badge-text {
-    font-family: 'Plus Jakarta Sans', serif;
-    font-size: 0.52em;
-    letter-spacing: 0.22em;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.5em;
+    font-weight: 600;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: #F5DC98;
+    color: #E6C875;
   }
 
   .home-hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5em, 6vw, 5.5em);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.05;
-    margin-bottom: 1em;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    font-size: clamp(2.3em, 4.3vw, 3.7em);
+    font-weight: 300;
+    color: #FAF7F2;
+    line-height: 1.1;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.55em;
+  }
+  .home-hero-title em {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #F5DC98;
+    text-decoration: underline;
+    text-decoration-color: rgba(230,200,117,0.35);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
   }
 
   .home-hero-subtitle {
-    font-family: 'EB Garamond', serif;
-    font-size: clamp(1em, 2.5vw, 1.5em);
+    font-family: 'Newsreader', serif;
     font-style: italic;
-    color: rgba(255,255,255,0.88);
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto 2.5em;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    font-size: clamp(1em, 1.45vw, 1.2em);
+    color: rgba(250,247,242,0.72);
+    line-height: 1.5;
+    max-width: 34em;
+    margin: 0 0 1.9em;
   }
 
-  .home-hero-cta {
-    display: flex;
-    flex-direction: column;
+  .home-hero-actions { display: flex; flex-wrap: wrap; gap: 1em; margin-bottom: 2.4em; }
+
+  .hero-btn {
+    display: inline-flex;
     align-items: center;
-    gap: 0.5em;
-  }
-
-  .home-hero-cta-label {
-    font-family: 'Plus Jakarta Sans', serif;
-    font-size: 0.6em;
-    letter-spacing: 0.22em;
+    padding: 0.95em 1.9em;
+    border-radius: 999px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.55em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
   }
+  .hero-btn:hover { text-decoration: none; }
+  .hero-btn--primary {
+    background: linear-gradient(135deg, #F5DC98 0%, #E6C875 50%, #C99F44 100%);
+    color: #0E1514;
+    box-shadow: 0 4px 24px rgba(230,200,117,0.35);
+  }
+  .hero-btn--primary:hover { color: #0E1514; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(230,200,117,0.5); }
+  .hero-btn--ghost {
+    border: 1px solid rgba(230,200,117,0.45);
+    color: #FAF7F2;
+  }
+  .hero-btn--ghost:hover { color: #E6C875; border-color: #E6C875; background: rgba(230,200,117,0.08); }
 
-  .home-hero-arrow {
-    font-size: 1.75em !important;
+  .home-hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.6em;
+    margin: 0;
+    padding-top: 1.6em;
+    border-top: 1px solid rgba(230,200,117,0.2);
+    max-width: 34em;
+  }
+  .home-hero-stats div { display: flex; flex-direction: column; gap: 0.35em; }
+  .home-hero-stats dt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35em;
+    font-weight: 600;
+    line-height: 1;
+    color: #FAF7F2;
+    margin: 0;
+  }
+  .home-hero-stats dt.home-hero-stat-italic {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.85em;
     color: #F5DC98;
-    animation: bounce 2s infinite;
+  }
+  .home-hero-stats dd {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.43em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(250,247,242,0.6);
+    margin: 0;
+  }
+  .home-hero-sep { width: 1px; height: 2em; background: rgba(230,200,117,0.25); }
+
+  /* Ventana arqueada */
+  .home-hero-visual {
+    position: relative;
+    justify-self: end;
+    width: min(100%, 420px);
+    aspect-ratio: 420 / 560;
+  }
+  .home-hero-arch-glow {
+    position: absolute;
+    inset: -16px;
+    border-radius: 260px 260px 40px 40px;
+    background: radial-gradient(circle, rgba(230,200,117,0.25) 0%, rgba(230,200,117,0.05) 50%, transparent 75%);
+    filter: blur(18px);
+  }
+  .home-hero-arch-outline {
+    position: absolute;
+    inset: -6px;
+    border: 1px solid rgba(230,200,117,0.32);
+    border-radius: 246px 246px 30px 30px;
+    pointer-events: none;
+  }
+  .home-hero-arch {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 240px 240px 24px 24px;
+    border: 1px solid #E6C875;
+    overflow: hidden;
+    background: #090E0D;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  }
+  .home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% center;
+    filter: brightness(0.94) contrast(1.04);
+    display: block;
+  }
+  .home-hero-arch-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(14,21,20,0.8), rgba(14,21,20,0.1) 55%, rgba(14,21,20,0.3));
+    pointer-events: none;
+  }
+  .home-hero-spark {
+    position: absolute;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: #F5DC98;
+    box-shadow: 0 0 8px #F5DC98;
+    opacity: 0.8;
+  }
+  .home-hero-spark--a { top: 24%; left: 20%; }
+  .home-hero-spark--b { top: 34%; right: 24%; width: 4px; height: 4px; }
+  .home-hero-spark--c { top: 66%; right: 32%; }
+
+  .home-hero-card {
+    position: absolute;
+    left: -2.2em;
+    bottom: -1.2em;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.9em;
+    max-width: 17.5em;
+    padding: 0.9em 1.3em;
+    background: rgba(14,21,20,0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(230,200,117,0.25);
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.65);
+  }
+  .home-hero-card > div { display: flex; flex-direction: column; gap: 0.2em; }
+  .home-hero-card-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.42em;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #E6C875;
+  }
+  .home-hero-card-text {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 0.78em;
+    line-height: 1.25;
+    color: #FAF7F2;
   }
 
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+  @media (max-width: 480px) {
+    .home-hero-title { font-size: 1.9em; }
+  }
+
+  @media (max-width: 900px) {
+    .home-hero { min-height: 0; padding: 2.2em 1.25em 3.2em; }
+    .home-hero-inner { grid-template-columns: 1fr; gap: 3em; }
+    .home-hero-visual { justify-self: center; width: min(86%, 360px); }
+    .home-hero-card { left: -0.8em; }
+    .home-hero-stats { flex-wrap: wrap; gap: 1.2em; }
   }
 
   /* ——— Main container ——— */
@@ -894,7 +1071,6 @@ const EXPEDIENTES = [
     .secondary-card--text { border-left: none; padding-left: 0; border-top: 1px solid rgba(230,200,117,0.2); padding-top: 2em; }
     .home-sidebar { grid-template-columns: 1fr; }
     .expedientes-grid { grid-template-columns: 1fr; }
-    .home-hero-title { font-size: 2.2em; }
     .case-card { flex-direction: column; }
     .home-meta-bar { flex-direction: column; gap: 0.5em; }
   }
