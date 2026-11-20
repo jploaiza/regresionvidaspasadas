@@ -452,6 +452,7 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
       }
       .sidebar-newsletter-mini button:hover { filter: brightness(1.08); }
       .sidebar-newsletter-mini button:disabled { opacity: 0.7; cursor: default; }
+      .sidebar-newsletter-mini-consent { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.55em; line-height: 1.5; color: rgba(250,247,242,0.55); margin: 0.4em 0 0; }
       .sidebar-newsletter-mini-msg { font-family: 'EB Garamond', serif; font-size: 0.8em; min-height: 1.2em; margin: 0.6em 0 0; line-height: 1.3; }
 
       /* ——— Article body ——— */
@@ -830,6 +831,7 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
             <input type="email" placeholder="Tu correo" aria-label="Tu correo electrónico" autocomplete="email" required />
             <button type="submit">Suscribirse</button>
             <p class="sidebar-newsletter-mini-msg" id="newsletter-msg-article" aria-live="polite"></p>
+            <p class="sidebar-newsletter-mini-consent">Te enviaremos un correo para confirmar. Puedes darte de baja cuando quieras.</p>
           </form>
         </div>
 
@@ -969,7 +971,7 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
     </script>
     <script>
       import { setupNewsletter } from '../scripts/newsletter';
-      setupNewsletter('newsletter-form-article', 'newsletter-msg-article', 'Suscribirse');
+      setupNewsletter('newsletter-form-article', 'newsletter-msg-article', 'Suscribirse', 'articulo');
     </script>
   </body>
 </html>

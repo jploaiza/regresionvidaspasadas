@@ -1,6 +1,9 @@
-// Formulario de suscripción: envía el correo a /api/subscribe (Resend).
-// Lo usan la portada y los artículos.
-export function setupNewsletter(formId: string, msgId: string, label = 'Suscribirse al Portal') {
+// Formulario de suscripción del portal.
+// Envía el correo a la plataforma de newsletter de juanpabloloaiza.com (CORS autorizado),
+// que guarda al suscriptor en la lista del portal y le manda un correo de confirmación.
+const ENDPOINT = 'https://www.juanpabloloaiza.com/api/newsletter/subscribe';
+
+export function setupNewsletter(formId: string, msgId: string, label = 'Suscribirse al Portal', source = 'portal') {
   const form = document.getElementById(formId) as HTMLFormElement | null;
   const msg = document.getElementById(msgId) as HTMLElement | null;
   if (!form || !msg) return;
@@ -17,27 +20,25 @@ export function setupNewsletter(formId: string, msgId: string, label = 'Suscribi
     msg.textContent = '';
 
     try {
-      const res = await fetch('/api/subscribe', {
+      const res = await fetch(ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, brand: 'rvp', source }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok) {
-        msg.textContent = data.message ?? '¡Suscrito!';
+        msg.textContent = 'Revisa tu correo: te enviamos un enlace para confirmar tu suscripción.';
         msg.style.color = '#E6C875';
         input.value = '';
-        btn.textContent = '✓ Suscrito';
+        btn.textContent = '✓ Revisa tu correo';
       } else {
-        msg.textContent = data.error === 'Server not configured'
-          ? 'El boletín no está disponible por ahora. Inténtalo más tarde.'
-          : (data.error ?? 'Error. Inténtalo nuevamente.');
+        msg.textContent = data.error ?? 'No pudimos procesar tu suscripción. Inténtalo nuevamente.';
         msg.style.color = '#F0867B';
         btn.disabled = false;
         btn.textContent = label;
       }
     } catch {
-      msg.textContent = 'Error de conexión.';
+      msg.textContent = 'Error de conexión. Inténtalo nuevamente.';
       msg.style.color = '#F0867B';
       btn.disabled = false;
       btn.textContent = label;

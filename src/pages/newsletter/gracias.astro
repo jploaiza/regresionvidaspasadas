@@ -1,0 +1,53 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SearchModal from '../../components/SearchModal.astro';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title="Suscripción confirmada · Regresión a Vidas Pasadas" description="Tu suscripción al boletín de Regresión a Vidas Pasadas está confirmada." />
+    <meta name="robots" content="noindex,follow" />
+  </head>
+  <body>
+    <Header />
+    <SearchModal />
+    <main class="gracias" data-pagefind-ignore>
+      <span class="gracias-ornament">✦</span>
+      <h1 id="gracias-titulo">Suscripción confirmada</h1>
+      <p id="gracias-texto">
+        Gracias por unirte. Desde ahora recibirás artículos sobre regresión a vidas pasadas, hipnosis y liberación espiritual.
+      </p>
+      <div class="gracias-acciones">
+        <a class="gracias-btn gracias-btn--primary" href="/blog/">Leer los artículos</a>
+        <a class="gracias-btn" href="/">Volver al inicio</a>
+      </div>
+    </main>
+    <Footer />
+    <script>
+      if (new URLSearchParams(location.search).has('already')) {
+        const t = document.getElementById('gracias-titulo');
+        const p = document.getElementById('gracias-texto');
+        if (t) t.textContent = 'Tu suscripción ya estaba confirmada';
+        if (p) p.textContent = 'Este enlace ya se usó o tu correo ya está en la lista. Si no recibes nuestros correos, revisa la carpeta de spam.';
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  .gracias { max-width: 640px; margin: 0 auto; padding: 5em 1.5em 6em; text-align: center; }
+  .gracias-ornament { color: #E6C875; font-size: 1.2em; display: block; margin-bottom: 0.8em; }
+  .gracias h1 { font-size: 2.4em; font-weight: 400; margin-bottom: 0.5em; }
+  .gracias p { color: var(--text-muted); font-size: 1.05em; line-height: 1.7; margin-bottom: 2em; }
+  .gracias-acciones { display: flex; gap: 0.8em; justify-content: center; flex-wrap: wrap; }
+  .gracias-btn {
+    font-family: 'Syne', sans-serif; font-size: 0.55em; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 1em 1.9em; border-radius: 999px; border: 1px solid rgba(230,200,117,0.45); color: #FAF7F2; text-decoration: none;
+  }
+  .gracias-btn:hover { color: #E6C875; border-color: #E6C875; text-decoration: none; }
+  .gracias-btn--primary { background: linear-gradient(135deg, #F5DC98 0%, #E6C875 50%, #C99F44 100%); color: #0E1514; border-color: transparent; }
+  .gracias-btn--primary:hover { color: #0E1514; filter: brightness(1.08); }
+</style>
