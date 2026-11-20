@@ -38,6 +38,24 @@ const CATEGORIAS = [
         descripcion: 'Un hombre muere en un accidente y descubre los planos del más allá mientras intenta rescatar a su esposa del infierno de su propio dolor. Basada en la novela de Richard Matheson.',
         porque: 'Visualmente impresionante y emocionalmente poderosa. Explora la idea de que el más allá es co-creado por nuestra mente.',
       },
+      {
+        titulo: 'Defending Your Life',
+        slug: 'defending-your-life',
+        tipo: 'Película',
+        año: '1991',
+        origen: 'EE.UU.',
+        descripcion: 'Tras morir, un hombre llega a Ciudad del Juicio, donde debe defender sus decisiones ante un tribunal para ver si avanza. Comedia escrita y dirigida por Albert Brooks, con Meryl Streep.',
+        porque: 'Con humor, plantea que el miedo es lo que más pesa en una vida; una idea afín a la revisión de vida que describen Newton y otros.',
+      },
+      {
+        titulo: 'Heaven Is for Real',
+        slug: 'heaven-is-for-real',
+        tipo: 'Película',
+        año: '2014',
+        origen: 'EE.UU.',
+        descripcion: 'Basada en el libro de Todd Burpo sobre su hijo Colton, de cuatro años, quien tras una cirugía de emergencia dice haber visitado el cielo.',
+        porque: 'Un testimonio infantil de experiencia cercana a la muerte desde una perspectiva cristiana; sirve para comparar con otros relatos.',
+      },
     ],
   },
   {
@@ -61,20 +79,48 @@ const CATEGORIAS = [
         porque: 'Explora la incomodidad y la complejidad emocional de creer —o no creer— en la reencarnación cuando se presenta frente a ti.',
       },
       {
-        titulo: 'Flipped',
-        tipo: 'Película',
-        año: '2021',
-        origen: 'India (Tamil)',
-        descripcion: 'Un joven recuerda su vida anterior y busca a sus seres queridos de esa vida. Una de las películas más emotivas sobre reencarnación del cine indio contemporáneo.',
-        porque: 'El cine indio trata la reencarnación con naturalidad narrativa — sin necesidad de justificarla ni defenderla.',
-      },
-      {
         titulo: 'I Origins',
         tipo: 'Película',
         año: '2014',
         origen: 'EE.UU.',
         descripcion: 'Un biólogo molecular que estudia el ojo como prueba de la evolución descubre evidencia biométrica que sugiere la continuidad de la identidad entre vidas.',
         porque: 'La única película que intenta abordar la reencarnación desde la evidencia científica. El giro final es memorable.',
+      },
+      {
+        titulo: 'The Search for Bridey Murphy',
+        slug: 'the-search-for-bridey-murphy',
+        tipo: 'Película',
+        año: '1956',
+        origen: 'EE.UU.',
+        descripcion: 'Basada en el libro de Morey Bernstein sobre la regresión hipnótica de Virginia Tighe, quien en los años 50 describió una vida como "Bridey Murphy" en la Irlanda del siglo XIX. El caso desató una fiebre mundial por la regresión y luego fue muy cuestionado.',
+        porque: 'El origen cultural de la regresión moderna: ayuda a entender tanto el entusiasmo como el escepticismo que la rodean desde el principio.',
+      },
+      {
+        titulo: 'Dead Again',
+        slug: 'dead-again',
+        tipo: 'Película',
+        año: '1991',
+        origen: 'EE.UU.',
+        descripcion: 'Un detective ayuda a una mujer sin memoria; un hipnoterapeuta la regresa y emerge el asesinato de un compositor ocurrido en los años 40. Dirigida y protagonizada por Kenneth Branagh, con Emma Thompson.',
+        porque: 'Uno de los pocos thrillers que usa la regresión a vidas pasadas como motor de la trama. Es ficción, pero la hipnosis es el eje del misterio.',
+      },
+      {
+        titulo: 'Little Buddha',
+        slug: 'little-buddha',
+        tipo: 'Película',
+        año: '1993',
+        origen: 'Internacional',
+        descripcion: 'Monjes tibetanos viajan a Seattle convencidos de que un niño es la reencarnación de su maestro, el lama Dorje. Bernardo Bertolucci entrelaza ese relato con la historia de Siddhartha.',
+        porque: 'Muestra la concepción tibetana de la reencarnación. Complementa en ficción a Unmistaken Child.',
+      },
+      {
+        titulo: 'Past Lives',
+        slug: 'past-lives',
+        tipo: 'Película',
+        año: '2023',
+        origen: 'EE.UU. / Corea del Sur',
+        descripcion: 'Dos amigos de la infancia surcoreanos se reencuentran 24 años después en Nueva York. La película gira en torno al concepto coreano de in-yun: los vínculos que atraviesan varias vidas.',
+        porque: 'No trata de regresión, sino de la idea de vínculos entre vidas. Muy útil para pensar en las almas que se reconocen.',
       },
     ],
   },
@@ -106,6 +152,15 @@ const CATEGORIAS = [
         descripcion: 'Un thriller de terror que usa la hipnosis como mecanismo central de su premisa. Aunque es ficción de género, su representación del trance forzado toca algo real sobre la vulnerabilidad que el estado hipnótico puede crear.',
         porque: 'Para entender la diferencia entre hipnosis consentida y terapéutica versus hipnosis usada para control — y por qué esa diferencia importa.',
       },
+      {
+        titulo: 'Somewhere in Time',
+        slug: 'somewhere-in-time',
+        tipo: 'Película',
+        año: '1980',
+        origen: 'EE.UU.',
+        descripcion: 'Un dramaturgo se hipnotiza a sí mismo para viajar a 1912 y encontrar a la actriz de una fotografía antigua. Basada en la novela de Richard Matheson, autor también de What Dreams May Come.',
+        porque: 'La autohipnosis como puerta al pasado, en clave de romance clásico. Es ficción, no un retrato clínico.',
+      },
     ],
   },
   {
@@ -129,20 +184,12 @@ const CATEGORIAS = [
         porque: 'La investigación más equilibrada y rigurosa sobre supervivencia de la conciencia disponible en streaming. Imprescindible.',
       },
       {
-        titulo: 'The Afterlife Investigations',
+        titulo: 'The Afterlife Investigations: The Scole Experiments',
         tipo: 'Documental',
-        año: '2009',
+        año: '2011',
         origen: 'Reino Unido',
-        descripcion: 'Investigación de los experimentos de Scole —una serie de sesiones mediúmnicas controladas que produjeron evidencia física inexplicable— y de los estudios de la Universidad de Arizona sobre mediumnidad.',
-        porque: 'Para quienes quieren evidencia, no solo testimonios. Los experimentos de Scole son lo más cercano a evidencia científica de la comunicación post-mortem.',
-      },
-      {
-        titulo: 'Hypnosis: A New Film',
-        tipo: 'Documental',
-        año: 'Varios',
-        origen: 'Internacional',
-        descripcion: 'Existen varios documentales sobre hipnosis clínica y regresión disponibles en plataformas. Busca: "regression therapy documentary" o "past life hypnosis documentary" para los más recientes.',
-        porque: 'La experiencia de ver a otros en proceso de regresión puede preparar emocionalmente para una sesión propia.',
+        descripcion: 'Dirigido por Tim Coleman y narrado por Donal MacIntyre, repasa los experimentos de Scole —sesiones mediúmnicas en Inglaterra que durante unos cinco años, desde 1993, afirmaron producir fenómenos físicos— y muestra a la médium Allison DuBois sometida a pruebas.',
+        porque: 'Para ver cómo se investigó un caso de supuestos fenómenos mediúmnicos, con sus defensores y sus críticos. Es una investigación polémica, no una prueba concluyente.',
       },
       {
         titulo: 'Unmistaken Child',
@@ -151,6 +198,52 @@ const CATEGORIAS = [
         origen: 'Israel/Nepal',
         descripcion: 'Un monje budista busca la reencarnación de su maestro fallecido siguiendo señales y pruebas. Un proceso real filmado con acceso extraordinario.',
         porque: 'El único documental que muestra el proceso de verificación de reencarnación de la tradición tibetana desde adentro.',
+      },
+      {
+        titulo: 'Reincarnated: Past Lives',
+        slug: 'reincarnated-past-lives',
+        tipo: 'Serie',
+        año: '2014',
+        origen: 'EE.UU. / LMN',
+        descripcion: 'Serie de telerrealidad de tres episodios en la que el hipnoterapeuta Damien Bertrand guía a personas comunes en regresiones a vidas pasadas para explorar el posible origen de fobias, pesadillas y conductas inexplicables. En IMDb figura como "Who Was I?: My Past Lives".',
+        porque: 'Muestra cómo se ve en pantalla una sesión de regresión guiada. Es entretenimiento televisivo: sirve como introducción, no como evidencia.',
+        enlaces: [{ texto: 'Ver en Apple TV', href: 'https://tv.apple.com/us/show/reincarnated-past-lives/umc.cmc.57u4fpjmj6k7r45cryt3li08v' }],
+      },
+      {
+        titulo: 'Peter Ramster: Reincarnation / Past-Life Regression',
+        slug: 'peter-ramster-reincarnation',
+        tipo: 'Documental',
+        año: '1983',
+        origen: 'Australia',
+        descripcion: 'Documental del psicólogo australiano Peter Ramster: cuatro mujeres de Sídney, bajo hipnosis regresiva, describen vidas pasadas en lugares que nunca habían visitado y luego viajan a esos sitios para contrastar sus relatos con registros históricos.',
+        porque: 'Un clásico del género por su método de verificación en el terreno. Sus conclusiones son discutidas; la copia disponible es una subida de terceros a YouTube y la fecha varía según la fuente (1981 o 1983).',
+        sinJustWatch: true,
+        sinTrailer: true,
+        enlaces: [{ texto: 'Ver en YouTube', href: 'https://www.youtube.com/playlist?list=PLAB2E742F250D0DCF' }],
+      },
+      {
+        titulo: 'The Science of Hypnosis',
+        slug: 'the-science-of-hypnosis',
+        tipo: 'Documental',
+        año: '2017',
+        origen: 'Francia (ARTE)',
+        descripcion: 'Documental de ARTE France de unos 52 minutos (título original: Les fabuleux pouvoirs de l\'hypnose). Con imágenes científicas y avances de la neurología, repasa qué ocurre en el cerebro bajo hipnosis y si es un estado alterado de conciencia o una forma de conformidad social.',
+        porque: 'Para entender qué dice la ciencia sobre la hipnosis antes de una sesión de regresión: qué se sabe y qué sigue en debate.',
+        sinJustWatch: true,
+        sinTrailer: true,
+        enlaces: [{ texto: 'Ficha en IMDb', href: 'https://www.imdb.com/title/tt10937338/' }],
+      },
+      {
+        titulo: 'Can Hypnosis Fix Your Life?',
+        slug: 'can-hypnosis-fix-your-life',
+        tipo: 'Documental',
+        año: '',
+        origen: 'Prime Video',
+        descripcion: 'Documental que sigue a tres personas con problemas severos —ira explosiva, dolor crónico y fobias paralizantes— mientras buscan ayuda en la hipnoterapia clínica.',
+        porque: 'Muestra a personas reales en proceso, útil para tener expectativas realistas sobre lo que puede aportar la hipnoterapia. No pude confirmar el año de estreno.',
+        sinJustWatch: true,
+        sinTrailer: true,
+        enlaces: [{ texto: 'Ver en Prime Video', href: 'https://www.primevideo.com/detail/0NBG06XMW5QKCSDJ6A37XZD283' }],
       },
     ],
   },
@@ -170,9 +263,8 @@ const slugify = (s: string) =>
 // Pósters guardados en /public/peliculas/{slug}.webp. Si falta uno, se dibuja un póster tipográfico.
 const tienePoster = (slug: string) => fs.existsSync(path.join(process.cwd(), 'public', 'peliculas', `${slug}.webp`));
 
-// Entradas sin póster ni enlaces de visionado: no son una obra concreta (Hypnosis: A New Film)
-// o su título no se pudo verificar (Flipped); revisar con Juan Pablo.
-const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
+// Entradas sin póster ni enlaces de visionado (ninguna por ahora).
+const SIN_FICHA = new Set<string>();
 ---
 
 <!doctype html>
@@ -216,7 +308,7 @@ const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
                   ) : (
                     <div class="poster-fallback" role="img" aria-label={`Póster de ${item.titulo}`}>
                       <span class="poster-fallback-title">{item.titulo}</span>
-                      <span class="poster-fallback-year">{item.año}</span>
+                      {item.año && <span class="poster-fallback-year">{item.año}</span>}
                     </div>
                   )}
                 </div>
@@ -224,7 +316,7 @@ const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
                 <div class="item-header">
                   <div class="item-meta">
                     <span class="item-tipo">{item.tipo}</span>
-                    <span class="item-año">{item.año}</span>
+                    {item.año && <span class="item-año">{item.año}</span>}
                     <span class="item-origen">{item.origen}</span>
                   </div>
                   <h3 class="item-titulo">{item.titulo}</h3>
@@ -236,10 +328,15 @@ const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
                 {conFicha && (
                   <div class="item-ver">
                     <span class="ver-label">Dónde verla:</span>
-                    {PAISES.map(pais => (
+                    {(item.enlaces ?? []).map(l => (
+                      <a class="ver-chip ver-chip--directo" href={l.href} target="_blank" rel="noopener">{l.texto}</a>
+                    ))}
+                    {!item.sinJustWatch && PAISES.map(pais => (
                       <a class="ver-chip" href={`https://www.justwatch.com/${pais.cc}/buscar?q=${encodeURIComponent(buscar)}`} target="_blank" rel="noopener" title={`Ver en qué plataformas está disponible en ${pais.nombre}`}>{pais.nombre}</a>
                     ))}
-                    <a class="ver-chip ver-chip--trailer" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(buscar + ' ' + item.año + ' tráiler oficial')}`} target="_blank" rel="noopener">▶ Tráiler</a>
+                    {!item.sinTrailer && (
+                      <a class="ver-chip ver-chip--trailer" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(buscar + (item.año ? ' ' + item.año : '') + ' tráiler oficial')}`} target="_blank" rel="noopener">▶ Tráiler</a>
+                    )}
                   </div>
                 )}
                 </div>
@@ -402,6 +499,8 @@ const SIN_FICHA = new Set(['Hypnosis: A New Film', 'Flipped']);
   }
   .ver-chip:hover { background: rgba(230,200,117,0.12); border-color: #E6C875; color: #E6C875; text-decoration: none; }
   .ver-chip--trailer { background: rgba(230,200,117,0.12); color: #E6C875; }
+  .ver-chip--directo { background: linear-gradient(135deg, #F5DC98 0%, #E6C875 50%, #C99F44 100%); color: #0E1514; border-color: transparent; }
+  .ver-chip--directo:hover { color: #0E1514; filter: brightness(1.08); background: linear-gradient(135deg, #F5DC98 0%, #E6C875 50%, #C99F44 100%); }
 
   .item-meta {
     display: flex;
