@@ -82,9 +82,9 @@ const cat = expositor ? CATEGORY[expositor] : undefined;
 
 const JP = 'https://www.juanpabloloaiza.com';
 const AUTHOR_LINKS = {
-  srt: { href: `${JP}/#liberacion`, anchor: 'sesiones de liberación espiritual' },
-  hipnosis: { href: `${JP}/#ComoFunciona`, anchor: 'cómo es una sesión de hipnosis terapéutica' },
-  rvp: { href: `${JP}/#QueEsTRVP`, anchor: 'sesiones de regresión a vidas pasadas' },
+  srt: { href: `${JP}/#liberacion`, anchor: 'Sesiones de liberación espiritual' },
+  hipnosis: { href: `${JP}/#ComoFunciona`, anchor: 'Hipnosis terapéutica en sesión' },
+  rvp: { href: `${JP}/#QueEsTRVP`, anchor: 'Sesiones de regresión a vidas pasadas' },
 };
 const authorLink = AUTHOR_LINKS[cat?.group ?? 'rvp'];
 
@@ -617,52 +617,70 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
       .author-cta a { color: #8B6914; text-decoration: none; }
       .author-cta a:hover { text-decoration: underline; }
 
-      /* ——— Sobre el autor (ficha) ——— */
+      /* ——— Sobre el autor (ficha, diseño Stitch adaptado) ——— */
       .author-card {
-        display: flex;
-        gap: 1.5em;
-        align-items: center;
         margin-top: 3em;
-        padding: 1.75em;
+        padding: 2em 2.25em;
         background: #F5EFE0;
         border: 1px solid rgba(184,149,42,0.25);
-        border-left: 3px solid #B8952A;
         border-radius: 4px;
+        box-shadow: 0 10px 35px -10px rgba(44,31,14,0.08), 0 2px 8px rgba(184,149,42,0.05);
+      }
+      .author-card-main { display: flex; gap: 2em; align-items: flex-start; }
+      .author-card-photo-ring {
+        flex-shrink: 0; width: 124px; height: 124px; padding: 3px; border-radius: 50%;
+        background: linear-gradient(135deg, #B8952A 0%, #D4AF6A 50%, rgba(184,149,42,0.4) 100%);
+        box-shadow: 0 4px 16px rgba(184,149,42,0.22);
       }
       .author-card-photo {
-        width: 96px; height: 96px; flex-shrink: 0;
-        border-radius: 50%;
-        object-fit: cover; object-position: 50% 22%;
-        border: 2px solid #B8952A;
-        box-shadow: 0 4px 14px rgba(44,31,14,0.18);
+        width: 100%; height: 100%; border-radius: 50%;
+        object-fit: cover; object-position: 50% 22%; display: block;
       }
       .author-card-label {
-        display: block;
+        display: flex; align-items: center; gap: 0.6em;
         font-family: 'Public Sans', sans-serif;
-        font-size: 0.52em; letter-spacing: 0.18em; text-transform: uppercase;
-        color: #A89060; font-weight: 700; margin-bottom: 0.4em;
+        font-size: 0.55em; letter-spacing: 0.22em; text-transform: uppercase;
+        color: #B8952A; font-weight: 700; margin-bottom: 0.5em;
       }
+      .author-card-rule { display: inline-block; width: 1.4em; height: 1px; background: #B8952A; }
       .author-card-name {
         font-family: 'Playfair Display', serif;
-        font-size: 1.35em; margin: 0 0 0.35em; color: #2C1F0E;
+        font-size: 1.7em; line-height: 1.2; margin: 0; color: #2C1F0E; letter-spacing: -0.01em;
       }
       .author-card-name a { color: inherit; text-decoration: none; }
       .author-card-name a:hover { color: #8B6914; }
+      .author-card-role {
+        font-family: 'EB Garamond', serif; font-style: italic;
+        font-size: 1.05em; color: #7A6840; margin: 0.15em 0 0.7em;
+      }
       .author-card-bio {
         font-family: 'EB Garamond', serif;
-        font-size: 0.95em; line-height: 1.55; color: #5C4A2A; margin: 0 0 1em;
+        font-size: 1.05em; line-height: 1.6; color: rgba(44,31,14,0.9); margin: 0;
       }
-      .author-card-actions { display: flex; flex-wrap: wrap; gap: 0.6em; }
+      .author-card-trust {
+        list-style: none; margin: 1.5em 0 0; padding: 1.1em 0 0;
+        border-top: 1px solid rgba(184,149,42,0.22);
+        display: grid; grid-template-columns: repeat(3, auto); gap: 0.8em 1.5em; justify-content: start;
+      }
+      .author-card-trust li {
+        display: flex; align-items: center; gap: 0.55em;
+        font-family: 'Public Sans', sans-serif; font-size: 0.6em; font-weight: 500;
+        letter-spacing: 0.06em; text-transform: uppercase; color: rgba(44,31,14,0.8);
+      }
+      .author-card-trust svg { width: 1.6em; height: 1.6em; color: #B8952A; flex-shrink: 0; }
+      .author-card-actions { display: flex; flex-wrap: wrap; gap: 0.7em; margin-top: 1.4em; }
       .author-card-btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
         font-family: 'Public Sans', sans-serif;
-        font-size: 0.6em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-        padding: 0.85em 1.3em; border: 1px solid #B8952A; border-radius: 3px;
-        color: #8B6914; text-decoration: none; background: transparent;
-        transition: background .2s, color .2s;
+        font-size: 0.62em; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+        padding: 1em 1.5em; border: 1px solid rgba(184,149,42,0.6); border-radius: 3px;
+        color: #2C1F0E; text-decoration: none; background: transparent;
+        transition: background .2s, border-color .2s, color .2s;
       }
-      .author-card-btn:hover { background: #B8952A; color: #FDFAF4; text-decoration: none; }
+      .author-card-btn:hover { background: rgba(184,149,42,0.1); border-color: #B8952A; text-decoration: none; }
+      .author-card-btn svg { width: 1.5em; height: 1.5em; color: #D4AF6A; }
       .author-card-btn--primary { background: #2C1F0E; border-color: #2C1F0E; color: #FDFAF4; }
-      .author-card-btn--primary:hover { background: #B8952A; border-color: #B8952A; }
+      .author-card-btn--primary:hover { background: #3D2C15; border-color: #3D2C15; }
 
       /* ——— Sigue leyendo (tarjetas con imagen) ——— */
       .read-more { margin-top: 2.5em; }
@@ -708,8 +726,11 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 
       @media (max-width: 760px) {
         .read-more-grid { grid-template-columns: 1fr; }
-        .author-card { flex-direction: column; text-align: center; }
-        .author-card-actions { justify-content: center; }
+        .author-card { padding: 1.5em 1.25em; }
+        .author-card-main { flex-direction: column; align-items: center; text-align: center; }
+        .author-card-label { justify-content: center; }
+        .author-card-trust { grid-template-columns: 1fr; justify-items: center; }
+        .author-card-actions { flex-direction: column; }
       }
 
       @media (max-width: 600px) {
@@ -819,26 +840,48 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
 
         <!-- Sobre el autor -->
         <aside class="author-card" aria-label="Sobre el autor">
-          <img
-            class="author-card-photo"
-            src={AUTHOR_PHOTO}
-            alt="Juan Pablo Loaiza, terapeuta de Regresión a Vidas Pasadas"
-            width="96"
-            height="96"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="author-card-body">
-            <span class="author-card-label">Sobre el autor</span>
-            <h3 class="author-card-name"><a href="https://www.juanpabloloaiza.com" rel="author">Juan Pablo Loaiza</a></h3>
-            <p class="author-card-bio">
-              Terapeuta de Regresión a Vidas Pasadas con más de 19 años de experiencia.
-              Atiende sesiones online a personas de todo el mundo.
-            </p>
-            <div class="author-card-actions">
-              <a class="author-card-btn author-card-btn--primary" href={WHATSAPP} target="_blank" rel="noopener">Escríbele por WhatsApp</a>
-              <a class="author-card-btn" href={authorLink.href}>Conoce {authorLink.anchor}</a>
+          <div class="author-card-main">
+            <div class="author-card-photo-ring">
+              <img
+                class="author-card-photo"
+                src={AUTHOR_PHOTO}
+                alt="Juan Pablo Loaiza, terapeuta de Regresión a Vidas Pasadas"
+                width="124"
+                height="124"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
+            <div class="author-card-body">
+              <span class="author-card-label"><i class="author-card-rule"></i>Sobre el autor</span>
+              <h3 class="author-card-name"><a href="https://www.juanpabloloaiza.com" rel="author">Juan Pablo Loaiza</a></h3>
+              <p class="author-card-role">Terapeuta de Regresión a Vidas Pasadas</p>
+              <p class="author-card-bio">
+                Más de 19 años de experiencia acompañando procesos de regresión a vidas pasadas.
+                Atiende sesiones online a personas de todo el mundo.
+              </p>
+            </div>
+          </div>
+          <ul class="author-card-trust">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
+              +19 años de experiencia
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4"/></svg>
+              Sesiones online
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M3.6 9h16.8M3.6 15h16.8M12 3a14.5 14.5 0 000 18 14.5 14.5 0 000-18z"/></svg>
+              Atención en todo el mundo
+            </li>
+          </ul>
+          <div class="author-card-actions">
+            <a class="author-card-btn author-card-btn--primary" href={WHATSAPP} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.09c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.1 8.1 0 01-1.24-4.32c0-4.48 3.65-8.13 8.13-8.13 2.17 0 4.21.85 5.75 2.38a8.07 8.07 0 012.38 5.74c0 4.49-3.65 8.14-8.13 8.14zm4.46-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.17.24-.63.8-.78.96-.14.16-.29.18-.54.06-.24-.12-1.03-.38-1.97-1.21-.73-.65-1.22-1.45-1.36-1.7-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.24-.87.85-.87 2.08 0 1.22.89 2.41 1.01 2.58.12.16 1.76 2.69 4.27 3.77.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.45-.6 1.66-1.17.2-.57.2-1.06.14-1.17-.06-.11-.22-.18-.46-.3z"/></svg>
+              Escríbele por WhatsApp
+            </a>
+            <a class="author-card-btn" href={authorLink.href}>{authorLink.anchor} →</a>
           </div>
         </aside>
 
