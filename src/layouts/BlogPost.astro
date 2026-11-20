@@ -422,30 +422,35 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
       .sidebar-newsletter-mini input {
         width: 100%;
         box-sizing: border-box;
-        background: rgba(255,255,255,0.5);
-        border: 1px solid rgba(230,200,117,0.15);
-        padding: 0.6em 1em;
-        font-family: 'EB Garamond', serif;
-        font-size: 0.9em;
-        margin-bottom: 0.5em;
+        background: #FAF7F2;
+        color: #0E1514;
+        border: 1px solid #E6C875;
+        border-radius: 12px;
+        padding: 0.75em 1em;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.8em;
+        margin-bottom: 0.6em;
         outline: none;
       }
-      .sidebar-newsletter-mini input:focus { border-color: #BA9C4B; }
+      .sidebar-newsletter-mini input::placeholder { color: #6B6558; opacity: 1; }
+      .sidebar-newsletter-mini input:focus { border-color: #F5DC98; box-shadow: 0 0 0 3px rgba(230,200,117,0.3); }
 
       .sidebar-newsletter-mini button {
         width: 100%;
-        padding: 0.75em;
-        background: #090E0D;
-        color: #FAF7F2;
+        padding: 0.85em;
+        background: linear-gradient(135deg, #F5DC98 0%, #E6C875 50%, #C99F44 100%);
+        color: #0E1514;
         border: none;
+        border-radius: 999px;
         cursor: pointer;
-        font-family: 'Plus Jakarta Sans', serif;
-        font-size: 0.48em;
+        font-family: 'Syne', sans-serif;
+        font-size: 0.5em;
+        font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        transition: background 0.2s;
+        transition: filter 0.2s;
       }
-      .sidebar-newsletter-mini button:hover { background: #E6C875; }
+      .sidebar-newsletter-mini button:hover { filter: brightness(1.08); }
 
       /* ——— Article body ——— */
       .article-body { min-width: 0; }
@@ -820,7 +825,7 @@ const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSc
           <h4 class="sidebar-newsletter-mini-title">Crónica Editorial</h4>
           <p class="sidebar-newsletter-mini-desc">Reflexiones mensuales sobre la evolución del espíritu.</p>
           <form onsubmit="return false;">
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Tu correo" aria-label="Tu correo electrónico" />
             <button type="submit">Suscribirse</button>
           </form>
         </div>
