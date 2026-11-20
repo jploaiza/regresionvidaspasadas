@@ -62,11 +62,11 @@ const hipnosisSchema = JSON.stringify([
         line-height: 1;
         display: inline-block;
         vertical-align: middle;
-        color: #4A6B8A;
+        color: #8FB3D4;
       }
-      .ornament { height: 1px; background: linear-gradient(90deg, transparent, #B8952A, transparent); width: 100%; margin: 2.5em 0; }
+      .ornament { height: 1px; background: linear-gradient(90deg, transparent, #E6C875, transparent); width: 100%; margin: 2.5em 0; }
       .card-hover { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.3s; }
-      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(44,31,14,0.07); border-color: rgba(74,107,138,0.55); }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.07); border-color: rgba(74,107,138,0.55); }
     </style>
   </head>
   <body>
@@ -135,19 +135,19 @@ const hipnosisSchema = JSON.stringify([
   .hub-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; max-width: none; border-radius: 0; display: block; }
   .hub-hero-overlay { position: absolute; inset: 0; background: rgba(20,40,60,0.5); }
   .hub-hero-content { position: relative; z-index: 10; text-align: center; padding: 0 2em; max-width: 700px; }
-  .hub-hero-eyebrow { font-family: 'Libre Caslon Text', serif; color: rgba(255,255,255,0.9); letter-spacing: 0.28em; font-size: 0.55em; text-transform: uppercase; display: block; margin-bottom: 1em; }
-  .hub-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2em, 6vw, 4em); font-weight: 700; color: #fff; margin: 0 0 0.6em; line-height: 1.1; }
+  .hub-hero-eyebrow { font-family: 'Plus Jakarta Sans', serif; color: rgba(255,255,255,0.9); letter-spacing: 0.28em; font-size: 0.55em; text-transform: uppercase; display: block; margin-bottom: 1em; }
+  .hub-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2em, 6vw, 4em); font-weight: 700; color: #fff; margin: 0 0 0.6em; line-height: 1.1; }
   .hub-hero-desc { font-family: 'EB Garamond', serif; font-size: 1.1em; font-style: italic; color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 1.5em; line-height: 1.65; }
-  .hub-hero-line { width: 6em; height: 1px; background: #B8952A; margin: 0 auto; }
+  .hub-hero-line { width: 6em; height: 1px; background: #E6C875; margin: 0 auto; }
 
   .hub-main { max-width: 1100px; margin: 0 auto; padding: 5em 2em 6em; }
 
   .hub-index-section { margin-bottom: 4em; }
   .hub-index-header { margin-bottom: 3em; text-align: center; }
-  .hub-index-title { font-family: 'Playfair Display', serif; font-size: 1.8em; font-weight: 700; color: #2C1F0E; margin: 0 0 1em; }
+  .hub-index-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8em; font-weight: 700; color: #FAF7F2; margin: 0 0 1em; }
   .hub-index-meta { display: flex; align-items: center; justify-content: center; gap: 1em; }
-  .hub-index-line { height: 1px; width: 3em; background: rgba(184,149,42,0.25); }
-  .hub-index-label { font-family: 'Libre Caslon Text', serif; font-size: 0.52em; letter-spacing: 0.2em; text-transform: uppercase; color: #7A6840; white-space: nowrap; }
+  .hub-index-line { height: 1px; width: 3em; background: rgba(230,200,117,0.25); }
+  .hub-index-label { font-family: 'Plus Jakarta Sans', serif; font-size: 0.52em; letter-spacing: 0.2em; text-transform: uppercase; color: #C6C0B1; white-space: nowrap; }
 
   .hub-cards-grid {
     display: grid;
@@ -161,7 +161,7 @@ const hipnosisSchema = JSON.stringify([
     align-items: center;
     text-align: center;
     padding: 2.5em 2em;
-    background: rgba(245,239,224,0.3);
+    background: rgba(21,30,29,0.3);
     border: 1px solid rgba(74,107,138,0.22);
     text-decoration: none;
     color: inherit;
@@ -171,24 +171,24 @@ const hipnosisSchema = JSON.stringify([
   .hub-card-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5em; }
   .hub-card-icon .material-symbols-outlined { font-size: 2.2em !important; }
 
-  .hub-card-title { font-family: 'Playfair Display', serif; font-size: 1.1em; font-weight: 700; color: #2C1F0E; margin: 0 0 0.75em; line-height: 1.25; transition: color 0.2s; }
-  .hub-card:hover .hub-card-title { color: #4A6B8A; }
+  .hub-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1em; font-weight: 700; color: #FAF7F2; margin: 0 0 0.75em; line-height: 1.25; transition: color 0.2s; }
+  .hub-card:hover .hub-card-title { color: #8FB3D4; }
 
-  .hub-card-desc { font-family: 'EB Garamond', serif; font-size: 0.9em; color: #7A6840; line-height: 1.65; flex: 1; margin: 0 0 1.5em; }
+  .hub-card-desc { font-family: 'EB Garamond', serif; font-size: 0.9em; color: #C6C0B1; line-height: 1.65; flex: 1; margin: 0 0 1.5em; }
 
-  .hub-card-cta { font-family: 'Libre Caslon Text', serif; font-size: 0.5em; letter-spacing: 0.2em; text-transform: uppercase; color: #2C1F0E; border-bottom: 1px solid #4A6B8A; padding-bottom: 0.1em; transition: color 0.2s; margin-top: auto; }
-  .hub-card:hover .hub-card-cta { color: #4A6B8A; }
+  .hub-card-cta { font-family: 'Plus Jakarta Sans', serif; font-size: 0.5em; letter-spacing: 0.2em; text-transform: uppercase; color: #FAF7F2; border-bottom: 1px solid #8FB3D4; padding-bottom: 0.1em; transition: color 0.2s; margin-top: auto; }
+  .hub-card:hover .hub-card-cta { color: #8FB3D4; }
 
-  .hub-cta-section { background: #F5EFE0; padding: 4em 3em; text-align: center; }
-  .hub-cta-title { font-family: 'Playfair Display', serif; font-size: 1.6em; font-weight: 700; font-style: italic; color: #2C1F0E; margin: 0 0 0.75em; }
-  .hub-cta-desc { font-family: 'EB Garamond', serif; font-size: 1em; color: #7A6840; line-height: 1.7; max-width: 500px; margin: 0 auto 2em; }
-  .hub-cta-desc a { color: #8B6914; text-decoration: none; }
+  .hub-cta-section { background: #151E1D; padding: 4em 3em; text-align: center; }
+  .hub-cta-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6em; font-weight: 700; font-style: italic; color: #FAF7F2; margin: 0 0 0.75em; }
+  .hub-cta-desc { font-family: 'EB Garamond', serif; font-size: 1em; color: #C6C0B1; line-height: 1.7; max-width: 500px; margin: 0 auto 2em; }
+  .hub-cta-desc a { color: #E6C875; text-decoration: none; }
   .hub-cta-desc a:hover { text-decoration: underline; }
   .hub-cta-btn {
     display: inline-block;
-    background: #B8952A;
-    color: #fff;
-    font-family: 'Libre Caslon Text', serif;
+    background: #E6C875;
+    color: #0E1514;
+    font-family: 'Plus Jakarta Sans', serif;
     font-size: 0.55em;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -196,7 +196,7 @@ const hipnosisSchema = JSON.stringify([
     text-decoration: none;
     transition: background 0.2s;
   }
-  .hub-cta-btn:hover { background: #8B6914; text-decoration: none; color: #fff; }
+  .hub-cta-btn:hover { background: #BA9C4B; text-decoration: none; color: #0E1514; }
 
   @media (max-width: 860px) { .hub-cards-grid { grid-template-columns: repeat(2, 1fr); } .hub-hero { height: 480px; } }
   @media (max-width: 560px) { .hub-cards-grid { grid-template-columns: 1fr; } .hub-hero { height: 380px; } .hub-hero-title { font-size: 1.9em; } }

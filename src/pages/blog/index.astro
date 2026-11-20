@@ -106,7 +106,7 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 					<div class="featured-content">
 						<span class="featured-eyebrow">Artículo destacado</span>
 						{featuredCat && (
-							<span class="featured-badge" style={`background:${featuredCat.color}; color:#fff`}>
+							<span class="featured-badge" style={`background:${featuredCat.color}; color:#0E1514`}>
 								{featuredCat.label}
 							</span>
 						)}
@@ -143,7 +143,7 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 									<div class="card-img">
 										<Image src={thumb} alt={post.data.title} width={500} height={280} loading="lazy" />
 										{cat && (
-											<span class="card-badge" style={`background:${cat.color}; color:#fff`}>
+											<span class="card-badge" style={`background:${cat.color}; color:#0E1514`}>
 												{cat.label}
 											</span>
 										)}
@@ -274,24 +274,24 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 
 	.ornament {
 		display: block;
-		color: #D4AF6A;
+		color: #F5DC98;
 		font-size: 0.85em;
 		letter-spacing: 0.5em;
 		margin-bottom: 0.75em;
 	}
 
 	.page-header h1 {
-		font-family: 'Cinzel', serif;
+		font-family: 'Cormorant Garamond', serif;
 		font-size: 2.5em;
 		font-weight: 400;
-		color: #2C1F0E;
+		color: #FAF7F2;
 		margin-bottom: 0.4em;
 	}
 
 	.page-desc {
-		color: #A89060;
+		color: #BA9C4B;
 		font-size: 0.9em;
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		letter-spacing: 0.05em;
 	}
 
@@ -306,7 +306,7 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		position: relative;
 		width: 100%;
 		height: 460px;
-		border-radius: 10px;
+		border-radius: 18px;
 		overflow: hidden;
 		text-decoration: none;
 		margin-bottom: 2.5em;
@@ -349,7 +349,7 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 
 	.featured-eyebrow {
 		display: block;
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.6em;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
@@ -359,29 +359,29 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 
 	.featured-badge {
 		display: inline-block;
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.62em;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		padding: 0.25em 0.7em;
-		border-radius: 3px;
+		border-radius: 999px;
 		margin-bottom: 0.75em;
 	}
 
 	.featured-title {
-		font-family: 'Crimson Text', serif;
+		font-family: 'EB Garamond', serif;
 		font-size: 2.4em;
 		font-weight: 400;
-		color: #FDFAF4;
+		color: #FAF7F2;
 		line-height: 1.15;
 		margin-bottom: 0.5em;
 		text-shadow: 0 2px 10px rgba(0,0,0,0.35);
 	}
 
 	.featured-desc {
-		font-family: 'Crimson Text', serif;
+		font-family: 'EB Garamond', serif;
 		font-size: 1.05em;
-		color: rgba(253,250,244,0.75);
+		color: rgba(250,247,242,0.75);
 		line-height: 1.55;
 		margin-bottom: 1em;
 		font-style: italic;
@@ -395,14 +395,14 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		display: flex;
 		align-items: center;
 		gap: 1.5em;
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.65em;
 		letter-spacing: 0.1em;
 		color: rgba(255,255,255,0.55);
 	}
 
 	.featured-cta {
-		color: #D4AF6A;
+		color: #F5DC98;
 		font-size: 1.05em;
 	}
 
@@ -415,29 +415,29 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 	}
 
 	.filter-btn {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.7em;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		padding: 0.5em 1.1em;
-		border: 1px solid rgba(184, 149, 42, 0.3);
-		border-radius: 20px;
+		border: 1px solid rgba(230, 200, 117, 0.3);
+		border-radius: 999px;
 		background: transparent;
-		color: #7A6840;
+		color: #C6C0B1;
 		cursor: pointer;
 		transition: all 0.2s;
 	}
 
 	.filter-btn:hover {
-		border-color: #B8952A;
-		color: #2C1F0E;
-		background: rgba(184, 149, 42, 0.06);
+		border-color: #BA9C4B;
+		color: #FAF7F2;
+		background: rgba(230, 200, 117, 0.06);
 	}
 
 	.filter-btn.active {
-		background: #B8952A;
-		border-color: #B8952A;
-		color: #FDFAF4;
+		background: #E6C875;
+		border-color: #BA9C4B;
+		color: #0E1514;
 	}
 
 	/* ——— Grid: 2 columnas ——— */
@@ -454,17 +454,17 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
-		border-radius: 8px;
+		border-radius: 16px;
 		overflow: hidden;
-		background: #F5EFE0;
-		border: 1px solid rgba(184, 149, 42, 0.1);
+		background: #151E1D;
+		border: 1px solid rgba(230, 200, 117, 0.1);
 		transition: transform 0.2s, box-shadow 0.2s;
 		height: 100%;
 	}
 
 	.post-card:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 8px 24px rgba(44, 31, 14, 0.1);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 	}
 
 	.card-img {
@@ -491,12 +491,12 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 		position: absolute;
 		bottom: 0.6em;
 		left: 0.6em;
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.6em;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		padding: 0.25em 0.6em;
-		border-radius: 3px;
+		border-radius: 999px;
 	}
 
 	.card-body {
@@ -507,22 +507,22 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 	}
 
 	.card-title {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.9em;
 		font-weight: 400;
-		color: #2C1F0E;
+		color: #FAF7F2;
 		line-height: 1.35;
 		margin-bottom: 0.5em;
 		transition: color 0.2s;
 	}
 
 	.post-card:hover .card-title {
-		color: #8B6914;
+		color: #E6C875;
 	}
 
 	.card-excerpt {
 		font-size: 0.85em;
-		color: #7A6840;
+		color: #C6C0B1;
 		line-height: 1.55;
 		flex: 1;
 		display: -webkit-box;
@@ -533,10 +533,10 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 	}
 
 	.card-date {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.65em;
 		letter-spacing: 0.08em;
-		color: #A89060;
+		color: #BA9C4B;
 		margin-top: auto;
 	}
 
@@ -551,30 +551,30 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 	}
 
 	:global(.page-btn) {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.72em;
 		letter-spacing: 0.08em;
 		min-width: 2.4em;
 		height: 2.4em;
 		padding: 0 0.5em;
-		border: 1px solid rgba(184,149,42,0.3);
-		border-radius: 4px;
+		border: 1px solid rgba(230,200,117,0.3);
+		border-radius: 999px;
 		background: transparent;
-		color: #7A6840;
+		color: #C6C0B1;
 		cursor: pointer;
 		transition: all 0.18s;
 	}
 
 	:global(.page-btn:hover:not(.disabled)) {
-		border-color: #B8952A;
-		color: #2C1F0E;
-		background: rgba(184,149,42,0.07);
+		border-color: #BA9C4B;
+		color: #FAF7F2;
+		background: rgba(230,200,117,0.07);
 	}
 
 	:global(.page-btn.active) {
-		background: #B8952A;
-		border-color: #B8952A;
-		color: #FDFAF4;
+		background: #E6C875;
+		border-color: #BA9C4B;
+		color: #0E1514;
 	}
 
 	:global(.page-btn.disabled) {
@@ -583,17 +583,17 @@ const featuredCat = featured.data.expositor ? CATEGORY[featured.data.expositor] 
 	}
 
 	:global(.page-dots) {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.72em;
-		color: #A89060;
+		color: #BA9C4B;
 		padding: 0 0.2em;
 	}
 
 	.results-count {
-		font-family: 'Cinzel', serif;
+		font-family: 'Syne', serif;
 		font-size: 0.7em;
 		letter-spacing: 0.1em;
-		color: #A89060;
+		color: #BA9C4B;
 		text-align: center;
 		margin-top: 1.5em;
 	}

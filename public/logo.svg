@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" role="img" aria-label="Regresión a Vidas Pasadas">
+  <rect width="340" height="70" fill="#0E1514"/>
+  <g transform="translate(8,5) scale(1.0)">
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#E6C875" stroke-opacity="0.3" stroke-width="0.8"/>
+    <path d="M12,31 C10,18 20,10 32,10 C44,10 51,20 49,31 C47,43 37,50 27,49 C17,48 11,38 13,27 C15,18 25,16 31,18" fill="none" stroke="#E6C875" stroke-width="2" stroke-linecap="round"/>
+    <path d="M20,30 C23,24 37,24 40,30 C37,36 23,36 20,30 Z" fill="none" stroke="#FAF7F2" stroke-width="1"/>
+    <circle cx="30" cy="30" r="2" fill="#FAF7F2"/>
+  </g>
+  <text x="82" y="34" fill="#FAF7F2" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="500" letter-spacing="1.8">REGRESIÓN</text>
+  <text x="196" y="33" fill="#E6C875" font-family="'Newsreader', Georgia, serif" font-size="16" font-style="italic">a vidas pasadas</text>
+  <text x="83" y="51" fill="#E6C875" fill-opacity="0.85" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="7.5" font-weight="600" letter-spacing="2.4">PORTAL DE CONOCIMIENTO ESPIRITUAL</text>
+</svg>

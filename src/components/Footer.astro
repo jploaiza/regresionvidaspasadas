@@ -1,10 +1,11 @@
 ---
+import LogoMark from './LogoMark.astro';
 const today = new Date();
 ---
 
 <footer>
 	<div class="footer-inner">
-		<div class="footer-logo">REGRESIÓN A VIDAS PASADAS</div>
+		<div class="footer-logo"><LogoMark size={44} /><span>REGRESIÓN <em>a vidas pasadas</em></span></div>
 
 		<nav class="footer-links">
 			<a href="/blog">Artículos</a>
@@ -26,9 +27,8 @@ const today = new Date();
 
 <style>
 	footer {
-		background: #F5EFE0;
-		border-top: 1px solid rgba(184, 149, 42, 0.3);
-		opacity: 0.95;
+		background: #090E0D;
+		border-top: 1px solid rgba(230, 200, 117, 0.3);
 		transition: opacity 0.3s;
 	}
 
@@ -46,12 +46,23 @@ const today = new Date();
 	}
 
 	.footer-logo {
-		font-family: 'Playfair Display', serif;
-		font-size: 1em;
-		font-weight: 700;
-		color: #B8952A;
-		letter-spacing: 0.08em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.7em;
+		font-family: 'Cormorant Garamond', serif;
+		font-size: 1.15em;
+		font-weight: 400;
+		color: #FAF7F2;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
+	}
+	.footer-logo em {
+		font-family: 'Newsreader', serif;
+		font-size: 0.85em;
+		color: #E6C875;
+		text-transform: none;
+		letter-spacing: 0.02em;
 	}
 
 	.footer-links {
@@ -64,23 +75,23 @@ const today = new Date();
 	.footer-links a {
 		font-family: 'EB Garamond', serif;
 		font-size: 0.9em;
-		color: #7A6840;
+		color: #C6C0B1;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
 
-	.footer-links a:hover { color: #2C1F0E; text-decoration: none; }
+	.footer-links a:hover { color: #FAF7F2; text-decoration: none; }
 
 	.footer-link-highlight {
-		color: #B8952A !important;
+		color: #E6C875 !important;
 		text-decoration: underline !important;
 	}
-	.footer-link-highlight:hover { color: #8B6914 !important; }
+	.footer-link-highlight:hover { color: #E6C875 !important; }
 
 	.footer-desc {
 		font-family: 'EB Garamond', serif;
 		font-size: 0.78em;
-		color: #7A6840;
+		color: #C6C0B1;
 		line-height: 1.65;
 		max-width: 540px;
 		margin: 0;
@@ -90,7 +101,7 @@ const today = new Date();
 	.footer-copy {
 		font-family: 'EB Garamond', serif;
 		font-size: 0.75em;
-		color: #2C1F0E;
+		color: #FAF7F2;
 		opacity: 0.6;
 		margin: 0;
 	}
