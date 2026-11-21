@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import LogoMark from './LogoMark.astro';
+import SearchModal from './SearchModal.astro';
 interface Props { transparent?: boolean; }
 const { transparent = false } = Astro.props;
 
@@ -48,6 +49,7 @@ const WHATSAPP = 'https://api.whatsapp.com/send?phone=56962081884&text=' +
 	</nav>
 	<div class="header-line"></div>
 </header>
+<SearchModal />
 
 <script>
 	const hamburger = document.getElementById('hamburger');
@@ -328,7 +330,10 @@ const WHATSAPP = 'https://api.whatsapp.com/send?phone=56962081884&text=' +
 	}
 
 	@media (max-width: 480px) {
-		nav { padding: 0 1em; }
-		.logo-sub { display: none; }
+		nav { padding: 0 1em; gap: 0.75em; }
+		.site-logo { gap: 0.65em; min-width: 0; }
+		.logo-line { flex-direction: column; align-items: flex-start; gap: 0.15em; }
+		.logo-title { font-size: 1.05em; }
+		.logo-sub { font-size: 0.85em; }
 	}
 </style>

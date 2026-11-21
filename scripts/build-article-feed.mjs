@@ -3,8 +3,9 @@
 // (título, extracto, imagen y enlace). Se ejecuta después de `astro build`.
 import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const DIST = new URL('../dist/', import.meta.url).pathname;
+const DIST = fileURLToPath(new URL('../dist/', import.meta.url));
 const BLOG = join(DIST, 'blog');
 
 const decode = (s = '') =>

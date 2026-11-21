@@ -4,7 +4,6 @@ import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import SearchModal from '../components/SearchModal.astro';
 import LogoMark from '../components/LogoMark.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, CATEGORY, EDITORIAL_PICKS, FEATURED_SLUG, SLUG_IMG } from '../consts';
 
@@ -112,7 +111,6 @@ const EXPEDIENTES = [
   </head>
   <body>
     <Header />
-    <SearchModal />
 
     <!-- ① HERO (diseño Stitch · Variante 03) -->
     <section class="home-hero">
@@ -564,11 +562,19 @@ const EXPEDIENTES = [
   }
 
   @media (max-width: 900px) {
-    .home-hero { min-height: 0; padding: 2.2em 1.25em 3.2em; }
-    .home-hero-inner { grid-template-columns: 1fr; gap: 3em; }
-    .home-hero-visual { justify-self: center; width: min(100%, 460px); }
-    .home-hero-card { left: -0.8em; }
-    .home-hero-stats { flex-wrap: wrap; gap: 1.2em; }
+    .home-hero { min-height: 0; padding: 1.6em 1.25em 2em; }
+    .home-hero-inner { grid-template-columns: 1fr; gap: 1.6em; }
+    .home-hero-badge { display: none; }
+    .home-hero-subtitle { margin-bottom: 1.3em; }
+    .home-hero-actions { flex-wrap: nowrap; gap: 0.7em; margin-bottom: 1.4em; }
+    .hero-btn { padding: 0.9em 1.3em; font-size: 0.5em; white-space: nowrap; }
+    .home-hero-stats { gap: 1.2em; padding-top: 1.1em; }
+    .home-hero-stats > div:last-of-type,
+    .home-hero-stats > .home-hero-sep:nth-of-type(2) { display: none; }
+    /* La foto pasa a ser una franja baja, no una pantalla entera */
+    .home-hero-visual { justify-self: stretch; width: 100%; aspect-ratio: 16 / 9; max-height: 200px; }
+    .home-hero-img { object-position: 70% 40%; }
+    .home-hero-card { display: none; }
   }
 
   /* ——— Main container ——— */
