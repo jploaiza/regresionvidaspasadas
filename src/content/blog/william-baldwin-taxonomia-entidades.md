@@ -1,5 +1,6 @@
 ---
 title: 'La taxonomía de entidades de Baldwin: quién se adhiere y por qué'
+seoTitle: 'Taxonomía de entidades de Baldwin: quién se adhiere'
 description: 'La clasificación de entidades de William Baldwin: humanas, de fuerza oscura, fragmentos del alma y no humanas, y el protocolo de cada tipo.'
 pubDate: '2025-11-01'
 expositor: 'william-baldwin'

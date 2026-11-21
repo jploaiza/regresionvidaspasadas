@@ -1,5 +1,6 @@
 ---
 title: 'Los orígenes de la hipnosis: de Mesmer y el magnetismo animal a James Braid'
+seoTitle: 'Orígenes de la hipnosis: de Mesmer a James Braid'
 description: 'Historia de la hipnosis moderna: Mesmer y el magnetismo animal, la Comisión Real que lo refutó y James Braid, quien separó el fenómeno del misticismo.'
 pubDate: '2026-02-14'
 expositor: 'hipnosis'

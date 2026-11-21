@@ -1,5 +1,6 @@
 ---
 title: 'Posesión y apego espiritual: ¿qué ocurre realmente cuando un espíritu se adhiere?'
+seoTitle: 'Posesión y apego espiritual: qué ocurre realmente'
 description: 'Posesión plena frente a apego espiritual parcial: cómo ocurre, qué síntomas da y por qué la SRT no se parece a las películas de terror.'
 pubDate: '2025-12-20'
 expositor: 'srt'

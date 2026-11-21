@@ -1,5 +1,6 @@
 ---
 title: 'Milton Erickson: el hombre que revolucionó la hipnosis clínica'
+seoTitle: 'Milton Erickson: el hombre que revolucionó la hipnosis'
 description: 'Quién fue Milton Erickson (1901-1980): cómo descubrió la hipnosis a los 17 años y por qué su enfoque conversacional transformó la hipnoterapia.'
 pubDate: '2026-02-28'
 expositor: 'hipnosis'

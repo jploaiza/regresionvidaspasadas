@@ -1,5 +1,6 @@
 ---
 title: 'El caso de Catherine: la paciente que transformó a Brian Weiss'
+seoTitle: 'El caso Catherine: la paciente que cambió a Brian Weiss'
 description: 'El caso clínico detrás de Muchas Vidas, Muchos Maestros: quién era Catherine, qué emergió bajo hipnosis y cómo resolvió lo que 18 meses de terapia no.'
 pubDate: '2025-01-24'
 expositor: 'brian-weiss'

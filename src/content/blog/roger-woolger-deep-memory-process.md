@@ -1,5 +1,6 @@
 ---
 title: 'El Deep Memory Process: la técnica terapéutica de Roger Woolger'
+seoTitle: 'Deep Memory Process: la técnica de Roger Woolger'
 description: 'Qué es el Deep Memory Process de Roger Woolger: hipnosis, trabajo corporal y psicodrama junguiano para acceder y sanar memorias de vidas pasadas.'
 pubDate: '2025-05-30'
 expositor: 'roger-woolger'

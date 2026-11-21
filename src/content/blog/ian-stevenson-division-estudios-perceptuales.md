@@ -1,5 +1,6 @@
 ---
 title: 'La División de Estudios Perceptuales de la Universidad de Virginia'
+seoTitle: 'División de Estudios Perceptuales de la U. de Virginia'
 description: 'Cómo Ian Stevenson fundó en la Universidad de Virginia el único departamento académico dedicado al estudio científico de la reencarnación.'
 pubDate: '2025-07-25'
 expositor: 'ian-stevenson'

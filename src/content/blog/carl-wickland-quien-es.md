@@ -1,5 +1,6 @@
 ---
 title: 'Carl Wickland: el psiquiatra que habló con los muertos para curar a los vivos'
+seoTitle: 'Carl Wickland: el psiquiatra que habló con los muertos'
 description: 'Quién fue Carl Wickland, el psiquiatra que dedicó 30 años a estudiar el apego espiritual como causa de trastornos mentales, junto a su esposa Anna.'
 pubDate: '2025-09-20'
 expositor: 'carl-wickland'

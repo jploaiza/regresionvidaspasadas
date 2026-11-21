@@ -1,5 +1,6 @@
 ---
 title: 'Las críticas a Michael Newton: lo que la ciencia cuestiona de la LBL'
+seoTitle: 'Críticas a Michael Newton y a la Vida entre Vidas'
 description: 'Las objeciones científicas al trabajo de Michael Newton, analizadas con honestidad: infalsificabilidad, sugestión hipnótica y estatus de sus hallazgos.'
 pubDate: '2025-03-28'
 expositor: 'michael-newton'

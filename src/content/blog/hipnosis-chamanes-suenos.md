@@ -1,5 +1,6 @@
 ---
 title: 'Antes de Mesmer: chamanes, sueños y el trance como medicina ancestral'
+seoTitle: 'Antes de Mesmer: chamanes, sueños y trance ancestral'
 description: 'La hipnosis no empezó con Mesmer: chamanes, el oráculo de Delfos y los templos del sueño usaron el trance como medicina espiritual.'
 pubDate: '2026-02-21'
 expositor: 'hipnosis'

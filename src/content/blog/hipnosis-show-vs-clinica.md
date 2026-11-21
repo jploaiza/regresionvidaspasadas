@@ -1,5 +1,6 @@
 ---
 title: 'Hipnosis de espectáculo vs. hipnosis clínica: la diferencia que importa'
+seoTitle: 'Hipnosis de espectáculo vs. hipnosis clínica: diferencias'
 description: 'Hipnosis de espectáculo vs. hipnosis clínica: qué hace cada una, qué no necesita la otra y cómo cambia por completo la experiencia.'
 pubDate: '2026-03-07'
 expositor: 'hipnosis'

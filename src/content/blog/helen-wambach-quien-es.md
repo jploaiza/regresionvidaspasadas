@@ -1,5 +1,6 @@
 ---
 title: 'Helen Wambach: la psicóloga que investigó la regresión con estadística'
+seoTitle: 'Helen Wambach: la psicóloga que midió las vidas pasadas'
 description: 'Biografía de Helen Wambach (1925-1986): la psicóloga que analizó estadísticamente más de 1.000 regresiones grupales a vidas pasadas.'
 pubDate: '2025-08-08'
 expositor: 'helen-wambach'

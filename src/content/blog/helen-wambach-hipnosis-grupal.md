@@ -1,5 +1,6 @@
 ---
 title: 'La hipnosis grupal como método de investigación: la apuesta de Wambach'
+seoTitle: 'Hipnosis grupal en la investigación de Helen Wambach'
 description: 'Por qué Helen Wambach investigó la regresión con hipnosis grupal en vez de sesiones individuales, sus ventajas metodológicas y las críticas recibidas.'
 pubDate: '2025-08-22'
 expositor: 'helen-wambach'

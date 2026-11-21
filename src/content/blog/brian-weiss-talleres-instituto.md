@@ -1,5 +1,6 @@
 ---
 title: 'Los talleres de Brian Weiss: de la clínica privada al movimiento global'
+seoTitle: 'Talleres de Brian Weiss: de la clínica al movimiento global'
 description: 'Cómo Brian Weiss creó una red global de formación en regresión: sus talleres, el Instituto Weiss y su impacto en miles de terapeutas.'
 pubDate: '2025-02-07'
 expositor: 'brian-weiss'

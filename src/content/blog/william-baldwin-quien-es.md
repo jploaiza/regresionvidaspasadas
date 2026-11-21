@@ -1,5 +1,6 @@
 ---
 title: 'William Baldwin: el dentista que escribió el manual definitivo de la liberación espiritual'
+seoTitle: 'William Baldwin: el dentista que escribió el manual de SRT'
 description: 'Quién fue William Baldwin (1939-2004): dentista y psicólogo clínico que sistematizó la Terapia de Liberación Espiritual y escribió su manual de 1992.'
 pubDate: '2025-10-18'
 expositor: 'william-baldwin'

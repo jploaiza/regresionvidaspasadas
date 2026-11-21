@@ -1,5 +1,6 @@
 ---
 title: '"Thirty Years Among the Dead": el libro que fundó la liberación espiritual'
+seoTitle: 'Thirty Years Among the Dead: el libro de Carl Wickland'
 description: 'Análisis de Treinta años entre los muertos (1924), de Carl Wickland: casos, teoría y por qué sigue siendo una referencia de la liberación espiritual.'
 pubDate: '2025-10-04'
 expositor: 'carl-wickland'

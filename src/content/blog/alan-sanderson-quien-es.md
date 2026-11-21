@@ -1,5 +1,6 @@
 ---
 title: 'Alan Sanderson: el psiquiatra del NHS que introdujo la liberación espiritual en la medicina'
+seoTitle: 'Alan Sanderson: psiquiatra del NHS y liberación espiritual'
 description: 'Quién fue Alan Sanderson: el psiquiatra británico que llevó la terapia de liberación espiritual al NHS y fundó la Spirit Release Foundation.'
 pubDate: '2025-11-29'
 expositor: 'alan-sanderson'

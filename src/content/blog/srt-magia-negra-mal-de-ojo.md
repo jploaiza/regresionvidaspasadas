@@ -1,5 +1,6 @@
 ---
 title: 'Magia negra, mal de ojo y ataques psíquicos: la SRT y las energías enviadas'
+seoTitle: 'Magia negra y mal de ojo: la SRT y las energías enviadas'
 description: 'Cómo aborda la SRT la magia negra, el mal de ojo y los ataques psíquicos: apegos espontáneos frente a energías dirigidas y recursos disponibles.'
 pubDate: '2026-01-03'
 expositor: 'srt'

@@ -9,6 +9,8 @@ const blog = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
+			// Título corto (≤60) solo para la etiqueta <title>; el H1 sigue usando `title`.
+			seoTitle: z.string().optional(),
 			description: z.string(),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),

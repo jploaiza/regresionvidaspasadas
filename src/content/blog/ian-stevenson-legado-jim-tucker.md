@@ -1,5 +1,6 @@
 ---
 title: 'El legado de Stevenson y Jim Tucker: la ciencia de la reencarnación continúa'
+seoTitle: 'El legado de Ian Stevenson y Jim Tucker'
 description: 'Cómo Jim Tucker continuó el trabajo de Ian Stevenson en la Universidad de Virginia y el estado actual de la investigación sobre reencarnación.'
 pubDate: '2025-08-01'
 expositor: 'ian-stevenson'

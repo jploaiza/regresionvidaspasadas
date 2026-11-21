@@ -1,5 +1,6 @@
 ---
 title: 'Muchas Vidas, Muchos Maestros: el libro que legitimó la regresión'
+seoTitle: 'Muchas Vidas, Muchos Maestros: el libro de Brian Weiss'
 description: 'Análisis de Muchas Vidas, Muchos Maestros (1988) de Brian Weiss: qué cuenta, por qué fue revolucionario y cómo se volvió un fenómeno editorial.'
 pubDate: '2025-01-17'
 expositor: 'brian-weiss'

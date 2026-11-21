@@ -1,5 +1,6 @@
 ---
 title: 'La Spirit Release Foundation: cuando la psiquiatría se abrió a lo invisible'
+seoTitle: 'Spirit Release Foundation: la psiquiatría y lo invisible'
 description: 'La Spirit Release Foundation (2000-2013), fundada por Alan Sanderson: su labor puente con la medicina convencional y lo que dejó al cerrar.'
 pubDate: '2025-12-06'
 expositor: 'alan-sanderson'

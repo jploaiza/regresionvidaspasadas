@@ -6,17 +6,28 @@ import { SITE_TITLE } from '../consts';
 
 interface Props {
 	title: string;
+	seoTitle?: string;
 	description: string;
 	image?: ImageMetadata;
 	ogType?: 'website' | 'article';
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, description, image = FallbackImage, ogType = 'website' } = Astro.props;
+const { title, seoTitle, description, image = FallbackImage, ogType = 'website' } = Astro.props;
+const headTitle = seoTitle ?? title;
 
 const SITE_URL = 'https://www.regresionvidaspasadas.com';
 
 const siteSchemas = JSON.stringify([
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Regresión a Vidas Pasadas',
+    url: SITE_URL,
+    inLanguage: 'es',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+  },
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -74,8 +85,8 @@ const siteSchemas = JSON.stringify([
 
 <link rel="canonical" href={canonicalURL} />
 
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{headTitle}</title>
+<meta name="title" content={headTitle} />
 <meta name="description" content={description} />
 
 <meta property="og:type" content={ogType} />

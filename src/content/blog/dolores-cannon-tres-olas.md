@@ -1,5 +1,6 @@
 ---
 title: 'Las Tres Olas de Voluntarios: la visión cósmica de Dolores Cannon'
+seoTitle: 'Las Tres Olas de Voluntarios de Dolores Cannon'
 description: 'Las Tres Olas de Voluntarios según Dolores Cannon: por qué esta idea resonó con millones y cómo se relaciona con la terapia de regresión.'
 pubDate: '2025-04-25'
 expositor: 'dolores-cannon'

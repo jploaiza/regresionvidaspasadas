@@ -1,5 +1,6 @@
 ---
 title: 'Journey of Souls: lo que ocurre cuando el alma deja el cuerpo'
+seoTitle: 'Journey of Souls: lo que ocurre al dejar el cuerpo'
 description: 'Journey of Souls de Michael Newton: qué halló en 29 casos de hipnosis profunda sobre la vida entre vidas y por qué sigue siendo una referencia.'
 pubDate: '2025-02-28'
 expositor: 'michael-newton'

@@ -63,9 +63,10 @@ interface Props extends CollectionEntry<'blog'>['data'] {
   readingTime?: number;
   postId?: string;
   relatedPosts?: CollectionEntry<'blog'>[];
+  kind?: 'article' | 'about';
 }
 
-const { title, description, pubDate, updatedDate, heroImage, expositor, readingTime, postId, relatedPosts } = Astro.props;
+const { title, seoTitle, description, pubDate, updatedDate, heroImage, expositor, readingTime, postId, relatedPosts, kind = 'article' } = Astro.props;
 
 function imageFor(id?: string, exp?: string, hero?: ImageMetadata): ImageMetadata {
   if (hero) return hero;
@@ -121,7 +122,7 @@ const articleSchema = {
   headline: title,
   description,
   datePublished: pubDate.toISOString(),
-  ...(updatedDate ? { dateModified: updatedDate.toISOString() } : {}),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
   image: ogImage.href,
   url: canonicalUrl.href,
   inLanguage: 'es',
@@ -172,12 +173,26 @@ const medicalWebPageSchema = {
   publisher: { '@id': `${siteOrigin}/#organization` },
 };
 
-const jsonLd = JSON.stringify([articleSchema, breadcrumbSchema, medicalWebPageSchema]);
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${canonicalUrl.href}#aboutpage`,
+  name: title,
+  url: canonicalUrl.href,
+  description,
+  inLanguage: 'es',
+  isPartOf: { '@id': `${siteOrigin}/#website` },
+  about: { '@id': `${siteOrigin}/#organization` },
+};
+
+const jsonLd = JSON.stringify(
+  kind === 'about' ? [aboutSchema, breadcrumbSchema] : [articleSchema, breadcrumbSchema, medicalWebPageSchema],
+);
 ---
 
 <html lang="es">
   <head>
-    <BaseHead title={title} description={description} image={displayImage} ogType="article" />
+    <BaseHead title={title} seoTitle={seoTitle} description={description} image={displayImage} ogType={kind === 'about' ? 'website' : 'article'} />
     <script type="application/ld+json" set:html={jsonLd}></script>
     <style>
       .material-symbols-outlined {

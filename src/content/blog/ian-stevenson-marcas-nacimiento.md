@@ -1,5 +1,6 @@
 ---
 title: 'Marcas de nacimiento y vidas anteriores: la investigación biológica de Stevenson'
+seoTitle: 'Marcas de nacimiento y vidas pasadas: Ian Stevenson'
 description: '225 casos donde las marcas de nacimiento de un niño coincidían con las heridas mortales de la vida que recordaba: la investigación de Ian Stevenson.'
 pubDate: '2025-07-18'
 expositor: 'ian-stevenson'

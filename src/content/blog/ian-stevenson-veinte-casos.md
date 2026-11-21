@@ -1,5 +1,6 @@
 ---
 title: 'Veinte Casos Sugestivos de Reencarnación: la obra fundacional de Stevenson'
+seoTitle: 'Veinte Casos Sugestivos de Reencarnación: Stevenson'
 description: 'Análisis de Veinte casos que sugieren reencarnación (1966), de Ian Stevenson: metodología, hallazgos y por qué sigue siendo una referencia.'
 pubDate: '2025-07-04'
 expositor: 'ian-stevenson'

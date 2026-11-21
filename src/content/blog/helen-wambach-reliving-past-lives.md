@@ -1,5 +1,6 @@
 ---
 title: 'Reliving Past Lives: el estudio de 1.000 regresiones de Helen Wambach'
+seoTitle: 'Reliving Past Lives: 1.000 regresiones de Helen Wambach'
 description: 'Reliving Past Lives (1978) de Helen Wambach: el análisis estadístico de más de 1.000 regresiones, sus patrones y por qué siguen siendo difíciles de descartar.'
 pubDate: '2025-08-15'
 expositor: 'helen-wambach'

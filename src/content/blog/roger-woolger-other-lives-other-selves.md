@@ -1,5 +1,6 @@
 ---
 title: 'Other Lives, Other Selves: el libro que integró Jung y la regresión'
+seoTitle: 'Other Lives, Other Selves: el libro de Roger Woolger'
 description: 'Other Lives, Other Selves (1987), de Roger Woolger: cómo integró la psicología junguiana con la regresión y qué aportó al campo transpersonal.'
 pubDate: '2025-05-23'
 expositor: 'roger-woolger'

@@ -1,5 +1,6 @@
 ---
 title: '"The Unquiet Dead": lo que los espíritus le enseñaron a una psicóloga clínica'
+seoTitle: 'The Unquiet Dead: el libro de la psicóloga Edith Fiore'
 description: 'Análisis de The Unquiet Dead (1987) de Edith Fiore: casos, patrones clínicos y por qué sigue siendo una referencia para profesionales de la salud.'
 pubDate: '2025-11-15'
 expositor: 'edith-fiore'

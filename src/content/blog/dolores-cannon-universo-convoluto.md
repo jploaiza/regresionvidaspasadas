@@ -1,5 +1,6 @@
 ---
 title: 'El Universo Convoluto: los libros más ambiciosos de Dolores Cannon'
+seoTitle: 'El Universo Convoluto: los libros de Dolores Cannon'
 description: 'La serie El Universo Convoluto de Dolores Cannon: cuatro volúmenes con los materiales más complejos surgidos en sus sesiones de QHHT.'
 pubDate: '2025-05-02'
 expositor: 'dolores-cannon'

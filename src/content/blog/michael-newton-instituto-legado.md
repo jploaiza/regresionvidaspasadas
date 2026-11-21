@@ -1,5 +1,6 @@
 ---
 title: 'El Instituto Newton: el legado institucional de la Vida entre Vidas'
+seoTitle: 'El Instituto Newton y el legado de la Vida entre Vidas'
 description: 'Cómo Michael Newton convirtió su método en una organización global: el Michael Newton Institute, su formación y su alcance internacional.'
 pubDate: '2025-03-21'
 expositor: 'michael-newton'

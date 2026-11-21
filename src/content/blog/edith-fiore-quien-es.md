@@ -1,5 +1,6 @@
 ---
 title: 'Edith Fiore: la psicóloga clínica que legitimó la liberación espiritual'
+seoTitle: 'Edith Fiore: la psicóloga de la liberación espiritual'
 description: 'Quién fue Edith Fiore: la psicóloga de California que documentó de forma sistemática casos de apego espiritual en tres décadas de práctica.'
 pubDate: '2025-11-08'
 expositor: 'edith-fiore'

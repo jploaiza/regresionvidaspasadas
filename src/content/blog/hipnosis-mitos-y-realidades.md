@@ -1,5 +1,6 @@
 ---
 title: 'Mitos y realidades sobre la hipnosis: lo que necesitas saber antes de tu primera sesión'
+seoTitle: 'Mitos y realidades de la hipnosis antes de tu primera sesión'
 description: 'Los 7 mitos más comunes sobre la hipnosis, respondidos con evidencia: ¿te quedas dormido?, ¿te controlan la mente?, ¿puedes quedar atrapado en trance?'
 pubDate: '2026-03-14'
 expositor: 'hipnosis'

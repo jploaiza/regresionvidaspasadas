@@ -1,5 +1,6 @@
 ---
 title: 'Cuerpo, emoción y vida pasada: el enfoque somático de Woolger'
+seoTitle: 'Cuerpo, emoción y vida pasada: el enfoque de Woolger'
 description: 'Cómo Roger Woolger unió la psicología somática y la regresión: por qué el cuerpo guarda memorias de otras vidas y qué pasa al liberarlas.'
 pubDate: '2025-06-06'
 expositor: 'roger-woolger'

@@ -1,5 +1,6 @@
 ---
 title: 'La herencia junguiana en la regresión: sombra, karma y arquetipos'
+seoTitle: 'Herencia junguiana en la regresión: sombra y arquetipos'
 description: 'Cómo Roger Woolger usó la sombra, el inconsciente colectivo y la individuación de Jung para una regresión que no exige creer en la reencarnación.'
 pubDate: '2025-06-13'
 expositor: 'roger-woolger'

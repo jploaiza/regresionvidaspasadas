@@ -1,5 +1,6 @@
 ---
 title: 'Dolores Cannon: la hipnoterapeuta autodidacta que transformó el campo'
+seoTitle: 'Quién fue Dolores Cannon, creadora del QHHT'
 description: 'Biografía de Dolores Cannon (1931-2014): de ama de casa en Missouri a creadora del QHHT y autora de más de 20 libros sobre regresión.'
 pubDate: '2025-04-04'
 expositor: 'dolores-cannon'

@@ -1,5 +1,6 @@
 ---
 title: 'Spirit Releasement Therapy: el manual técnico que Baldwin escribió para los terapeutas'
+seoTitle: 'Spirit Releasement Therapy: el manual de William Baldwin'
 description: 'Análisis del manual de William Baldwin sobre Terapia de Liberación Espiritual (1992): teoría, protocolos y por qué sigue siendo la guía técnica de referencia.'
 pubDate: '2025-10-25'
 expositor: 'william-baldwin'
