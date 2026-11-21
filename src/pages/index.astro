@@ -257,6 +257,7 @@ const EXPEDIENTES = [
               <input class="sidebar-newsletter-input" id="newsletter-email-home" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required />
               <button class="sidebar-newsletter-btn" type="submit">Suscribirse al Portal</button>
               <p class="newsletter-msg" id="newsletter-msg-home" aria-live="polite"></p>
+              <p class="newsletter-consent">Te enviaremos un correo para confirmar. Puedes darte de baja cuando quieras.</p>
             </form>
           </div>
 
@@ -311,7 +312,7 @@ const EXPEDIENTES = [
 
     <script>
       import { setupNewsletter } from '../scripts/newsletter';
-      setupNewsletter('newsletter-form-home', 'newsletter-msg-home');
+      setupNewsletter('newsletter-form-home', 'newsletter-msg-home', 'Suscribirse al Portal', 'home');
     </script>
   </body>
 </html>
@@ -856,6 +857,7 @@ const EXPEDIENTES = [
   }
   .sidebar-newsletter-btn:hover { filter: brightness(1.08); }
   .sidebar-newsletter-btn:disabled { opacity: 0.7; cursor: default; }
+  .newsletter-consent { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.55em; line-height: 1.5; color: rgba(250,247,242,0.55); margin: 0; text-align: left; }
   .newsletter-msg { font-family: 'EB Garamond', serif; font-size: 0.82em; min-height: 1.2em; margin: 0; }
 
   /* Lo más leído */
