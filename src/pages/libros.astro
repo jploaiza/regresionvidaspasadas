@@ -223,6 +223,7 @@ const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
                       <span class="cover-fallback-author">{libro.autor}</span>
                     </div>
                   )}
+                  <ShareButtons compact path={`/libros/#libro-${libro.isbn}`} title={libro.titulo} label="Compartir" />
                 </div>
                 <div class="libro-body">
                   <div class="libro-header">
@@ -232,7 +233,6 @@ const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
                   <h3 class="libro-titulo">{libro.titulo}</h3>
                   <p class="libro-autor">{libro.autor}</p>
                   <p class="libro-desc">{libro.descripcion}</p>
-                  <ShareButtons compact path={`/libros/#libro-${libro.isbn}`} title={libro.titulo} label="Compartir" />
                 </div>
               </li>
             ))}

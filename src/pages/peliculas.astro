@@ -407,6 +407,7 @@ const SIN_FICHA = new Set<string>();
                       {item.año && <span class="poster-fallback-year">{item.año}</span>}
                     </div>
                   )}
+                  <ShareButtons compact path={`/peliculas/#${slug}`} title={item.titulo} label="Compartir" />
                 </div>
                 <div class="item-body">
                 <div class="item-header">
@@ -435,7 +436,6 @@ const SIN_FICHA = new Set<string>();
                     )}
                   </div>
                 )}
-                <ShareButtons compact path={`/peliculas/#${slug}`} title={item.titulo} label="Compartir" />
                 </div>
               </li>
               );
