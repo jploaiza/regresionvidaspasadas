@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import headerImg from '../assets/blog/peliculas-cine-film.jpg';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -218,6 +219,16 @@ const CATEGORIAS = [
         porque: 'No es sobre hipnosis sino sobre lo que la hipnosis y la regresión a veces revelan: que el obstáculo para la transformación es siempre el ego, no las circunstancias.',
       },
       {
+        titulo: 'La profecía celestina (The Celestine Prophecy)',
+        slug: 'the-celestine-prophecy',
+        buscar: 'The Celestine Prophecy',
+        tipo: 'Película',
+        año: '2006',
+        origen: 'EE.UU.',
+        descripcion: 'Dirigida por Armand Mastroianni y basada en la novela de James Redfield. Un hombre viaja a Perú tras oír hablar de un antiguo manuscrito que revelaría nueve "visiones" sobre las coincidencias y la energía que nos une, mientras es perseguido por quienes quieren suprimirlo.',
+        porque: 'Adaptación de un libro que popularizó la idea de que las coincidencias tienen sentido y de que hay una evolución espiritual personal. Una película modesta que fue mal recibida por la crítica; su interés está en las ideas del libro, no en el cine.',
+      },
+      {
         titulo: 'Get Out',
         tipo: 'Película',
         año: '2017',
@@ -346,6 +357,7 @@ const SIN_FICHA = new Set<string>();
     <BaseHead
       title="Películas y documentales sobre regresión e hipnosis"
       description="Las mejores películas y documentales sobre regresión a vidas pasadas, hipnosis, vida después de la muerte y despertar espiritual: de Nosso Lar a Cloud Atlas, de Surviving Death a Peaceful Warrior."
+      ogImage="/og/og-peliculas.jpg"
     />
   </head>
   <body>
@@ -385,7 +397,7 @@ const SIN_FICHA = new Set<string>();
               const buscar = item.buscar ?? item.titulo;
               const conFicha = !SIN_FICHA.has(item.titulo);
               return (
-              <li class="item-card">
+              <li class="item-card" id={slug}>
                 <div class="item-poster">
                   {conFicha && tienePoster(slug) ? (
                     <img src={`/peliculas/${slug}.webp`} alt={`Póster de ${item.titulo}`} width="110" height="160" loading="lazy" decoding="async" />
@@ -423,6 +435,7 @@ const SIN_FICHA = new Set<string>();
                     )}
                   </div>
                 )}
+                <ShareButtons compact path={`/peliculas/#${slug}`} title={item.titulo} label="Compartir" />
                 </div>
               </li>
               );
@@ -430,6 +443,7 @@ const SIN_FICHA = new Set<string>();
           </ul>
         </section>
       ))}
+      <ShareButtons path="/peliculas/" title="Películas y documentales sobre regresión e hipnosis" label="Compartir esta lista" />
     </main>
     <Footer />
 

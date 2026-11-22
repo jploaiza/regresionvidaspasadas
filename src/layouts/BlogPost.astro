@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { CATEGORY, SLUG_IMG } from '../consts';
@@ -855,6 +856,8 @@ const jsonLd = JSON.stringify(
         <div class="prose" id="prose-content">
           <slot />
         </div>
+
+        {kind === 'article' && <ShareButtons path={Astro.url.pathname} title={title} label="Compartir este artículo" />}
 
         <!-- Ornament divider before CTA -->
         <div class="ornament">

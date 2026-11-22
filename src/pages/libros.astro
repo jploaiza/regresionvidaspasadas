@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import headerImg from '../assets/blog/libros-vintage.jpg';
 
 const CATEGORIAS = [
@@ -184,6 +185,7 @@ const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
     <BaseHead
       title="Libros sobre regresión, hipnosis y espiritualidad"
       description="Una biblioteca curada sobre regresión a vidas pasadas, hipnosis clínica, liberación espiritual y espiritualidad: de Chico Xavier a Brian Weiss, de Erickson a Carl Wickland."
+      ogImage="/og/og-libros.jpg"
     />
   </head>
   <body>
@@ -204,7 +206,7 @@ const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
           <h2 class="categoria-titulo" style={`--accent: ${cat.color}`}>{cat.titulo}</h2>
           <ul class="libros-grid">
             {cat.libros.map(libro => (
-              <li class="libro-card">
+              <li class="libro-card" id={`libro-${libro.isbn}`}>
                 <div class="libro-cover">
                   {CON_PORTADA.has(libro.isbn) ? (
                     <img
@@ -230,12 +232,14 @@ const coverUrl = (isbn: string) => `/portadas/${isbn}.webp`;
                   <h3 class="libro-titulo">{libro.titulo}</h3>
                   <p class="libro-autor">{libro.autor}</p>
                   <p class="libro-desc">{libro.descripcion}</p>
+                  <ShareButtons compact path={`/libros/#libro-${libro.isbn}`} title={libro.titulo} label="Compartir" />
                 </div>
               </li>
             ))}
           </ul>
         </section>
       ))}
+      <ShareButtons path="/libros/" title="Libros sobre regresión, hipnosis y espiritualidad" label="Compartir esta biblioteca" />
     </main>
     <Footer />
   </body>

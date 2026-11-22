@@ -1,0 +1,120 @@
+---
+// Botones para compartir una página (o una ficha dentro de ella con #ancla).
+// El texto y el enlace salen con la marca: el título y el dominio del portal.
+interface Props {
+	path: string;
+	title: string;
+	compact?: boolean;
+	label?: string;
+}
+
+const { path, title, compact = false, label = 'Compartir' } = Astro.props;
+const url = new URL(path, Astro.site ?? 'https://www.regresionvidaspasadas.com').href;
+const u = encodeURIComponent(url);
+const t = encodeURIComponent(`${title} — Regresión a Vidas Pasadas`);
+
+const redes = [
+	{ k: 'whatsapp', nombre: 'WhatsApp', href: `https://api.whatsapp.com/send?text=${t}%20${u}` },
+	{ k: 'facebook', nombre: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
+	{ k: 'x', nombre: 'X', href: `https://twitter.com/intent/tweet?url=${u}&text=${t}` },
+	{ k: 'telegram', nombre: 'Telegram', href: `https://t.me/share/url?url=${u}&text=${t}` },
+	{ k: 'linkedin', nombre: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+	{ k: 'correo', nombre: 'Correo', href: `mailto:?subject=${t}&body=${u}` },
+];
+const visibles = compact ? redes.slice(0, 3) : redes;
+---
+
+<div class:list={['share', { 'share--compact': compact }]} data-pagefind-ignore data-share-url={url} data-share-title={title}>
+	<span class="share-label">{label}</span>
+	<div class="share-chips">
+		{visibles.map((r) => (
+			<a class="share-chip" href={r.href} target="_blank" rel="noopener noreferrer" aria-label={`${label} en ${r.nombre}: ${title}`}>{r.nombre}</a>
+		))}
+		<button type="button" class="share-chip share-copy" data-share-copy aria-label={`Copiar el enlace de ${title}`}>Copiar enlace</button>
+		<button type="button" class="share-chip share-native" data-share-native hidden aria-label={`Compartir ${title}`}>Más…</button>
+	</div>
+</div>
+
+<script>
+	function setup() {
+		document.querySelectorAll<HTMLElement>('.share').forEach((box) => {
+			if (box.dataset.ready) return;
+			box.dataset.ready = '1';
+			const url = box.dataset.shareUrl ?? location.href;
+			const title = box.dataset.shareTitle ?? document.title;
+			const copy = box.querySelector<HTMLButtonElement>('[data-share-copy]');
+			const nativo = box.querySelector<HTMLButtonElement>('[data-share-native]');
+
+			copy?.addEventListener('click', async () => {
+				const original = copy.textContent;
+				try {
+					await navigator.clipboard.writeText(url);
+				} catch {
+					const ta = document.createElement('textarea');
+					ta.value = url;
+					ta.style.position = 'fixed';
+					ta.style.opacity = '0';
+					document.body.appendChild(ta);
+					ta.select();
+					try { document.execCommand('copy'); } catch {}
+					ta.remove();
+				}
+				copy.textContent = '¡Copiado!';
+				setTimeout(() => { copy.textContent = original; }, 1800);
+			});
+
+			if (nativo && typeof navigator.share === 'function') {
+				nativo.hidden = false;
+				nativo.addEventListener('click', () => {
+					navigator.share({ title: `${title} — Regresión a Vidas Pasadas`, url }).catch(() => {});
+				});
+			}
+		});
+	}
+	setup();
+</script>
+
+<style>
+	.share {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.6em 0.9em;
+		margin: 2em 0 0;
+		padding-top: 1.4em;
+		border-top: 1px solid rgba(230, 200, 117, 0.15);
+	}
+	.share-label {
+		font-family: 'Syne', sans-serif;
+		font-size: 0.62em;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: #BA9C4B;
+	}
+	.share-chips { display: flex; flex-wrap: wrap; gap: 0.45em; }
+	.share-chip {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: 0.68em;
+		font-weight: 600;
+		color: #FAF7F2;
+		background: transparent;
+		border: 1px solid rgba(230, 200, 117, 0.35);
+		border-radius: 999px;
+		padding: 0.5em 1em;
+		line-height: 1.2;
+		cursor: pointer;
+		text-decoration: none;
+		transition: background 0.2s, color 0.2s, border-color 0.2s;
+	}
+	.share-chip:hover,
+	.share-chip:focus-visible { border-color: #E6C875; color: #E6C875; }
+	.share-chip[hidden] { display: none; }
+
+	.share--compact {
+		margin: 0.9em 0 0;
+		padding-top: 0.9em;
+		grid-column: 1 / -1;
+	}
+	.share--compact .share-label { font-size: 0.5em; }
+	.share--compact .share-chip { font-size: 0.6em; padding: 0.45em 0.85em; }
+</style>

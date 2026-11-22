@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE } from '../consts';
 
 interface Props {
@@ -9,11 +8,18 @@ interface Props {
 	seoTitle?: string;
 	description: string;
 	image?: ImageMetadata;
+	ogImage?: string;
 	ogType?: 'website' | 'article';
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { title, seoTitle, description, image = FallbackImage, ogType = 'website' } = Astro.props;
+const { title, seoTitle, description, image, ogImage, ogType = 'website' } = Astro.props;
+// Imagen al compartir: la del artículo, una ruta propia (/og/...) o la imagen de marca por defecto.
+const socialImage = ogImage
+	? new URL(ogImage, Astro.site).href
+	: image
+		? new URL(image.src, Astro.url).href
+		: new URL('/og/og-default.jpg', Astro.site).href;
 const headTitle = seoTitle ?? title;
 
 const SITE_URL = 'https://www.regresionvidaspasadas.com';
@@ -93,13 +99,16 @@ const siteSchemas = JSON.stringify([
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:alt" content={`${title} — Regresión a Vidas Pasadas`} />
+<meta property="og:site_name" content="Regresión a Vidas Pasadas" />
+<meta property="og:locale" content="es_LA" />
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+<meta property="twitter:image" content={socialImage} />
 
 <!-- Sitewide entity schemas: Organization + Person -->
 <script type="application/ld+json" set:html={siteSchemas}></script>
